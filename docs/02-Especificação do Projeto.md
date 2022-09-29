@@ -25,8 +25,8 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 
 |EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
 |--------------------|------------------------------------|----------------------------------------|
-| Ciclista | informações sobre locais com sinal de celular durante o percurso da trilha  | Obter um melhor aproveitamento da trilha sozinho ou em grupo|
-| Ciclista | indicativo de pontos de apoio para ciclistas | Saber onde encontrar ajuda em caso de algum imprevisto |
+| Ciclista | Informações sobre locais com sinal de celular durante o percurso da trilha  | Obter um melhor aproveitamento da trilha sozinho ou em grupo|
+| Ciclista | Indicativo de pontos de apoio para ciclistas | Saber onde encontrar ajuda em caso de algum imprevisto |
 | Ciclista | Grau de dificuldade de trilhas rurais em relação a subidas, descidas, tipo do terreno | Ter conhecimento prévio sobre o grau de dificuldade de uma trilha |
 | Ciclista | Informações seguras para encontrar trilhas adequadas ao seu perfil iniciante | Melhorar sua saúde e condição física|
 | Ciclista | Conhecer várias localidades situadas no entorno da cidade | Desfrutar de bons passeios com amigos |
