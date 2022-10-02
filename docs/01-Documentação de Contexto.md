@@ -12,14 +12,11 @@ Motivados também pelo sentimento de aventura e sentimento de liberdade, os cicl
 
 Seja sozinho ou em um grupo, é preciso conhecer bem por onde você andará, assim, o praticante conseguirá entender previamente quais serão os desafios que enfrentará, sejam eles relacionados a distância, elevação, relevo, por este motivo, é fundamental o conhecimento de trilhas que possam evidenciar suas distâncias e expor suas complexidades.
 
+
 ## Problema
 
 A maioria das trilhas que são realizadas pelas pessoas não apresentam indicação de sua complexidade, do seu nível de dificuldade, fotos do percurso atrapalhando o entendimento e o planejamento para sua realização, além do fato que, a maioria dos percursos são de conhecimento dos ciclistas mais experientes.
 
-> **Links Úteis**:
-> - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-> - [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-> - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
 
 ## Objetivos
 
@@ -31,18 +28,12 @@ Objetivamos criar uma plataforma que possa ajudar os ciclistas em:
 · Obter dicas e recomendações para a realização de um passeio seguro, tranquilo e divertido
 
  
-> **Links Úteis**:
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
-
 ## Justificativa
 
 Ao observar a dificuldade para acessar trilhas de bike pelos ciclistas iniciantes, notou-se a necessidade de desenvolvimento de um site com informações relevantes para atender esse público.
 
 Além desta necessidade, que gerou a oportunidade deste projeto, existe também a motivação pessoal dos integrantes do grupo que, alguns, já são ciclistas e outros tem interesse em iniciar, utilizando também informações do site para orientação.
 
-
-> **Links Úteis**:
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
 
 ## Público-Alvo
 
@@ -52,9 +43,3 @@ Para melhor entendimento do nosso público, realizamos pesquisas através de um 
 
 Após os dados obtidos, definimos 5 personas principais que serão o alvo principal da nossa solução, que desejam realizar passeios de bicicleta e buscam previamente maiores informações sobre a trilha para poderem efetuar a melhor escolha frente a seu nível no ciclismo, sua condição física, idade, tempo disponível para a prática esportiva ou outros itens relevantes para a escolha de um percurso
 
-
-> **Links Úteis**:
-> - [Público-alvo](https://blog.hotmart.com/pt-br/publico-alvo/)
-> - [Como definir o público alvo](https://exame.com/pme/5-dicas-essenciais-para-definir-o-publico-alvo-do-seu-negocio/)
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
