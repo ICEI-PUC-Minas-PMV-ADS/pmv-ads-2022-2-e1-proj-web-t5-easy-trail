@@ -1,24 +1,30 @@
 # TÍTULO DO PROJETO
 
-`CURSO`
+`ANÁLISE E DESENVOLVIMENTO DE SISTEMAS`
 
-`DISCIPLINA`
+`DESENVOLVIMENTO DE APLICAÇÃO WEB FRONT END`
 
-`SEMESTRE`
+`PROJETO - EASY TRAIL`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+O projeto desenvolvido tem como objetivo criar uma plataforma que possa ajudar os ciclistas em:
+
+· Escolher trilhas mais adequadas a sua condição física e sua disponibilidade de tempo conhecendo previamente as várias opções de trilha
+
+· Obter dicas e recomendações para a realização de um passeio seguro, tranquilo e divertido
+
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
-* Nome completo do aluno 5
+* Atos dos Santos Pereira
+* Carlos José Leao Freitas
+* Diogo Silva Costa
+* Leonardo Buck Alves
+* Leonardo Melo de Lima
+* Rafael Santana de Oliveira
 
 ## Orientador
 
-* Nome completo do professor 1
+* Simone Alves Nogueira
 
 ## Instruções de utilização
 
