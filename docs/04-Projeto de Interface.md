@@ -1,11 +1,11 @@
 
 # Projeto de Interface
 
-<span style="color:red">Pré-requisitos: <a href="2-Especificação do Projeto.md"> Documentação de Especificação</a></span>
+<span style="color:red">Pré-requisitos: <a href="02-Especificação do Projeto.md"> Documentação de Especificação</a></span>
 
 Visão geral da interação do usuário pelas telas do sistema e protótipo interativo das telas com as funcionalidades que fazem parte do sistema (wireframes).
 
- Apresente as principais interfaces da plataforma. Discuta como ela foi elaborada de forma a atender os requisitos funcionais, não funcionais e histórias de usuário abordados nas <a href="2-Especificação do Projeto.md"> Documentação de Especificação</a>.
+ Apresente as principais interfaces da plataforma. Discuta como ela foi elaborada de forma a atender os requisitos funcionais, não funcionais e histórias de usuário abordados nas <a href="02-Especificação do Projeto.md"> Documentação de Especificação</a>.
 
 ## User Flow
 
@@ -38,16 +38,13 @@ Descendo a página, haverá a demonstração de algumas trilhas mais acessadas p
 Por fim, no rodapé, teremos links para páginas do sistema e informações para contato a empresa. 
 
 ## Tela - Pesquisa Trilha
-Assim que o usuário pesquisar uma trilha no campo de pesquisa logo abaixo do carossel de imagens, será exibida a tela com os resultados da pesquisa realizada, conforme a imagem abaixo.
+Assim que o usuário pesquisar uma trilha no campo de pesquisa logo abaixo do carossel de imagens, será exibida a tela com os resultados da pesquisa realizada, conforme a imagem abaixo. No cabeçalho, será exibido além da logo a opção deste usuário se logar/cadastrar no sistema.
 
-No cabeçalho, será exibido além da logo a opção deste usuário se logar/cadastrar no sistema.
 
 ![Pesquisa Trilha](img/PesquisaTrilha.png)
 
 ## Tela - Escolha Trilha
-Após o usuário escolher uma trilha perante as várias opções exibidas no sistema mediante a busca realizada, será exibida uma tela com o detalhamento da trilha escolhida, informações relevantes sobre percurso, clima e comentários de outros usuários sobre esta trilha.
-
-No cabeçalho, será exibido além da logo a opção deste usuário se logar/cadastrar no sistema.
+Após o usuário escolher uma trilha perante as várias opções exibidas no sistema mediante a busca realizada, será exibida uma tela com o detalhamento da trilha escolhida, informações relevantes sobre percurso, clima e comentários de outros usuários sobre esta trilha. No cabeçalho, será exibido além da logo a opção deste usuário se logar/cadastrar no sistema.
 
 ![Escolha Trilha](img/EscolhaTrilha.png)
 
@@ -61,13 +58,9 @@ Caso o usuário deseje realizar login para salvar, comentar ou ter conteúdo exc
 ![Home Page](img/HomePageLogado.png)
 A tela principal do sistema, mostrará em seu cabeçalho além da logo a opção deste usuário consultar o seu perfil cadastrado, seus alertas de trilhas cadastradas perto de sua realização e/ou informativos sobre trilhas, propagandas, dentre outros.
 
-No centro da página, haverá imagens de divulgação de trilhas presentes no site, medidas de segurança, benefícios do ciclismo e de paisagens visando ampliar o interesse do usuário ao site. 
+No centro da página, haverá imagens de divulgação de trilhas presentes no site, medidas de segurança, benefícios do ciclismo e de paisagens visando ampliar o interesse do usuário ao site. Logo após as fotos, o usuários poderá escolher um destino preterido para uma trilha, escolher o nível de dificuldade desta e a data que gostaria de realiza-la conforme sua vontade. 
 
-Logo após as fotos, o usuários poderá escolher um destino preterido para uma trilha, escolher o nível de dificuldade desta e a data que gostaria de realiza-la conforme sua vontade. 
-
-Descendo a página, haverá a demonstração de algumas trilhas mais acessadas pelos usuários e a possibilidade de acessar outras trilhas presentes no sistema. 
-
-Por fim, no rodapé, teremos links para páginas do sistema e informações para contato a empresa
+Descendo a página, haverá a demonstração de algumas trilhas mais acessadas pelos usuários e a possibilidade de acessar outras trilhas presentes no sistema. Por fim, no rodapé, teremos links para páginas do sistema e informações para contato a empresa
 
 ## Tela - Pesquisa Trilha Usuário logado
 Após o login e a realização da busca pelo usuário logado a uma trilha no campo de pesquisa logo abaixo do carossel de imagens, será exibida a tela com os resultados da pesquisa realizada, conforme a imagem abaixo.
