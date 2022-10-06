@@ -9,27 +9,76 @@ Visão geral da interação do usuário pelas telas do sistema e protótipo inte
 
 ## User Flow
 
-![Exemplo de UserFlow](img/userflow.jpg)
+Fluxo de usuário <i>(User Flow),</i> é uma técnica que permite ao desenvolvedor mapear todo fluxo de telas do site ou app. Essa técnica funciona para alinhar os caminhos e as possíveis ações que o usuário pode fazer junto com os membros de sua equipe.
 
-Fluxo de usuário (User Flow) é uma técnica que permite ao desenvolvedor mapear todo fluxo de telas do site ou app. Essa técnica funciona para alinhar os caminhos e as possíveis ações que o usuário pode fazer junto com os membros de sua equipe.
 
-> **Links Úteis**:
-> - [User Flow: O Quê É e Como Fazer?](https://medium.com/7bits/fluxo-de-usu%C3%A1rio-user-flow-o-que-%C3%A9-como-fazer-79d965872534)
-> - [User Flow vs Site Maps](http://designr.com.br/sitemap-e-user-flow-quais-as-diferencas-e-quando-usar-cada-um/)
-> - [Top 25 User Flow Tools & Templates for Smooth](https://www.mockplus.com/blog/post/user-flow-tools)
+![Exemplo de UserFlow](img/FluxoSistema.png)
+
 
 
 ## Wireframes
 
-![Exemplo de Wireframe](img/wireframe-example.png)
+Conforme fluxo de telas do projeto, apresentado no item anterior, as telas do sistema são apresentadas em detalhes nos itens que se seguem. As telas do sistema apresentam uma estrutura comum que é apresentada na Figura acima. Nesta estrutura, existem 3 grandes blocos, descritos a seguir. São eles:
 
-São protótipos usados em design de interface para sugerir a estrutura de um site web e seu relacionamentos entre suas páginas. Um wireframe web é uma ilustração semelhante do layout de elementos fundamentais na interface.
- 
-> **Links Úteis**:
-> - [Protótipos vs Wireframes](https://www.nngroup.com/videos/prototypes-vs-wireframes-ux-projects/)
-> - [Ferramentas de Wireframes](https://rockcontent.com/blog/wireframes/)
-> - [MarvelApp](https://marvelapp.com/developers/documentation/tutorials/)
-> - [Figma](https://www.figma.com/)
-> - [Adobe XD](https://www.adobe.com/br/products/xd.html#scroll)
-> - [Axure](https://www.axure.com/edu) (Licença Educacional)
-> - [InvisionApp](https://www.invisionapp.com/) (Licença Educacional)
+●	<b>Cabeçalho</b> - local onde são dispostos elementos fixos de identidade (logo) e navegação principal do site (menu da aplicação);
+
+●	<b>Conteúdo</b> - apresenta o conteúdo da tela em questão;
+
+●	<b>Rodapé</b> - apresenta a síntese do site associados aos elementos presentes no sistema, auxiliando na navegação do usuário e ajuda-lo com informações de contato para a empresa.
+
+## Tela - Home Page
+
+![Home Page](img/HomePage.png)
+A tela principal do sistema, mostrará em seu cabeçalho a logomarca da empresa e os campos para login ou cadastro caso seja um novo usuário. No centro da página, haverá imagens de divulgação de trilhas presentes no site, medidas de segurança, benefícios do ciclismo e de paisagens visando ampliar o interesse do usuário ao site. 
+
+Logo após as fotos, o usuários poderá escolher um destino preterido para uma trilha, escolher o nível de dificuldade desta e a data que gostaria de realiza-la conforme sua vontade. 
+
+Descendo a página, haverá a demonstração de algumas trilhas mais acessadas pelos usuários e a possibilidade de acessar outras trilhas presentes no sistema. 
+
+Por fim, no rodapé, teremos links para páginas do sistema e informações para contato a empresa. 
+
+## Tela - Pesquisa Trilha
+Assim que o usuário pesquisar uma trilha no campo de pesquisa logo abaixo do carossel de imagens, será exibida a tela com os resultados da pesquisa realizada, conforme a imagem abaixo.
+
+No cabeçalho, será exibido além da logo a opção deste usuário se logar/cadastrar no sistema.
+
+![Pesquisa Trilha](img/PesquisaTrilha.png)
+
+## Tela - Escolha Trilha
+Após o usuário escolher uma trilha perante as várias opções exibidas no sistema mediante a busca realizada, será exibida uma tela com o detalhamento da trilha escolhida, informações relevantes sobre percurso, clima e comentários de outros usuários sobre esta trilha.
+
+No cabeçalho, será exibido além da logo a opção deste usuário se logar/cadastrar no sistema.
+
+![Escolha Trilha](img/EscolhaTrilha.png)
+
+## Tela - Login
+Caso o usuário deseje realizar login para salvar, comentar ou ter conteúdo exclusivo, será necessário a realização de um login ou de um cadastro para um novo usuário, conforme visto na imagem abaixo. 
+
+![Login](img/Login.png)
+
+## Tela - Home Page Usuário logado
+
+![Home Page](img/HomePageLogado.png)
+A tela principal do sistema, mostrará em seu cabeçalho além da logo a opção deste usuário consultar o seu perfil cadastrado, seus alertas de trilhas cadastradas perto de sua realização e/ou informativos sobre trilhas, propagandas, dentre outros.
+
+No centro da página, haverá imagens de divulgação de trilhas presentes no site, medidas de segurança, benefícios do ciclismo e de paisagens visando ampliar o interesse do usuário ao site. 
+
+Logo após as fotos, o usuários poderá escolher um destino preterido para uma trilha, escolher o nível de dificuldade desta e a data que gostaria de realiza-la conforme sua vontade. 
+
+Descendo a página, haverá a demonstração de algumas trilhas mais acessadas pelos usuários e a possibilidade de acessar outras trilhas presentes no sistema. 
+
+Por fim, no rodapé, teremos links para páginas do sistema e informações para contato a empresa
+
+## Tela - Pesquisa Trilha Usuário logado
+Após o login e a realização da busca pelo usuário logado a uma trilha no campo de pesquisa logo abaixo do carossel de imagens, será exibida a tela com os resultados da pesquisa realizada, conforme a imagem abaixo.
+
+No cabeçalho, será exibido além da logo a opção deste usuário consultar o seu perfil cadastrado, seus alertas de trilhas cadastradas perto de sua realização e/ou informativos sobre trilhas, propagandas, dentre outros.
+
+![Pesquisa Trilha](img/PesquisaTrilhaLogado.png)
+
+## Tela - Escolha Trilha Usuário logado
+Com o usuário logadoe após a escolha de uma trilha perante as várias opções exibidas no sistema mediante a busca realizada, será exibida uma tela com o detalhamento da trilha escolhida, informações relevantes sobre percurso, clima e comentários de outros usuários sobre esta trilha.
+
+No cabeçalho, será exibido além da logo a opção deste usuário consultar o seu perfil cadastrado, seus alertas de trilhas cadastradas perto de sua realização e/ou informativos sobre trilhas, propagandas, dentre outros.
+
+![Escolha Trilha](img/EscolhaTrilhaLogado.png)
