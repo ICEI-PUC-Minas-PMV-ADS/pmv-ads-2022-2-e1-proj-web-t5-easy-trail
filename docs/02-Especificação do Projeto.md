@@ -69,12 +69,12 @@ A tabela a seguir apresenta os requisitos do projeto, identificando a prioridade
 
 
 
-### Requisitos não FuncionaiS
+### Requisitos não Funcionais
 
 A tabela a seguir apresenta os requisitos não funcionais que o projeto deverá atender.
 
-|ID     | Descrição do Requisito  |Prioridade |
-|-------|-------------------------|----|
+|ID       | Descrição do Requisito  |Prioridade |
+|---------|-------------------------|----|
 | RNF-001 |	O sistema deverá funcionar em ambiente WEB e deverá rodar nos navegadores com suporte para HTML5 e CSS3. | ALTA |
 | RNF-002 |	O sistema deve ser responsivo, ou seja, deve se adaptar aos diferentes tipos de tela e janelas.| ALTA |
 | RNF-003 |	O sistema será desenvolvido com as linguagens HTML, CSS e JavaScript.| ALTA |

@@ -44,7 +44,7 @@ Assim que o usuário pesquisar uma trilha no campo de pesquisa logo abaixo do ca
 ![Pesquisa Trilha](img/PesquisaTrilha.png)
 
 ## Tela - Escolha Trilha
-Após o usuário escolher uma trilha perante as várias opções exibidas no sistema mediante a busca realizada, será exibida uma tela com o detalhamento da trilha escolhida, informações relevantes sobre percurso, clima e comentários de outros usuários sobre esta trilha. No cabeçalho, será exibido além da logo a opção deste usuário se logar/cadastrar no sistema.
+Após o usuário escolher uma trilha perante as várias opções exibidas no sistema mediante a busca realizada, será exibida uma tela com o detalhamento da trilha escolhida, informações relevantes sobre percurso, clima e comentários de outros usuários sobre esta trilha, caso o usuário queira adicionar um comentário, após clicar no botão "Adicionar comentário" ele será direcionado para efetuar seu login, para poder assim, cadastrar o seu comentário. No cabeçalho, será exibido além da logo a opção deste usuário se logar/cadastrar no sistema.
 
 ![Escolha Trilha](img/EscolhaTrilha.png)
 
@@ -53,6 +53,10 @@ Caso o usuário deseje realizar login para salvar, comentar ou ter conteúdo exc
 
 ![Login](img/Login.png)
 
+## Tela - Página do Usuário logado
+Página destinada ao perfil do usuários logado, no cabeçalho haverá um campo de busca para pesquisa de novas trilhas, um sinininho para notificações de trilhas salvas e notificações importantes ao usuário, bem como, um campo para que ele possa cadastar informações sobre o seu perfil. No corpo da tela, haverá informações sobre as últimas trilhas realizadas pelo ciclista e no rodapé, teremos links para páginas do sistema e informações para contato a empresa.
+
+![Página Usuário](img/PaginaUsuario.png)
 ## Tela - Home Page Usuário logado
 
 ![Home Page](img/HomePageLogado.png)
@@ -70,7 +74,7 @@ No cabeçalho, será exibido além da logo a opção deste usuário consultar o 
 ![Pesquisa Trilha](img/PesquisaTrilhaLogado.png)
 
 ## Tela - Escolha Trilha Usuário logado
-Com o usuário logadoe após a escolha de uma trilha perante as várias opções exibidas no sistema mediante a busca realizada, será exibida uma tela com o detalhamento da trilha escolhida, informações relevantes sobre percurso, clima e comentários de outros usuários sobre esta trilha.
+Com o usuário logadoe após a escolha de uma trilha perante as várias opções exibidas no sistema mediante a busca realizada, será exibida uma tela com o detalhamento da trilha escolhida, informações relevantes sobre percurso, clima e comentários de outros usuários sobre esta trilha, caso o usuário queira adicionar um comentário, após clicar no botão "Adicionar comentário" será aberta uma caixa de texto para que o usuário possa digitar seu comentário e poder salva-ló.
 
 No cabeçalho, será exibido além da logo a opção deste usuário consultar o seu perfil cadastrado, seus alertas de trilhas cadastradas perto de sua realização e/ou informativos sobre trilhas, propagandas, dentre outros.
 
