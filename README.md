@@ -11,8 +11,6 @@ O projeto desenvolvido tem como objetivo criar uma plataforma que possa ajudar o
 · Escolher trilhas mais adequadas a sua condição física e sua disponibilidade de tempo conhecendo previamente as várias opções de trilha
 
 · Obter dicas e recomendações para a realização de um passeio seguro, tranquilo e divertido
-
-
 ## Integrantes
 
 * Atos dos Santos Pereira

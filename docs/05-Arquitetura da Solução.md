@@ -9,20 +9,18 @@ Definição de como o software é estruturado em termos dos componentes que faze
 Diagrama que permite a modelagem física de um sistema, através da visão dos seus componentes e relacionamentos entre os mesmos. Os componentes que fazem parte da solução são apresentados na Figura abaixo.
 
 ![Diagrama de Componentes](img/ArquiteturaSistema.jpg) <center> Arquitetura da Solução </center>
-<br>
 
 A solução implementada conta com os seguintes módulos:
-- **Navegador** - Interface básica do sistema  
-  - **Páginas Web** - Conjunto de arquivos HTML, CSS, JavaScript e imagens que implementam as funcionalidades do sistema.
-   - **Local Storage** - armazenamento mantido no Navegador, onde são implementados bancos de dados baseados em JSON. São eles: 
-     - **Trilhas** - seções de trilhas cadastradas no sistema 
-     - **Comentários** - registro de opiniões dos usuários sobre as trilhas apresentadas no sistema
-     - **Pesquisa de Trilha** - lista de trilhas segundo filtro de busca do usuário
-     - **Cadastro do Usuário** - Informações do usuário cadastrado no sistema
- - **Climatempo API** - plataforma que permite o acesso a informações da previsão do tempo
- - **Hospedagem** - local na Internet onde as páginas são mantidas e acessadas pelo navegador. 
 
-<hr>
+* **Navegador**: Interface básica do sistema
+  * **Páginas Web** - Conjunto de arquivos HTML, CSS, JavaScript e imagens que implementam as funcionalidades do sistema.
+  * **Local Storage** - armazenamento mantido no Navegador, onde são implementados bancos de dados baseados em JSON. São eles:
+    * **Trilhas** - seções de trilhas cadastradas no sistema
+    * **Comentários** - registro de opiniões dos usuários sobre as trilhas apresentadas no sistema
+    * **Pesquisa de Trilha** - lista de trilhas segundo filtro de busca do usuário
+    * **Cadastro do Usuário** - Informações do usuário cadastrado no sistema
+* **Climatempo API** - plataforma que permite o acesso a informações da previsão do tempo
+* **Hospedagem** - local na Internet onde as páginas são mantidas e acessadas pelo navegador.
 
 ## Tecnologias Utilizadas
 
