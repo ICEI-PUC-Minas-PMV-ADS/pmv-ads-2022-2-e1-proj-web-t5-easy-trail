@@ -22,8 +22,8 @@ A solução implementada conta com os seguintes módulos:
     * **Comentários** - registro de opiniões dos usuários sobre as trilhas apresentadas no sistema
     * **Pesquisa de Trilha** - lista de trilhas segundo filtro de busca do usuário
     * **Cadastro do Usuário** - Informações do usuário cadastrado no sistema
-* **Climatempo API** - plataforma que permite o acesso a informações da previsão do tempo
-* **Hospedagem** - local na Internet onde as páginas são mantidas e acessadas pelo navegador.
+* **Hospedagem** - local na Internet onde as páginas são mantidas e acessadas pelo navegador
+* **Climatempo API** - plataforma que permite o acesso a informações da previsão do tempo.
 
 ## Tecnologias Utilizadas
 
