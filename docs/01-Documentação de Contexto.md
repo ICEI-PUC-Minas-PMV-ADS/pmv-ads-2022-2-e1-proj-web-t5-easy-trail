@@ -41,5 +41,4 @@ A Easy Trail vem proporcionar aos ciclistas iniciantes, acesso as trilhas mitiga
 
 Para melhor entendimento do nosso público, realizamos pesquisas através de um formulário de cunho anônimo composto por 6 questões, direcionado para grupos de WhatsApp de ciclistas amigos/conhecidos dos integrantes deste grupo, visando entendimento do perfil em relação a idade, tempo de ciclismo, preferência de trilhas (urbanas ou rurais), o que mais aprecia no esporte, maiores desafios para realizar uma trilha e dificuldades para a encontrar uma trilha.
 
-Após os dados obtidos, definimos 5 personas principais que serão o alvo principal da nossa solução, que desejam realizar passeios de bicicleta e buscam previamente maiores informações sobre a trilha para poderem efetuar a melhor escolha frente a seu nível no ciclismo, sua condição física, idade, tempo disponível para a prática esportiva ou outros itens relevantes para a escolha de um percurso
-
+Após os dados obtidos, definimos 5 personas principais que serão o alvo principal da nossa solução, que desejam realizar passeios de bicicleta e buscam previamente maiores informações sobre a trilha para poderem efetuar a melhor escolha frente a seu nível no ciclismo, sua condição física, idade, tempo disponível para a prática esportiva ou outros itens relevantes para a escolha de um percurso.
