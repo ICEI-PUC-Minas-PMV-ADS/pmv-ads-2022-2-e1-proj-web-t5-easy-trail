@@ -8,7 +8,7 @@ Definição de como o software é estruturado em termos dos componentes que faze
 
 Diagrama que permite a modelagem física de um sistema, através da visão dos seus componentes e relacionamentos entre os mesmos. Os componentes que fazem parte da solução são apresentados na Figura abaixo.
 
-![Diagrama de Componentes](img/ArquiteturaSistema.jpg) <center>Arquitetura da Solução</center>
+![Diagrama de Componentes](img/ArquiteturaSistema.jpg)<center>Arquitetura da Solução</center>
 <br>
 
 A solução implementada conta com os seguintes módulos:
@@ -28,5 +28,4 @@ A solução implementada conta com os seguintes módulos:
 
 No projeto da Easy Trail, será utilizada tecnologias de ponto, no desenvolvimento do front end, será utilizado Java Script e HTML para confecção do código do software.
 
-A equipe de desenvolvimento usará o Microsoft Visual Studio para a confecção do código da solução e o github como repositório oficial para arquivo e controle de configuração e mudanças ocorridas no projeto durante a sua execução. 
-
+A equipe de desenvolvimento usará o Microsoft Visual Studio para a confecção do código da solução e o github como repositório oficial para arquivo e controle de configuração e mudanças ocorridas no projeto durante a sua execução.
