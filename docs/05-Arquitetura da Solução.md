@@ -25,6 +25,4 @@ A solução implementada conta com os seguintes módulos:
 
 ## Tecnologias Utilizadas
 
-No projeto da Easy Trail, será utilizada tecnologias de ponto, no desenvolvimento do front end, será utilizado Java Script e HTML para confecção do código do software.
-
-A equipe de desenvolvimento usará o Microsoft Visual Studio para a confecção do código da solução e o github como repositório oficial para arquivo e controle de configuração e mudanças ocorridas no projeto durante a sua execução.
+No projeto da Easy Trail, será utilizada tecnologias de ponto, no desenvolvimento do front end, será utilizado Java Script e HTML para confecção do código do software. A equipe de desenvolvimento usará o Microsoft Visual Studio para a confecção do código da solução e o github como repositório oficial para arquivo e controle de configuração e mudanças ocorridas no projeto durante a sua execução.
