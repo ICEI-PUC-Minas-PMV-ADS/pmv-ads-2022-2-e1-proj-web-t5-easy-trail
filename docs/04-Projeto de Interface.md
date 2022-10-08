@@ -13,6 +13,7 @@ Fluxo de usuário *(User Flow),* é uma técnica que permite ao desenvolvedor ma
 
 ![Exemplo de UserFlow](img/FluxoSistema.png)
 <center>Fluxo do Sistema</center>
+<br>
 
 ## Wireframes
 

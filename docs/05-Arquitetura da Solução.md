@@ -11,6 +11,7 @@ Diagrama que permite a modelagem física de um sistema, através da visão dos s
 ![Diagrama de Componentes](img/ArquiteturaSistema.jpg)
 <center>Arquitetura da Solução</center>
 
+<br>
 A solução implementada conta com os seguintes módulos:
 
 * **Navegador**: Interface básica do sistema
