@@ -75,10 +75,10 @@ A tabela a seguir apresenta os requisitos não funcionais que o projeto deverá 
 
 |ID       | Descrição do Requisito  |Prioridade |
 |---------|-------------------------|----|
-| RNF-001 |	O sistema deverá funcionar em ambiente WEB e deverá rodar nos navegadores com suporte para HTML5 e CSS3. | ALTA |
-| RNF-002 |	O sistema deve ser responsivo, ou seja, deve se adaptar aos diferentes tipos de tela e janelas.| ALTA |
-| RNF-003 |	O sistema será desenvolvido com as linguagens HTML, CSS e JavaScript.| ALTA |
-| RNF-004 |	O sistema deverá seguir as normas estabelecidas pela Legislação de privacidade do usuário.| ALTA |
+| RNF-01 |	O sistema deverá funcionar em ambiente WEB e deverá rodar nos navegadores com suporte para HTML5 e CSS3. | ALTA |
+| RNF-02 |	O sistema deve ser responsivo, ou seja, deve se adaptar aos diferentes tipos de tela e janelas.| ALTA |
+| RNF-03 |	O sistema será desenvolvido com as linguagens HTML, CSS e JavaScript.| ALTA |
+| RNF-04 |	O sistema deverá seguir as normas estabelecidas pela Legislação de privacidade do usuário.| ALTA |
 
 
 
