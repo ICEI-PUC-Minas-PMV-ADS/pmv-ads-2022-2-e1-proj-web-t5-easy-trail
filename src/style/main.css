@@ -8,6 +8,7 @@ html, body {
     height: 100%;
     font-size: 17px;
     background-color: #D9D9D9;
+    font-family: 'Calibri';
 }
 
 
@@ -63,7 +64,7 @@ header {
 
 .header-list li a .header-icon {
     height: 30px;
-    font: #74D269;
+    font: #d26969;
 }
 
 
@@ -86,9 +87,9 @@ header {
 }
 
 .barra-pesquisa-trail {
-    width: 1160px;
-    height: 110px;
-    background: white;
+    width: 1200px;
+    height: 150px;
+    background: rgb(252, 252, 252);
     border-radius: 9px;
 }
 .input-pesquisa-wrap {
@@ -109,6 +110,22 @@ header {
 }
 .pesquisa-input-list li {
     border-right: 2px solid black;
+}
+
+.pesquisa-input-item{
+    font-family: 'Calibri';
+    font-size: 20px;
+    color: #050200;
+}
+.formulario{
+background-color: rgb(255, 255, 255);
+}
+.xpto{
+background-color: #faf8f7;
+font-size: 20px;
+height: 38px;
+width: 213px;
+margin-right: 1rem;
 }
 
 .pesquisa-input-list li:nth-last-child(1) {
