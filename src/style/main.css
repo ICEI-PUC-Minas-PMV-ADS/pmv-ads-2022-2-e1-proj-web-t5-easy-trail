@@ -104,7 +104,6 @@ header {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-
     list-style-type: none;
     width: 100%;
 }
@@ -118,14 +117,24 @@ header {
     color: #050200;
 }
 .formulario{
-background-color: rgb(255, 255, 255);
+    font-family: 'Calibri';
+    font-size: 1px;
+    background-color: rgb(255, 255, 255);
 }
 .xpto{
-background-color: #faf8f7;
-font-size: 20px;
-height: 38px;
-width: 213px;
-margin-right: 1rem;
+    background-color: #faf8f7;
+    font-family: 'Calibri';
+    font-size: 20px;
+    height: 38px;
+    width: 213px;
+    margin-right: 1rem;
+}
+.pesquisa-input-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style-type: none;
 }
 
 .pesquisa-input-list li:nth-last-child(1) {
@@ -142,9 +151,11 @@ margin-right: 1rem;
     width: 168px !important;
     height: 60px !important;
     color: white;
+    font-family: 'Calibri';
+    font-size: 20px;
 
 
-    background-color: #EB5C0C;
+    background-color: #ff6004;
     border-radius: 90px;
     border: none;
     cursor: pointer;
