@@ -42,34 +42,32 @@
     </header>
 
     <section class="trails">
-        <div class="container">
+ 
             <div class="main-frame-trails">
-                <div class="slider-trilhas">
-                    <span class="dot-trilha-slider"></span>
-                    <span class="dot-trilha-slider"></span>
-                    <span class="dot-trilha-slider"></span>
-                    <span class="dot-trilha-slider"></span>
-                </div><!--SLIDER-TRILHAS-->
                 <div class="barra-pesquisa-trail">
-                    <div class="input-pesquisa-wrap">
-                        <ul class="pesquisa-input-list">
-                            <li class="pesquisa-input-row">
-                                <input type="search" name="" id="" class="pesquisa-input-item" placeholder="TESTE">
-                            </li>
-                            <li class="pesquisa-input-row">
-                                <input type="search" name="" id="" class="pesquisa-input-item">
-                            </li>
-                            <li class="pesquisa-input-row">
-                                <input type="search" name="" id="" class="pesquisa-input-item">
-                            </li>
-                            <li>
-                                <input type="submit" value="Explorar" class="pesquisar-input-btn">
-                            </li>
-                        </ul><!--PESQUISA-INPUT-->
-                    </div><!--INPUT-PESQUISA-WRAP-->
+                        <form action="" class="trailForm">
+                            <div class="location">
+                                <input type="text" name="" id="" class="locationInput inputSearchTrailItem" placeholder="Location">
+                            </div><!--LOCATION-INPUT-->
+                            <div class="levelSelection">
+                                <select name="level" id="" class="selectLevel inputSearchTrailItem">
+                                    <option value="" disabled selected>Level</option>
+                                    <option value="iniciante">Iniciante</option>
+                                    <option value="intermediario">Intermediario</option>
+                                    <option value="avancado">Avancado</option>
+                                </select>
+                            </div><!--LEVEL-SELECTION-->
+                            <div class="date">
+                                <input type="date" name="" id="" class="dateInput inputSearchTrailItem">
+                            </div><!--LOCATION-INPUT-->
+                            <div>
+                                <input type="submit" value="Explorar" class="trailSubmitBtn">
+                            </div>
+                        </form>
+
                 </div><!--BARRA-PESQUISA-TRAIL-->
             </div><!--MAIN-FRAME-TRAISLS-->
-        </div><!--CONTAINER-->
+
 
     </section>
 
