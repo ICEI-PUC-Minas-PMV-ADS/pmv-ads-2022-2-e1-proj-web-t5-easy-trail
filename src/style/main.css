@@ -44,9 +44,6 @@ header {
     padding: 10px;
 }
 
-
-
-
 .logo-container   {
     width: 102px;
     height: 102px;
@@ -62,6 +59,7 @@ header {
 .header-list {
     display: flex;
     flex-direction: row;
+    align-items: center;
     column-gap: 1.6rem;
 
     list-style-type: none;
@@ -72,13 +70,23 @@ header {
     font: #74D269;
 }
 
+.loginBtn {
+    width: 150px;
+    height: 50px;
 
+    border-radius: 20px;
+    border: 0;
+
+    background-color: #EB5C0C;
+    color: white;
+    cursor: pointer;
+
+
+    font-size: 20px;
+}
 /*==============*/
 /* MAIN SECTION */
 /*==============*/
-.trails {
-    border-bottom: 2px solid black;
-}
 .main-frame-trails {
     display: flex;
     align-items: center;
