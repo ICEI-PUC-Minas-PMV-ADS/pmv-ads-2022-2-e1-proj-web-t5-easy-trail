@@ -14,7 +14,6 @@ const selectAllElements = (name) => {
     return elements;
 }
 
-
 const trailFuncs = {
     cadastroDuvidas: () => {
         //ALL INPUTS TOGHETER
@@ -42,21 +41,17 @@ const trailFuncs = {
 
         return alert('Duvida enviada com sucesso!');
     },
-
     buscarTrilha: () => {
 
     },
-    
     maisTrilhas: () => {
         let trilhasBox = selectAllElements('.trilhas-box-geral');
 
         let trilhasBoxItems = selectAllElements('.trilhas-box-items');
 
-        console.log(trilhasBoxItems)
-
         if(trilhasBoxItems.length >= 2) {
             return;
-        }
+        };
 
         let content = `<div class="trilhas-box-items">
         <div class="trilha-item">
