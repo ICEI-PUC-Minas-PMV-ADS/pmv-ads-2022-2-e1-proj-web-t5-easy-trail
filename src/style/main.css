@@ -11,11 +11,9 @@ html, body {
     font-family: 'Calibri';
 }
 
-
 /* MAIN-CONTAINER */
 .container {
-    
-    align-items:center;
+    margin: 0 auto;
     width: 100%;
     max-width: 1400px;
 }
@@ -26,7 +24,6 @@ html, body {
 
 header {
     background-color:#F5F5F5;
-    border-bottom: 2px solid black;
 }
 
 .header-wrap {
@@ -70,18 +67,22 @@ header {
 /* MAIN SECTION */
 /*==============*/
 .trails {
-    border-bottom: 2px solid black;
+    background-image: url("../images/trailspage.jpg"); /* The image used */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
 }
 .main-frame-trails {
     display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-end;
  
     padding: 84px 101px ;
 
     width: 100%;
-    height: 914px;
+    height: 1100px;
+
 }
 
 .barra-pesquisa-trail {
@@ -239,28 +240,37 @@ header {
     background-color: #C4C4C4;
 }
 .trilhas-wraper {
-    height: 1028px;
+   padding: 3rem;
     
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
 }
-.trilhas-box {
+.trilhas-box-geral {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     column-gap: 1rem;
     text-justify: auto;
     align-items: auto;
 }
+.trilhas-box-items {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
 .trilha-item {
     padding: 1rem;
+    margin: 1rem 1rem;
     border-radius: 10px;
     height: 400px;
     width: 402px;
     cursor: pointer;
     background-color: white;
-
+    box-shadow: 0px 0px 9px 3px rgba(0,0,0,0.75);;
 
     display: flex;
     flex-direction: column;
@@ -299,30 +309,91 @@ header {
 .trilhas-recomendadas-title h1 {
     font-size: 50px;
     font-family: 'Calibri';
+    margin: 2rem;
+}
+
+.form-container {
+    width: 100%;
+
+    padding: 2rem;
 }
 
 .setup-form{
     width: 100%; /* Full width */
-    padding: 1px; /* Some padding */ 
+
+    padding: 1.3rem; /* Some padding */ 
+
     border: 0px #ccc; /* Gray border */
-    margin-top: 6px; /* Add a top margin */
-    margin-bottom: 7px; /* Bottom margin */
-    font-family: 'Calibri';
+
+    margin: 7px 0;
+   
+
     font-size: 16px;
-    color: black;
-  }
-  
-  
-  .buttom-form {
+
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.setup-form-nome,
+.setup-form-sobrenome,
+.setup-form-email {
+    width: 100%;
+    height: 3rem;
+    outline: none;
+    border: 0;
+    padding-left: 0.2rem;
+    margin: 0.5rem 0;
+}
+
+
+
+.setup-form label {
+    color: Black;
+    font-size: 20px;
+    margin-top: 0.5rem;
+}
+
+.txtAreaForm {
+    resize: none;
+    height: 300px;
+    margin-bottom: 1rem;
+}
+
+.btn-form-wraper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-titulo-wraper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-titulo-wraper > h1 {
+    font-size: 3rem;
+    font-style: italic;
+    font-weight: 100;
+}
+
+.buttom-form {
+    width: 300px;
+    height: 3.2rem;
     background-color:#EB5C0C;
-    font-family: 'Calibri';
-    font-size: 16px;
+
+    font-size: 22px;
     color: white;
     padding: 12px 20px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-  }
+}
   
   
   .buttom-form:hover {
@@ -335,10 +406,9 @@ header {
   }
 
 footer {
-    padding-top: 0px;
+    padding: 2rem;
     text-align: center;
     width: 100%;
-    height: 70px;
     background-color: white;
     font-family: 'Calibri';
     color: #767676;
