@@ -186,8 +186,29 @@ form.trailForm{
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
+
+    transition: 0.5s;
 }
 
+.trilha-item:hover{
+    background-color: rgba(0, 0, 0, 0.39);
+}
+.saibaMainWrap {
+    background-color: #EB5C0C;
+    height: 40px;
+    width: 80px;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+
+    position: relative;
+    top: 200px;
+
+    transition: 1s;
+
+}
 .icon-trilha-item {
     width: 100%;
     text-align: right;
