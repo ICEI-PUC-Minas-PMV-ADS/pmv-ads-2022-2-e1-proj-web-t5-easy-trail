@@ -5,16 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style/main.css">
-    <title>EasyTrail</title>
-    <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css">
-
-<!-- Optional Theme Stylesheet -->
-    <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.theme.min.css">
-    <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
-
-    <script>
-        new Glide('.glide').mount()
-    </script>
+    <link rel="shortcut icon" href="images/logoEasy.png" type="image"    
 </head>
 <body>
     <header>
@@ -22,7 +13,7 @@
             <nav class="header-wrap">
                 <div class="logo-container">
                     <a href="#">
-                    </a>
+                        <img src="images/logoEasy.png" width="120" alt="100"></a>
                 </div><!--LOGO-CONTAINER-->
                 <ul class="header-list">
                     <li class="header-list-row">
@@ -32,17 +23,7 @@
                     </li>
                     <li class="header-list-row">
                         <a href="#" class="header-list-link">
-                            <img src="images/icons/sino.svg" alt="" class="sino-icon header-icon">
-                        </a>
-                    </li>
-                    <li class="header-list-row">
-                        <a href="#" class="header-list-link">
-                            <img src="images/icons/perfil.svg" alt="" class="perfil-icon header-icon">
-                        </a>
-                    </li>
-                    <li class="header-list-row">
-                        <a href="#" class="header-list-link">
-                            <img src="images/icons/sair.svg" alt="" class="sair-icon header-icon">
+                            <a href="https://www.pucminas.br/main/Paginas/default.aspx"><button class="pesquisar-input-login">Login</button></a>
                         </a>
                     </li>
                 </ul><!--HEADER-LIST-->
@@ -63,16 +44,26 @@
                     <div class="input-pesquisa-wrap">
                         <ul class="pesquisa-input-list">
                             <li class="pesquisa-input-row">
-                                <input type="search" name="" id="" class="pesquisa-input-item">
+                                <input type="search" placeholder="Destino.."  class="pesquisa-input-item">
                             </li>
                             <li class="pesquisa-input-row">
-                                <input type="search" name="" id="" class="pesquisa-input-item">
+                                <form class="formulario">
+                                    <label for="Dificuldade da Trilha"></label>
+                                    <select class="xpto">
+                                      <option value=""enabled>Dificuldade</option>
+                                      <option value="Alto">Alto</option>
+                                      <option value="Médio">Médio</option>
+                                      <option value="Baixo">Baixo</option>
+                                    </select>
+                                    <br><br>
+                                  </form>
                             </li>
                             <li class="pesquisa-input-row">
-                                <input type="search" name="" id="" class="pesquisa-input-item">
+                                <input type="date" class="pesquisa-input-item">
                             </li>
                             <li>
-                                <input type="submit" value="Explorar" class="pesquisar-input-btn">
+                                <a href="https://www.pucminas.br/main/Paginas/default.aspx"><button class="pesquisar-input-btn">Explorar</button>
+                                </a>
                             </li>
                         </ul><!--PESQUISA-INPUT-->
                     </div><!--INPUT-PESQUISA-WRAP-->
@@ -91,12 +82,26 @@
                 <div class="trilhas-box">
                     <div class="trilha-item">
                         <div class="icon-trilha-item">
+                            <a href="https://www.pucminas.br/main/Paginas/default.aspx"><button class="pesquisar-input-explorar">Saiba Mais</button></a>
+                            <button onclick="compartilhaBotao()" class="botoes-outline"><img src="images/icons/compartilhar.png" alt="" class="comp-trilha"></button>
+                        </div>
+                        <div class="trilhas-text">
+                            <h2 class="titulo-trilha">Pata da Vaca</h2>
+                            <p class="desc-trilha">
+                                Saída da antiga estação ferroviária, bairro São Luiz, Fazenda São José, Sapucaí novo e Sapucaí velho, Eleutério, Barão Ataliba Nogueira, Fazenda Malheiros, Fazenda da Mata, Fazenda Bom Café e Chácara Primavera, antigo Sítio Floresta. Os quase 65 km de estradas ajudam a contar a história recente de nosso país quando tropas federalistas e paulistas travaram o maior combate armado da história nacional.
+                            </p>
+                        </div>
+                        <div class="icon-trilha-item">
+                            <button onclick="salvarTrilha()" class="botoes-outline"><img src="images/icons/Vector.svg" alt="" class="save-trilha"></button>
+                        </div>
+                    </div>
+                    <div class="trilha-item">
+                        <div class="icon-trilha-item">
+                            <a href="https://www.pucminas.br/main/Paginas/default.aspx"><button class="pesquisar-input-explorar">Saiba Mais</button></a>
                             <img src="images/icons/compartilhar.png" alt="" class="comp-trilha">
                         </div>
-                       
-                        
                         <div class="trilhas-text">
-                            <h2 class="titulo-trilha">Titulo trilha</h2>
+                            <h2 class="titulo-trilha">Laranjeiras</h2>
                             <p class="desc-trilha">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quae pariatur beatae minima, adipisci laudantium obcaecati fugit culpa impedit ut est voluptatibus dolorum modi sint soluta aliquid quaerat accusantium nostrum!
                             </p>
@@ -107,28 +112,13 @@
                     </div>
                     <div class="trilha-item">
                         <div class="icon-trilha-item">
+                            <a href="https://www.pucminas.br/main/Paginas/default.aspx"><button class="pesquisar-input-explorar">Saiba Mais</button></a>
                             <img src="images/icons/compartilhar.png" alt="" class="comp-trilha">
                         </div>
                        
                         
                         <div class="trilhas-text">
-                            <h2 class="titulo-trilha">Titulo trilha</h2>
-                            <p class="desc-trilha">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quae pariatur beatae minima, adipisci laudantium obcaecati fugit culpa impedit ut est voluptatibus dolorum modi sint soluta aliquid quaerat accusantium nostrum!
-                            </p>
-                        </div>
-                        <div class="icon-trilha-item">
-                            <img src="images/icons/Vector.svg" alt="" class="save-trilha">
-                        </div>
-                    </div>
-                    <div class="trilha-item">
-                        <div class="icon-trilha-item">
-                            <img src="images/icons/compartilhar.png" alt="" class="comp-trilha">
-                        </div>
-                       
-                        
-                        <div class="trilhas-text">
-                            <h2 class="titulo-trilha">Titulo trilha</h2>
+                            <h2 class="titulo-trilha">Mirante das Goiabeiras</h2>
                             <p class="desc-trilha">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quae pariatur beatae minima, adipisci laudantium obcaecati fugit culpa impedit ut est voluptatibus dolorum modi sint soluta aliquid quaerat accusantium nostrum!
                             </p>
@@ -139,16 +129,37 @@
                     </div>
                 </div><!--TRILHAS-BOX-->
                 <div class="mais-trilhas-btn">
-                    <input type="submit" value="Mais trilhas" class="mais-trilhas-btn-element">
+
+                    <a href="https://www.pucminas.br/main/Paginas/default.aspx"><button class="mais-trilhas-btn-element ">Mais Trilhas</button>
+                    </a>
                 </div>
-            </div><!--TRILHAS-WRAPER-->
-        </div><!--CONTAINER-->>
-    </section>  
+            </div><!--CONTAINER-->
+       </div>
+    </section>
+    <section>
+        <div class="container-form">
+            <form class="setup-form">
+            <label class="setup-form">Nome</label>
+            <input type="text" class="setup-form" placeholder="Meu nome..">          
+            <label class="setup-form">Comentário</label>
+            <textarea class="setup-form" name="subject" placeholder="Escreva seu comentário.." style="height:100px"></textarea>
+            <input type="submit" class="buttom-form" value="Submit">
+        </form>
+      </div>
+    </section>
 
     <footer>
         <div class="container">
-
+            <p>Direitos reservados a Pucminas. COPYRIGHT &copy 2022.</p>
+        </div>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <!-- Add font awesome icons -->
+        <div class=".fa-facebook">
+               <a href="https://www.facebook.com" class="fa fa-facebook"></a>
+                <a href="https://www.twitter.com" class="fa fa-twitter"></a>
+            </div>
         </div><!--CONTAINER-->
     </footer>
+    <script src="/src/script/script.js"></script>
 </body>
 </html>
