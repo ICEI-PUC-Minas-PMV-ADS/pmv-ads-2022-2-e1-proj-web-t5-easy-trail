@@ -272,6 +272,13 @@ header {
     text-align: right;
 }
 
+.botoes-outline {
+    outline: none;
+    border: none;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
 .mais-trilhas-btn-element {
     font-size: 24px;
     color: white;
