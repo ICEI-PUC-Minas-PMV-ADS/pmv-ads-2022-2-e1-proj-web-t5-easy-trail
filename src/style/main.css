@@ -14,10 +14,10 @@ html, body {
 
 /* MAIN-CONTAINER */
 .container {
+    
+    align-items:center;
     width: 100%;
     max-width: 1400px;
-
-    margin: 0 auto;
 }
 
 /*================*/
@@ -37,7 +37,6 @@ header {
     height: 120px;
     padding: 10px;
 }
-
 
 
 
@@ -154,8 +153,6 @@ header {
     color: white;
     font-family: 'Calibri';
     font-size: 20px;
-
-
     background-color: #ff6004;
     border-radius: 90px;
     border: none;
@@ -173,13 +170,17 @@ header {
     border-radius: 70px;
     border: none;
     cursor: pointer;
-    
     justify-content: space-between;
     align-items: left;
     width: 20%;
     height: 20px;
     padding: 0px;
 }
+
+.pesquisar-input-btn:hover  {
+    opacity: 0.7;
+}
+
 
 .pesquisar-input-login{
     width: 148px !important;
@@ -278,10 +279,14 @@ header {
     width: 260px;
     height: 63px;
     border-radius: 90px;
-
     background: #EB5C0C;
     border: 1px solid #EB5C0C;
     transition: 0.5;
+    cursor: pointer;
+}
+
+.mais-trilhas-btn-element:hover{
+    background-color: rgb(136, 66, 0);
 }
 
 .trilhas-recomendadas-title h1 {
@@ -289,12 +294,71 @@ header {
     font-family: 'Calibri';
 }
 
+.setup-form{
+    width: 100%; /* Full width */
+    padding: 1px; /* Some padding */ 
+    border: 0px #ccc; /* Gray border */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 7px; /* Bottom margin */
+    font-family: 'Calibri';
+    font-size: 16px;
+    color: black;
+  }
+  
+  
+  .buttom-form {
+    background-color:#EB5C0C;
+    font-family: 'Calibri';
+    font-size: 16px;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  
+  .buttom-form:hover {
+    background-color: rgb(136, 66, 0);
+  }
+  
+    .container-form {
+    background-color: whitesmoke;
+    padding: 2px;
+  }
+
 footer {
-    padding-top: 10px;
+    padding-top: 0px;
     text-align: center;
     width: 100%;
-    height: 50px;
-    background-color: #1E1E1E;
+    height: 70px;
+    background-color;white;
     font-family: 'Calibri';
     color: #767676;
 }
+
+/* Style all font awesome icons */
+.fa {
+    margin-top: 2%;
+    padding: 15px;
+    font-size: 30px;
+    width: 50px;
+    text-decoration: none;
+  }
+  
+  /* Add a hover effect if you want */
+  .fa:hover {
+    opacity: 0.7;
+  }
+   
+  /* Facebook */
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  
+  /* Twitter */
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
