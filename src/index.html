@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Easy Trail</title>
     <link rel="stylesheet" href="./style/main.css">
-    <link rel="shortcut icon" href="images/logoEasy.png" type="image"    
-</head>
+    <link rel="shortcut icon" href="images/logoEasy.png" type="image" </head>
+
 <body>
     <header>
         <div class="container">
@@ -15,7 +16,8 @@
                 <div class="logo-container">
                     <a href="#">
                         <img src="images/logoEasy.png" width="120" alt="100"></a>
-                </div><!--LOGO-CONTAINER-->
+                </div>
+                <!--LOGO-CONTAINER-->
                 <ul class="header-list">
                     <li class="header-list-row">
                         <a href="#" class="header-list-link">
@@ -24,12 +26,16 @@
                     </li>
                     <li class="header-list-row">
                         <a href="#" class="header-list-link">
-                            <a href="https://www.pucminas.br/main/Paginas/default.aspx"><button class="pesquisar-input-login">Login</button></a>
+                            <a href="https://www.pucminas.br/main/Paginas/default.aspx"><button
+                                    class="pesquisar-input-login">Login</button></a>
                         </a>
                     </li>
-                </ul><!--HEADER-LIST-->
-            </nav><!--HEADER-WRAP-->
-        </div><!--CONTAINER-->
+                </ul>
+                <!--HEADER-LIST-->
+            </nav>
+            <!--HEADER-WRAP-->
+        </div>
+        <!--CONTAINER-->
     </header>
 
     <section class="trails">
@@ -45,32 +51,39 @@
                     <div class="input-pesquisa-wrap">
                         <ul class="pesquisa-input-list">
                             <li class="pesquisa-input-row">
-                                <input type="search" placeholder="Destino.."  class="pesquisa-input-item">
+                                <label>Cidade</label>
+                                <input type="search" placeholder="Destino.." class="pesquisa-input-item">
                             </li>
                             <li class="pesquisa-input-row">
+                                <label>Dificuldade</label>
                                 <form class="formulario">
-                                    <label for="Dificuldade da Trilha"></label>
                                     <select class="xpto">
-                                      <option value=""enabled>Dificuldade</option>
-                                      <option value="Alto">Alto</option>
-                                      <option value="Médio">Médio</option>
-                                      <option value="Baixo">Baixo</option>
+                                        <option value="Escolha" enable>-</option>
+                                        <option value="Alto">Alto</option>
+                                        <option value="Médio">Médio</option>
+                                        <option value="Baixo">Baixo</option>
                                     </select>
-                                    <br><br>
-                                  </form>
+                                </form>
                             </li>
                             <li class="pesquisa-input-row">
+                                <label>Data</label>
                                 <input type="date" class="pesquisa-input-item">
                             </li>
                             <li>
-                                <a href="https://www.pucminas.br/main/Paginas/default.aspx"><button class="pesquisar-input-btn">Explorar</button>
+                                <a href="https://www.pucminas.br/main/Paginas/default.aspx"><button
+                                        class="pesquisar-input-btn">Explorar</button>
                                 </a>
                             </li>
-                        </ul><!--PESQUISA-INPUT-->
-                    </div><!--INPUT-PESQUISA-WRAP-->
-                </div><!--BARRA-PESQUISA-TRAIL-->
-            </div><!--MAIN-FRAME-TRAISLS-->
-        </div><!--CONTAINER-->
+                        </ul>
+                        <!--PESQUISA-INPUT-->
+                    </div>
+                    <!--INPUT-PESQUISA-WRAP-->
+                </div>
+                <!--BARRA-PESQUISA-TRAIL-->
+            </div>
+            <!--MAIN-FRAME-TRAISLS-->
+        </div>
+        <!--CONTAINER-->
 
     </section>
 
@@ -84,28 +97,38 @@
                     <div class="trilhas-box-items">
                         <div class="trilha-item">
                             <div class="icon-trilha-item">
-                                <a href="https://www.pucminas.br/main/Paginas/default.aspx"><button class="pesquisar-input-explorar">Saiba Mais</button></a>
-                                <button onclick="compartilhaBotao()" class="botoes-outline"><img src="images/icons/compartilhar.png" alt="" class="comp-trilha"></button>
+                                <a href="https://www.pucminas.br/main/Paginas/default.aspx"><button
+                                        class="pesquisar-input-explorar">Saiba Mais</button></a>
+                                <button onclick="compartilhaBotao()" class="botoes-outline"><img
+                                        src="images/icons/compartilhar.png" alt="" class="comp-trilha"></button>
                             </div>
                             <div class="trilhas-text">
                                 <h2 class="titulo-trilha">Pata da Vaca</h2>
                                 <p class="desc-trilha">
-                                    Saída da antiga estação ferroviária, bairro São Luiz, Fazenda São José, Sapucaí novo e Sapucaí velho, Eleutério, Barão Ataliba Nogueira, Fazenda Malheiros, Fazenda da Mata, Fazenda Bom Café e Chácara Primavera, antigo Sítio Floresta. Os quase 65 km de estradas ajudam a contar a história recente de nosso país quando tropas federalistas e paulistas travaram o maior combate armado da história nacional.
+                                    Saída da antiga estação ferroviária, bairro São Luiz, Fazenda São José, Sapucaí novo
+                                    e Sapucaí velho, Eleutério, Barão Ataliba Nogueira, Fazenda Malheiros, Fazenda da
+                                    Mata, Fazenda Bom Café e Chácara Primavera, antigo Sítio Floresta. Os quase 65 km de
+                                    estradas ajudam a contar a história recente de nosso país quando tropas federalistas
+                                    e paulistas travaram o maior combate armado da história nacional.
                                 </p>
                             </div>
                             <div class="icon-trilha-item">
-                                <button onclick="salvarTrilha()" class="botoes-outline"><img src="images/icons/Vector.svg" alt="" class="save-trilha"></button>
+                                <button onclick="salvarTrilha()" class="botoes-outline"><img
+                                        src="images/icons/Vector.svg" alt="" class="save-trilha"></button>
                             </div>
                         </div>
                         <div class="trilha-item">
                             <div class="icon-trilha-item">
-                                <a href="https://www.pucminas.br/main/Paginas/default.aspx"><button class="pesquisar-input-explorar">Saiba Mais</button></a>
+                                <a href="https://www.pucminas.br/main/Paginas/default.aspx"><button
+                                        class="pesquisar-input-explorar">Saiba Mais</button></a>
                                 <img src="images/icons/compartilhar.png" alt="" class="comp-trilha">
                             </div>
                             <div class="trilhas-text">
                                 <h2 class="titulo-trilha">Laranjeiras</h2>
                                 <p class="desc-trilha">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quae pariatur beatae minima, adipisci laudantium obcaecati fugit culpa impedit ut est voluptatibus dolorum modi sint soluta aliquid quaerat accusantium nostrum!
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quae pariatur
+                                    beatae minima, adipisci laudantium obcaecati fugit culpa impedit ut est voluptatibus
+                                    dolorum modi sint soluta aliquid quaerat accusantium nostrum!
                                 </p>
                             </div>
                             <div class="icon-trilha-item">
@@ -114,71 +137,76 @@
                         </div>
                         <div class="trilha-item">
                             <div class="icon-trilha-item">
-                                <a href="https://www.pucminas.br/main/Paginas/default.aspx"><button class="pesquisar-input-explorar">Saiba Mais</button></a>
+                                <a href="https://www.pucminas.br/main/Paginas/default.aspx"><button
+                                        class="pesquisar-input-explorar">Saiba Mais</button></a>
                                 <img src="images/icons/compartilhar.png" alt="" class="comp-trilha">
                             </div>
-                        
-                            
+
+
                             <div class="trilhas-text">
                                 <h2 class="titulo-trilha">Mirante das Goiabeiras</h2>
                                 <p class="desc-trilha">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quae pariatur beatae minima, adipisci laudantium obcaecati fugit culpa impedit ut est voluptatibus dolorum modi sint soluta aliquid quaerat accusantium nostrum!
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quae pariatur
+                                    beatae minima, adipisci laudantium obcaecati fugit culpa impedit ut est voluptatibus
+                                    dolorum modi sint soluta aliquid quaerat accusantium nostrum!
                                 </p>
                             </div>
                             <div class="icon-trilha-item">
                                 <img src="images/icons/Vector.svg" alt="" class="save-trilha">
                             </div>
                         </div>
+                    </div>
                 </div>
-                </div><!--TRILHAS-BOX-->
+                <!--TRILHAS-BOX-->
                 <div class="mais-trilhas-btn">
                     <button class="mais-trilhas-btn-element" onclick="trailFuncs.maisTrilhas()">Mais Trilhas</button>
                 </div>
-            </div><!--CONTAINER-->
-       </div>
+            </div>
+            <!--CONTAINER-->
+        </div>
     </section>
 
     <section class="form-container">
-        <div class="container">
             <div class="container-form">
                 <form class="setup-form">
                     <thead>
                         <div class="form-titulo-wraper">
-                            <h1>Cadastre aqui sua Duvida</h1>
+                            <h1>Cadastre aqui sua dúvida</h1>
                         </div>
                     </thead>
                     <tbody>
                         <label>Nome:</label>
-                        <input type="text" class="setup-form-nome form-input" placeholder="Meu nome..">   
-                        <label>Sobrenome:</label>
-                        <input type="text" class="setup-form-sobrenome form-input" placeholder="Meu sobrenome.."> 
+                        <input type="text" class="setup-form-nome form-input" placeholder="Meu nome..">
                         <label>Email</label>
-                        <input type="email" class="setup-form-email form-input" placeholder="Meu email..">        
+                        <input type="email" class="setup-form-email form-input" placeholder="Meu email..">
                         <label>Comentário:</label>
-                        <textarea class="setup-form txtAreaForm form-input" name="subject" placeholder="Escreva seu comentário.."></textarea>
+                        <textarea class="setup-form txtAreaForm form-input" name="subject"
+                            placeholder="Escreva seu comentário.."></textarea>
                     </tbody>
                     <tfoot>
                         <div class="btn-form-wraper">
-                            <button onclick="trailFuncs.cadastroDuvidas()" class="buttom-form">Submit</button>
+                            <button onclick="trailFuncs.cadastroDuvidas()" class="buttom-form">Enviar</button>
                         </div>
                     </tfoot>
                 </form>
-            </div>
-        </div><!--CONTAINER-->
+            </div> <!--CONTAINER-->
     </section>
 
     <footer>
         <div class="container">
             <p>Direitos reservados a Pucminas. COPYRIGHT &copy 2022.</p>
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet"
+                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
             <!-- Add font awesome icons -->
             <!-- <div class=".fa-facebook"> -->
-                <a href="https://www.facebook.com" class="fa fa-facebook"></a>
-                <a href="https://www.twitter.com" class="fa fa-twitter"></a>
+            <a href="https://www.facebook.com" class="fa fa-facebook"></a>
+            <a href="https://www.twitter.com" class="fa fa-twitter"></a>
             <!-- </div> -->
-        </div><!--CONTAINER-->
+        </div>
+        <!--CONTAINER-->
     </footer>
-    
+
     <script src="script/main.js"></script>
 </body>
+
 </html>
