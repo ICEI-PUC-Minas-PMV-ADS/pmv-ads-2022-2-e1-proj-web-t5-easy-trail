@@ -4,7 +4,8 @@
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     height: 100%;
     font-size: 17px;
     background-color: #D9D9D9;
@@ -23,7 +24,7 @@ html, body {
 /*================*/
 
 header {
-    background-color:#F5F5F5;
+    background-color: #F5F5F5;
 }
 
 .header-wrap {
@@ -37,13 +38,13 @@ header {
 
 
 
-.logo-container   {
+.logo-container {
     width: 102px;
     height: 102px;
     border-radius: 102px;
     /* background-color: black; */
-    
-    background-position: center; 
+
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -67,21 +68,24 @@ header {
 /* MAIN SECTION */
 /*==============*/
 .trails {
-    background-image: url("../images/trailspage.jpg"); /* The image used */
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: cover; /* Resize the background image to cover the entire container */
+    background-image: url("../images/trailspage.jpg");
+    /* The image used */
+    background-position: center;
+    /* Center the image */
+    background-repeat: no-repeat;
+    /* Do not repeat the image */
+    background-size: cover;
+    /* Resize the background image to cover the entire container */
 }
+
 .main-frame-trails {
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: flex-end;
- 
-    padding: 84px 101px ;
-
+    padding: 84px 101px;
     width: 100%;
-    height: 1100px;
+    height: 700px;
 
 }
 
@@ -91,6 +95,7 @@ header {
     background: rgb(252, 252, 252);
     border-radius: 9px;
 }
+
 .input-pesquisa-wrap {
     height: 100%;
     width: 100%;
@@ -98,7 +103,9 @@ header {
     align-items: center;
     justify-content: center;
 }
- .pesquisa-input-list {
+
+
+.pesquisa-input-list {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -106,23 +113,28 @@ header {
     list-style-type: none;
     width: 100%;
 }
+
 .pesquisa-input-list li {
     border-right: 1px solid black;
 }
 
-.pesquisa-input-item{
+.pesquisa-input-item {
     font-family: 'Calibri';
     font-size: 20px;
     color: #050200;
+
 }
-.formulario{
+
+.formulario {
     font-family: 'Calibri';
     font-size: 0px;
     height: 38px;
     width: 230px;
+    margin-right: 1rem;
     background-color: rgb(255, 255, 255);
 }
-.xpto{
+
+.xpto {
     background-color: #faf8f7;
     font-family: 'Calibri';
     font-size: 20px;
@@ -130,7 +142,9 @@ header {
     width: 213px;
     margin-right: 1rem;
 }
-.pesquisa-input-row{
+
+
+.pesquisa-input-row {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -148,7 +162,15 @@ header {
     margin-right: 1rem;
 }
 
-.pesquisar-input-btn  {
+.pesquisa-input-list li label {
+    padding-bottom: 20%;
+    margin-right: 1rem;
+    font-weight: 900;
+    color: gr;
+}
+
+
+.pesquisar-input-btn {
     width: 148px !important;
     height: 45px !important;
     color: white;
@@ -160,7 +182,7 @@ header {
     cursor: pointer;
 }
 
-.pesquisar-input-explorar{
+.pesquisar-input-explorar {
     width: 108px !important;
     height: 30px !important;
     color: white;
@@ -178,12 +200,12 @@ header {
     padding: 0px;
 }
 
-.pesquisar-input-btn:hover  {
+.pesquisar-input-btn:hover {
     opacity: 0.7;
 }
 
 
-.pesquisar-input-login{
+.pesquisar-input-login {
     width: 148px !important;
     height: 45px !important;
     color: white;
@@ -194,7 +216,7 @@ header {
     border-radius: 70px;
     border: none;
     cursor: pointer;
-    
+
     justify-content: space-between;
     align-items: left;
     width: 20%;
@@ -208,11 +230,11 @@ header {
     margin-bottom: 1rem;
 
     background-image: url('../images/bike-g48a56f32c_1920.jpg');
-    background-position: center; 
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 
-    display: flex;  
+    display: flex;
     flex-direction: row;
     align-items: flex-end;
     justify-content: center;
@@ -237,16 +259,18 @@ header {
 /* TRILHA BOX */
 /*==============*/
 .trilhas-recomendadas {
-    background-color: #C4C4C4;
+    background-color: #D9D9D9;;
 }
+
 .trilhas-wraper {
-   padding: 3rem;
-    
+    padding: 3rem;
+
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
 }
+
 .trilhas-box-geral {
     display: flex;
     flex-direction: column;
@@ -254,6 +278,7 @@ header {
     text-justify: auto;
     align-items: auto;
 }
+
 .trilhas-box-items {
     width: 100%;
     display: flex;
@@ -270,7 +295,8 @@ header {
     width: 402px;
     cursor: pointer;
     background-color: white;
-    box-shadow: 0px 0px 9px 3px rgba(0,0,0,0.75);;
+    box-shadow: 0px 0px 9px 3px rgba(0, 0, 0, 0.75);
+    ;
 
     display: flex;
     flex-direction: column;
@@ -302,7 +328,7 @@ header {
     cursor: pointer;
 }
 
-.mais-trilhas-btn-element:hover{
+.mais-trilhas-btn-element:hover {
     background-color: rgb(136, 66, 0);
 }
 
@@ -313,24 +339,22 @@ header {
 }
 
 .form-container {
-    width: 100%;
-
-    padding: 2rem;
+    width: 70%;
+    align-items: center;
+    margin-inline: 15%;
+    background-color: whitesmoke;;
+    padding: 1rem;
 }
 
-.setup-form{
-    width: 100%; /* Full width */
-
-    padding: 1.3rem; /* Some padding */ 
-
-    border: 0px #ccc; /* Gray border */
-
-    margin: 7px 0;
-   
-
+.setup-form {
+    width: 73%;
+    /* Full width */
+    padding: 1.3rem;
+    /* Some padding */
+    border: 0px #ccc;
+    /* Gray border */
+    margin: 10px 10%;
     font-size: 16px;
-
-
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -338,28 +362,35 @@ header {
 }
 
 .setup-form-nome,
-.setup-form-sobrenome,
 .setup-form-email {
-    width: 100%;
+    width: 110%;
+    align-items: LEFT;
     height: 3rem;
     outline: none;
     border: 0;
     padding-left: 0.2rem;
-    margin: 0.5rem 0;
+    margin: 15px 0;
+    font-family: 'segoe UI';
+    font-size: 16px;
+    color: red;
 }
 
-
-
 .setup-form label {
-    color: Black;
-    font-size: 20px;
+    er font-size: 20px;
     margin-top: 0.5rem;
 }
 
 .txtAreaForm {
-    resize: none;
-    height: 300px;
-    margin-bottom: 1rem;
+    align-items: center;
+    width: 110%;
+    height: 7rem;
+    outline: none;
+    border: 0;
+    padding-left: 0.2rem;
+    margin: 15px 0;
+    font-family: 'segoe UI';
+    font-size: 16px;
+    color: red;
 }
 
 .btn-form-wraper {
@@ -374,36 +405,37 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: 'Calibri';
 }
 
-.form-titulo-wraper > h1 {
-    font-size: 3rem;
-    font-style: italic;
-    font-weight: 100;
+.form-titulo-wraper>h1 {
+    font-size: 2rem;
+    font-family: 'Calibri';
+    font-weight: 500;
 }
 
 .buttom-form {
     width: 300px;
     height: 3.2rem;
-    background-color:#EB5C0C;
+    background-color: #EB5C0C;
 
     font-size: 22px;
     color: white;
     padding: 12px 20px;
     border: none;
-    border-radius: 4px;
+    border-radius: 90px;
     cursor: pointer;
 }
-  
-  
-  .buttom-form:hover {
+
+
+.buttom-form:hover {
     background-color: rgb(136, 66, 0);
-  }
-  
-    .container-form {
-    background-color: whitesmoke;
-    padding: 2px;
-  }
+}
+
+.container-form {
+    width: 100%;
+    padding: 15px;
+}
 
 footer {
     padding: 2rem;
@@ -421,21 +453,21 @@ footer {
     font-size: 30px;
     width: 50px;
     text-decoration: none;
-  }
-  
-  /* Add a hover effect if you want */
-  .fa:hover {
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
     opacity: 0.7;
-  }
-   
-  /* Facebook */
-  .fa-facebook {
+}
+
+/* Facebook */
+.fa-facebook {
     background: #3B5998;
     color: white;
-  }
-  
-  /* Twitter */
-  .fa-twitter {
+}
+
+/* Twitter */
+.fa-twitter {
     background: #55ACEE;
     color: white;
-  }
+}
