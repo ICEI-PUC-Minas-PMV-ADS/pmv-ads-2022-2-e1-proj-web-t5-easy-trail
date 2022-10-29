@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Easy Trail</title>
+    <link rel="stylesheet"
+    href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="./style/main.css">
     <link rel="shortcut icon" href="images/logoEasy.png" type="image"    
 </head>
@@ -23,14 +25,52 @@
                         </a>
                     </li>
                     <li class="header-list-row">
-                        <a href="./pesquisaBody.html" class="header-list-link">
-                           <button class="pesquisar-input-login">Login</button>
+                        <a href="#" class="header-list-link">
+                            <a href="https://www.pucminas.br/main/Paginas/default.aspx"><button class="pesquisar-input-login">Login</button></a>
                         </a>
                     </li>
                 </ul><!--HEADER-LIST-->
             </nav><!--HEADER-WRAP-->
         </div><!--CONTAINER-->
     </header>
+
+    <section class="slide-trilhas">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                    <div class="project-img">
+                        <img src="images/MicrosoftTeams-image.png" alt="Foto de um site">
+                    </div>
+                    <div class="project-info">
+                        <p>“Comemore os seus sucessos. Veja com humor os seus fracassos” – Sam Walton</p>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="project-img">
+                        <img src="images/MicrosoftTeams-image (1).png" alt="Foto de uma tela de login">
+                    </div>
+                    <div class="project-info">
+                        <p>“Existe o risco que você jamais pode correr. Existe o risco que você jamais pode deixar de correr” – Peter Drucker</p>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="project-img">
+                        <img src="images/MicrosoftTeams-image (2).png" alt="Foto de um site">
+                    </div>
+                    <div class="project-info">
+                        <p>“A confiança em si mesmo é o primeiro segredo do sucesso” – Ralph Waldo Emerson</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
 
     <section class="trails">
         <div class="container">
@@ -173,6 +213,9 @@
         </div><!--CONTAINER-->
     </footer>
     
-    <script src="script/main.js" type="module"></script>
+    <script src="script/main.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="script/carrossel.js"></script>
+
 </body>
 </html>
