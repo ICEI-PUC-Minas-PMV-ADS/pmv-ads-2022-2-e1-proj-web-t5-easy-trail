@@ -68,14 +68,9 @@ header {
 /* MAIN SECTION */
 /*==============*/
 .trails {
-    background-image: url("../images/trailspage.jpg");
-    /* The image used */
-    background-position: center;
-    /* Center the image */
-    background-repeat: no-repeat;
-    /* Do not repeat the image */
-    background-size: cover;
-    /* Resize the background image to cover the entire container */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container *
 }
 
 .main-frame-trails {
@@ -85,8 +80,7 @@ header {
     justify-content: flex-end;
     padding: 84px 101px;
     width: 100%;
-    height: 700px;
-
+    height: 250px;
 }
 
 .barra-pesquisa-trail {
@@ -228,9 +222,7 @@ header {
     height: 800px;
     width: 1160px;
     margin-bottom: 1rem;
-
-    background-image: url('../images/bike-g48a56f32c_1920.jpg');
-    background-position: center;
+    background-position: center; 
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -470,4 +462,56 @@ footer {
 .fa-twitter {
     background: #55ACEE;
     color: white;
+  }
+
+  /* PROJECTS */
+
+section#projects {
+    height: 500px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+
+.project-img{
+    width: 60%;
+}
+
+.project-img img{
+    box-shadow: 0 1px 2px #0003;
+    object-fit: cover;
+    width: 80%;
+}
+
+.project-info {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    font-weight: 800;
+}
+
+.swiper {
+    width: 95vw;
+    height: 500px;
+}
+
+.swiper-slide{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 30px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: rgb(39, 39, 164);
+}
+
+.swiper-pagination-bullet-active {
+    background-color: rgb(48, 48, 220);
 }

@@ -105,5 +105,36 @@ const trailFuncs = {
         trilhasBox[0].innerHTML += content;
         
         return;
+    },
+    cadastroTrilha: () => {
+        const trilhaNome = selectElement('#trilha_nome');
+        const trilhaLocal = selectElement('#trilha_local');
+        const trilhaDescricao = selectElement('#trilha_descricao');
+        const trilhaAltimetria = selectElement('#trilha_altimetria');
+        const trilhaDuracao = selectElement('#trilha_duracao');
+
+        this.event.preventDefault();
+
+        if(!trilhaNome.value && !trilhaLocal.value && !trilhaDescricao.value && !trilhaAltimetria.value && !trilhaDuracao.value ) {
+            alert("Preencha todos os campos!");
+            return
+        }
+
+        const trilhaObj = {
+            nome: trilhaNome.value,
+            local: trilhaLocal.value,
+            descricao: trilhaDescricao.value,
+            altimetria: trilhaAltimetria.value,
+            trilha_duracao: trilhaDuracao.value,
+        };
+
+        window.localStorage.setItem('trilha', JSON.stringify(trilhaObj));
+
+        return;
     }
 }
+
+
+import fs from ('fs');
+
+console.log(fs);
