@@ -15,6 +15,11 @@
     #more3 {display: none;}
     </style>
 
+    <link rel="shortcut icon" href="images/logoEasy.png" type="image">
+    <!-- Font Awesome leobuck -->
+    <script src="https://kit.fontawesome.com/77bf635d25.js" crossorigin="anonymous"></script>
+</head>
+
 <body>
     <header>
         <div class="container">
@@ -50,7 +55,8 @@
 
                 <div class="swiper-slide">
                     <div class="project-img">
-                        <img src="images/bike-g48a56f32c_1920.jpg" alt="Foto de um site">
+                        <img src="images/carrosel1.png" alt="Foto de um site">
+
                     </div>
                     <div class="project-info">
                         <p>“Comemore os seus sucessos. Veja com humor os seus fracassos” – Sam Walton</p>
@@ -59,7 +65,7 @@
 
                 <div class="swiper-slide">
                     <div class="project-img">
-                        <img src="images/MicrosoftTeams-image (1).png" alt="Foto de uma tela de login">
+                        <img src="images/carrosel2.png" alt="Foto de uma tela de login">
                     </div>
                     <div class="project-info">
                         <p>“Existe o risco que você jamais pode correr.
@@ -69,7 +75,7 @@
 
                 <div class="swiper-slide">
                     <div class="project-img">
-                        <img src="images/MicrosoftTeams-image (2).png" alt="Foto de um site">
+                        <img src="images/carrosel3.png" alt="Foto de um site">
                     </div>
                     <div class="project-info">
                         <p>“A confiança em si mesmo é o primeiro segredo do sucesso” – Ralph Waldo Emerson</p>
@@ -132,7 +138,42 @@
                             <div class="icon-trilha-item">
                                 <a href="https://www.pucminas.br/main/Paginas/default.aspx"><button
                                         class="pesquisar-input-explorar">Saiba Mais</button></a>
-                                <img src="images/icons/compartilhar.png" alt="" class="comp-trilha">
+                                <a href="javascript:;" class="open-modal"><img src="images/icons/compartilhar.png" alt=""></a>
+                        
+                                <div class="modal">
+                                    <div class="modal-head">
+                                        <h2 class="modal-title">Compartilhar</h2>
+                                        <a href="javascript:;" class="modal-close">
+                                            <i class="fa-sharp fa-solid fa-xmark"></i>
+                                        </a>
+                                    </div><!-- modal head -->
+                                    <div class="modal-body">
+                                        <h3 class="modal-name">Compartilhe o link:</h3>
+                                        <div class="modal-socials">
+                                            <div class="modal-column">
+                                                <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.pucminas.br/main/Paginas/default.aspx" target="_blank" class="modal-social is-facebook">
+                                                    <i class="fa-brands fa-facebook"></i>
+                                                </a>
+                                            </div><!-- modal do Facebook -->
+                                            <div class="modal-column">
+                                                <a href="https://twitter.com/intent/tweet?text=Veja conhecer a trilha Pata da Vaca. Acesse em: https://www.pucminas.br/main/Paginas/default.aspx"
+                                                    target="_blank" class="modal-social is-twitter">
+                                                    <i class="fa-brands fa-twitter"></i>
+                                                </a>
+                                            </div><!-- modal do Twitter -->
+                                            <div class="modal-column">
+                                                <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.pucminas.br/main/Paginas/default.aspx" target="_blank" class="modal-social is-linkedin">
+                                                    <i class="fa-brands fa-linkedin"></i>
+                                                </a>                                            
+                                            </div><!-- modal do linkedIn -->
+                                        </div><!-- modal-socials -->
+                                        <h3 class="modal-name">Ou copie o link:</h3>
+                                        <div class="modal-label">
+                                            <input type="text" class="modal-input" value="https://www.pucminas.br">
+                                            <button class="btn-copiar" onclick="copiarBtn()">Copiar</button>
+                                        </div>
+                                    </div><!-- modal-body -->
+                                </div><!-- modal -->
                             </div>
                             <div class="trilhas-text">
                                 <h2 class="titulo-trilha">Pata da Vaca</h2>
@@ -148,15 +189,14 @@
                                 <button onclick="vejaMais()" class="button-Btn" id="myBtn"><b>Veja Mais</b></button>
                             </div>
                             <div class="icon-trilha-item">
-                                <button onclick="salvarTrilha()" class="botoes-outline"><img
-                                        src="images/icons/Vector.svg" alt="" class="save-trilha"></button>
+                                <img src="images/icons/Vector.svg" alt="" class="save-trilha"></button>
                             </div>
                         </div>
                         <div class="trilha-item">
                             <div class="icon-trilha-item">
                                 <a href="https://www.pucminas.br/main/Paginas/default.aspx"><button
                                         class="pesquisar-input-explorar">Saiba Mais</button></a>
-                                <img src="images/icons/compartilhar.png" alt="" class="comp-trilha">
+                                <a href="javascript:;" class="open-modal"><img src="images/icons/compartilhar.png" alt=""></a>
                             </div>
                             <div class="trilhas-text">
                                 <h2 class="titulo-trilha">Laranjeiras</h2>
@@ -179,7 +219,7 @@
                             <div class="icon-trilha-item">
                                 <a href="https://www.pucminas.br/main/Paginas/default.aspx"><button
                                         class="pesquisar-input-explorar">Saiba Mais</button></a>
-                                <img src="images/icons/compartilhar.png" alt="" class="comp-trilha">
+                                <a href="javascript:;" class="open-modal"><img src="images/icons/compartilhar.png" alt=""></a>
                             </div>
 
 
@@ -236,18 +276,14 @@
             </form>
         </div><!--CONTAINER-->
     </section>
+    
+    <br>
+
     <br>
     <footer>
         <div class="container">
-            <p>Direitos reservados a Pucminas. COPYRIGHT &copy 2022.</p>
-            <link rel="stylesheet"
-                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-            <!-- Add font awesome icons -->
-            <!-- <div class=".fa-facebook"> -->
-            <a href="https://www.facebook.com" class="fa fa-facebook"></a>
-            <a href="https://www.twitter.com" class="fa fa-twitter"></a>
-            <!-- </div> -->
-        </div>
+            <p>Direitos reservados a Pucminas. COPYRIGHT &copy 2022.</p> 
+        </div><!-- </div> -->
         <!--CONTAINER-->
     </footer>
 
@@ -256,6 +292,7 @@
     <script src="script/carrossel.js"></script>
     <script src="script/readmore.js"></script>
     <script src="script/loginmodal.js"></script>
+    <script src="script/shareModal.js"></script>
 
 </body >
 

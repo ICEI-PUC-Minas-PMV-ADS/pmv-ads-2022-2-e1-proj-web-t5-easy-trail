@@ -107,6 +107,8 @@ const trailFuncs = {
         return;
     },
     cadastroTrilha: () => {
+        const allInputsCadastro = selectAllElements('.cadastro-trilha-input');
+
         const trilhaNome = selectElement('#trilha_nome');
         const trilhaLocal = selectElement('#trilha_local');
         const trilhaDescricao = selectElement('#trilha_descricao');
@@ -116,8 +118,7 @@ const trailFuncs = {
         this.event.preventDefault();
 
         if(!trilhaNome.value && !trilhaLocal.value && !trilhaDescricao.value && !trilhaAltimetria.value && !trilhaDuracao.value ) {
-            alert("Preencha todos os campos!");
-            return
+            return alert("Preencha todos os campos!");
         }
 
         const trilhaObj = {
@@ -128,13 +129,10 @@ const trailFuncs = {
             trilha_duracao: trilhaDuracao.value,
         };
 
-        window.localStorage.setItem('trilha', JSON.stringify(trilhaObj));
+        window.localStorage.setItem(`trilha-${trilhaNome.value}`, JSON.stringify(trilhaObj));
 
-        return;
+        allInputsCadastro.forEach(item => item.value = '');
+
+        return alert('Trilha cadastrada com sucesso!');
     }
 }
-
-
-import fs from ('fs');
-
-console.log(fs);
