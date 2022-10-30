@@ -491,7 +491,7 @@ section#projects {
     left: 50%;
     transform: translate(-50%, -50%);
     background: #fff;
-    border: 1px solid #3687ff;
+    border: 1px solid #EB5C0C;
     border-radius: 20px;
     max-width: 460px;
     width: 100%;
@@ -505,7 +505,7 @@ section#projects {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid #3687ff;
+    border-bottom: 1px solid #EB5C0C;
 }
 
 .modal-title {
@@ -598,15 +598,6 @@ section#projects {
 
 .modal-social.is-linkedin:hover {
     background: #0e76a8;
-    color: #fff;
-}
-.modal-social.is-reddit {
-    border-color: #ff4301;
-    color: #ff4301;
-}
-
-.modal-social.is-reddit:hover {
-    background: #ff4301;
     color: #fff;
 }
 
