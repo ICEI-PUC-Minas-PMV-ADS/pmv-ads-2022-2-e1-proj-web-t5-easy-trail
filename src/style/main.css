@@ -451,6 +451,7 @@ section#projects {
     box-shadow: 0 1px 2px #0003;
     object-fit: cover;
     width: 80%;
+    height: 400px;
 }
 
 .project-info {
@@ -482,6 +483,30 @@ section#projects {
 .swiper-pagination-bullet-active {
     background-color: rgb(48, 48, 220);
 }
+
+/* FORM CADASTRO TRILHA */
+.form-cadastro-trilha {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-cadastro-trilha textarea {   
+    outline: none;
+    resize: none;
+}
+
+.form-cadastro-trilha label {
+    margin: 0.5rem 0;
+}
+
+.form-cadastro-trilha input {
+    height: 2.4rem;
+    width: 100%;
+    padding: 0.6rem;
+}
+.form-btn-cadastro, .form-title-container {
+    text-align: center;
+    margin: 1rem;
 
 /* Modal de compartilhar */
 

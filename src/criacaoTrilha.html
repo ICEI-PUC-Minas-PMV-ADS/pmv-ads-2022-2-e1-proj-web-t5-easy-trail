@@ -4,31 +4,81 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/logoEasy.png" type="image" </head>
     <title>Cadastrar Trilha</title>
+    <link rel="stylesheet" href="./style/main.css">
 </head>
 <body>
-    <div>
-        <!-- 
-            nome;
-            local;
-            dificuldade;
-            descricao;
-            altimetria;
-            tempo duracao media;
-         -->
+    <header>
+        <div class="container">
+            <nav class="header-wrap">
+                <div class="logo-container">
+                    <a href="#">
+                        <img src="images/logoEasy.png" width="120" alt="100"></a>
+                </div>
+                <!--LOGO-CONTAINER-->
+                <ul class="header-list">
+                    <li class="header-list-row">
+                        <a href="#" class="header-list-link">
+                            <img src="images/icons/search.svg" alt="" class="search-icon header-icon">
+                        </a>
+                    </li>
+                    <li class="header-list-row">
+                        <a href="#" class="header-list-link">
+                            <a href="https://www.pucminas.br/main/Paginas/default.aspx"><button
+                                    class="pesquisar-input-login">Login</button></a>
+                        </a>
+                    </li>
+                </ul>
+                <!--HEADER-LIST-->
+            </nav>
+            <!--HEADER-WRAP-->
+        </div>
+        <!--CONTAINER-->
+    </header>
 
-         <input type="text" name="" id="trilha_nome" placeholder="Nome">
-         <input type="text" name="" id="trilha_local" placeholder="local">
-         <input type="text" name="" id="trilha_descricao" placeholder="descricao">
-         <input type="number" name="" id="trilha_altimetria" placeholder="altimetria">
-         <input type="text" name="" id="trilha_duracao" placeholder="duracao">
-         <button id="cadastroTrilha" onclick="trailFuncs.cadastroTrilha()">Cadastrar</button>
+    <div class="container">
+        <form action="" class="form-cadastro-trilha">
+            
+            <div class="form-title-container">
+                <h1>Cadastro de trilha</h1>
+            </div>
 
-    </div>
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome" id="trilha_nome" placeholder="Nome" class="cadastro-trilha-input">
 
+            <label for="nome">Local:</label>
+            <input type="text" name="local" id="trilha_local" placeholder="local" class="cadastro-trilha-input">
 
-    <div class="teste"></div>
+            <label for="descricao">Descricao:</label>
+            <textarea name="descricao" id="trilha_descricao" cols="30" rows="10" placeholder="descricao" class="cadastro-trilha-input"></textarea>
 
+            <label for="nome">Altimetria:</label>
+            <input type="number" name="" id="trilha_altimetria" placeholder="altimetria" class="cadastro-trilha-input">
+
+            <label for="nome">Duracao:</label>
+            <input type="text" name="" id="trilha_duracao" placeholder="duracao" class="cadastro-trilha-input">
+
+            <div class="form-btn-cadastro">
+                <button id="cadastroTrilha" onclick="trailFuncs.cadastroTrilha()" class="buttom-form">Cadastrar</button>
+            </div>
+
+        </form>
+    </div><!--CONTAINER-->
+
+    <footer style="position: absolute; bottom: 0px;">
+        <div class="container">
+            <p>Direitos reservados a Pucminas. COPYRIGHT &copy 2022.</p>
+            <link rel="stylesheet"
+                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <!-- Add font awesome icons -->
+            <!-- <div class=".fa-facebook"> -->
+            <a href="https://www.facebook.com" class="fa fa-facebook"></a>
+            <a href="https://www.twitter.com" class="fa fa-twitter"></a>
+            <!-- </div> -->
+        </div>
+        <!--CONTAINER-->
+    </footer>
     <script src="./script/main.js"></script>
 </body>
 </html>
