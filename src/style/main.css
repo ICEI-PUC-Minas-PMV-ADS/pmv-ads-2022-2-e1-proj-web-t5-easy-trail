@@ -544,6 +544,7 @@ section#projects {
     transition: .3;
     opacity: 0;
     visibility: hidden;
+    z-index: 1;
 }
 
 .modal-head {
