@@ -114,9 +114,9 @@ header {
 
 .pesquisa-input-item {
     font-family: 'Calibri';
-    font-size: 20px;
+    font-size: 18px;
     color: #050200;
-
+    text-align: center;
 }
 
 .formulario {
@@ -131,10 +131,11 @@ header {
 .xpto {
     background-color: #faf8f7;
     font-family: 'Calibri';
-    font-size: 20px;
+    font-size: 18px;
     height: 38px;
     width: 213px;
     margin-right: 1rem;
+    text-align: center;
 }
 
 
@@ -216,12 +217,12 @@ header {
 
 
 .pesquisar-input-login {
-    width: 148px !important;
-    height: 45px !important;
+    width: 98px !important;
+    height: 30px !important;
     color: white;
     font-family: 'Calibri';
     font-weight: 500;
-    font-size: 25px;
+    font-size: 17px;
     background-color: rgb(255, 91, 2);
     border-radius: 70px;
     border: none;
@@ -324,10 +325,10 @@ header {
 }
 
 .mais-trilhas-btn-element {
-    font-size: 24px;
+    font-size: 17px;
     color: white;
-    width: 260px;
-    height: 63px;
+    width: 140px;
+    height: 43px;
     border-radius: 90px;
     background: #EB5C0C;
     border: none;
@@ -419,10 +420,10 @@ header {
 }
 
 .buttom-form {
-    font-size: 24px;
+    font-size: 17px;
     color: white;
-    width: 260px;
-    height: 63px;
+    width: 140px;
+    height: 43px;
     border-radius: 90px;
     background: #EB5C0C;
     border: none;
@@ -529,9 +530,9 @@ section#projects {
 
 .swiper-button-next,
 .swiper-button-prev {
-    color: rgb(39, 39, 164);
+    color: #EB5C0C(39, 39, 164);
 }
 
 .swiper-pagination-bullet-active {
-    background-color: rgb(48, 48, 220);
+    background-color: #EB5C0C;
 }
