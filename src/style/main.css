@@ -70,7 +70,7 @@ header {
 .trails {
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: cover; /* Resize the background image to cover the entire container *
+    background-size: cover; /* Resize the background image to cover the entire container */
 }
 
 .main-frame-trails {
@@ -251,7 +251,7 @@ header {
 /* TRILHA BOX */
 /*==============*/
 .trilhas-recomendadas {
-    background-color: #D9D9D9;;
+    background-color: #D9D9D9;
 }
 
 .trilhas-wraper {
