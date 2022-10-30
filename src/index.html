@@ -6,9 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Easy Trail</title>
-    <link rel="stylesheet"
-    href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="./style/main.css">
+    <link rel="shortcut icon" href="images/logoEasy.png" type="image" </head>
+    <style>
+    #more {display: none;}
+    #more2 {display: none;}
+    #more3 {display: none;}
+    </style>
+
     <link rel="shortcut icon" href="images/logoEasy.png" type="image">
     <!-- Font Awesome leobuck -->
     <script src="https://kit.fontawesome.com/77bf635d25.js" crossorigin="anonymous"></script>
@@ -26,8 +32,8 @@
                 <ul class="header-list">
                     <li class="header-list-row">
                         <a href="#" class="header-list-link">
-                            <img src="images/icons/search.svg" alt="" class="search-icon header-icon">
-                        </a>
+                            <a href="https://www.google.com"><button class="pesquisar-input-login">Cadastre-se
+                                </button></a>
                     </li>
                     <li class="header-list-row">
                         <a href="#" class="header-list-link">
@@ -50,6 +56,7 @@
                 <div class="swiper-slide">
                     <div class="project-img">
                         <img src="images/carrosel1.png" alt="Foto de um site">
+
                     </div>
                     <div class="project-info">
                         <p>“Comemore os seus sucessos. Veja com humor os seus fracassos” – Sam Walton</p>
@@ -61,7 +68,8 @@
                         <img src="images/carrosel2.png" alt="Foto de uma tela de login">
                     </div>
                     <div class="project-info">
-                        <p>“Existe o risco que você jamais pode correr. Existe o risco que você jamais pode deixar de correr” – Peter Drucker</p>
+                        <p>“Existe o risco que você jamais pode correr.
+                            Existe o risco que você jamais pode deixar de correr” – Peter Drucker</p>
                     </div>
                 </div>
 
@@ -96,9 +104,9 @@
                                 <form class="formulario">
                                     <select class="xpto">
                                         <option value="Escolha" enable>-</option>
-                                        <option value="Alto">Alto</option>
-                                        <option value="Médio">Médio</option>
-                                        <option value="Baixo">Baixo</option>
+                                        <option value="Alto">Alta</option>
+                                        <option value="Médio">Média</option>
+                                        <option value="Baixo">Baixa</option>
                                     </select>
                                 </form>
                             </li>
@@ -107,20 +115,14 @@
                                 <input type="date" class="pesquisa-input-item">
                             </li>
                             <li>
-                                <a href="https://www.pucminas.br/main/Paginas/default.aspx"><button
-                                        class="pesquisar-input-btn">Explorar</button>
+                                <a href="pesquisaBody.html"><button class="pesquisar-input-btn">Explorar</button>
                                 </a>
                             </li>
-                        </ul>
-                        <!--PESQUISA-INPUT-->
-                    </div>
-                    <!--INPUT-PESQUISA-WRAP-->
-                </div>
-                <!--BARRA-PESQUISA-TRAIL-->
-            </div>
-            <!--MAIN-FRAME-TRAISLS-->
-        </div>
-        <!--CONTAINER-->
+                        </ul><!--PESQUISA-INPUT-->
+                    </div><!--INPUT-PESQUISA-WRAP-->
+                </div><!--BARRA-PESQUISA-TRAIL-->
+            </div><!--MAIN-FRAME-TRAISLS-->
+        </div><!--CONTAINER-->
 
     </section>
 
@@ -136,7 +138,6 @@
                             <div class="icon-trilha-item">
                                 <a href="https://www.pucminas.br/main/Paginas/default.aspx"><button
                                         class="pesquisar-input-explorar">Saiba Mais</button></a>
-
                                 <a href="javascript:;" class="open-modal"><img src="images/icons/compartilhar.png" alt=""></a>
                         
                                 <div class="modal">
@@ -177,12 +178,15 @@
                             <div class="trilhas-text">
                                 <h2 class="titulo-trilha">Pata da Vaca</h2>
                                 <p class="desc-trilha">
-                                    Saída da antiga estação ferroviária, bairro São Luiz, Fazenda São José, Sapucaí novo
-                                    e Sapucaí velho, Eleutério, Barão Ataliba Nogueira, Fazenda Malheiros, Fazenda da
-                                    Mata, Fazenda Bom Café e Chácara Primavera, antigo Sítio Floresta. Os quase 65 km de
-                                    estradas ajudam a contar a história recente de nosso país quando tropas federalistas
-                                    e paulistas travaram o maior combate armado da história nacional.
-                                </p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla
+                                    et dictum interdum, nisi lorem egestas vitae scel erisque enim ligula venenatis
+                                    dolor. Maecenas nisl est, ultrices<span id="dots">...</span><span id="more">nec
+                                    congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc
+                                    sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc
+                                    venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida
+                                    venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar
+                                    nibh tempor porta.</span></p>
+                                <button onclick="vejaMais()" class="button-Btn" id="myBtn"><b>Veja Mais</b></button>
                             </div>
                             <div class="icon-trilha-item">
                                 <img src="images/icons/Vector.svg" alt="" class="save-trilha"></button>
@@ -197,10 +201,15 @@
                             <div class="trilhas-text">
                                 <h2 class="titulo-trilha">Laranjeiras</h2>
                                 <p class="desc-trilha">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quae pariatur
-                                    beatae minima, adipisci laudantium obcaecati fugit culpa impedit ut est voluptatibus
-                                    dolorum modi sint soluta aliquid quaerat accusantium nostrum!
-                                </p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla
+                                    et dictum interdum, nisi lorem egestas vitae scel erisque enim ligula venenatis
+                                    dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus
+                                    vestibulum augue ut aliquet. Nunc <span id="dots2">...</span><span
+                                    id="more2">sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at
+                                    libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget
+                                    tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed
+                                    dapibus pulvinar nibh tempor porta.</span></p>
+                                <button onclick="vejaMais2()" class="button-Btn" id="myBtn2"><b>Veja Mais</b></button>
                             </div>
                             <div class="icon-trilha-item">
                                 <img src="images/icons/Vector.svg" alt="" class="save-trilha">
@@ -217,10 +226,13 @@
                             <div class="trilhas-text">
                                 <h2 class="titulo-trilha">Mirante das Goiabeiras</h2>
                                 <p class="desc-trilha">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quae pariatur
-                                    beatae minima, adipisci laudantium obcaecati fugit culpa impedit ut est voluptatibus
-                                    dolorum modi sint soluta aliquid quaerat accusantium nostrum!
-                                </p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. A enim placeat dicta cum
+                                    voluptatem dolores fugiat. Odio temporibus accusamus nobis delectus neque fugit,
+                                    deserunt eum iure, sunt voluptate reprehenderit cumque aut earum rerum deleniti,
+                                    exercitationem cum ullam a natus provident eos fugiat impedit. Eligendi enim
+                                    adipisci dolores voluptatem maiores, provident delectus tempore magni suscipit ut
+                                    deleniti, assumenda, <span id="dots3">...</span><span id="more3">voluptates labore sunt. Pariatur nisi magni ex vitae, voluptatum sint, fugiat ratione incidunt corrupti ipsum molestias, neque nam deleniti porro?</span></p>
+                                <button onclick="vejaMais3()" class="button-Btn" id="myBtn3"><b>Veja Mais</b></button>
                             </div>
                             <div class="icon-trilha-item">
                                 <img src="images/icons/Vector.svg" alt="" class="save-trilha">
@@ -229,6 +241,7 @@
                     </div>
                 </div>
                 <!--TRILHAS-BOX-->
+                <br>
                 <div class="mais-trilhas-btn">
                     <button class="mais-trilhas-btn-element" onclick="trailFuncs.maisTrilhas()">Mais Trilhas</button>
                 </div>
@@ -238,34 +251,35 @@
     </section>
 
     <section class="form-container">
-            <div class="container-form">
-                <form class="setup-form">
-                    <thead>
-                        <div class="form-titulo-wraper">
-                            <h1>Cadastre aqui sua dúvida</h1>
-                        </div>
-                    </thead>
-                    <tbody>
-                        <label>Nome:</label>
-                        <input type="text" class="setup-form-nome form-input" placeholder="Meu nome..">
-                        <label>Email</label>
-                        <input type="email" class="setup-form-email form-input" placeholder="Meu email..">
-                        <label>Comentário:</label>
-                        <textarea class="setup-form txtAreaForm form-input" name="subject"
-                            placeholder="Escreva seu comentário.."></textarea>
-                    </tbody>
-                    <tfoot>
-                        <div class="btn-form-wraper">
-                            <button onclick="trailFuncs.cadastroDuvidas()" class="buttom-form">Enviar</button>
-                        </div>
-                    </tfoot>
-                </form>
-            </div> <!--CONTAINER-->
+        <div class="container-form">
+            <form class="setup-form">
+                <thead>
+                    <div class="form-titulo-wraper">
+                        <h1>Cadastre aqui sua dúvida</h1>
+                    </div>
+                </thead>
+                <tbody>
+                    <label><b>Nome:</b></label>
+                    <input type="text" class="setup-form-nome form-input" placeholder="Meu nome..">
+                    <label><b>Email</b></label>
+                    <input type="email" class="setup-form-email form-input" placeholder="Meu email..">
+                    <label><b>Comentário:</b></label>
+                    <textarea class="setup-form txtAreaForm form-input" name="subject"
+                        placeholder="Escreva seu comentário.."></textarea>
+                </tbody>
+                <tfoot>
+                    <br>
+                    <div class="btn-form-wraper">
+                        <button onclick="trailFuncs.cadastroDuvidas()" class="buttom-form">Enviar</button>
+                    </div>
+                </tfoot>
+            </form>
+        </div><!--CONTAINER-->
     </section>
     
     <br>
-    <br>
 
+    <br>
     <footer>
         <div class="container">
             <p>Direitos reservados a Pucminas. COPYRIGHT &copy 2022.</p> 
@@ -276,8 +290,10 @@
     <script src="script/main.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="script/carrossel.js"></script>
+    <script src="script/readmore.js"></script>
+    <script src="script/loginmodal.js"></script>
     <script src="script/shareModal.js"></script>
 
-</body>
+</body >
 
-</html>
+</html >
