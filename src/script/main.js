@@ -39,7 +39,7 @@ const trailFuncs = {
 
         clearAllInputs.forEach(item => item.value = '');
 
-        return alert('Dúvida enviada com sucesso!');
+        return alert('Duvida enviada com sucesso!');
     },
     buscarTrilha: () => {
 

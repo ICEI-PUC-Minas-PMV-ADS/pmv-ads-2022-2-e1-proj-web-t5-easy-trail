@@ -114,9 +114,9 @@ header {
 
 .pesquisa-input-item {
     font-family: 'Calibri';
-    font-size: 18px;
+    font-size: 20px;
     color: #050200;
-    text-align: center;
+
 }
 
 .formulario {
@@ -131,11 +131,10 @@ header {
 .xpto {
     background-color: #faf8f7;
     font-family: 'Calibri';
-    font-size: 18px;
+    font-size: 20px;
     height: 38px;
     width: 213px;
     margin-right: 1rem;
-    text-align: center;
 }
 
 
@@ -158,7 +157,7 @@ header {
 }
 
 .pesquisa-input-list li label {
-    padding-bottom: 0%;
+    padding-bottom: 20%;
     margin-right: 1rem;
     font-weight: 900;
     color: gr;
@@ -175,22 +174,6 @@ header {
     border-radius: 90px;
     border: none;
     cursor: pointer;
-}
-
-.novapesquisa-input-btn {
-    width: 148px;
-    height: 35px;
-    background-color: #EB5C0C;
-    color: white;
-    font-size: 15px;
-    font-weight: bold;
-    border-radius:10px;
-    border: none;
-    cursor: pointer;
-}
-
-.novapesquisa-input-btn:hover {
-    opacity: 0.7;
 }
 
 .pesquisar-input-explorar {
@@ -217,12 +200,12 @@ header {
 
 
 .pesquisar-input-login {
-    width: 98px !important;
-    height: 30px !important;
+    width: 148px !important;
+    height: 45px !important;
     color: white;
     font-family: 'Calibri';
     font-weight: 500;
-    font-size: 17px;
+    font-size: 25px;
     background-color: rgb(255, 91, 2);
     border-radius: 70px;
     border: none;
@@ -273,6 +256,7 @@ header {
 
 .trilhas-wraper {
     padding: 3rem;
+
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -318,13 +302,13 @@ header {
 }
 
 .mais-trilhas-btn-element {
-    font-size: 17px;
+    font-size: 24px;
     color: white;
-    width: 140px;
-    height: 43px;
+    width: 260px;
+    height: 63px;
     border-radius: 90px;
     background: #EB5C0C;
-    border: none;
+    border: 1px solid #EB5C0C;
     transition: 0.5;
     cursor: pointer;
 }
@@ -340,18 +324,21 @@ header {
 }
 
 .form-container {
-    width: 100%;
-    display: flex;
+    width: 70%;
     align-items: center;
-    justify-content: center;
-    flex-direction: row;
+    margin-inline: 15%;
     background-color: whitesmoke;;
+    padding: 1rem;
 }
 
 .setup-form {
+    width: 73%;
+    /* Full width */
+    padding: 1.3rem;
+    /* Some padding */
     border: 0px #ccc;
-    padding-left: 15rem;
-    padding-right: 15rem;
+    /* Gray border */
+    margin: 10px 10%;
     font-size: 16px;
     display: flex;
     flex-direction: column;
@@ -361,16 +348,16 @@ header {
 
 .setup-form-nome,
 .setup-form-email {
-    width: 100%;
+    width: 110%;
     align-items: LEFT;
     height: 3rem;
     outline: none;
     border: 0;
     padding-left: 0.2rem;
     margin: 15px 0;
-    font-family: 'calibri';
+    font-family: 'segoe UI';
     font-size: 16px;
-    color: black;
+    color: red;
 }
 
 .setup-form label {
@@ -380,15 +367,15 @@ header {
 
 .txtAreaForm {
     align-items: center;
-    width: 100%;
+    width: 110%;
     height: 7rem;
     outline: none;
     border: 0;
     padding-left: 0.2rem;
     margin: 15px 0;
-    font-family: 'Calibri';
+    font-family: 'segoe UI';
     font-size: 16px;
-    color:black;
+    color: red;
 }
 
 .btn-form-wraper {
@@ -413,14 +400,15 @@ header {
 }
 
 .buttom-form {
-    font-size: 17px;
+    width: 300px;
+    height: 3.2rem;
+    background-color: #EB5C0C;
+
+    font-size: 22px;
     color: white;
-    width: 140px;
-    height: 43px;
-    border-radius: 90px;
-    background: #EB5C0C;
+    padding: 12px 20px;
     border: none;
-    transition: 0.5;
+    border-radius: 90px;
     cursor: pointer;
 }
 
@@ -433,15 +421,6 @@ header {
     width: 100%;
     padding: 15px;
 }
-
-
-.button-Btn{
-background-color: white;
-color: #EB5C0C;
-font-weight: bolder;
-border: 0px;
-}
-
 
 footer {
     padding: 2rem;
@@ -498,11 +477,11 @@ section#projects {
 
 .swiper-button-next,
 .swiper-button-prev {
-    color: #EB5C0C(39, 39, 164);
+    color: rgb(39, 39, 164);
 }
 
 .swiper-pagination-bullet-active {
-    background-color: #EB5C0C;
+    background-color: rgb(48, 48, 220);
 }
 
 /* FORM CADASTRO TRILHA */
