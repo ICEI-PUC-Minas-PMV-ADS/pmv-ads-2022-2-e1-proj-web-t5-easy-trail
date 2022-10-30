@@ -6,4 +6,9 @@ Implementação do sistema descritas por meio dos requisitos funcionais e/ou nã
 
 Para cada requisito funcional, pode ser entregue um artefato desse tipo
 
+# Funcionalidades:
+
+## Carrossel: Carlos José
+
 ![Funcionalidade](img/codeCarlos.jpg)<center>Arquitetura da Solução</center>
+![Funcionalidade](img/codeCarloscarrossel.jpg)<center>Arquitetura da Solução</center>
