@@ -25,22 +25,17 @@
         <div class="container">
             <nav class="header-wrap">
                 <div class="logo-container">
-                    <a href="#">
-                        <img src="images/logoEasy.png" width="120" alt="100"></a>
+                        <img onclick="location=href='https://www.google.com'" src="images/logoEasy.png" width="120" alt="100">
                 </div>
                 <!--LOGO-CONTAINER-->
                 <ul class="header-list">
                     <li class="header-list-row">
-                        <a href="#" class="header-list-link">
-                            <a href="https://www.google.com"><button class="pesquisar-input-login">Cadastre-se
-                                </button></a>
+                        <button class="pesquisar-input-login" onclick="location=href='https://www.google.com'">Cadastre-se</button>
                     </li>
-                    <li class="header-list-row">
-                        <a href="#" class="header-list-link">
-                            <a href="https://www.pucminas.br/main/Paginas/default.aspx"><button
-                                    class="pesquisar-input-login">Login</button></a>
-                        </a>
-                    </li>
+                    <ul class="header-list">
+                        <li class="header-list-row">
+                            <button class="pesquisar-input-login" onclick="location=href='https://www.globo.com'">Login</button>
+                        </li>
                 </ul>
                 <!--HEADER-LIST-->
             </nav>
@@ -250,14 +245,11 @@
         </div>
     </section>
 
-    <section class="form-container">
-        <div class="container-form">
+    <section class="setup-form">
+        
             <form class="setup-form">
                 <thead>
-                    <div class="form-titulo-wraper">
-                        <h1>Cadastre aqui sua dúvida</h1>
-                    </div>
-                </thead>
+                    <h1 class="form-titulo-wraper">Cadastre aqui sua dúvida</h1>
                 <tbody>
                     <label><b>Nome:</b></label>
                     <input type="text" class="setup-form-nome form-input" placeholder="Meu nome..">
@@ -268,13 +260,11 @@
                         placeholder="Escreva seu comentário.."></textarea>
                 </tbody>
                 <tfoot>
-                    <br>
                     <div class="btn-form-wraper">
-                        <button onclick="trailFuncs.cadastroDuvidas()" class="buttom-form">Enviar</button>
-                    </div>
+                    <button class="buttom-form" onclick="trailFuncs.cadastroDuvidas()">Enviar</button></div>
                 </tfoot>
             </form>
-        </div><!--CONTAINER-->
+        
     </section>
     
     <br>

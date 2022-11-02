@@ -217,7 +217,7 @@ header {
 
 
 .pesquisar-input-login {
-    width: 98px !important;
+    width: 120px !important;
     height: 30px !important;
     color: white;
     font-family: 'Calibri';
@@ -227,13 +227,13 @@ header {
     border-radius: 70px;
     border: none;
     cursor: pointer;
-
     justify-content: space-between;
     align-items: left;
     width: 20%;
     height: 20px;
     padding: 0px;
 }
+
 
 .slider-trilhas {
     height: 800px;
@@ -301,7 +301,6 @@ header {
     border-radius: 10px;
     height: 400px;
     width: 402px;
-    cursor: pointer;
     background-color: white;
     box-shadow: 0px 0px 9px 3px rgba(0, 0, 0, 0.75);
     ;
@@ -339,30 +338,36 @@ header {
     margin: 2rem;
 }
 
-.form-container {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    background-color: whitesmoke;;
-}
 
 .setup-form {
     border: 0px #ccc;
-    padding-left: 15rem;
-    padding-right: 15rem;
+    width: 100%;
+    padding-left: 5rem;
+    padding-right: 5rem;
     font-size: 16px;
-    display: flex;
     flex-direction: column;
-    align-items: flex-start;
     justify-content: center;
+    align-items: right;
+    padding-bottom: 2%;
+    background-color: whitesmoke;
+}
+
+
+.setup-form>button { 
+    font-size: 17px;
+    color: white;
+    width: 140px;
+    height: 43px;
+    border-radius: 90px;
+    background: #EB5C0C;
+    border: none;
+    transition: 0.5;
+    cursor: pointer;
 }
 
 .setup-form-nome,
 .setup-form-email {
     width: 100%;
-    align-items: LEFT;
     height: 3rem;
     outline: none;
     border: 0;
@@ -371,11 +376,13 @@ header {
     font-family: 'calibri';
     font-size: 16px;
     color: black;
+    text-align: left;
 }
 
 .setup-form label {
     font-size: 20px;
     margin-top: 0.5rem;
+    text-align: left;
 }
 
 .txtAreaForm {
@@ -389,27 +396,7 @@ header {
     font-family: 'Calibri';
     font-size: 16px;
     color:black;
-}
-
-.btn-form-wraper {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.form-titulo-wraper {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Calibri';
-}
-
-.form-titulo-wraper>h1 {
-    font-size: 2rem;
-    font-family: 'Calibri';
-    font-weight: 500;
+    background-color: white;
 }
 
 .buttom-form {
@@ -424,14 +411,34 @@ header {
     cursor: pointer;
 }
 
+.btn-form-wraper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.form-titulo-wraper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Calibri';
+    font-size: 2.3rem;
+    padding-top: 2%;
+}
+
+
+.form-titulo-wraper>h1 {
+    font-size: 2rem;
+    font-family: 'Calibri';
+    font-weight: 500;
+}
+
 
 .buttom-form:hover {
     background-color: rgb(136, 66, 0);
-}
-
-.container-form {
-    width: 100%;
-    padding: 15px;
 }
 
 
@@ -440,6 +447,7 @@ background-color: white;
 color: #EB5C0C;
 font-weight: bolder;
 border: 0px;
+cursor: pointer;
 }
 
 
