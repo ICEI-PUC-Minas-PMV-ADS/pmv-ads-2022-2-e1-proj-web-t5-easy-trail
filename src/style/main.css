@@ -710,3 +710,27 @@ section#projects {
     opacity: 1;
     visibility: visible;
 }
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1300px) {
+    .trilhas-box-items{
+        flex-direction: column;
+    }
+    .pesquisa-input-list {
+        flex-direction: column;
+    }
+    .barra-pesquisa-trail {
+        width: fit-content;
+    }
+}
+
+@media (max-width: 425px) {
+    .header-wrap {
+        flex-direction: column;
+    }
+    .header-list {
+        flex-direction: column;
+        padding: 5%;
+    }
+}
