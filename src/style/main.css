@@ -43,11 +43,17 @@ header {
     height: 102px;
     border-radius: 102px;
     /* background-color: black; */
-
+    display: flex;
+    align-items: center;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 
+}
+
+.logo-container>img {
+    width: 102px;
+    cursor: pointer;
 }
 
 .header-list {
@@ -538,8 +544,9 @@ section#projects {
     margin: 1rem;
 }
 /* Modal de compartilhar */
-
-.modal {
+.modal,
+.modal2,
+.modal3 {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -554,7 +561,6 @@ section#projects {
     visibility: hidden;
     z-index: 1;
 }
-
 .modal-head {
     padding: 25px 40px;
     display: flex;
@@ -562,14 +568,14 @@ section#projects {
     justify-content: space-between;
     border-bottom: 1px solid #EB5C0C;
 }
-
 .modal-title {
     font-weight: 600;
     font-size: 24px;
     color: #000;
 }
-
-.modal-close {
+.modal-close,
+.modal-close2,
+.modal-close3 {
     width: 32px;
     height: 32px;
     display: flex;
@@ -581,11 +587,9 @@ section#projects {
     text-decoration: none;
     color: #000;
 }
-
 .modal-body {
     padding: 30px 40px;
 }
-
 .modal-name {
     display: flex;
     font-weight: 500;
@@ -593,17 +597,14 @@ section#projects {
     color: #000;
     margin-bottom: 20px;
 }
-
 .modal-socials {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
 }
-
 .modal-column {
     margin-right: 20px;
 }
-
 .modal-social {
     width: 50px;
     height: 50px;
@@ -617,50 +618,34 @@ section#projects {
     text-decoration: none;
     transition: .5s;
 }
-
 .modal-social.is-facebook {
     border-color: #3b5998;
     color: #3b5998;
 }
-
 .modal-social.is-facebook:hover {
     background: #3b5998;
     color: #fff;
 }
-
 .modal-social.is-twitter {
     border-color: #00acee;
     color: #00acee;
 }
-
 .modal-social.is-twitter:hover {
     background: #00acee;
-    color: #fff;
-}
-.modal-social.is-instagram {
-    border-color: #8a3ab9;
-    color: #8a3ab9;
-}
-
-.modal-social.is-instagram:hover {
-    background: #8a3ab9;
     color: #fff;
 }
 .modal-social.is-linkedin {
     border-color: #0e76a8;
     color: #0e76a8;
 }
-
 .modal-social.is-linkedin:hover {
     background: #0e76a8;
     color: #fff;
 }
-
 .modal-label {
     position: relative;
     display: flex;
 }
-
 .modal-input {
     width: 100%;
     height: 50px;
@@ -673,13 +658,11 @@ section#projects {
     font-size: 14px;
     color: #000;
 }
-
 .modal-label .btn-copiar {
     position: absolute;
     top: 7px;
     right: 7px;
 }
-
 .btn-copiar {
     display: flex;
     align-items: center;
@@ -696,17 +679,56 @@ section#projects {
     border: 1px solid #EB5;
     text-decoration: none;
 }
-
+#btn-modal-close{
+	border: none;
+}
+.btn-sem-borda{
+    border: none;
+    background: inherit;
+    cursor: pointer;
+}
 .btn-copiar:hover {
     background: #fff;
     color: #EB5C0C;
 }
-
 .btn-copiar:focus{
     background: #3a1b02;
 }
 
-.modal.is-show {
-    opacity: 1;
-    visibility: visible;
+/* MEDIA QUERIES */
+@media (max-width: 1850px) {
+    .container{
+        max-width: none;
+    }
+    .logo-container {
+        margin-left: 2rem;
+    }
+}
+@media (max-width: 1300px) {
+    .trilhas-box-items{
+        flex-direction: column;
+    }
+    .pesquisa-input-list {
+        flex-direction: column;
+    }
+    .barra-pesquisa-trail {
+        width: fit-content;
+    }
+}
+@media (max-width: 450px) {
+    .header-wrap {
+        flex-direction: column;
+        height: 250px;
+    }
+    .header-list {
+        flex-direction: column;
+        padding: 5%;
+    }
+    ul.header-list {
+        align-items: center;
+        padding: 16px;
+    }
+    .logo-container {
+        margin-left: 0;
+    }
 }
