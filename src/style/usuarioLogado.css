@@ -1,0 +1,31 @@
+.conteudo-principal{
+    display: flex;
+    justify-content: center;
+}
+
+.div-esquerda{
+    
+    width: 50%;
+}
+
+.div-direita{
+    
+    width: 50%;
+}
+
+.descricao>p{
+    padding: 2rem;
+}
+
+.comentario{
+    display: flex;
+    border-bottom: 1px solid black;
+}
+
+.nome-pessoa{
+    padding-top: 2rem;
+}
+
+.imagem01{
+    width: 350px;
+}
