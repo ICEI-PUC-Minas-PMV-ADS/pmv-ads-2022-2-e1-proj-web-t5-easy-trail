@@ -10,13 +10,11 @@
     <link rel="stylesheet" href="./style/main.css">
     <link rel="shortcut icon" href="images/logoEasy.png" type="image">
     <style>
-    #more {display: none;}
-    #more2 {display: none;}
-    #more3 {display: none;}
+        #more {display: none;}
+        #more2 {display: none;}
+        #more3 {display: none;}
     </style>
-
-    <link rel="shortcut icon" href="images/logoEasy.png" type="image">
-    <!-- Font Awesome leobuck -->
+    <!-- Font Awesome-->
     <script src="https://kit.fontawesome.com/77bf635d25.js" crossorigin="anonymous"></script>
 </head>
 
@@ -25,7 +23,7 @@
         <div class="container">
             <nav class="header-wrap">
                 <div class="logo-container">
-                        <img onclick="location=href='https://www.google.com'" src="images/logoEasy.png" width="120" alt="100">
+                        <img onclick="location=href='https://www.google.com'" src="images/logoEasy.png">
                 </div>
                 <!--LOGO-CONTAINER-->
                 <ul class="header-list">
@@ -84,41 +82,33 @@
         </div>
     </section>
 
-    <section class="trails">
-        <div class="container">
-            <div class="main-frame-trails">
-                <div class="barra-pesquisa-trail">
-                    <div class="input-pesquisa-wrap">
-                        <ul class="pesquisa-input-list">
-                            <li class="pesquisa-input-row">
-                                <label>Cidade</label>
-                                <input type="search" placeholder="Destino.." class="pesquisa-input-item">
-                            </li>
-                            <li class="pesquisa-input-row">
-                                <label>Dificuldade</label>
-                                <form class="formulario">
-                                    <select class="xpto">
-                                        <option value="Escolha" enable>-</option>
-                                        <option value="Alto">Alta</option>
-                                        <option value="Médio">Média</option>
-                                        <option value="Baixo">Baixa</option>
-                                    </select>
-                                </form>
-                            </li>
-                            <li class="pesquisa-input-row">
-                                <label>Data</label>
-                                <input type="date" class="pesquisa-input-item">
-                            </li>
-                            <li>
-                                <a href="pesquisaBody.html"><button class="pesquisar-input-btn">Explorar</button>
-                                </a>
-                            </li>
-                        </ul><!--PESQUISA-INPUT-->
-                    </div><!--INPUT-PESQUISA-WRAP-->
-                </div><!--BARRA-PESQUISA-TRAIL-->
-            </div><!--MAIN-FRAME-TRAISLS-->
-        </div><!--CONTAINER-->
-
+    <section id="search-bar">
+        <div class="container--search-bar">
+            <div class="search-bar">
+                <div class="search-bar-itens border-r">
+                    <label class="label-fodido" for="cidade">Cidade</label>
+                    <input type="search" placeholder="Destino..." class="search-bar-input">
+                </div>
+                <div class="search-bar-itens border-r">
+                    <form>
+                        <label for="dificuldade">Dificuldade</label>
+                        <select class="search-bar-input">
+                            <option value="Escolha" enable>-</option>
+                            <option value="Alto">Alta</option>
+                            <option value="Médio">Média</option>
+                            <option value="Baixo">Baixa</option>
+                        </select>
+                    </form>
+                </div>
+                <div class="search-bar-itens border-r">
+                    <label class="label-fodido" for="data">Data</label>
+                    <input type="search" placeholder="dd/mm/yyyy" class="search-bar-input">
+                </div>
+                <div id="search-div4" class="search-bar-itens">
+                    <button class="pesquisar-input-btn">Explorar</button>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section class="trilhas-recomendadas">
@@ -337,9 +327,6 @@
         
     </section>
     
-    <br>
-
-    <br>
     <footer>
         <div class="container">
             <p>Direitos reservados a Pucminas. COPYRIGHT &copy 2022.</p> 
