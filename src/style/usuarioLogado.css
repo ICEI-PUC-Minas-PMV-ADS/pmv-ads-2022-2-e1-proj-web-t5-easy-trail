@@ -1,6 +1,7 @@
 .conteudo-principal{
     display: flex;
     justify-content: center;
+    padding: 5rem;
 }
 
 .div-esquerda{
@@ -14,18 +15,50 @@
 }
 
 .descricao>p{
-    padding: 2rem;
+    padding: 4rem;
 }
 
 .comentario{
     display: flex;
     border-bottom: 1px solid black;
+    height: 100%;
+    font-size: 17px;
+    padding: 5rem;
 }
 
 .nome-pessoa{
-    padding-top: 2rem;
+    padding-top: 5rem;
 }
 
 .imagem01{
-    width: 350px;
+    width: 700px;
 }
+
+.city{
+    font-size: 32px;
+}
+
+.date {
+    font-size: 16px;
+}
+
+.container-temp{
+    display: flex;
+    justify-content: center;
+    background-color: rgba(244, 208, 63, 0.2);
+    box-shadow: 5px 6px rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+
+    font-size: 100px;
+    font-weight: 900;
+    text-shadow: 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.weather{
+    font-size: 32px;
+}
+
+.low-high {
+    font-size: 22px;
+}
+

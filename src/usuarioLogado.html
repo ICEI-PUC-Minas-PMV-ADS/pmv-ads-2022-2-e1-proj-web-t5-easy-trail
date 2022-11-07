@@ -27,12 +27,10 @@
                 </div>
                 <!--LOGO-CONTAINER-->
                 <ul class="header-list">
-                    <li class="header-list-row">
-                        <a href="#" class="header-list-link">
-                            <a href="https://www.pucminas.br/main/Paginas/default.aspx"><button
-                                    class="pesquisar-input-login">Usuário Logado</button></a>
-                        </a>
-                    </li>
+                    <img src="/src/images/icons/sino.svg" alt="sino">
+                    <img src="/src/images/icons/perfil.svg" alt="perfil">
+                    <img src="/src/images/icons/search.svg" alt="pesquisa">
+                    <img src="/src/images/icons/sair.svg" alt="sair">
                 </ul>
                 <!--HEADER-LIST-->
             </nav>
@@ -88,11 +86,39 @@
             <div class="div-esquerda">
                 <h1>TRILHA QUALQUER</h1>
                 <img class="imagem01"  src="/src/images/carrosel1.png" alt="ciclista">
+                
             </div>
+            
             <div class="div-direita">
+                
                 <h2>PREVISÃO DO TEMPO</h2>
-                <img src="/src/images/carrosel2.png" alt="prev01">
-                <img src="/src/images/carrosel3.png" alt="prev02">
+                <div class="container-fluid">
+
+                    <div class="card text-center shadow-lg" style="width: 26rem;">
+                
+                      <div class="card-header bg-white text-dark font-weight-bold">
+                        TEMPO E TEMPERATURA
+                        
+                      </div>
+                
+                      <div class="card-body">
+                        <div class="city">Belo Horizonte, BR</div>
+                        <div class="date">Terça, 8 Novembro 2022</div>
+                        <div class="container-img">
+                          <img src="/src/images/icons/02d.png">
+                        </div>
+                        <div class="container-temp mx-4 my-3">
+                          <div>22</div>
+                          <span>°c</span>
+                        </div>
+                        <div class="weather py-2">Nublado</div>
+                        <div class="low-high">22°c / 23°c</div>
+                      </div>
+                                    
+                
+                    </div>
+                  </div>
+                
             </div>
         </div>
         <div class="descricao">
@@ -114,11 +140,32 @@
                 <P>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit, voluptates vitae et illum dolorem quasi asperiores natus a minus explicabo iure, ipsa aliquid aspernatur dolor? Minima necessitatibus iste facilis? Architecto?</P>
                 
             </div>
-        
         </div>
 
     </section>
     
+    <section class="form-container">
+        <div class="container-form">
+            <form class="setup-form">
+                <thead>
+                    <div class="form-titulo-wraper">
+                        <h1>Comentar</h1>
+                    </div>
+                </thead>
+                <tbody>
+                    <textarea class="setup-form txtAreaForm form-input" name="subject"
+                        placeholder="Escreva seu comentário.."></textarea>
+                </tbody>
+                <tfoot>
+                    <br>
+                    <div class="btn-form-wraper">
+                        <button onclick="trailFuncs.cadastroDuvidas()" class="buttom-form">Enviar</button>
+                    </div>
+                </tfoot>
+            </form>
+        </div><!--CONTAINER-->
+    </section>
+
     <footer>
         <div class="container">
             <p>Direitos reservados a Pucminas. COPYRIGHT &copy 2022.</p>
