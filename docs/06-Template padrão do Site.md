@@ -4,3 +4,4 @@
 
 Abaixo podemos ver como está estrutura a nossa interface para as páginas que compõem o site da Easy Trail.
 
+(img/TemplateSite.jpg)
