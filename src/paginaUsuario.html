@@ -56,7 +56,7 @@
         </div>
 
         <div class="container--metade2">
-            <h2>Trilhas Salvas</h2>
+            <h2>Trilhas Favoritas</h2>
             <div class="card-trilhas-salvas">
                 <div class="card-exemplo1">
                     <img src="/src/images/icons/compartilhar.png" alt="share">
@@ -104,6 +104,19 @@
                     </p>
                 </div>
             </div>
+
+            <!-- FAZER LAYOUT NO CSS -->
+            <h3 id="user__name"></h3>
+            <h3 id="user__password"></h3>
+            <h3 id="user__email"></h3>
+            <label for="nome">Alterar nome:</label>
+            <input type="text" name="nome" id="input-nome">
+            <label for="senha">Nova senha:</label>
+            <input type="text" name="senha" id="input-senha">
+            <label for="email">Alterar email:</label>
+            <input type="text" name="email" id="input-email">
+            <button type="button" onclick="alterarNome()">Enviar</button>
+
         </div>
 
         
@@ -117,8 +130,8 @@
     </footer>
 
     <script src="script/main.js"></script>
-    <script src="script/shareModal.js"></script>
-
+    <!-- <script src="script/shareModal.js"></script> -->
+    <script src="script/userConfig.js"></script>
 </body >
 
 </html >
