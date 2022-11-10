@@ -1,712 +1,400 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-html,
-body {
-    height: 100%;
-    font-size: 17px;
-    background-color: #D9D9D9;
-    font-family: 'Calibri';
-}
-
-/* MAIN-CONTAINER */
-.container {
-    margin: 0 auto;
-    width: 100%;
-    max-width: 1400px;
-}
-
-/*================*/
-/* HEADER SECTION */
-/*================*/
+/*== HEADER ==*/
 
 header {
-    background-color: #F5F5F5;
-}
-
-.header-wrap {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 120px;
-    padding: 10px;
-}
-
-
-
-.logo-container {
-    width: 102px;
-    height: 102px;
-    border-radius: 102px;
-    /* background-color: black; */
-
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-}
-
-.header-list {
-    display: flex;
-    flex-direction: row;
-    column-gap: 1.6rem;
-
-    list-style-type: none;
-}
-
-.header-list li a .header-icon {
-    height: 30px;
-    font: #d26969;
-}
-
-
-/*==============*/
-/* MAIN SECTION */
-/*==============*/
-.trails {
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: cover; /* Resize the background image to cover the entire container */
-}
-
-.main-frame-trails {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding: 84px 101px;
-    width: 100%;
-    height: 250px;
-}
-
-.barra-pesquisa-trail {
-    width: 1200px;
-    height: 150px;
-    background: rgb(252, 252, 252);
-    border-radius: 9px;
-}
-
-.input-pesquisa-wrap {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-
-.pesquisa-input-list {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    list-style-type: none;
-    width: 100%;
-}
-
-.pesquisa-input-list li {
-    border-right: 1px solid black;
-}
-
-.pesquisa-input-item {
-    font-family: 'Calibri';
-    font-size: 18px;
-    color: #050200;
-    text-align: center;
-}
-
-.formulario {
-    font-family: 'Calibri';
-    font-size: 0px;
-    height: 38px;
-    width: 230px;
-    margin-right: 1rem;
-    background-color: rgb(255, 255, 255);
-}
-
-.xpto {
-    background-color: #faf8f7;
-    font-family: 'Calibri';
-    font-size: 18px;
-    height: 38px;
-    width: 213px;
-    margin-right: 1rem;
-    text-align: center;
-}
-
-
-.pesquisa-input-row {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    list-style-type: none;
-}
-
-.pesquisa-input-list li:nth-last-child(1) {
-    border: 0;
-}
-
-.pesquisa-input-list li input {
-    height: 38px;
-    width: 213px;
-    margin-right: 1rem;
-}
-
-.pesquisa-input-list li label {
-    padding-bottom: 0%;
-    margin-right: 1rem;
-    font-weight: 900;
-    color: gr;
-}
-
-
-.pesquisar-input-btn {
-    width: 148px !important;
-    height: 45px !important;
-    color: white;
-    font-family: 'Calibri';
-    font-size: 20px;
-    background-color: #ff6004;
-    border-radius: 90px;
-    border: none;
-    cursor: pointer;
-}
-
-.novapesquisa-input-btn {
-    width: 148px;
-    height: 35px;
-    background-color: #EB5C0C;
-    color: white;
-    font-size: 15px;
-    font-weight: bold;
-    border-radius:10px;
-    border: none;
-    cursor: pointer;
-}
-
-.novapesquisa-input-btn:hover {
-    opacity: 0.7;
-}
-
-.pesquisar-input-explorar {
-    width: 108px !important;
-    height: 30px !important;
-    color: white;
-    font-family: 'Calibri';
-    font-weight: 500;
-    font-size: 17px;
-    background-color: rgb(255, 91, 2);
-    border-radius: 70px;
-    border: none;
-    cursor: pointer;
-    justify-content: space-between;
-    align-items: left;
-    width: 20%;
-    height: 20px;
-    padding: 0px;
-}
-
-.pesquisar-input-btn:hover {
-    opacity: 0.7;
-}
-
-
-.pesquisar-input-login {
-    width: 120px !important;
-    height: 30px !important;
-    color: white;
-    font-family: 'Calibri';
-    font-weight: 500;
-    font-size: 17px;
-    background-color: rgb(255, 91, 2);
-    border-radius: 70px;
-    border: none;
-    cursor: pointer;
-    justify-content: space-between;
-    align-items: left;
-    width: 20%;
-    height: 20px;
-    padding: 0px;
-}
-
-
-.slider-trilhas {
-    height: 800px;
-    width: 1160px;
-    margin-bottom: 1rem;
-    background-position: center; 
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    justify-content: center;
-}
-
-.slider-trilhas span:nth-child(1) {
-    background-color: aqua;
-}
-
-
-.dot-trilha-slider {
-    margin: 3.5rem 1rem;
-    height: 25px;
-    width: 25px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-}
-
-
-/*==============*/
-/* TRILHA BOX */
-/*==============*/
-.trilhas-recomendadas {
-    background-color: #D9D9D9;
-}
-
-.trilhas-wraper {
-    padding: 3rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.trilhas-box-geral {
-    display: flex;
-    flex-direction: column;
-    column-gap: 1rem;
-    text-justify: auto;
-    align-items: auto;
-}
-
-.trilhas-box-items {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-}
-
-.trilha-item {
-    padding: 1rem;
-    margin: 1rem 1rem;
-    border-radius: 10px;
-    height: 400px;
-    width: 402px;
     background-color: white;
-    box-shadow: 0px 0px 9px 3px rgba(0, 0, 0, 0.75);
-    ;
-
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
+    font-size: 27px;
 }
 
-.icon-trilha-item {
+.search {
+    width: 130px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+  }
+  
+.search:focus {
     width: 100%;
-    text-align: right;
-}
+  }
+  
+  
 
-.mais-trilhas-btn-element {
-    font-size: 17px;
-    color: white;
-    width: 140px;
-    height: 43px;
-    border-radius: 90px;
-    background: #EB5C0C;
-    border: none;
-    transition: 0.5;
-    cursor: pointer;
-}
+/*== BODY ==*/
 
-.mais-trilhas-btn-element:hover {
-    background-color: rgb(136, 66, 0);
-}
-
-.trilhas-recomendadas-title h1 {
-    font-size: 50px;
-    font-family: 'Calibri';
-    margin: 2rem;
+@media (max-width:1080px) and (min-width:240px) {
+  .container--search-bar,
+  .search-bar-itens-border,
+  .search-bar-input,
+  .search-bar-itens,
+  .search-bar {
+background-color:white;
+justify-content: center;
+align-items: center;
+flex-direction: row;
+    }
 }
 
 
-.setup-form {
-    border: 0px #ccc;
-    width: 100%;
-    padding-left: 5rem;
-    padding-right: 5rem;
-    font-size: 16px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: right;
-    padding-bottom: 2%;
-    background-color: whitesmoke;
+.btn-danger{
+  background-color: #EB5C0C;
+  border: none;
+  border-radius: 30px;
+  width: 120px;
+  height: 40px;
+  align-items: center;
+  justify-content:c e
+}
+
+#search-bar{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  font-family: 'Calibri';
+  height: auto;
+  font-size: 17px;
+  font-weight: 700;
+  padding: 1rem;
+  background-color: rgb(227, 226, 226);
+}
+.container--search-bar{
+  width: 1200px;
+  height: 82px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  height: auto;
+}
+.search-bar {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.border-r{
+  
+  border-right: 1px solid black;
+}
+.search-bar-itens {
+  display: flex;
+  align-items: center;
 }
 
 
-.setup-form>button { 
-    font-size: 17px;
-    color: white;
-    width: 140px;
-    height: 43px;
-    border-radius: 90px;
-    background: #EB5C0C;
-    border: none;
-    transition: 0.5;
-    cursor: pointer;
+pl-3.pr2 {
+padding-left: 70%;
 }
 
-.setup-form-nome,
-.setup-form-email {
-    width: 100%;
-    height: 3rem;
-    outline: none;
-    border: 0;
-    padding-left: 0.2rem;
-    margin: 15px 0;
-    font-family: 'calibri';
-    font-size: 16px;
-    color: black;
-    text-align: left;
+.col-sm{
+font-size: 19px;
+font-family: "Calibri";
 }
 
-.setup-form label {
-    font-size: 20px;
-    margin-top: 0.5rem;
-    text-align: left;
+.search-bar-input {
+  text-align: center;
+  font-size: 17px;
+  height: 38px;
+  width: 150px;
+  border: gray;
 }
 
-.txtAreaForm {
-    align-items: center;
-    width: 100%;
-    height: 7rem;
-    outline: none;
-    border: 0;
-    padding-left: 0.2rem;
-    margin: 15px 0;
-    font-family: 'Calibri';
-    font-size: 16px;
-    color:black;
-    background-color: white;
+#Dificuldade {
+  border: 1px solid #d4d4d4;
+  height: 50.20px;
+  width: 202.23px;
+  text-align: center;
+}
+
+
+.Explorar-input-btn{
+  background-color: #EB5C0C;
+  border: none;
+  }
+
+
+
+.cards-trilhas {
+ padding-top: 4%;
+ padding-bottom: 2%;
+ text-align: center;
+
+}
+
+.button-Btn {
+ color: #EB5C0C;
+ background-color: white;
+ border: none;
+ text-align: left;
+ padding-left: 0;
+}
+
+.card-text {
+text-size-adjust: auto;
+font-family: "calibri";
+text-justify: distribute-all-lines;
+font-size: 14px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.form-group {
+  padding-left: 25%;
+  padding-right: 25%;
+  font-family: "calibri";
+  font-size: 1.3rem;
+  background-color: white;
+}
+
+.Form-titulo {
+padding-top: 3%;
+text-align: center;
+}
+
+.form-control{
+background-color: whitesmoke;
 }
 
 .buttom-form {
-    font-size: 17px;
-    color: white;
-    width: 140px;
-    height: 43px;
-    border-radius: 90px;
-    background: #EB5C0C;
+  font-size: 17px;
+  color: white;
+  background-color: #EB5C0C;
+  width: 140px;
+  height: 43px;
+  border: none;
+  font-size: 12px;
+  border-radius: 10px;
+  }
+  
+  .btn-form-wraper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 2%;
     border: none;
-    transition: 0.5;
-    cursor: pointer;
+    }
+
+.footer {
+  text-align: center;
+  width: 100%;
+  background-color: white;
+  font-family: 'Calibri';
+  font-size: 1.7px;
+  color: gray;
 }
 
-.btn-form-wraper {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.carousel-inner {
+  position: relative;
+  margin: 0 auto;
+}
+
+.carousel-inner .content {
+  position: absolute;
+  bottom: 1%;
+  background: rgb(0, 0, 0); 
+  background: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  font-size: 25px;
+  color: #f1f1f1; /* Grey text */
+  width: 100%; /* Full width */
+  padding: 35px; /* Some padding */
+}
+
+/*///////////// MODAL LOGIN /////////////*/
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: rgb(95, 3, 95);
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+  display: flex;
+  float: none;
 }
 
 
-.form-titulo-wraper {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Calibri';
-    font-size: 2.3rem;
-    padding-top: 2%;
+.container {
+  padding: 16px;
+}
+
+.containerX {
+  width: 100%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 3%;
+  padding-bottom: 2%;
+  float: center;
+  margin: auto;
 }
 
 
-.form-titulo-wraper>h1 {
-    font-size: 2rem;
-    font-family: 'Calibri';
-    font-weight: 500;
+span.psw {
+  float: right;
+  padding-top: 16px;
 }
 
-
-.buttom-form:hover {
-    background-color: rgb(136, 66, 0);
-}
-
-
-.button-Btn{
-background-color: white;
-color: #EB5C0C;
-font-weight: bolder;
-border: 0px;
-cursor: pointer;
-}
-
-
-footer {
-    padding: 2rem;
-    text-align: center;
-    width: 100%;
-    background-color: white;
-    font-family: 'Calibri';
-    color: #767676;
-}
-
-  /* PROJECTS */
-
-section#projects {
-    height: 500px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
-}
-
-.project-img{
-    width: 60%;
-}
-
-.project-img img{
-    box-shadow: 0 1px 2px #0003;
-    object-fit: cover;
-    width: 80%;
-    height: 400px;
-}
-
-.project-info {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    text-align: start;
-    font-weight: 800;
-}
-
-.swiper {
-    width: 95vw;
-    height: 500px;
-}
-
-.swiper-slide{
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 30px;
-}
-
-.swiper-button-next,
-.swiper-button-prev {
-    color: #EB5C0C(39, 39, 164);
-}
-
-.swiper-pagination-bullet-active {
-    background-color: #EB5C0C;
-}
-
-/* FORM CADASTRO TRILHA */
-.form-cadastro-trilha {
-    display: flex;
-    flex-direction: column;
-}
-
-.form-cadastro-trilha textarea {   
-    outline: none;
-    resize: none;
-}
-
-.form-cadastro-trilha label {
-    margin: 0.5rem 0;
-}
-
-.form-cadastro-trilha input {
-    height: 2.4rem;
-    width: 100%;
-    padding: 0.6rem;
-}
-.form-btn-cadastro, .form-title-container {
-    text-align: center;
-    margin: 1rem;
-}
-/* Modal de compartilhar */
-
+/*//////////// The Modal (background)//////*/
 .modal {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: #fff;
-    border: 1px solid #EB5C0C;
-    border-radius: 20px;
-    max-width: 460px;
-    width: 100%;
-    transition: .3;
-    opacity: 0;
-    visibility: hidden;
-    z-index: 1;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+  padding-top: 60px;
 }
 
-.modal-head {
-    padding: 25px 40px;
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  border: 1px solid #888;
+  width: 50%;
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #EB5C0C;
+  cursor: pointer;
+}
+
+  .cancelarbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 1px solid #EB5C0C;
+    float: none;
+
+  }
+
+
+
+/*////// AUTO COMPLETE ////*/
+
+* { box-sizing: border-box; }
+
+.autocomplete {
+  position: relative;
 }
 
-.modal-title {
-    font-weight: 600;
-    font-size: 24px;
-    color: #000;
+.Cidade-btn {
+  border: 1px solid transparent;
+  background-color: white;
+  font-size: 16px;
 }
 
-.modal-close {
-    width: 32px;
-    height: 32px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    background-color: #ededed;
-    border-radius: 50%;
-    text-decoration: none;
-    color: #000;
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+}
+.autocomplete-items div {
+  cursor: pointer;
+  background-color: whitesmoke;
 }
 
-.modal-body {
-    padding: 30px 40px;
+.autocomplete-items:hover {
+  cursor: pointer;
+  background-color: red;
 }
 
-.modal-name {
-    display: flex;
-    font-weight: 500;
-    font-size: 18px;
-    color: #000;
-    margin-bottom: 20px;
+
+
+
+
+.signin-login {
+  background-color: rgb(95, 3, 95);
+  width: auto;
+  display: flex;
+  float: none;
 }
 
-.modal-socials {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
+button:hover {
+  opacity: 0.8;
 }
 
-.modal-column {
-    margin-right: 20px;
+.cancelbtn-signin {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+  display: flex;
+  float: none;
 }
 
-.modal-social {
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid;
-    border-radius: 50%;
-    font-size: 24px;
-    background: #fff;
-    text-decoration: none;
-    transition: .5s;
+.breadcrumb {
+width: 100%;
+padding: 0;
+padding-left: 2%;
 }
 
-.modal-social.is-facebook {
-    border-color: #3b5998;
-    color: #3b5998;
+.breadcrumb a {
+font-size: 0.1rem;
+font-family:'sans-serif';
+color: red;
 }
 
-.modal-social.is-facebook:hover {
-    background: #3b5998;
-    color: #fff;
+#FAQ {
+text-align: center;
+padding-top: 1%;
+padding-bottom: 2%;
 }
 
-.modal-social.is-twitter {
-    border-color: #00acee;
-    color: #00acee;
+.accordion {
+padding-bottom: 10%;
+width: auto;
+padding-left: 10%;
+padding-right: 10%;
 }
 
-.modal-social.is-twitter:hover {
-    background: #00acee;
-    color: #fff;
-}
-.modal-social.is-instagram {
-    border-color: #8a3ab9;
-    color: #8a3ab9;
+.btn-link {
+color: #EB5C0C;
+font-family: "calibri";
 }
 
-.modal-social.is-instagram:hover {
-    background: #8a3ab9;
-    color: #fff;
-}
-.modal-social.is-linkedin {
-    border-color: #0e76a8;
-    color: #0e76a8;
-}
-
-.modal-social.is-linkedin:hover {
-    background: #0e76a8;
-    color: #fff;
-}
-
-.modal-label {
-    position: relative;
-    display: flex;
-}
-
-.modal-input {
-    width: 100%;
-    height: 50px;
-    background: #fbfbfb;
-    border: 1px solid #ededed;
-    border-radius: none;
-    padding: 0 15px;
-    font-family: Montserrat;
-    font-weight: normal;
-    font-size: 14px;
-    color: #000;
-}
-
-.modal-label .btn-copiar {
-    position: absolute;
-    top: 7px;
-    right: 7px;
-}
-
-.btn-copiar {
-    display: flex;
-    align-items: center;
-    height: 36px;
-    padding: 0 30px;
-    background: #EB5C0C;
-    border-radius: 5px;
-    border: 0;
-    outline: none;
-    cursor: pointer;
-    font-weight: 500;
-    font-size: 14px;
-    color: #fff;
-    border: 1px solid #EB5;
-    text-decoration: none;
-}
-
-.btn-copiar:hover {
-    background: #fff;
-    color: #EB5C0C;
-}
-
-.btn-copiar:focus{
-    background: #3a1b02;
-}
-
-.modal.is-show {
-    opacity: 1;
-    visibility: visible;
+.card-faq {
+padding-left: 3%;
+padding-top: 2%;
+font-family: "calibri";
+color: gray;
+font-size: 10px;
 }
