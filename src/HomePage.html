@@ -24,13 +24,16 @@
       <div class="container-fluid">
         <img onclick="location=href='https://www.google.com'" src="images/logoEasy.png" width="120" alt="100">
         <div>
-          <button class="btn btn-danger" onclick="document.getElementById('id00').style.display='block'">Cadastre-se</button>
-          <button class="btn btn-danger" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
-      
+          <button class="btn btn-danger"
+            onclick="document.getElementById('id00').style.display='block'">Cadastre-se</button>
+          <button class="btn btn-danger" onclick="document.getElementById('id01').style.display='block'"
+            style="width:auto;">Login</button>
+    
           <div id="id00" class="modal">
             <form class="modal-content" action="/action_page.php">
               <div class="container">
-                <span onclick="document.getElementById('id00').style.display='none'" class="close" title="close">&times;</span>
+                <span onclick="document.getElementById('id00').style.display='none'" class="close"
+                  title="close">&times;</span>
                 <label for="name"><b>Nome</b></label>
                 <input type="text" placeholder="Digite o seu nome completo" name="name" required>
                 <label for="email"><b>Email</b></label>
@@ -45,9 +48,9 @@
               </div>
           </div>
           </form>
-          
+    
           <div id="id01" class="modal">
-          
+    
             <form class="modal-content animate" action="/action_page.php" method="post">
               <div class="imgcontainer">
                 <span onclick="document.getElementById('id01').style.display='none'" class="close"
@@ -62,13 +65,14 @@
               </div>
               <div class="containerX" style="background-color:#f1f1f1">
                 <span class="psw">Esqueceu sua <a href="#">senha?</a></span>
-                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelarbtn">Cancelar</button>
+                <button type="button" onclick="document.getElementById('id01').style.display='none'"
+                  class="cancelarbtn">Cancelar</button>
               </div>
             </form>
-          
+    
           </div>
-          </div>
-          </nav>
+        </div>
+    </nav>
     
           <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
             <div class="carousel-indicators">
@@ -220,8 +224,7 @@
 <footer>
    <div class="footer">
     <p>Direitos reservados a Pucminas. COPYRIGHT&copy 2022.</p>
-  </div><!-- </div> -->
-  <!--CONTAINER-->
+  </div>
 </footer>
 
 <script src="cidades.js"></script>
