@@ -84,13 +84,30 @@ header {
   border: none;
 }
 
-.footer {
-  text-align: center;
-  width: 100%;
-  background-color: white;
-  font-family: 'Calibri';
-  font-size: 1.7px;
-  color: gray;
+  /*//////// FOOTER ////////*/
+
+footer {
+background-color:whitesmoke;
+padding-top: 15px;
+padding-bottom:15px;
+}
+
+.container.text {
+margin: 0;
+padding: 0;
+}
+
+#Copyright{
+  /*Configuração do Rodapé*/
+color: gray;
+font-size: 1px;
+text-align: right;
+margin: 0;
+}
+
+#imgFAQ{
+  /*Configuração do Rodapé*/
+text-align: center;
 }
 
 /*///////////// BARRA DE PESQUISA /////////////*/
