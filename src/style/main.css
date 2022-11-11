@@ -15,7 +15,6 @@ header {
   width: 120px;
   height: 40px;
   align-items: center;
-  justify-content: c e
 }
 
 .col-sm {
@@ -208,14 +207,19 @@ text-align: center;
 .carousel-inner .content {
   /*Configurações do Carrosel */
   position: absolute;
-  bottom: 1%;
+  bottom: 3%;
   background: rgb(0, 0, 0);
-  background: rgba(0, 0, 0, 0.5);
-  text-align: right;
+  background: rgba(0, 0, 0, 0.6);
+  text-align: center;
   text-size-adjust: auto;
   color: #f1f1f1;
   width: 100%;
-  padding: 5px;
+  height: 20%;
+  padding: 10px;
+}
+
+.carousel-indicators {
+background-color:;
 }
 
 span.psw {
