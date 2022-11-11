@@ -1,94 +1,60 @@
-
 /*/////////== HEADER ==/////////*/
-
 header {
-    background-color: white;
-    font-size: 27px;
+  background-color: white;
+  font-size: 27px;
 }
 
-.search {
-    width: 130px;
-    -webkit-transition: width 0.4s ease-in-out;
-    transition: width 0.4s ease-in-out;
-}
-  
-.search:focus {
-    width: 100%;
-}
-  
- 
 
 /*/////////== BODY ==/////////*/
 
 .btn-danger {
+  /*Botões Cadastre-se, Login, Explorar e Enviar do Forms*/
   background-color: #EB5C0C;
   border: none;
   border-radius: 30px;
   width: 120px;
   height: 40px;
   align-items: center;
-  justify-content:c e
+  justify-content: c e
 }
 
-
-.border-r {
-  border-right: 1px solid black;
+.col-sm {
+  /*Barra de pesquisa*/
+  font-size: 19px;
+  font-family: "Calibri";
 }
 
-
-
-pl-3.pr2 {
-padding-left: 70%;
-}
-
-.col-sm{
-font-size: 19px;
-font-family: "Calibri";
-}
-
-
-#Dificuldade {
-  border: 1px solid #d4d4d4;
-  height: 50.20px;
-  width: 202.23px;
+.cards-trilhas {
+  /*Fundo do Título "Trilhas Recomendadas" */
+  padding-top: 2%;
+  padding-bottom: 2%;
   text-align: center;
 }
 
-
-.Explorar-input-btn{
-  background-color: #EB5C0C;
-  border: none;
-  }
-
-
-
-.cards-trilhas {
- padding-top: 4%;
- padding-bottom: 2%;
- text-align: center;
-
-}
-
 .button-Btn {
- color: #EB5C0C;
- background-color: white;
- border: none;
- text-align: left;
- padding-left: 0;
+  /*Funcionalidade "Veja Mais" */
+  color: #EB5C0C;
+  background-color: white;
+  border: none;
+  text-align: left;
+  padding-left: 0;
 }
 
 .card-text {
-text-size-adjust: auto;
-font-family: "calibri";
-text-justify: distribute-all-lines;
-font-size: 14px;
+  /*Área dos texto dos cards das Trilhas*/
+  text-size-adjust: auto;
+  font-family: "calibri";
+  text-justify: distribute-all-lines;
+  font-size: 14px;
 }
 
 .card {
+  /*Área total dos cards das Trilhas*/
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .form-group {
+  /*Área do forms "Envie sua Dúvida"*/
   padding-left: 25%;
   padding-right: 25%;
   font-family: "calibri";
@@ -97,33 +63,26 @@ font-size: 14px;
 }
 
 .Form-titulo {
-padding-top: 3%;
-text-align: center;
+  /*´Titulo do forms "Envie sua Dúvida"*/
+  padding-top: 3%;
+  text-align: center;
 }
 
-.form-control{
-background-color: whitesmoke;
+.form-control {
+  /*Campos inputs do forms "Envie sua Dúvida"*/
+  background-color: white;
+  padding: auto;
 }
 
-.buttom-form {
-  font-size: 17px;
-  color: white;
-  background-color: #EB5C0C;
-  width: 140px;
-  height: 43px;
+.btn-form-wraper {
+  /*Alinhamento do Botão Enviar no forms "Envie sua Dúvida"*/
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 2%;
   border: none;
-  font-size: 12px;
-  border-radius: 10px;
-  }
-  
-  .btn-form-wraper {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-bottom: 2%;
-    border: none;
-    }
+}
 
 .footer {
   text-align: center;
@@ -134,29 +93,125 @@ background-color: whitesmoke;
   color: gray;
 }
 
+/*///////////// BARRA DE PESQUISA /////////////*/
+.container {
+  /*Container da Barra de Pesquisa*/
+  width: 100%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+#floatingInput {
+  /*Ajuste do input Cidade da Barra de Pesquisa*/
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-radius: 0.4rem;
+  margin: 0;
+  font-size: 17px;
+}
+
+.Cidade-btn {
+  /*Ajuste do input Cidade na Barra de Pesquisa*/
+  border: 1px solid transparent;
+  background-color: white;
+  font-size: 16px;
+}
+
+#floatingSelect {
+  /*Ajuste do input Dificuldade da Barra de Pesquisa*/
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+#date {
+  /*Ajuste do input date da Barra de Pesquisa*/
+  text-align: justify center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: white;
+}
+
+.d-flex {
+  /*Ajuste do grid da Barra de Pesquisa*/
+  background-color: rgb(227, 227, 227);
+}
+
+#pesquisa {
+  /*Ajuste do grid da Barra de Pesquisa*/
+  background-color: rgb(227, 227, 227);
+}
+
+.row {
+  /*Ajuste do grid da Barra de Pesquisa*/
+  margin: 0;
+  padding: 0;
+}
+
+.autocomplete {
+  /*Auto complete das Cidades*/
+  position: relative;
+  padding: 0px 12.75px;
+}
+
+.autocomplete-items {
+  /*Configurações do Auto complete das Cidades*/
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  width: 15rem;
+}
+
+.autocomplete-items div {
+  /*Configurações do Auto complete das Cidades*/
+  cursor: pointer;
+  background-color: whitesmoke;
+}
+
+.autocomplete-items:hover {
+  /*Configurações do Auto complete das Cidades*/
+  cursor: pointer;
+  background-color: blue;
+}
+
+.autocomplete-active {
+  /*Configurações do Auto complete das Cidades*/
+  background-color: DodgerBlue !important;
+  color: #ffffff;
+}
 
 /*///////////// CARROSEL /////////////*/
 .carousel-inner {
+  /*Configuração inicial do Carrosel */
   position: relative;
   margin: 0 auto;
 }
 
 .carousel-inner .content {
+  /*Configurações do Carrosel */
   position: absolute;
   bottom: 1%;
-  background: rgb(0, 0, 0); 
+  background: rgb(0, 0, 0);
   background: rgba(0, 0, 0, 0.5);
   text-align: right;
   text-size-adjust: auto;
   color: #f1f1f1;
-  width: 100%; 
+  width: 100%;
   padding: 5px;
+}
+
+span.psw {
+  /*Elementos do Carrosel*/
+  float: right;
+  padding-top: 16px;
 }
 
 /*///////////// MODAL LOGIN /////////////*/
 
-/* Full-width input fields */
-input[type=text], input[type=password] {
+input[type=text],
+input[type=password] {
+  /*Configurações inputs textos*/
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -165,8 +220,8 @@ input[type=text], input[type=password] {
   box-sizing: border-box;
 }
 
-/* Set a style for all buttons */
 button {
+  /*Botão entrar*/
   background-color: rgb(95, 3, 95);
   color: white;
   padding: 14px 20px;
@@ -177,10 +232,12 @@ button {
 }
 
 button:hover {
+ /*Botão entrar*/
   opacity: 0.8;
 }
 
 .cancelbtn {
+ /*Botão Cancelar*/
   width: auto;
   padding: 10px 18px;
   background-color: #f44336;
@@ -188,18 +245,8 @@ button:hover {
   float: none;
 }
 
-
-.container {
-  width: 100%;
-  padding-left: 5%;
-  padding-right: 5%;
-  padding-top: 3%;
-  padding-bottom: 2%;
-  float: center;
-  margin: auto;
-}
-
 .containerX {
+  /*Container Modal Cadastre-se/Entrar*/
   width: 100%;
   padding-left: 5%;
   padding-right: 5%;
@@ -209,14 +256,8 @@ button:hover {
   margin: auto;
 }
 
-
-span.psw {
-  float: right;
-  padding-top: 16px;
-}
-
-/*//////////// The Modal (background)//////*/
 .modal {
+  /*Configurações Modal de Login*/
   display: none;
   position: fixed;
   z-index: 1;
@@ -225,21 +266,21 @@ span.psw {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgb(0,0,0);
-  background-color: rgba(0,0,0,0.4);
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
   padding-top: 60px;
 }
 
-/* Modal Content/Box */
 .modal-content {
+  /*Configurações Modal de Login*/
   background-color: #fefefe;
   margin: auto;
   border: 1px solid #888;
   width: 50%;
 }
 
-/* The Close Button (x) */
 .close {
+  /*Botão (x) do Modal de Login*/
   position: absolute;
   right: 25px;
   top: 0;
@@ -250,102 +291,13 @@ span.psw {
 
 .close:hover,
 .close:focus {
+  /*Elementos do Botão (x) do Modal de Login*/
   color: #EB5C0C;
   cursor: pointer;
 }
 
-  .cancelarbtn {
-    width: auto;
-    padding: 10px 18px;
-    background-color: #f44336;
-    display: flex;
-    float: none;
-  }
-
-#date{
-    text-align: justify center;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    background-color: white;
-}
-
-#floatingSelect{
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-}
-
-#floatingInput{
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    border-radius: 0.4rem;
-    margin: 0;
-    font-size: 17px;
-}
-
-.d-flex {
-background-color: rgb(227, 227, 227);
-}
-
-#pesquisa {
-    background-color: rgb(227, 227, 227);
-    
-}
-
-
-.row {
-margin: 0;
-padding: 0;
-}
-
-/*////// AUTO COMPLETE ////*/
-.autocomplete {
-  position: relative;
-  padding: 0px 12.75px; 
-}
-
-.Cidade-btn {
-  border: 1px solid transparent;
-  background-color: white;
-  font-size: 16px;
-  
-}
-
-.autocomplete-items {
-  position: absolute;
-  border: 1px solid #d4d4d4;
-  border-bottom: none;
-  border-top: none;
-  z-index: 99;
-  width: 15rem;
-}
-.autocomplete-items div {
-  cursor: pointer;
-  background-color:whitesmoke;
-}
-
-.autocomplete-items:hover {
-  cursor: pointer;
-  background-color: blue;
-}
-
-.autocomplete-active {
-    background-color: DodgerBlue !important;
-    color: #ffffff;
-  }
-
-
-.signin-login {
-  background-color: rgb(95, 3, 95);
-  width: auto;
-  display: flex;
-  float: none;
-}
-
-button:hover {
-  opacity: 0.8;
-}
-
-.cancelbtn-signin {
+.cancelarbtn {
+  /*Botão de Cancelar do modal Cadastre-se e Entrar*/
   width: auto;
   padding: 10px 18px;
   background-color: #f44336;
@@ -354,38 +306,47 @@ button:hover {
 }
 
 .breadcrumb {
-width: 100%;
-padding-left: 2%;
+ /*Rota das páginas navegadas*/
+  width: 100%;
+  padding-left: 10px;
+  margin: 0;
 }
 
 .breadcrumb a {
-font-size: 0.1rem;
-font-family:'calibri';
-color: red;
+ /*Configuração do texto da Rota das páginas navegadas*/
+  font-size: 0.01rem;
+  font-family: 'calibri';
+  color: red;
 }
 
+/*//////////  FAQ //////////*/
 #FAQ {
-text-align: center;
-padding-top: 1%;
-padding-bottom: 2%;
-text-justify: auto;
+  /*Configuração da Imagem principal*/
+  text-align: center;
+  padding-top: 1%;
+  padding-bottom: 2%;
+  text-justify: auto;
 }
 
 .accordion {
-padding-bottom: 0.7rem;
-width: auto;
-padding-left: 10%;
-padding-right: 10%;
+  /*Configuração do componente*/
+  padding-bottom: 0.7rem;
+  width: auto;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 .accordion-button {
-color: #EB5C0C;
-font-family: "calibri";
-padding: 0.07rem;
+  /*Configuração do componente*/
+  color: #EB5C0C;
+  background-color:whitesmoke;
+  font-family: "calibri";
+  padding: 0.07rem;
 }
 
 .card-faq {
-font-family: "calibri";
-color: gray;
-font-size: 10px;
+  /*Configuração do campo de texto do componente*/
+  font-family: "calibri";
+  color: gray;
+  font-size: 10px;
 }

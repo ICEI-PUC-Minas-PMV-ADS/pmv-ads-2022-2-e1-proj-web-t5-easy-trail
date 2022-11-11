@@ -34,7 +34,7 @@
                 <button class="btn btn-danger"
                     onclick="document.getElementById('id00').style.display='block'">Cadastre-se</button>
                 <button class="btn btn-danger" onclick="document.getElementById('id01').style.display='block'"
-                    style="width:auto;">Login</button>
+                    style="width:auto;">Entrar</button>
 
                 <div id="id00" class="modal">
                     <form class="modal-content" action="/action_page.php">
@@ -49,9 +49,9 @@
                             <input type="password" placeholder="Digite sua senha" name="psw" required>
                             <label for="psw-repeat"><b>Repita sua Senha</b></label>
                             <input type="password" placeholder="Digite sua senha" name="psw-repeat" required>
+                            <button type="submit" class="signup-login">Entrar</button>
                             <button type="button" onclick="document.getElementById('id00').style.display='none'"
-                                class="cancelbtn-signin">Cancel</button>
-                            <button type="submit" class="signup-login">Sign Up</button>
+                                class="cancelarbtn">Cancelar</button>
                         </div>
                 </div>
                 </form>
@@ -67,7 +67,7 @@
                             <input type="text" placeholder="Digite seu e-mail" name="uname" required>
                             <label for="psw"><b>Senha</b></label>
                             <input type="password" placeholder="Digite sua senha" name="psw" required>
-                            <button type="submit">Login</button>
+                            <button type="submit">Entrar</button>
                         </div>
                         <div class="container" style="background-color:#f1f1f1">
                             <button type="button" onclick="document.getElementById('id01').style.display='none'"
@@ -79,112 +79,122 @@
             </div>
     </nav>
 
-    <section>
+    <section id="Perguntas Frequentes">
         <div id="FAQ">
             <img src="images/466.jpg" width="1000">
             <h2><b>Perguntas Frequentes (FAQ)</b></h2>
         </div>
-            <div class="accordion" id="accordionExample">
-                <div class="card">
-                    <h2 class="card-header" id="headingOne">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+        <div class="accordion" id="accordionExample">
+            <div class="card">
+                <h2 class="card-header" id="headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                         data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                            <b>O que é necessário para começar no ciclismo?</b>
-                        </button>
-                    </h2>
-                </div>
-            
-                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                    <div class="card-faq p-4">
-                        Estar sempre prevenido é essencial, especialmente nos pedais mais longos, em que o ciclista fica distante de
-                        qualquer assistência. Possuir alguns equipamentos, ferramentas e insumos “só para garantir” também oferece
-                        maior confiança, um fator muito necessário para quem dá os primeiros passos no ciclismo, tais como:
-                        <ul>
-                            <li>Capacete, o mais essencial dos equipamentos.</li>
-                            <li>Óculos de ciclismo, Luvas, cotoveleira e joelheira.</li>
-                            <li>Para passeios noturnos roupa e/ou colete refletor, lanternas, tanto traseiras como dianteiras.</li>
-                            <li>Garrafa de água com suporte, mochila com alimentação e água adicional.</li>
-                            <li>Roupa apropriada para ciclismo.</li>
-                            <li>Kit de ferramentas</li>
-                            <li>Sapatilhas para ciclismo</li>
-                        </ul>
-                    </div>
+                        <b>O que é necessário para começar no ciclismo?</b>
+                    </button>
+                </h2>
+            </div>
+    
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="card-faq p-4">
+                    Estar sempre prevenido é essencial, especialmente nos pedais mais longos, em que o ciclista fica
+                    distante de
+                    qualquer assistência. Possuir alguns equipamentos, ferramentas e insumos “só para garantir” também
+                    oferece
+                    maior confiança, um fator muito necessário para quem dá os primeiros passos no ciclismo, tais como:
+                    <ul>
+                        <li>Capacete, o mais essencial dos equipamentos.</li>
+                        <li>Óculos de ciclismo, Luvas, cotoveleira e joelheira.</li>
+                        <li>Para passeios noturnos roupa e/ou colete refletor, lanternas, tanto traseiras como dianteiras.
+                        </li>
+                        <li>Garrafa de água com suporte, mochila com alimentação e água adicional.</li>
+                        <li>Roupa apropriada para ciclismo.</li>
+                        <li>Kit de ferramentas</li>
+                        <li>Sapatilhas para ciclismo</li>
+                    </ul>
                 </div>
             </div>
-
-            <div class="accordion" id="accordionExample">
-                <div class="card">
-                    <h2 class="card-header" id="headingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            <b>O que o ciclista deve fazer?</b>
-                        </button>
-                    </h2>
-                </div>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                    <div class="card-faq p-4">
-                        Confira algumas regras e boas práticas que devem ser adotadas pelos ciclistas no trânsito:
-                        <ul>
-                            <li>Andar na faixa da direita</li>
-                            <li>Ultrapassar veículos com segurança</li>
-                            <li>Nunca andar na contramão</li>
-                            <li>Controlar a velocidade</li>
-                            <li>Respeitar os pedestres</li>
-                            <li>Respeitar os faróis</li>
-                            <li>Evitar calçadas</li>
-                            <li>Ter cuidado com cruzamentos</li>
-                            <li>Sinalizar intenções de passagem</li>
-                            <li>Cuidado com abertura de portas dos veículos</li>
-                            <li>Utilize pneus de acordo com o trajeto que for realizado, você sentirá mais conforto e segurança em
-                                realizar o trajeto</li>
-                
-                        </ul>
-                    </div>
-                </div>
-                </div>
-
-                <div class="accordion" id="accordionExample">
-                    <div class="card">
-                        <h2 class="card-header" id="headingThree">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        </div>
+    
+    <div class="accordion" id="accordionExample">
+        <div class="card">
+            <h2 class="card-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <b>O que o ciclista deve fazer?</b>
+                </button>
+            </h2>
+        </div>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+            <div class="card-faq p-4">
+                Confira algumas regras e boas práticas que devem ser adotadas pelos ciclistas no trânsito:
+                <ul>
+                    <li>Andar na faixa da direita</li>
+                    <li>Ultrapassar veículos com segurança</li>
+                    <li>Nunca andar na contramão</li>
+                    <li>Controlar a velocidade</li>
+                    <li>Respeitar os pedestres</li>
+                    <li>Respeitar os faróis</li>
+                    <li>Evitar calçadas</li>
+                    <li>Ter cuidado com cruzamentos</li>
+                    <li>Sinalizar intenções de passagem</li>
+                    <li>Cuidado com abertura de portas dos veículos</li>
+                    <li>Utilize pneus de acordo com o trajeto que for realizado, você sentirá mais conforto e segurança em
+                        realizar o trajeto</li>
+    
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="accordion" id="accordionExample">
+        <div class="card">
+            <h2 class="card-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                     <b>Recomendações aos ciclistas</b>
-                      </button>
-                    </h2>
-                  </div>
-                  <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                    <div class="card-faq p-4">             
-                        <li>Faça-se visível</li>
-                        <li>Agradeça e seja cordial</li>
-                        <li>Respeite as leis de trânsito e itens de segurança obrigatórios da bicicleta (retrovisor esquerdo, campainha, sinalização noturna traseira e dianteira, refletores laterais e nos pedais)</li>
-                        <li>Utilize refletores e iluminação à noite</li>
-                        <li>Fique sempre atento a obstáculos</li>
-                        <li>Planeje seu caminho antes de iniciá-lo e dê preferência a vias de menor tráfego</li>
-                        <li>Nas travessias de pedestre, o ciclista deve descer da bicicleta e atravessar como pedestre</li>
-                        <li>Nas travessias exclusivas de ciclovia, o ciclista deve parar a bicicleta e fazer o sinal de vida</li>
-                    </div>
-                  </div>
-                </div>
-
-            <div class="accordion" id="accordionExample">
-                <div class="card">
-                    <h2 class="card-header" id="headingFour">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                      <b>Alimentação no ciclismo</b>
-                        </button>
-                      </h2>
-                    </div>
-                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
-                      <div class="card-faq p-4">             
-                        <li><b black>Proteína</b></li>
-                        A recomendação de proteína gira em torno de 1,5 a 2g/Kg de peso corporal/dia. O baixo consumo de proteína pode comprometer a massa muscular e imunidade e pode gerar fraqueza e até anemia. <b>Fontes proteicas:</b> carnes magras (frango/peixe/carne), ovos, leite e derivados, whey protein, feijões, entre outras.                        
-                        <li><b black>Carboidratos</b></li>
-                        Uma ingestão adequada de carboidratos é importante para evitar/retardar a fadiga, evitar lesões e também a perda de massa muscular.  A recomendação do consumo de carboidrato gira em torno de 5-10g/kg de peso corporal/dia (dependendo da duração de cada treino), para conseguir armazenar glicogênio muscular (que é a energia armazenada nos músculos). Mas vale lembrar que isso é uma recomendação, ou seja, o ideal é ter uma orientação individualizada de um nutricionista esportivo.
-                      </div>
-                    </div>
-                  </div> 
-              </div>
+                </button>
+            </h2>
+        </div>
+        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+            <div class="card-faq p-4">
+                <li>Faça-se visível</li>
+                <li>Agradeça e seja cordial</li>
+                <li>Respeite as leis de trânsito e itens de segurança obrigatórios da bicicleta (retrovisor esquerdo,
+                    campainha, sinalização noturna traseira e dianteira, refletores laterais e nos pedais)</li>
+                <li>Utilize refletores e iluminação à noite</li>
+                <li>Fique sempre atento a obstáculos</li>
+                <li>Planeje seu caminho antes de iniciá-lo e dê preferência a vias de menor tráfego</li>
+                <li>Nas travessias de pedestre, o ciclista deve descer da bicicleta e atravessar como pedestre</li>
+                <li>Nas travessias exclusivas de ciclovia, o ciclista deve parar a bicicleta e fazer o sinal de vida</li>
+            </div>
+        </div>
+    </div>
+    
+    <div class="accordion" id="accordionExample">
+        <div class="card">
+            <h2 class="card-header" id="headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    <b>Alimentação no ciclismo</b>
+                </button>
+            </h2>
+        </div>
+        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+            <div class="card-faq p-4">
+                <li><b black>Proteína</b></li>
+                A recomendação de proteína gira em torno de 1,5 a 2g/Kg de peso corporal/dia. O baixo consumo de proteína
+                pode comprometer a massa muscular e imunidade e pode gerar fraqueza e até anemia. <b>Fontes proteicas:</b>
+                carnes magras (frango/peixe/carne), ovos, leite e derivados, whey protein, feijões, entre outras.
+                <li><b black>Carboidratos</b></li>
+                Uma ingestão adequada de carboidratos é importante para evitar/retardar a fadiga, evitar lesões e também a
+                perda de massa muscular. A recomendação do consumo de carboidrato gira em torno de 5-10g/kg de peso
+                corporal/dia (dependendo da duração de cada treino), para conseguir armazenar glicogênio muscular (que é a
+                energia armazenada nos músculos). Mas vale lembrar que isso é uma recomendação, ou seja, o ideal é ter uma
+                orientação individualizada de um nutricionista esportivo.
+            </div>
+        </div>
+    </div>
+    </div>
     </section>
 
     <footer>
