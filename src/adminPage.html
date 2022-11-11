@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="images/logoEasy.png" type="image" >
-    <title>Cadastrar Trilha</title>
+    <link rel="shortcut icon" href="images/logoEasy.png" type="image">
+    <title>Easy Trail | Pagina Admin</title>
     <link rel="stylesheet" href="./style/main.css">
 </head>
 <body>
@@ -13,11 +13,11 @@
         <div class="container">
             <nav class="header-wrap">
                 <div class="logo-container">
-                    <a href="index.html">
-                        <img src="images/logoEasy.png" width="120" alt="100" ></a>
+                    <a href="#">
+                        <img src="images/logoEasy.png" width="120" alt="100"></a>
                 </div>
                 <!--LOGO-CONTAINER-->
-                <ul class="header-list">
+                <!-- <ul class="header-list">
                     <li class="header-list-row">
                         <a href="#" class="header-list-link">
                             <img src="images/icons/search.svg" alt="" class="search-icon header-icon">
@@ -29,7 +29,7 @@
                                     class="pesquisar-input-login">Login</button></a>
                         </a>
                     </li>
-                </ul>
+                </ul> -->
                 <!--HEADER-LIST-->
             </nav>
             <!--HEADER-WRAP-->
@@ -37,37 +37,11 @@
         <!--CONTAINER-->
     </header>
 
-    <div class="container">
-        <form action="" class="form-cadastro-trilha">
-            
-            <div class="form-title-container">
-                <h1>Cadastro de trilha</h1>
-            </div>
-
-            <label for="nome">Nome:</label>
-            <input type="text" name="nome" id="trilha_nome" placeholder="Nome" class="cadastro-trilha-input">
-
-            <label for="nome">Local:</label>
-            <input type="text" name="local" id="trilha_local" placeholder="local" class="cadastro-trilha-input">
-
-            <label for="descricao">Descricao:</label>
-            <textarea name="descricao" id="trilha_descricao" cols="30" rows="10" placeholder="descricao" class="cadastro-trilha-input"></textarea>
-
-            <label for="nome">Altimetria:</label>
-            <input type="number" name="" id="trilha_altimetria" placeholder="altimetria" class="cadastro-trilha-input">
-
-            <label for="nome">Duracao:</label>
-            <input type="text" name="" id="trilha_duracao" placeholder="duracao" class="cadastro-trilha-input">
-
-            <label for="nome">Fotos:</label>
-            <input type="file" name="" id="foto" placeholder="foto" class="cadastro-trilha-input"   accept="image/png, image/jpeg">
-
-            <div class="form-btn-cadastro">
-                <button id="cadastroTrilha" onclick="trailFuncs.cadastroTrilha()" class="buttom-form">Cadastrar</button>
-            </div>
-
-        </form>
-    </div><!--CONTAINER-->
+    <!-- MOSTRAR METRICAS  -->
+    <!-- QUANTIDADE USUARIOS CADASTRADOS -->
+        <!-- LISTAR TODOS OS USUARIOS -->
+    <!-- QUANTIDADE DE TRILHAS CADASTRADAS -->
+        <!-- MOSTRAR TODAS AS TRILHAS CADASTRADAS -->
 
     <footer style="position: absolute; bottom: 0px;">
         <div class="container">
@@ -82,6 +56,7 @@
         </div>
         <!--CONTAINER-->
     </footer>
-    <script src="./script/main.js"></script>
+
+    <script src="./script/adminPage.js"></script>
 </body>
 </html>
