@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -8,15 +8,14 @@
     <title>Easy Trail</title>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="./style/main.css">
+    <link rel="stylesheet" href="./style/mediaQueries.css">
     <link rel="shortcut icon" href="images/logoEasy.png" type="image">
     <style>
-    #more {display: none;}
-    #more2 {display: none;}
-    #more3 {display: none;}
+        #more {display: none;}
+        #more2 {display: none;}
+        #more3 {display: none;}
     </style>
-
-    <link rel="shortcut icon" href="images/logoEasy.png" type="image">
-    <!-- Font Awesome leobuck -->
+    <!-- Font Awesome-->
     <script src="https://kit.fontawesome.com/77bf635d25.js" crossorigin="anonymous"></script>
 </head>
 
@@ -25,7 +24,7 @@
         <div class="container">
             <nav class="header-wrap">
                 <div class="logo-container">
-                        <img onclick="location=href='https://www.google.com'" src="images/logoEasy.png" width="120" alt="100">
+                        <img onclick="location=href='https://www.google.com'" src="images/logoEasy.png">
                 </div>
                 <!--LOGO-CONTAINER-->
                 <ul class="header-list">
@@ -84,41 +83,33 @@
         </div>
     </section>
 
-    <section class="trails">
-        <div class="container">
-            <div class="main-frame-trails">
-                <div class="barra-pesquisa-trail">
-                    <div class="input-pesquisa-wrap">
-                        <ul class="pesquisa-input-list">
-                            <li class="pesquisa-input-row">
-                                <label>Cidade</label>
-                                <input type="search" placeholder="Destino.." class="pesquisa-input-item">
-                            </li>
-                            <li class="pesquisa-input-row">
-                                <label>Dificuldade</label>
-                                <form class="formulario">
-                                    <select class="xpto">
-                                        <option value="Escolha" enable>-</option>
-                                        <option value="Alto">Alta</option>
-                                        <option value="Médio">Média</option>
-                                        <option value="Baixo">Baixa</option>
-                                    </select>
-                                </form>
-                            </li>
-                            <li class="pesquisa-input-row">
-                                <label>Data</label>
-                                <input type="date" class="pesquisa-input-item">
-                            </li>
-                            <li>
-                                <a href="pesquisaBody.html"><button class="pesquisar-input-btn">Explorar</button>
-                                </a>
-                            </li>
-                        </ul><!--PESQUISA-INPUT-->
-                    </div><!--INPUT-PESQUISA-WRAP-->
-                </div><!--BARRA-PESQUISA-TRAIL-->
-            </div><!--MAIN-FRAME-TRAISLS-->
-        </div><!--CONTAINER-->
-
+    <section id="search-bar">
+        <div class="container--search-bar">
+            <div class="search-bar">
+                <div class="search-bar-itens border-r">
+                    <label class="label-search-bar" for="cidade">Cidade</label>
+                    <input type="search" placeholder="Destino..." class="search-bar-input">
+                </div>
+                <div class="search-bar-itens border-r">
+                    <form>
+                        <label for="dificuldade">Dificuldade</label>
+                        <select class="search-bar-input">
+                            <option value="Escolha" enable>-</option>
+                            <option value="Alto">Alta</option>
+                            <option value="Médio">Média</option>
+                            <option value="Baixo">Baixa</option>
+                        </select>
+                    </form>
+                </div>
+                <div class="search-bar-itens border-r">
+                    <label class="label-search-bar" for="data">Data</label>
+                    <input type="search" placeholder="dd/mm/yyyy" class="search-bar-input">
+                </div>
+                <div id="search-div4" class="search-bar-itens">
+                    <button class="pesquisar-input-btn">Explorar</button>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section class="trilhas-recomendadas">
@@ -133,14 +124,14 @@
                             <div class="icon-trilha-item">
                                 <a href="https://www.pucminas.br/main/Paginas/default.aspx"><button
                                         class="pesquisar-input-explorar">Saiba Mais</button></a>
-                                <a href="javascript:;" class="open-modal"><img src="images/icons/compartilhar.png" alt=""></a>
+                                <button class="btn-sem-borda open-modal"><img src="images/icons/compartilhar.png" alt=""></button>
                         
                                 <div class="modal">
                                     <div class="modal-head">
                                         <h2 class="modal-title">Compartilhar</h2>
-                                        <a href="javascript:;" class="modal-close">
+                                        <button id="btn-modal-close" class="btn-sem-borda modal-close">
                                             <i class="fa-sharp fa-solid fa-xmark"></i>
-                                        </a>
+                                        </button>
                                     </div><!-- modal head -->
                                     <div class="modal-body">
                                         <h3 class="modal-name">Compartilhe o link:</h3>
@@ -191,7 +182,42 @@
                             <div class="icon-trilha-item">
                                 <a href="https://www.pucminas.br/main/Paginas/default.aspx"><button
                                         class="pesquisar-input-explorar">Saiba Mais</button></a>
-                                <a href="javascript:;" class="open-modal"><img src="images/icons/compartilhar.png" alt=""></a>
+                                <button id="open-modal2" class="btn-sem-borda open-modal"><img src="images/icons/compartilhar.png" alt=""></button>
+                
+                                <div id="modal2" class="modal2">
+                                    <div class="modal-head">
+                                        <h2 class="modal-title">Compartilhar</h2>
+                                        <button id="btn-modal-close" class="btn-sem-borda modal-close2">
+                                            <i class="fa-sharp fa-solid fa-xmark"></i>
+                                        </button>
+                                    </div><!-- modal head -->
+                                    <div class="modal-body">
+                                        <h3 class="modal-name">Compartilhe o link:</h3>
+                                        <div class="modal-socials">
+                                            <div class="modal-column">
+                                                <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.pucminas.br/main/Paginas/default.aspx" target="_blank" class="modal-social is-facebook">
+                                                    <i class="fa-brands fa-facebook"></i>
+                                                </a>
+                                            </div><!-- modal do Facebook -->
+                                            <div class="modal-column">
+                                                <a href="https://twitter.com/intent/tweet?text=Veja conhecer a trilha Laranjeiras. Acesse em: https://www.pucminas.br/main/Paginas/default.aspx"
+                                                    target="_blank" class="modal-social is-twitter">
+                                                    <i class="fa-brands fa-twitter"></i>
+                                                </a>
+                                            </div><!-- modal do Twitter -->
+                                            <div class="modal-column">
+                                                <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.pucminas.br/main/Paginas/default.aspx" target="_blank" class="modal-social is-linkedin">
+                                                    <i class="fa-brands fa-linkedin"></i>
+                                                </a>                                            
+                                            </div><!-- modal do linkedIn -->
+                                        </div><!-- modal-socials -->
+                                        <h3 class="modal-name">Ou copie o link:</h3>
+                                        <div class="modal-label">
+                                            <input type="text" class="modal-input" value="https://www.pucminas.br">
+                                            <button class="btn-copiar" onclick="copiarBtn()">Copiar</button>
+                                        </div>
+                                    </div><!-- modal-body -->
+                                </div><!-- modal -->
                             </div>
                             <div class="trilhas-text">
                                 <h2 class="titulo-trilha">Laranjeiras</h2>
@@ -214,7 +240,42 @@
                             <div class="icon-trilha-item">
                                 <a href="https://www.pucminas.br/main/Paginas/default.aspx"><button
                                         class="pesquisar-input-explorar">Saiba Mais</button></a>
-                                <a href="javascript:;" class="open-modal"><img src="images/icons/compartilhar.png" alt=""></a>
+                                <button id="open-modal3" class="btn-sem-borda open-modal"><img src="images/icons/compartilhar.png" alt=""></button>
+        
+                                <div id="modal3" class="modal3">
+                                    <div class="modal-head">
+                                        <h2 class="modal-title">Compartilhar</h2>
+                                        <button id="btn-modal-close" class="btn-sem-borda modal-close3">
+                                            <i class="fa-sharp fa-solid fa-xmark"></i>
+                                        </button>
+                                    </div><!-- modal head -->
+                                    <div class="modal-body">
+                                        <h3 class="modal-name">Compartilhe o link:</h3>
+                                        <div class="modal-socials">
+                                            <div class="modal-column">
+                                                <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.pucminas.br/main/Paginas/default.aspx" target="_blank" class="modal-social is-facebook">
+                                                    <i class="fa-brands fa-facebook"></i>
+                                                </a>
+                                            </div><!-- modal do Facebook -->
+                                            <div class="modal-column">
+                                                <a href="https://twitter.com/intent/tweet?text=Veja conhecer a trilha Mirante das Goiabeiras. Acesse em: https://www.pucminas.br/main/Paginas/default.aspx"
+                                                    target="_blank" class="modal-social is-twitter">
+                                                    <i class="fa-brands fa-twitter"></i>
+                                                </a>
+                                            </div><!-- modal do Twitter -->
+                                            <div class="modal-column">
+                                                <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.pucminas.br/main/Paginas/default.aspx" target="_blank" class="modal-social is-linkedin">
+                                                    <i class="fa-brands fa-linkedin"></i>
+                                                </a>                                            
+                                            </div><!-- modal do linkedIn -->
+                                        </div><!-- modal-socials -->
+                                        <h3 class="modal-name">Ou copie o link:</h3>
+                                        <div class="modal-label">
+                                            <input type="text" class="modal-input" value="https://www.pucminas.br">
+                                            <button class="btn-copiar" onclick="copiarBtn()">Copiar</button>
+                                        </div>
+                                    </div><!-- modal-body -->
+                                </div><!-- modal -->
                             </div>
 
 
@@ -267,9 +328,6 @@
         
     </section>
     
-    <br>
-
-    <br>
     <footer>
         <div class="container">
             <p>Direitos reservados a Pucminas. COPYRIGHT &copy 2022.</p> 
