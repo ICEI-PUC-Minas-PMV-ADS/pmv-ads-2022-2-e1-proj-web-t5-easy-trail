@@ -94,7 +94,8 @@ const trailFuncs = {
             email:  emailInput.value,
             duvidaText: textareaInput.value,
             statusDuvidaResposta: false,
-            idUserAdminResposta: null
+            idUserAdminResposta: null,
+            responstaDuvida: null
         };
 
         window.localStorage.setItem(`CM-${emailInput.value}`, JSON.stringify(duvidaObj));
@@ -105,6 +106,35 @@ const trailFuncs = {
     },
 
     buscarTrilha: () => {
+        //FAZER PARTE DE VERIFICAO
+        const localTrilha = selectElement('.pesquisa-input-item');
+        const nivelTrilha = selectElement('.xpto');
+        const dataTrilha = selectElement('#dataTrilha');
+
+        this.event.preventDefault();
+
+        Object.keys(trailsLocalStorage).forEach(storageKey => {
+            if(storageKey.split('-')[0] != 'trilha'){
+                return 'Isto nao e um cadastro de uma trilha!';
+            };
+
+            const trilhasStorage = trailsLocalStorage.getItem(storageKey);
+
+            const trilhas = JSON.parse(trilhasStorage);
+
+            const {
+                nome, 
+                local,
+                data,
+                nivel
+            } = trilhas;
+
+            if(local == localTrilha.value && data == dataTrilha.value && nivel == nivelTrilha.value){
+                console.log(trilhas);
+            };
+
+            return;
+        })
     },
 
     maisTrilhas: () => {
@@ -178,8 +208,10 @@ const trailFuncs = {
         const trilhaDescricao = selectElement('#trilha_descricao');
         const trilhaAltimetria = selectElement('#trilha_altimetria');
         const trilhaDuracao = selectElement('#trilha_duracao');
+        const trilhaNivel = selectElement('.nivelTrilha');
+        const trilhaData = selectElement('#dataTrilha');
 
-        const trilhaFotos = selectElement('#foto').files[0].name;
+        // const trilhaFotos = selectElement('#foto').files[0].name;
 
         this.event.preventDefault();
 
@@ -193,6 +225,8 @@ const trailFuncs = {
             descricao: trilhaDescricao.value,
             altimetria: trilhaAltimetria.value,
             trilha_duracao: trilhaDuracao.value,
+            nivel: trilhaNivel.value,
+            data: trilhaData.value
         };
 
         window.localStorage.setItem(`trilha-${trilhaNome.value}`, JSON.stringify(trilhaObj));
@@ -226,9 +260,13 @@ const trailFuncs = {
     findTrail: (name = '', location= '') => {
 
     },
-
-    getTrailsByLevel: (level) => {
-
+    cadastrarUsuario: () => {
+        /* 
+            -> NOME COMPLETO
+            -> EMAIL
+            -> SENHA-
+            -> REPITA SUA SENHA
+        */
     }
 }
 
