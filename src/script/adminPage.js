@@ -69,6 +69,7 @@ let adminFuncionalities = {
                     <p>${statusDuvidaResposta}</p>
                     <span>Id do admin que respondeu a duvida:</span>
                     <p>${idUserAdminResposta}</p>
+                    <input type="checkbox" id="horns" name="horns" idPergunta="${id_duvida}">
                 </div>
             `;
 
@@ -107,7 +108,7 @@ let adminFuncionalities = {
             // ADICIONAR TODAS AS DUVIDAS DENTRO DO HTML
 
             let questionElement = `
-                <div>   
+                <div class="questionElement">   
                     <span>Id Duvida:</span>
                     <p>${id_duvida}</p>
                     <span>Nome:</span>

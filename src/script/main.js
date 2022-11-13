@@ -14,8 +14,6 @@ const selectAllElements = (name) => {
     return elements;
 }
 
-let trailsLocalStorage = localStorage;
-
 let trilhaItemHTML = (trilhaNome, trilhaDescricao, trilhaAltimetria, trilhaDuracao) => {
     return `
     <div class="trilha-item">
@@ -72,6 +70,8 @@ let trilhaItemHTML = (trilhaNome, trilhaDescricao, trilhaAltimetria, trilhaDurac
 </div>
    `
 };
+
+let trailsLocalStorage = localStorage;
 
 const trailFuncs = {
 
@@ -267,6 +267,9 @@ const trailFuncs = {
             -> SENHA-
             -> REPITA SUA SENHA
         */
+
+        // FAZER VERIFICACAO COM COOKIES
+            // => PARA VERIFICACAO DE ADMIN
     }
 }
 
