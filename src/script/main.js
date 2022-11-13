@@ -130,6 +130,7 @@ const trailFuncs = {
             } = trilhas;
 
             if(local == localTrilha.value && data == dataTrilha.value && nivel == nivelTrilha.value){
+                //NECESSARIO FAZER COM QUE SEJA RENDERIZADO NA PAGINA DE RESPOSTA DA PESQUISA.
                 console.log(trilhas);
             };
 
@@ -260,16 +261,22 @@ const trailFuncs = {
     findTrail: (name = '', location= '') => {
 
     },
-    cadastrarUsuario: () => {
+    cadastrarUsuario: () => {COOKIES
+        let nomeCompleto;
+        let email;
+        // NECESSARIO ENCRIPTAR A SENHA DO USUARIO ANTES DE SALVAR
+        let senha;
+        // NECESSARIO CRIAR UM TOKEN/ID PARA IDENTIFICAR CADA USUARIO COOMO ADMIN OU USER NORMAL 
+        let token;
+        
         /* 
             -> NOME COMPLETO
             -> EMAIL
             -> SENHA-
-            -> REPITA SUA SENHA
         */
 
         // FAZER VERIFICACAO COM COOKIES
-            // => PARA VERIFICACAO DE ADMIN
+        // => PARA VERIFICACAO DE ADMIN
     }
 }
 
