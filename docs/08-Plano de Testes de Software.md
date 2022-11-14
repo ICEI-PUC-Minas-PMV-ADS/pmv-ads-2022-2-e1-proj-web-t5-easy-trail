@@ -16,19 +16,26 @@ A finalidade do Plano de Teste é reunir todas as informações necessárias par
         <td>RF-001 O software deve mostrar as trilhas por ordem de dificuldade.</td>
     </tr>
     <tr>
-        <td></td>
+        <td>RF-009 O software deve recomendar trilhas para realização em grupo ou individual</td>
     </tr>
     <tr>
         <td>Objetivo do Teste</td>
-        <td> </td>
+        <td>Verificar se a barra de pesquisa está buscando as trilhas cadastradas conforme as escolhas realizadas pelo usuário em relação a cidade, dificuldade e data</td>
     </tr>
     <tr>
-        <td>Passos</td>
-        <td> </td>
+        <td rowspan="6">Passos</td>
+        <td>
+        1. Acessar o Navegador
+        2. Informar o endereço do Site
+        3. Visualizar a página principal
+        4. Digitar a cidade desejada no campo "cidade"
+        5. Selecionar a Dificuldade no campo "dificuldade"
+        6. Selecionar a Data no campo "data"
+        </td>
     </tr>
     <tr>
         <td>Critérios de Êxito</td>
-        <td> </td>
+        <td>Os resultados exibidos após a busca do usuário, devem considerar a cidade, o grau de dificuldade e a data escolhida pelo usuário no momento da pesquisa. Deve ser exibida todas as trilhas cadastradas no sistema, que atendam aos critérios definidos pelo usuário em sua pesquisa.</td>
     </tr>
     </table>
 <br>
