@@ -32,7 +32,7 @@ A finalidade do Plano de Teste é reunir todas as informações necessárias par
     </tr>
     </table>
 <br>
-<!-- caso de teste 1-!>
+
 
 <table border="0" id="CT02 - Exibir Trilha">
     <tr>
@@ -57,7 +57,7 @@ A finalidade do Plano de Teste é reunir todas as informações necessárias par
     </tr>
     </table>
 <br>
-<!-- caso de teste 1-!>
+
 
 <table border="0" id="CT03 - Cadastro de Trilha">
     <tr>
@@ -82,7 +82,7 @@ A finalidade do Plano de Teste é reunir todas as informações necessárias par
     </tr>
     </table>
 <br>
-<!-- caso de teste 3-!>
+
 
 <table border="0" id="CT04 - ">
     <tr>
@@ -107,7 +107,7 @@ A finalidade do Plano de Teste é reunir todas as informações necessárias par
     </tr>
     </table>
 <br>
-<!-- caso de teste 4-!>
+
 
 <table border="0" id="CT05 - ">
     <tr>
@@ -132,4 +132,3 @@ A finalidade do Plano de Teste é reunir todas as informações necessárias par
     </tr>
     </table>
 <br>
-<!-- caso de teste 5-!>
