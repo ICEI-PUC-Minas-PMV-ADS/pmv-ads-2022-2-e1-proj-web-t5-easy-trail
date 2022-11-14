@@ -6,10 +6,10 @@ A finalidade do Plano de Teste é reunir todas as informações necessárias par
  
 <h2>Casos de Testes</h2>
 
-<table border="0">
+<table border="0" id="CT01 - Pesquisa Trilha">
     <tr>
         <th>Caso de Teste</th>
-        <th>CT-01</th>
+        <th>CT-01 Pesquisa de Trilha</th>
     </tr>
     <tr>
         <td rowspan="2">Requisitos Associados</td>
@@ -32,9 +32,9 @@ A finalidade do Plano de Teste é reunir todas as informações necessárias par
     </tr>
     </table>
 <br>
-<!----------------------------------------------------------------------------------------!>
+<!-- caso de teste 1-!>
 
-<table border="0">
+<table border="0" id="CT02 - Exibir Trilha">
     <tr>
         <th>Caso de Teste</th>
         <th>CT-02 Exibir Trilhas</th>
@@ -57,9 +57,9 @@ A finalidade do Plano de Teste é reunir todas as informações necessárias par
     </tr>
     </table>
 <br>
-<!----------------------------------------------------------------------------------------!>
+<!-- caso de teste 1-!>
 
-<table border="0">
+<table border="0" id="CT03 - Cadastro de Trilha">
     <tr>
         <th>Caso de Teste</th>
         <th>CT-03 Cadastro Trilhas</th>
@@ -82,9 +82,9 @@ A finalidade do Plano de Teste é reunir todas as informações necessárias par
     </tr>
     </table>
 <br>
-<!----------------------------------------------------------------------------------------!>
+<!-- caso de teste 3-!>
 
-<table border="0">
+<table border="0" id="CT04 - ">
     <tr>
         <th>Caso de Teste</th>
         <th>CT-04</th>
@@ -106,3 +106,30 @@ A finalidade do Plano de Teste é reunir todas as informações necessárias par
         <td> </td>
     </tr>
     </table>
+<br>
+<!-- caso de teste 4-!>
+
+<table border="0" id="CT05 - ">
+    <tr>
+        <th>Caso de Teste</th>
+        <th>CT-05</th>
+    </tr>
+    <tr>
+        <td>Requisitos Associados</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Objetivo do Teste</td>
+        <td> </td>
+    </tr>
+    <tr>
+        <td>Passos</td>
+        <td> </td>
+    </tr>
+    <tr>
+        <td>Critérios de Êxito</td>
+        <td> </td>
+    </tr>
+    </table>
+<br>
+<!-- caso de teste 5-!>
