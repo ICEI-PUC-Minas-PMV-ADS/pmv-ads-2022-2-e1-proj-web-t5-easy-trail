@@ -1,6 +1,6 @@
 # Plano de Testes de Software
 
-<span style="color:red">Pré-requisitos: <a href="02-Especificação do Projeto.md"> Especificação do Projeto</a></span>, <a href="03-Projeto de Interface.md"> Projeto de Interface</a>
+<span style="color:red">Pré-requisitos: <a href="02-Especificação do Projeto.md"> Especificação do Projeto</a></span>, <a href="04-Projeto de Interface.md"> Projeto de Interface</a>
 
 A finalidade do Plano de Teste é reunir todas as informações necessárias para planejar e controlar o esforço de teste referente a uma iteração específica. Ele descreve a abordagem dada ao teste do software e é o plano de nível superior gerado e usado para coordenar o esforço de teste.
  
@@ -42,7 +42,7 @@ A finalidade do Plano de Teste é reunir todas as informações necessárias par
         <td>6. Selecionar a Data no campo "data"</td>
     </tr>
     <tr>
-        <td><b>Critérios de Êxito</b></td>
+        <td><b>Critério de Êxito</b></td>
         <td>Os resultados exibidos após a busca do usuário, devem considerar a cidade, o grau de dificuldade e a data escolhida pelo usuário no momento da pesquisa. Deve ser exibida todas as trilhas cadastradas no sistema, que atendam aos critérios definidos pelo usuário em sua pesquisa</td>
     </tr>
     </table>
@@ -82,7 +82,7 @@ A finalidade do Plano de Teste é reunir todas as informações necessárias par
         <td>4. Visualizar informações relacionadas a altimetria, dificuldade, fotos, indicação de uma trilha ideal para um grupo ou individual, previsão do tempo para data escolhida</td>
     </tr>
     <tr>
-        <td><b>Critérios de Êxito</b></td>
+        <td><b>Critério de Êxito</b></td>
         <td>Página de detalhamento da trilha escolhida pelo usuário deve apresentar todas as informações de detalhamento cadastradas para a trilha</td>
     </tr>
     </table>
@@ -134,8 +134,8 @@ A finalidade do Plano de Teste é reunir todas as informações necessárias par
         <td>9. Enviar informações da trilha após o cadastro</td>
     </tr>
     <tr>
-        <td><b>Critérios de Êxito</b></td>
-        <td>Ser possível que um usuário logado, posso cadastrar um nova trilha quando desejado, podendo enviar uma foto, se desejado for.</td>
+        <td><b>Critério de Êxito</b></td>
+        <td>Ser possível que um usuário logado, posso cadastrar um nova trilha quando desejado, podendo enviar uma foto, se desejado for</td>
     </tr>
     </table>
 <br>
@@ -162,7 +162,7 @@ A finalidade do Plano de Teste é reunir todas as informações necessárias par
         <td> </td>
     </tr>
     <tr>
-        <td><b>Critérios de Êxito</b></td>
+        <td><b>Critério de Êxito</b></td>
         <td> </td>
     </tr>
     </table>
@@ -187,7 +187,7 @@ A finalidade do Plano de Teste é reunir todas as informações necessárias par
         <td> </td>
     </tr>
     <tr>
-        <td><b>Critérios de Êxito</b></td>
+        <td><b>Critério de Êxito</b></td>
         <td> </td>
     </tr>
     </table>
