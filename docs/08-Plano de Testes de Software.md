@@ -96,10 +96,10 @@ A finalidade do Plano de Teste é reunir todas as informações necessárias par
 <table border="0" id="CT04 - Trilhas Recomendadas ">
     <tr>
         <th>Caso de Teste</th>
-        <th rowspan="2">CT-04 Trilhas Recomendadas</th>
+        <th>CT-04 Trilhas Recomendadas</th>
     </tr>
     <tr>
-        <td>Requisitos Associados</td>
+        <td rowspan="2">Requisitos Associados</td>
         <td>RF-003 O software deve ter uma funcionalidade de indicações de trilhas</td>
     </tr>
     <tr>
