@@ -25,13 +25,22 @@ A finalidade do Plano de Teste é reunir todas as informações necessárias par
     <tr>
         <td rowspan="6">Passos</td>
         <td>
-        1. Acessar o Navegador
-        2. Informar o endereço do Site
-        3. Visualizar a página principal
-        4. Digitar a cidade desejada no campo "cidade"
-        5. Selecionar a Dificuldade no campo "dificuldade"
-        6. Selecionar a Data no campo "data"
-        </td>
+        1. Acessar o Navegador</td>
+    </tr>
+    <tr>
+        2. Informar o endereço do Site</td>
+    </tr>
+    <tr>
+        3. Visualizar a página principal</td>
+    </tr>
+    <tr>
+        4. Digitar a cidade desejada no campo "cidade"</td>
+    </tr>
+    <tr>
+        5. Selecionar a Dificuldade no campo "dificuldade"</td>
+    </tr>
+    <tr>
+        6. Selecionar a Data no campo "data"</td>
     </tr>
     <tr>
         <td>Critérios de Êxito</td>
