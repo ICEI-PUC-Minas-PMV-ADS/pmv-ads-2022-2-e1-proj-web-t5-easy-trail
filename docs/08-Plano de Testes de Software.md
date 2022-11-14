@@ -13,14 +13,14 @@ A finalidade do Plano de Teste é reunir todas as informações necessárias par
     </tr>
     <tr>
         <td rowspan="2"><b>Requisitos Associados</b></td>
-        <td>RF-001 O software deve mostrar as trilhas por ordem de dificuldade.</td>
+        <td>RF-001 O software deve mostrar as trilhas por ordem de dificuldade</td>
     </tr>
     <tr>
         <td>RF-009 O software deve recomendar trilhas para realização em grupo ou individual</td>
     </tr>
     <tr>
         <td><b>Objetivo do Teste</b></td>
-        <td>Verificar se a barra de pesquisa está buscando as trilhas cadastradas conforme as escolhas realizadas pelo usuário em relação a cidade, dificuldade e data</td>
+        <td>Verificar se a barra de pesquisa está buscando as trilhas cadastrada conforme as escolhas realizadas pelo usuário em relação a cidade, dificuldade e data</td>
     </tr>
     <tr>
         <td rowspan="6"><b>Passos</b></td>
@@ -43,7 +43,7 @@ A finalidade do Plano de Teste é reunir todas as informações necessárias par
     </tr>
     <tr>
         <td><b>Critérios de Êxito</b></td>
-        <td>Os resultados exibidos após a busca do usuário, devem considerar a cidade, o grau de dificuldade e a data escolhida pelo usuário no momento da pesquisa. Deve ser exibida todas as trilhas cadastradas no sistema, que atendam aos critérios definidos pelo usuário em sua pesquisa.</td>
+        <td>Os resultados exibidos após a busca do usuário, devem considerar a cidade, o grau de dificuldade e a data escolhida pelo usuário no momento da pesquisa. Deve ser exibida todas as trilhas cadastradas no sistema, que atendam aos critérios definidos pelo usuário em sua pesquisa</td>
     </tr>
     </table>
 <br>
@@ -66,7 +66,7 @@ A finalidade do Plano de Teste é reunir todas as informações necessárias par
     </tr>
     <tr>
         <td><b>Objetivo do Teste</b></td>
-        <td>Validar se a página da trilha escolhida, exibi todas as informações cadastradas.</td>
+        <td>Validar se a página da trilha escolhida, exibi todas as informações cadastradas</td>
     </tr>
     <tr>
         <td rowspan="4"><b>Passos</b></td>
@@ -79,11 +79,11 @@ A finalidade do Plano de Teste é reunir todas as informações necessárias par
         <td>3. Visualizar a página de detalhe da trilha escolhida.</td>
     </tr>
     <tr>
-        <td>4. Visualizar informações relacionadas a altimetria, dificuldade, fotos, indicação de uma trilha ideal para um grupo ou individual, previsão do tempo para data escolhida.</td>
+        <td>4. Visualizar informações relacionadas a altimetria, dificuldade, fotos, indicação de uma trilha ideal para um grupo ou individual, previsão do tempo para data escolhida</td>
     </tr>
     <tr>
         <td><b>Critérios de Êxito</b></td>
-        <td>Página de detalhamento da trilha escolhida pelo usuário deve apresentar todas as informações de detalhamento cadastradas para a trilha.</td>
+        <td>Página de detalhamento da trilha escolhida pelo usuário deve apresentar todas as informações de detalhamento cadastradas para a trilha</td>
     </tr>
     </table>
 <br>
