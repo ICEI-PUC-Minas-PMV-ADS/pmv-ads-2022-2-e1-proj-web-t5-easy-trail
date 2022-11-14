@@ -12,18 +12,18 @@ A finalidade do Plano de Teste é reunir todas as informações necessárias par
         <th>CT-01 Pesquisa de Trilha</th>
     </tr>
     <tr>
-        <td rowspan="2">Requisitos Associados</td>
+        <td rowspan="2"><b>Requisitos Associados</b></td>
         <td>RF-001 O software deve mostrar as trilhas por ordem de dificuldade.</td>
     </tr>
     <tr>
         <td>RF-009 O software deve recomendar trilhas para realização em grupo ou individual</td>
     </tr>
     <tr>
-        <td>Objetivo do Teste</td>
+        <td><b>Objetivo do Teste</b></td>
         <td>Verificar se a barra de pesquisa está buscando as trilhas cadastradas conforme as escolhas realizadas pelo usuário em relação a cidade, dificuldade e data</td>
     </tr>
     <tr>
-        <td rowspan="6">Passos</td>
+        <td rowspan="6"><b>Passos</b></td>
         <td>1. Acessar o Navegador</td>
     </tr>
     <tr>
@@ -55,7 +55,7 @@ A finalidade do Plano de Teste é reunir todas as informações necessárias par
         <th>CT-02 Exibir detalhe da trilha</th>
     </tr>
     <tr>
-        <td rowspan="3">Requisitos Associados</td>
+        <td rowspan="3"><b>Requisitos Associados</b></td>
         <td>RF-004 O software deve mostrar o mapa/rota da trilha</td>
     </tr>
     <tr>
@@ -65,16 +65,25 @@ A finalidade do Plano de Teste é reunir todas as informações necessárias par
         <td>RF-006 O software deve ter um fórum para que os ciclistas possam interagir com outros ciclistas</td>
     </tr>
     <tr>
-        <td>Objetivo do Teste</td>
-        <td> </td>
+        <td><b>Objetivo do Teste</b></td>
+        <td>Validar se a página da trilha escolhida, exibi todas as informações cadastradas.</td>
     </tr>
     <tr>
-        <td>Passos</td>
-        <td> </td>
+        <td rowspan="4"><b>Passos</b></td>
+        <td>1. Visualizar a página principal</td>
     </tr>
     <tr>
-        <td>Critérios de Êxito</td>
-        <td> </td>
+        <td>2. Escolhar uma das trilhas exibidas pelo sistema ou pesquisada pelo usuário</td>
+    </tr>
+    <tr>
+        <td>3. Visualizar a página de detalhe da trilha escolhida.</td>
+    </tr>
+    <tr>
+        <td>4. Visualizar informações relacionadas a altimetria, dificuldade, fotos, indicação de uma trilha ideal para um grupo ou individual, previsão do tempo para data escolhida.</td>
+    </tr>
+    <tr>
+        <td><b>Critérios de Êxito</b></td>
+        <td>Página de detalhamento da trilha escolhida pelo usuário deve apresentar todas as informações de detalhamento cadastradas para a trilha.</td>
     </tr>
     </table>
 <br>
