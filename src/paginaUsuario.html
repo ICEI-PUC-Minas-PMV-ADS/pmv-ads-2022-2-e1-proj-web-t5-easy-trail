@@ -109,14 +109,16 @@
             <h3 id="user__name"></h3>
             <h3 id="user__password"></h3>
             <h3 id="user__email"></h3>
-            <label for="nome">Alterar nome:</label>
-            <input type="text" name="nome" id="input-nome">
+            <label for="input-nome">Alterar nome:</label>
+            <input type="text" name="nome" id="input-nome" required>
+            <button type="button" onclick="alterarNome()">Alterar</button>
             <label for="senha">Nova senha:</label>
             <input type="text" name="senha" id="input-senha">
+            <button type="button" onclick="alterarSenha()">Alterar</button>
             <label for="email">Alterar email:</label>
             <input type="text" name="email" id="input-email">
-            <button type="button" onclick="alterarNome()">Enviar</button>
-
+            <button type="button" onclick="alterarEmail()">Alterar</button>
+        
         </div>
 
         

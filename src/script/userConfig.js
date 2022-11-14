@@ -30,39 +30,44 @@ function atualizaUsuarios() {
     readLog = JSON.parse(localStorage.getItem("usuariosCadastrados"));
 }
 
-// CRIAR VALIDAÇÃO DE DADOS
-// https://stackoverflow.com/questions/154059/how-do-i-check-for-an-empty-undefined-null-string-in-javascript
-// !EMPTY !NULL !UNDEFINED
 function atualizaHTML() {
-    // INSERIR VALIDAÇÃO
     document.getElementById("user__name").innerHTML = readLog[1].nome;
     document.getElementById("user__password").innerHTML = readLog[1].senha;
     document.getElementById("user__email").innerHTML = readLog[1].email;
 }
 
 function alterarNome() {
-    dadosIniciais.usuarios[1].nome = document.getElementById("input-nome").value;
-    atualizaUsuarios();
-    atualizaHTML();
-    console.log(readLog[1].nome);
+    let inputUsuario = document.getElementById("input-nome").value;
+    if(inputUsuario) {
+        dadosIniciais.usuarios[1].nome = inputUsuario;
+        atualizaUsuarios();
+        atualizaHTML();
+    } else {
+        window.alert("Usuário inválido");
+    }
 }
 
+function alterarSenha() {
+    let inputSenha = document.getElementById("input-senha").value;
+    if(inputSenha) {
+        dadosIniciais.usuarios[1].senha = inputSenha;
+        atualizaUsuarios();
+        atualizaHTML();
+    } else {
+        window.alert("Senha inválida");
+    }
+}
 
-
-// AJAX?
-
-// var req = new XMLHttpRequest ();
-// var url = "";
-
-// function processaDados() {
-     
-// }
-
-// function getData() {
-//     req.open('GET', url, true);
-//     req.send();
-// }
-
+function alterarEmail() {
+    let inputEmail = document.getElementById("input-email").value;
+    if(inputEmail) {
+        dadosIniciais.usuarios[1].email = inputEmail;
+        atualizaUsuarios();
+        atualizaHTML();
+    } else {
+        window.alert("Email inválido");
+    }
+}
 
 
 
