@@ -16,7 +16,7 @@ A finalidade do Plano de Teste é reunir todas as informações necessárias par
         <td>RF-001 O software deve mostrar as trilhas por ordem de dificuldade.</td>
     </tr>
     <tr>
-        <td>RF-002 O software deve permitir que o usuário cadastre novas trilhas</td>
+        <td></td>
     </tr>
     <tr>
         <td>Objetivo do Teste</td>
@@ -34,14 +34,20 @@ A finalidade do Plano de Teste é reunir todas as informações necessárias par
 <br>
 
 
-<table border="0" id="CT02 - Exibir Trilha">
+<table border="0" id="CT02 - Exibir detalhe da trilha">
     <tr>
         <th>Caso de Teste</th>
-        <th>CT-02 Exibir Trilhas</th>
+        <th>CT-02 Exibir detalhe da trilha</th>
     </tr>
     <tr>
-        <td>Requisitos Associados</td>
-        <td></td>
+        <td rowspan="3">Requisitos Associados</td>
+        <td>RF-004 O software deve mostrar o mapa/rota da trilha</td>
+    </tr>
+    <tr>
+        <td>FR-005 O software deve mostrar a previsão do tempo dia/hora, para que o usuário saiba se e possível realizar a trilha</td>
+    </tr>
+    <tr>
+        <td>RF-006 O software deve ter um fórum para que os ciclistas possam interagir com outros ciclistas</td>
     </tr>
     <tr>
         <td>Objetivo do Teste</td>
@@ -62,11 +68,14 @@ A finalidade do Plano de Teste é reunir todas as informações necessárias par
 <table border="0" id="CT03 - Cadastro de Trilha">
     <tr>
         <th>Caso de Teste</th>
-        <th>CT-03 Cadastro Trilhas</th>
+        <th>CT-03 Cadastro de Trilhas</th>
     </tr>
     <tr>
-        <td>Requisitos Associados</td>
-        <td></td>
+        <td rowspan="2">Requisitos Associados</td>
+        <td>RF-002 O software deve permitir que o usuário cadastre novas trilhas</td>
+    </tr>
+    <tr>
+        <td>RF-013 Usuário poderá enviar fotos de suas trilhas realizadas com comentários para elas</td>
     </tr>
     <tr>
         <td>Objetivo do Teste</td>
@@ -84,14 +93,17 @@ A finalidade do Plano de Teste é reunir todas as informações necessárias par
 <br>
 
 
-<table border="0" id="CT04 - ">
+<table border="0" id="CT04 - Trilhas Recomendadas ">
     <tr>
         <th>Caso de Teste</th>
-        <th>CT-04</th>
+        <th rowspan="2">CT-04 Trilhas Recomendadas</th>
     </tr>
     <tr>
         <td>Requisitos Associados</td>
-        <td></td>
+        <td>RF-003 O software deve ter uma funcionalidade de indicações de trilhas</td>
+    </tr>
+    <tr>
+        <td>RF-008 O software deve poder mostrar as trilhas mais próximas da localização atual do usuário</td>
     </tr>
     <tr>
         <td>Objetivo do Teste</td>
