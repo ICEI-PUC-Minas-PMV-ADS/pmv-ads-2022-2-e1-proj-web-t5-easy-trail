@@ -7,7 +7,7 @@ A finalidade do Plano de Teste é reunir todas as informações necessárias par
 OS requisitos para realização do testes são:
 * Site hospedado no Heroku
 * Compatibilidade com os navegadores de internet chrome e Edge
-* Site responsivo para celulares com sistema operacionais Android e iOS
+* Site responsivo para celulares com sistema operacional Android ou iOS
 
  
 <h2>Casos de Testes</h2>
@@ -162,15 +162,24 @@ Os testes funcionais a serem realizados no aplicativo são descritos a seguir.
     </tr>
     <tr>
         <td><b>Objetivo do Teste</b></td>
-        <td> </td>
+        <td>Validar se o sistema está indicado trilhas ao usuário</td>
     </tr>
     <tr>
-        <td><b>Passos</b></td>
-        <td> </td>
+        <td rowspan="4"><b>Passos</b></td>
+        <td>1. Acessar o Navegador</td>
+    </tr>
+    <tr>
+        <td>2. Informar o endereço do Site</td>
+    </tr>
+    <tr>
+        <td>3. Visualizar a página principal</td>
+    </tr>
+    <tr>
+        <td>4. Visualizar recomendações de trilhas na página</td>
     </tr>
     <tr>
         <td><b>Critério de Êxito</b></td>
-        <td> </td>
+        <td>Sistema deve indicar trilhas para o usuário em sua página principal</td>
     </tr>
     </table>
 <br>
