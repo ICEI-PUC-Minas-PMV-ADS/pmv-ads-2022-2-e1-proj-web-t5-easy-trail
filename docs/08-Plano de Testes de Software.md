@@ -20,7 +20,7 @@ A finalidade do Plano de Teste é reunir todas as informações necessárias par
     </tr>
     <tr>
         <td><b>Objetivo do Teste</b></td>
-        <td>Verificar se a barra de pesquisa está buscando as trilhas cadastrada conforme as escolhas realizadas pelo usuário em relação a cidade, dificuldade e data</td>
+        <td>Verificar se a barra de pesquisa busca trilhas conforme as escolhas realizadas pelo usuário</td>
     </tr>
     <tr>
         <td rowspan="6"><b>Passos</b></td>
@@ -95,14 +95,14 @@ A finalidade do Plano de Teste é reunir todas as informações necessárias par
         <th>CT-03 Cadastro de Trilhas</th>
     </tr>
     <tr>
-        <td rowspan="2">Requisitos Associados</td>
+        <td rowspan="2"><b>Requisitos Associados</b></td>
         <td>RF-002 O software deve permitir que o usuário cadastre novas trilhas</td>
     </tr>
     <tr>
         <td>RF-013 Usuário poderá enviar fotos de suas trilhas realizadas com comentários para elas</td>
     </tr>
     <tr>
-        <td>Objetivo do Teste</td>
+        <td><b>Objetivo do Teste</b></td>
         <td>Verificar se é possível que um usuário possa cadastrar uma nova trilha</td>
     </tr>
     <tr>
@@ -134,7 +134,7 @@ A finalidade do Plano de Teste é reunir todas as informações necessárias par
         <td>9. Enviar informações da trilha após o cadastro</td>
     </tr>
     <tr>
-        <td>Critérios de Êxito</td>
+        <td><b>Critérios de Êxito</b></td>
         <td>Ser possível que um usuário logado, posso cadastrar um nova trilha quando desejado, podendo enviar uma foto, se desejado for.</td>
     </tr>
     </table>
@@ -147,22 +147,22 @@ A finalidade do Plano de Teste é reunir todas as informações necessárias par
         <th>CT-04 Trilhas Recomendadas</th>
     </tr>
     <tr>
-        <td rowspan="2">Requisitos Associados</td>
+        <td rowspan="2"><b>Requisitos Associados</b></td>
         <td>RF-003 O software deve ter uma funcionalidade de indicações de trilhas</td>
     </tr>
     <tr>
         <td>RF-008 O software deve poder mostrar as trilhas mais próximas da localização atual do usuário</td>
     </tr>
     <tr>
-        <td>Objetivo do Teste</td>
+        <td><b>Objetivo do Teste</b></td>
         <td> </td>
     </tr>
     <tr>
-        <td>Passos</td>
+        <td><b>Passos</b></td>
         <td> </td>
     </tr>
     <tr>
-        <td>Critérios de Êxito</td>
+        <td><b>Critérios de Êxito</b></td>
         <td> </td>
     </tr>
     </table>
@@ -175,19 +175,19 @@ A finalidade do Plano de Teste é reunir todas as informações necessárias par
         <th>CT-05</th>
     </tr>
     <tr>
-        <td>Requisitos Associados</td>
+        <td><b>Requisitos Associados</b></td>
         <td></td>
     </tr>
     <tr>
-        <td>Objetivo do Teste</td>
+        <td><b>Objetivo do Teste</b></td>
         <td> </td>
     </tr>
     <tr>
-        <td>Passos</td>
+        <td><b>Passos</b></td>
         <td> </td>
     </tr>
     <tr>
-        <td>Critérios de Êxito</td>
+        <td><b>Critérios de Êxito</b></td>
         <td> </td>
     </tr>
     </table>
