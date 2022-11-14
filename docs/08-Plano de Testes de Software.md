@@ -12,18 +12,18 @@ A finalidade do Plano de Teste é reunir todas as informações necessárias par
         <th>CT-01 Pesquisa de Trilha</th>
     </tr>
     <tr>
-        <th rowspan="2">Requisitos Associados</th>
+        <td rowspan="2">Requisitos Associados</td>
         <td>RF-001 O software deve mostrar as trilhas por ordem de dificuldade.</td>
     </tr>
     <tr>
         <td>RF-009 O software deve recomendar trilhas para realização em grupo ou individual</td>
     </tr>
     <tr>
-        <th>Objetivo do Teste</th>
+        <td>Objetivo do Teste</td>
         <td>Verificar se a barra de pesquisa está buscando as trilhas cadastradas conforme as escolhas realizadas pelo usuário em relação a cidade, dificuldade e data</td>
     </tr>
     <tr>
-        <th rowspan="6">Passos</th>
+        <td rowspan="6">Passos</td>
         <td>1. Acessar o Navegador</td>
     </tr>
     <tr>
@@ -42,7 +42,7 @@ A finalidade do Plano de Teste é reunir todas as informações necessárias par
         <td>6. Selecionar a Data no campo "data"</td>
     </tr>
     <tr>
-        <th>Critérios de Êxito</th>
+        <td><b>Critérios de Êxito</b></td>
         <td>Os resultados exibidos após a busca do usuário, devem considerar a cidade, o grau de dificuldade e a data escolhida pelo usuário no momento da pesquisa. Deve ser exibida todas as trilhas cadastradas no sistema, que atendam aos critérios definidos pelo usuário em sua pesquisa.</td>
     </tr>
     </table>
