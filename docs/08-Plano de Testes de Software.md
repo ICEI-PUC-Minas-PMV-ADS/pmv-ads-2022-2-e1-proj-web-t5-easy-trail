@@ -103,15 +103,39 @@ A finalidade do Plano de Teste é reunir todas as informações necessárias par
     </tr>
     <tr>
         <td>Objetivo do Teste</td>
-        <td> </td>
+        <td>Verificar se é possível que um usuário possa cadastrar uma nova trilha</td>
     </tr>
     <tr>
-        <td>Passos</td>
-        <td> </td>
+        <td rowspan="9"><b>Passos</b></td>
+        <td>1. Acessar o Navegador</td>
+    </tr>
+    <tr>
+        <td>2. Informar o endereço do Site</td>
+    </tr>
+    <tr>
+        <td>3. Visualizar a página principal</td>
+    </tr>
+    <tr>
+        <td>4. Realizar seu login</td>
+    </tr>
+    <tr>
+        <td>5. Selecionar a opção "cadastrar nova trilha"</td>
+    </tr>
+    <tr>
+        <td>6. Cadastrar informações para uma nova trilha</td>
+    </tr>
+    <tr>
+        <td>7. Carregar uma foto da trilha durante o cadastro</td>
+    </tr>
+    <tr>
+        <td>8. Salvar informações da trilha após o cadastro</td>
+    </tr>
+    <tr>
+        <td>9. Enviar informações da trilha após o cadastro</td>
     </tr>
     <tr>
         <td>Critérios de Êxito</td>
-        <td> </td>
+        <td>Ser possível que um usuário logado, posso cadastrar um nova trilha quando desejado, podendo enviar uma foto, se desejado for.</td>
     </tr>
     </table>
 <br>
