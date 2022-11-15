@@ -367,3 +367,13 @@ button:hover {
   color: gray;
   font-size: 10px;
 }
+
+.textarea {
+margin: 3%;
+padding: 0;
+}
+
+.descricaotrilha{
+margin: 3%;
+text-size-adjust: auto;
+}
