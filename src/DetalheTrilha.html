@@ -83,31 +83,35 @@
 
 <section id="Diogo">
 
-    <div class="container">
+    <div class="container-fluid p-1 m-0 d-flex bg-white">
         <div class="row">
-            <div class="col-9">
                 <h2>Pata da Vaca</h2>
-                <img src="images/465.jpg" width="100%">
+                <img src="images/465.jpg" width="0%">
             </div>
-            <div class="col-3 p-5">
-                <h5>Previsão do Tempo</h5>
-                <h6>Tempo e Temperatura</h6>
-                <div class="city">Belo Horizonte, BR</div>
-                <div>Terça, 8 Novembro 2022</div>
-                <div><img src=""></div>
-                <div class="weather py-2">Nublado</div>
-                <div class="low-high">22°c / 23°c</div>
+    
+            <div class="card align-self-center text-center shadow-lg" style="widht:100%">
+                <div class="card-header">Tempo e Temperatura</div>
+    
+                <div class="card-body">
+                    <div class="city">Cidade Exemplo, BR</div>
+                    <div class="date">domingo, 30 Novembro 2020</div>
+                    <div class="container-temp mx-4 my-3">
+                        <div>22</div>
+                        <span>°c</span>
+                      </div>
+                      <div class="weather py-2">Nublado</div>
+                      <div class="low-high">22°c / 23°c</div>
+                </div>    
+                <div class="card-footer">Footer</div>
             </div>
-            <div class="col-sm-3 bg-light"><b>Atimetria:</b> 1.000 metros</div>
-            <div class="col-sm-3 bg-light"><b>Dificuldade:</b> Alta</div>
-            <div class="col-sm-3 bg-light"><b>Ideal para:</b> Grupos</div>
         </div>
-    </div>
+        
+
+
 
     <div class="descricaotrilha">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium porro iure reprehenderit corrupti exercitationem. Voluptatibus enim excepturi quisquam blanditiis sequi, velit ad voluptate hic facilis impedit dicta eligendi, voluptas sapiente? Rerum consequuntur possimus amet omnis ratione, illum nisi praesentium dolorem accusamus neque esse quisquam dolorum, facere, eum aut qui molestiae?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis alias vitae exercitationem sint inventore quisquam dolorum, minus suscipit officia nemo aliquid dolor temporibus, enim quas accusamus iusto unde pariatur deserunt possimus molestias nobis ad at recusandae fugiat! Autem expedita illum pariatur cum error esse nulla doloremque, nemo atque, possimus laborum.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam amet excepturi modi quis reiciendis similique eos natus, alias tenetur omnis ipsa, blanditiis quidem voluptatem repellendus voluptatum animi? Sapiente totam, ad enim veniam atque est. Ea neque voluptatem nulla, officia ex temporibus? Vel delectus, sapiente eum mollitia sunt nulla molestias explicabo nemo nisi nobis iste a, molestiae dolores voluptate facilis ducimus iure, ullam minima tempore ad culpa exercitationem assumenda! Officiis aliquam impedit suscipit a amet architecto tenetur nostrum alias ex sequi!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium porro iure reprehenderit corrupti exercitationem. Voluptatibus enim excepturi quisquam blanditiis sequi, velit ad voluptate hic facilis impedit dicta eligendi, voluptas sapiente? Rerum consequuntur possimus amet omnis ratione, illum nisi praesentium dolorem accusamus neque esse quisquam dolorum, facere, eum aut qui molestiae?. Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis alias vitae exercitationem sint inventore quisquam dolorum, minus suscipit officia nemo aliquid dolor temporibus, enim quas accusamus iusto unde pariatur deserunt possimus molestias nobis ad at recusandae fugiat! Autem expedita illum pariatur cum error esse nulla doloremque, nemo atque, possimus laborum.</p>
+
             <hr>
         </div>
         <div class="descricaotrilha">
@@ -132,6 +136,7 @@
   
       </footer>
 
+    <script src="climatempo.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
         crossorigin="anonymous"></script>
