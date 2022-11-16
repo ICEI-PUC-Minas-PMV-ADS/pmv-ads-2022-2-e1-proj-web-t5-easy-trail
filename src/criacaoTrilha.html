@@ -1,66 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="images/logoEasy.png" type="image" </head>
-    <title>Cadastrar Trilha</title>
-    <link rel="stylesheet" href="./style/main.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="./style/mediaquery.css">
+    <link rel="shortcut icon" href="images/logoEasy.png">
+    <title>Easy Trail</title>
+    <style>
+      #more {display: none;}
+      #more2 {display: none;}
+      #more3 {display: none;}
+    </style>
 </head>
+
 <body>
-    <header>
-        <div class="container">
-            <nav class="header-wrap">
-                <div class="logo-container">
-                    <a href="#">
-                        <img src="images/logoEasy.png" width="120" alt="100"></a>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <img onclick="location=href='https://www.google.com'" src="images/logoEasy.png" width="120" alt="100">
+          <div>
+            <button class="btn btn-danger"
+              onclick="document.getElementById('id00').style.display='block'">Cadastre-se</button>
+            <button class="btn btn-danger" onclick="document.getElementById('id01').style.display='block'"
+              style="width:auto;">Entrar</button>
+          </div>
+  
+            <div id="id00" class="modal">
+              <form class="modal-content" action="/action_page.php">
+                <div class="container">
+                  <span onclick="document.getElementById('id00').style.display='none'" class="close" title="close">&times;</span>
+                  <label for="name"><b>Nome</b></label>
+                  <input type="text" placeholder="Digite o seu nome completo" name="name" required>
+                  <label for="email"><b>Email</b></label>
+                  <input type="text" placeholder="Digite o seu Email" name="email" required>
+                  <label for="psw"><b>Senha</b></label>
+                  <input type="password" placeholder="Digite sua senha" name="psw" required>
+                  <label for="psw-repeat"><b>Repita sua Senha</b></label>
+                  <input type="password" placeholder="Digite sua senha" name="psw-repeat" required>
+                  <button type="submit">Cadastrar</button>
+                  <button type="button" onclick="document.getElementById('id00').style.display='none'"
+                    class="cancelarbtn">Cancelar</button>
                 </div>
-                <!--LOGO-CONTAINER-->
-                <ul class="header-list">
-                    <li class="header-list-row">
-                        <a href="#" class="header-list-link">
-                            <img src="images/icons/search.svg" alt="" class="search-icon header-icon">
-                        </a>
-                    </li>
-                    <li class="header-list-row">
-                        <a href="#" class="header-list-link">
-                            <a href="https://www.pucminas.br/main/Paginas/default.aspx"><button
-                                    class="pesquisar-input-login">Login</button></a>
-                        </a>
-                    </li>
-                </ul>
-                <!--HEADER-LIST-->
-            </nav>
-            <!--HEADER-WRAP-->
+              </form>
+            </div>
+            <div id="id01" class="modal">
+            
+              <form class="modal-content animate" action="/action_page.php" method="post">
+                <div class="imgcontainer">
+                  <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                    title="Close Modal">&times;</span>
+                </div>
+                <div class="containerX">
+                  <label for="uname"><b>Usuário</b></label>
+                  <input type="text" placeholder="Digite seu e-mail" name="uname" required>
+                  <label for="psw"><b>Senha</b></label>
+                  <input type="password" placeholder="Digite sua senha" name="psw" required>
+                  <button type="submit">Entrar</button>
+                </div>
+                <div class="containerX" style="background-color:#f1f1f1">
+                  <span class="psw">Esqueceu sua <a href="#">senha?</a></span>
+                  <button type="button" onclick="document.getElementById('id01').style.display='none'"
+                    class="cancelarbtn">Cancelar</button>
+                </div>
+              </form>
+            
+            </div>
+            
         </div>
-        <!--CONTAINER-->
-    </header>
+    </nav>
 
     <div class="container">
         <form action="" class="form-cadastro-trilha">
             
-            <div class="form-title-container">
+            <div class="form-title-container mb-5">
                 <h1>Cadastro de trilha</h1>
+            <hr>
             </div>
 
-            <label for="nome">Nome:</label>
-            <input type="text" name="nome" id="trilha_nome" placeholder="Nome" class="cadastro-trilha-input">
+            <label for="nome"><b>Nome:</b></label>
+            <input type="text" name="nome" id="trilha_nome" placeholder="Nome" class="cadastro-trilha-input shadow mb-3" required>
 
-            <label for="nome">Local:</label>
-            <input type="text" name="local" id="trilha_local" placeholder="local" class="cadastro-trilha-input">
+            <label for="nome"><b>Local:</b></label>
+            <input type="text" name="local" id="trilha_local" placeholder="local" class="cadastro-trilha-input shadow mb-3" required>
 
-            <label for="descricao">Descricao:</label>
-            <textarea name="descricao" id="trilha_descricao" cols="30" rows="10" placeholder="descricao" class="cadastro-trilha-input"></textarea>
+            <label for="descricao"><b>Descricao:</b></label>
+            
+            <div>
+            <textarea name="descricao" id="trilha_descricao" placeholder="descricao" class="form-control shadow mb-3" width="100%"></textarea>
+            </div>
 
-            <label for="nome">Altimetria:</label>
-            <input type="number" name="" id="trilha_altimetria" placeholder="altimetria" class="cadastro-trilha-input">
+        <div class="row">
+            <div class="col-sm-2 p-2">
+            <label for="nome"><b>Altimetria:</b></label>
+            <input type="text" id="trilha_altimetria" placeholder="Ex: 700 metros" class="cadastro-trilha-input shadow mb-3">
+            </div>
+            <div class="col-sm-2 p-2">
+            <label for="nome"><b>Duração Estimada:</b></label>
+            <input type="text" name="" id="trilha_duracao" placeholder="Ex: 02h30m, 50min" class="cadastro-trilha-input shadow mb-3">
+            </div>
 
-            <label for="nome">Duracao:</label>
-            <input type="text" name="" id="trilha_duracao" placeholder="duracao" class="cadastro-trilha-input">
+
+
+         </div>
 
             <div class="form-btn-cadastro">
-                <button id="cadastroTrilha" onclick="trailFuncs.cadastroTrilha()" class="buttom-form">Cadastrar</button>
+                <button id="cadastroTrilha" onclick="trailFuncs.cadastroTrilha()" class="btn btn-danger">Cadastrar</button>
             </div>
 
         </form>
@@ -75,7 +123,7 @@
           </div>
         </div>
   
-      </footer>
+    </footer>
       
     <script src="./script/main.js"></script>
 </body>
