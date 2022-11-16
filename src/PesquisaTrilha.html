@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="style/main.css">
     <link rel="stylesheet" href="./style/mediaquery.css">
     <link rel="shortcut icon" href="images/logoEasy.png">
@@ -49,7 +48,7 @@
                             <input type="password" placeholder="Digite sua senha" name="psw" required>
                             <label for="psw-repeat"><b>Repita sua Senha</b></label>
                             <input type="password" placeholder="Digite sua senha" name="psw-repeat" required>
-                            <button type="submit" class="signup-login">Entrar</button>
+                            <button type="submit" class="signup-login">Cadastrar</button>
                             <button type="button" onclick="document.getElementById('id00').style.display='none'"
                                 class="cancelarbtn">Cancelar</button>
                         </div>
@@ -111,108 +110,82 @@
     </div>
 
     <section id="pesquisa-trilhas">
-        <div class="cards-trilhas">
-        </div>
-
+        
         <div class="row row-cols-1 row-cols-md-3">
             <div class="col mb-4 shadow-lg">
-                <div class="card">
-                    <img src="images/460.jpg" class="card-img-top d-block w-100">
-                    <div class="card-body">
-                        <h6 class="card-title"><b>Pata da Vaca</b></h6>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-                            imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel erisque enim ligula
-                            venenatis Dolor. Maecenas nisl est, ultrices<span id="dots">...</span><span id="more">nec
-                                congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis
-                                dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis
-                                imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer
-                                fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
-                        <button onclick="vejaMais()" class="button-Btn" id="myBtn"><b>Veja Mais</b></button>
-                    </div>
+              <div class="card">
+                <img src="images/460.jpg" class="card-img-top d-block w-100">
+                <div class="card-body">
+                  <h6 class="card-title"><b>Laranjeiras</b></h6>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et
+                    dictum interdum, nisi lorem egestas vitae scel erisque enim ligula venenatis Dolor. Maecenas nisl est, ultrices<span class="dots">...</span><span class="more hide">nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
+                      <button class="vejamais" onclick="readMore(this)"><b>Veja Mais</b></button>
                 </div>
+              </div>
             </div>
+        
+            <div class="col mb-4 shadow-lg">
+              <div class="card">
+                <img src="images/464.jpg" class="card-img-top d-block w-100">
+                <div class="card-body">
+                  <h6 class="card-title"><b>Laranjeiras</b></h6>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et
+                    dictum interdum, nisi lorem egestas vitae scel erisque enim ligula venenatis Dolor. Maecenas nisl est, ultrices<span class="dots">...</span><span class="more hide">nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
+                      <button class="vejamais" onclick="readMore(this)"><b>Veja Mais</b></button>
+                </div>
+              </div>
+            </div>
+    
+            <div class="col mb-4 shadow-lg">
+              <div class="card">
+                <img src="images/462.jpg" class="card-img-top d-block w-100">
+                <div class="card-body">
+                  <h6 class="card-title"><b>Mirante das Goiabeiras</b></h6>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et
+                    dictum interdum, nisi lorem egestas vitae scel erisque enim ligula venenatis Dolor. Maecenas nisl est, ultrices<span class="dots">...</span><span class="more hide">nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
+                      <button class="vejamais" onclick="readMore(this)"><b>Veja Mais</b></button>
+                </div>
+              </div>
+            </div>
+    
+            <div class="col mb-4 shadow-lg">
+              <div class="card">
+                <img src="images/465.jpg" class="card-img-top d-block w-100">
+                <div class="card-body">
+                  <h6 class="card-title"><b>Caiçara</b></h6>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et
+                    dictum interdum, nisi lorem egestas vitae scel erisque enim ligula venenatis Dolor. Maecenas nisl est, ultrices<span class="dots">...</span><span class="more hide">nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
+                      <button class="vejamais" onclick="readMore(this)"><b>Veja Mais</b></button>
+                </div>
+              </div>
+            </div>
+    
+            <div class="col mb-4 shadow-lg">
+              <div class="card">
+                <img src="images/461.jpg" class="card-img-top d-block w-100">
+                <div class="card-body">
+                  <h6 class="card-title"><b>3 Lagoas</b></h6>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et
+                    dictum interdum, nisi lorem egestas vitae scel erisque enim ligula venenatis Dolor. Maecenas nisl est, ultrices<span class="dots">...</span><span class="more hide">nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
+                      <button class="vejamais" onclick="readMore(this)"><b>Veja Mais</b></button>
+                </div>
+              </div>
+            </div>
+    
+            <div class="col mb-4 shadow-lg">
+              <div class="card">
+                <img src="images/463.jpeg" class="card-img-top d-block w-100">
+                <div class="card-body">
+                  <h6 class="card-title"><b>Estradão do Vento</b></h6>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et
+                    dictum interdum, nisi lorem egestas vitae scel erisque enim ligula venenatis Dolor. Maecenas nisl est, ultrices<span class="dots">...</span><span class="more hide">nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
+                      <button class="vejamais" onclick="readMore(this)"><b>Veja Mais</b></button>
+                </div>
+              </div>
+            </div>
+    
+          </div>
 
-            <div class="col mb-4 shadow-lg">
-                <div class="card">
-                    <img src="images/464.jpg" class="card-img-top d-block w-100">
-                    <div class="card-body">
-                        <h6 class="card-title"><b>Laranjeiras</b></h6>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-                            imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel erisque enim ligula
-                            venenatis Dolor. Maecenas nisl est, ultrices<span id="dots">...</span><span id="more">nec
-                                congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis
-                                dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis
-                                imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer
-                                fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
-                        <button onclick="vejaMais()" class="button-Btn" id="myBtn"><b>Veja Mais</b></button>
-                    </div>
-                </div>
-            </div>
-            <div class="col mb-4 shadow-lg">
-                <div class="card">
-                    <img src="images/462.jpg" class="card-img-top d-block w-100">
-                    <div class="card-body">
-                        <h6 class="card-title"><b>Mirante das Goiabeiras</b></h6>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-                            imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel erisque enim ligula
-                            venenatis Dolor. Maecenas nisl est, ultrices<span id="dots">...</span><span id="more">nec
-                                congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis
-                                dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis
-                                imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer
-                                fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
-                        <button onclick="vejaMais()" class="button-Btn" id="myBtn"><b>Veja Mais</b></button>
-                    </div>
-                </div>
-            </div>
-            <div class="col mb-4 shadow-lg">
-                <div class="card">
-                    <img src="images/465.jpg" class="card-img-top d-block w-100">
-                    <div class="card-body">
-                        <h6 class="card-title"><b>Caiçara</b></h6>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-                            imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel erisque enim ligula
-                            venenatis Dolor. Maecenas nisl est, ultrices<span id="dots">...</span><span id="more">nec
-                                congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis
-                                dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis
-                                imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer
-                                fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
-                        <button onclick="vejaMais()" class="button-Btn" id="myBtn"><b>Veja Mais</b></button>
-                    </div>
-                </div>
-            </div>
-            <div class="col mb-4 shadow-lg">
-                <div class="card">
-                    <img src="images/461.jpg" class="card-img-top d-block w-100">
-                    <div class="card-body">
-                        <h6 class="card-title"><b>3 Lagoas</b></h6>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-                            imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel erisque enim ligula
-                            venenatis Dolor. Maecenas nisl est, ultrices<span id="dots">...</span><span id="more">nec
-                                congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis
-                                dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis
-                                imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer
-                                fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
-                        <button onclick="vejaMais()" class="button-Btn" id="myBtn"><b>Veja Mais</b></button>
-                    </div>
-                </div>
-            </div>
-            <div class="col mb-4 shadow-lg">
-                <div class="card">
-                    <img src="images/463.jpeg" class="card-img-top d-block w-100">
-                    <div class="card-body">
-                        <h6 class="card-title"><b>Estradão do Vento</b></h6>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-                            imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel erisque enim ligula
-                            venenatis Dolor. Maecenas nisl est, ultrices<span id="dots">...</span><span id="more">nec
-                                congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis
-                                dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis
-                                imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer
-                                fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
-                        <button onclick="vejaMais()" class="button-Btn" id="myBtn"><b>Veja Mais</b></button>
-                    </div>
-                </div>
-            </div>
-        </div>
     </section>
 
     <footer>
