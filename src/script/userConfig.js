@@ -4,13 +4,15 @@ const dadosIniciais = {
             login: "admin",
             senha: "123",
             nome: "Administrador do Sistema",
-            email: "admin@abc.com"
+            email: "admin@abc.com",
+            descricao: "Lorem, ipsum dolor sit amet consectetur adipisicing elit."
         },
         {
             login: "user",
             senha: "123",
             nome: "Usuario Comum",
-            email: "user@abc.com"
+            email: "user@abc.com",
+            descricao: "Lorem, ipsum dolor sit amet consectetur adipisicing elit."
         }
     ]
 };
@@ -21,6 +23,7 @@ if(localStorage.getItem("usuariosCadastrados") !== null){
     document.getElementById("user__name").innerHTML = readLog[1].nome;
     document.getElementById("user__password").innerHTML = readLog[1].senha;
     document.getElementById("user__email").innerHTML = readLog[1].email;
+    document.getElementById("user__description").innerHTML = readLog[1].descricao;
 } else {
     localStorage.setItem("usuariosCadastrados", JSON.stringify(dadosIniciais.usuarios));
 }
@@ -30,39 +33,66 @@ function atualizaUsuarios() {
     readLog = JSON.parse(localStorage.getItem("usuariosCadastrados"));
 }
 
-// CRIAR VALIDAÇÃO DE DADOS
-// https://stackoverflow.com/questions/154059/how-do-i-check-for-an-empty-undefined-null-string-in-javascript
-// !EMPTY !NULL !UNDEFINED
 function atualizaHTML() {
-    // INSERIR VALIDAÇÃO
     document.getElementById("user__name").innerHTML = readLog[1].nome;
     document.getElementById("user__password").innerHTML = readLog[1].senha;
     document.getElementById("user__email").innerHTML = readLog[1].email;
+    document.getElementById("user__description").innerHTML = readLog[1].descricao;
 }
 
 function alterarNome() {
-    dadosIniciais.usuarios[1].nome = document.getElementById("input-nome").value;
-    atualizaUsuarios();
-    atualizaHTML();
-    console.log(readLog[1].nome);
+    let inputUsuario = document.getElementById("input-nome").value;
+    if(inputUsuario) {
+        dadosIniciais.usuarios[1].nome = inputUsuario;
+        atualizaUsuarios();
+        atualizaHTML();
+    }
 }
 
+function alterarSenha() {
+    let inputSenha = document.getElementById("input-senha").value;
+    if(inputSenha) {
+        dadosIniciais.usuarios[1].senha = inputSenha;
+        atualizaUsuarios();
+        atualizaHTML();
+    }
+}
 
+function alterarEmail() {
+    let inputEmail = document.getElementById("input-email").value;
+    if(inputEmail) {
+        dadosIniciais.usuarios[1].email = inputEmail;
+        atualizaUsuarios();
+        atualizaHTML();
+    }
+}
 
-// AJAX?
+function alterarDescricao() {
+    let inputDescricao = document.getElementById("input-description").value;
+    if(inputDescricao) {
+        dadosIniciais.usuarios[1].descricao = inputDescricao;
+        atualizaUsuarios();
+        atualizaHTML();
+    }
+}
 
-// var req = new XMLHttpRequest ();
-// var url = "";
+//BTN CONFIG
 
-// function processaDados() {
-     
-// }
+const btnShow = document.getElementById("user__configs");
+const div2Show = document.getElementById("favoritas");
+let clicked = false;
 
-// function getData() {
-//     req.open('GET', url, true);
-//     req.send();
-// }
-
+function showDiv(){
+    if(clicked) {
+        div2Show.style.display= "block";
+        btnShow.style.display= "none";
+        clicked = false;
+    } else {
+        div2Show.style.display= "none";
+        btnShow.style.display= "block";
+        clicked = true;
+    }
+}
 
 
 

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="./style/mediaquery.css">
+    <link rel="shortcut icon" href="images/logoEasy.png">
+    <title>Easy Trail</title>
+    <style>
+      #more {display: none;}
+      #more2 {display: none;}
+      #more3 {display: none;}
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <img onclick="location=href='https://www.google.com'" src="images/logoEasy.png" width="120" alt="100">
+        <div>
+          <button class="btn btn-danger"
+            onclick="document.getElementById('id00').style.display='block'">Cadastre-se</button>
+          <button class="btn btn-danger" onclick="document.getElementById('id01').style.display='block'"
+            style="width:auto;">Entrar</button>
+        </div>
+
+          <div id="id00" class="modal">
+            <form class="modal-content" action="/action_page.php">
+              <div class="container">
+                <span onclick="document.getElementById('id00').style.display='none'" class="close" title="close">&times;</span>
+                <label for="name"><b>Nome</b></label>
+                <input type="text" placeholder="Digite o seu nome completo" name="name" required>
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Digite o seu Email" name="email" required>
+                <label for="psw"><b>Senha</b></label>
+                <input type="password" placeholder="Digite sua senha" name="psw" required>
+                <label for="psw-repeat"><b>Repita sua Senha</b></label>
+                <input type="password" placeholder="Digite sua senha" name="psw-repeat" required>
+                <button type="submit">Cadastrar</button>
+                <button type="button" onclick="document.getElementById('id00').style.display='none'"
+                  class="cancelarbtn">Cancelar</button>
+              </div>
+            </form>
+          </div>
+          <div id="id01" class="modal">
+          
+            <form class="modal-content animate" action="/action_page.php" method="post">
+              <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                  title="Close Modal">&times;</span>
+              </div>
+              <div class="containerX">
+                <label for="uname"><b>Usuário</b></label>
+                <input type="text" placeholder="Digite seu e-mail" name="uname" required>
+                <label for="psw"><b>Senha</b></label>
+                <input type="password" placeholder="Digite sua senha" name="psw" required>
+                <button type="submit">Entrar</button>
+              </div>
+              <div class="containerX" style="background-color:#f1f1f1">
+                <span class="psw">Esqueceu sua <a href="#">senha?</a></span>
+                <button type="button" onclick="document.getElementById('id01').style.display='none'"
+                  class="cancelarbtn">Cancelar</button>
+              </div>
+            </form>
+          
+          </div>
+          
+      </div>
+    </nav>
+    
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+      <div class="carousel-indicators mb-1">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="images/carrosel1.png" class="d-block w-100">
+          <div class="content"><h5>“A confiança em si mesmo é o primeiro segredo do sucesso”</h5><i>Ralph Waldo Emerson</i>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="images/carrosel2.png" class="d-block w-100">
+          <div class="content"><h5>“Existe o risco que você jamais pode correr.
+            Existe o risco que você jamais pode deixar de correr”</h5><i>Peter Drucker</i>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="images/carrosel3.png" class="d-block w-100">
+          <div class="content"><h5>“Comemore os seus sucessos. Veja com humor os seus fracassos”</h5><i>Walton</i>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    
+    <div id="pesquisa" class="d-flex justify-content-center">
+      <div class="container">
+    
+        <div class="row align-self-center">
+          <div class="col-sm align-self-center p-2">
+            <input id="floatingInput" class="Cidade-btn" type="text" name="myCountry" placeholder="Digite a cidade..."
+              required>
+          </div>
+    
+          <div class="col-sm align-self-center p-2">
+            <select id="floatingSelect" class="form-select" aria-label="Floating label select example">
+              <option selected>Dificuldade</option>
+              <option value="1">Alta</option>
+              <option value="2">Média</option>
+              <option value="3">Baixa</option>
+            </select>
+          </div>
+    
+          <div class="col-sm align-self-center p-2">
+            <div class="form-floating">
+              <input type="date" class="form-control" id="date">
+            </div>
+          </div>
+    
+          <div class="col-sm align-self-center">
+            <button type="button" class="btn btn-danger">Pesquisar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <section id="trilhas-recomendadas">
+      <div class="cards-trilhas">
+        <h1><b>Trilhas Recomendadas</b></h1>
+      </div>
+    
+      <div class="row row-cols-1 row-cols-md-3">
+        <div class="col mb-4 shadow-lg">
+          <div class="card">
+            <img src="images/460.jpg" class="card-img-top d-block w-100">
+            <div class="card-body">
+              <h6 class="card-title"><b>Laranjeiras</b></h6>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et
+                dictum interdum, nisi lorem egestas vitae scel erisque enim ligula venenatis Dolor. Maecenas nisl est, ultrices<span class="dots">...</span><span class="more hide">nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
+                  <button class="vejamais" onclick="readMore(this)"><b>Veja Mais</b></button>
+            </div>
+          </div>
+        </div>
+    
+        <div class="col mb-4 shadow-lg">
+          <div class="card">
+            <img src="images/464.jpg" class="card-img-top d-block w-100">
+            <div class="card-body">
+              <h6 class="card-title"><b>Laranjeiras</b></h6>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et
+                dictum interdum, nisi lorem egestas vitae scel erisque enim ligula venenatis Dolor. Maecenas nisl est, ultrices<span class="dots">...</span><span class="more hide">nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
+                  <button class="vejamais" onclick="readMore(this)"><b>Veja Mais</b></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col mb-4 shadow-lg">
+          <div class="card">
+            <img src="images/462.jpg" class="card-img-top d-block w-100">
+            <div class="card-body">
+              <h6 class="card-title"><b>Mirante das Goiabeiras</b></h6>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et
+                dictum interdum, nisi lorem egestas vitae scel erisque enim ligula venenatis Dolor. Maecenas nisl est, ultrices<span class="dots">...</span><span class="more hide">nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
+                  <button class="vejamais" onclick="readMore(this)"><b>Veja Mais</b></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col mb-4 shadow-lg">
+          <div class="card">
+            <img src="images/465.jpg" class="card-img-top d-block w-100">
+            <div class="card-body">
+              <h6 class="card-title"><b>Caiçara</b></h6>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et
+                dictum interdum, nisi lorem egestas vitae scel erisque enim ligula venenatis Dolor. Maecenas nisl est, ultrices<span class="dots">...</span><span class="more hide">nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
+                  <button class="vejamais" onclick="readMore(this)"><b>Veja Mais</b></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col mb-4 shadow-lg">
+          <div class="card">
+            <img src="images/461.jpg" class="card-img-top d-block w-100">
+            <div class="card-body">
+              <h6 class="card-title"><b>3 Lagoas</b></h6>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et
+                dictum interdum, nisi lorem egestas vitae scel erisque enim ligula venenatis Dolor. Maecenas nisl est, ultrices<span class="dots">...</span><span class="more hide">nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
+                  <button class="vejamais" onclick="readMore(this)"><b>Veja Mais</b></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col mb-4 shadow-lg">
+          <div class="card">
+            <img src="images/463.jpeg" class="card-img-top d-block w-100">
+            <div class="card-body">
+              <h6 class="card-title"><b>Estradão do Vento</b></h6>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et
+                dictum interdum, nisi lorem egestas vitae scel erisque enim ligula venenatis Dolor. Maecenas nisl est, ultrices<span class="dots">...</span><span class="more hide">nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
+                  <button class="vejamais" onclick="readMore(this)"><b>Veja Mais</b></button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    
+    <section id="Envie-sua-Duvida">
+    
+      <form>
+        <h2 class="Form-titulo"><b>Envie sua Dúvida</b></h2>
+      <hr>
+        <div class="form-group">
+          <label><b>Nome</b></label>
+          <input class="form-control shadow p-3 mb-4" type="text" placeholder="Meu Nome.. " required>
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlInput1"><b>E-mail</b></label>
+          <input type="email" class="form-control shadow p-3 mb-4" id="exampleFormControlInput1"
+            placeholder="nome@exemplo.com.br" required>
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1"><b>Comentário</b></label>
+          <textarea class="form-control pl-3 shadow mb-2" placeholder="Escreva seu comentário.."
+            id="exampleFormControlTextarea1" rows="3" required></textarea>
+        </div>
+        <div class="btn-form-wraper">
+          <button class="btn btn-danger" type="submit">Enviar</button>
+      </form>
+    </section>
+    
+    <footer>
+
+      <div class="container text">
+        <div class="row">
+          <div class="col-sm-9 align-self-center" id="Copyright">Direitos reservados a PUC Minas. COPYRIGHT&copy 2022</div>
+          <div class="col-sm-3" id="imgFAQ"><img onclick="location=href='FAQ.html'" src="images/FAQ.jpg" width="30%"></div>
+        </div>
+      </div>
+
+    </footer>
+    
+    <script src="cidades.js"></script>
+    <script src="login.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="vejamais.js"></script>
+    </body>
+    
+    </html>

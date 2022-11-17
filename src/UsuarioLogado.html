@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <link rel="stylesheet" href="style/main.css">
+        <link rel="stylesheet" href="./style/mediaquery.css">
+        <link rel="shortcut icon" href="images/logoEasy.png">
+        <title>Easy Trail</title>
+        <style>
+          #more {display: none;}
+          #more2 {display: none;}
+          #more3 {display: none;}
+        </style>
+    </head>
+
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <img onclick="location=href='https://www.google.com'" src="images/logoEasy.png" width="120" alt="100">
+                <ul class="header-list">
+                    <img src="images/icons/notificacao.png" width="30">
+                    <img src="images/icons/user.png" width="30">
+                    <img src="images/icons/logout.png" width="30" onclick="location=href='HomePage.html'">
+                </ul>
+        </div>
+    </nav>
+
+    <div id="pesquisa" class="d-flex justify-content-center">
+        <div class="container">
+            
+            <div class="row align-self-center"> 
+                <div class="col-sm align-self-center p-2">
+                    <input id="floatingInput" class="Cidade-btn" type="text" name="myCountry" placeholder="Digite a cidade..."
+                        required>
+                </div>
+                
+                <div class="col-sm align-self-center p-2">
+                    <select id="floatingSelect" class="form-select" aria-label="Floating label select example">
+                        <option selected>Dificuldade</option>
+                        <option value="1">Alta</option>
+                        <option value="2">Média</option>
+                        <option value="3">Baixa</option>
+                    </select>
+                </div>
+
+                <div class="col-sm align-self-center p-2">
+                    <div class="form-floating">
+                        <input type="date" class="form-control" id="date">
+                    </div>
+                </div>
+                
+                <div class="col-sm align-self-center">
+                    <button type="button" class="btn btn-danger">Pesquisar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<section id="usuariologado">
+
+    <div class="container-fluid p-3">
+        <div class="row">
+            <div class="col-9">
+                <h2>Pata da Vaca</h2>
+                <img src="images/460.JPG" width="100%">
+            </div>
+            <div class="col-3 align-self-center">
+                <h5>Previsão do Tempo</h5>
+                <p>Tempo e Temperatura</p>
+                <div class="city">Belo Horizonte, BR</div>
+                <div>Terça, 8 Novembro 2022</div>
+                <div class="weather py-2">Nublado</div>
+                <div class="container-temp">
+                <div>22<span>°c</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+   
+<div class="descricao p-4">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium porro iure reprehenderit corrupti exercitationem. Voluptatibus enim excepturi quisquam blanditiis sequi, velit ad voluptate hic facilis impedit dicta eligendi, voluptas sapiente? Rerum consequuntur possimus amet omnis ratione, illum nisi praesentium dolorem accusamus neque esse quisquam dolorum, facere, eum aut qui molestiae?</p>
+    <hr>
+    <h4>COMENTÁRIO</h4>
+    <textarea class="form-control p-4 shadow mb-4" placeholder="Escreva seu comentário.."></textarea>
+    <button class="btn btn-danger" type="submit">Enviar</button>
+</div>
+
+<footer>
+
+    <div class="container text">
+      <div class="row">
+        <div class="col-sm-9 align-self-center" id="Copyright">Direitos reservados a PUC Minas. COPYRIGHT&copy 2022</div>
+        <div class="col-sm-3" id="imgFAQ"><img onclick="location=href='FAQ.html'" src="images/FAQ.jpg" width="30%"></div>
+      </div>
+    </div>
+
+  </footer>
+
+  <script src="cidades.js"></script>
+  <script src="login.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+  <script src="vejamais.js"></script>
+</body>
+</html>
