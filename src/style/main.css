@@ -1,799 +1,394 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html,
-body {
-    height: 100%;
-    font-size: 17px;
-    background-color: #D9D9D9;
-    font-family: 'Calibri';
-}
-
-/* MAIN-CONTAINER */
-.container {
-    margin: 0 auto;
-    width: 100%;
-    max-width: 1400px;
-}
-
-/*================*/
-/* HEADER SECTION */
-/*================*/
-
+/*/////////== HEADER ==/////////*/
 header {
-    background-color: #F5F5F5;
-}
-
-.header-wrap {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 120px;
-    padding: 10px;
+  background-color: white;
+  font-size: 27px;
 }
 
 
+/*/////////== BODY ==/////////*/
 
-.logo-container {
-    width: 102px;
-    height: 102px;
-    border-radius: 102px;
-    /* background-color: black; */
-    display: flex;
-    align-items: center;    display: flex;
-    align-items: center;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
+.btn-danger {
+  /*Botões Cadastre-se, Login, Explorar e Enviar do Forms*/
+  background-color: #EB5C0C;
+  border: none;
+  border-radius: 30px;
+  width: 120px;
+  height: 40px;
+  align-items: center;
 }
 
-.logo-container>img {
-    width: 102px;
-    cursor: pointer;
+.col-sm {
+  /*Barra de pesquisa*/
+  font-size: 19px;
+  font-family: "Calibri";
 }
 
-.logo-container>img {
-    width: 102px;
-    cursor: pointer;
+.cards-trilhas {
+  /*Fundo do Título "Trilhas Recomendadas" */
+  padding-top: 2%;
+  padding-bottom: 2%;
+  text-align: center;
 }
 
-.header-list {
-    display: flex;
-    flex-direction: row;
-    column-gap: 1.6rem;
-
-    list-style-type: none;
+.button-Btn {
+  /*Funcionalidade "Veja Mais" */
+  color: #EB5C0C;
+  background-color: white;
+  border: none;
+  text-align: left;
+  padding-left: 0;
 }
 
-.header-list li a .header-icon {
-    height: 30px;
-    font: #d26969;
+.card-text {
+  /*Área dos texto dos cards das Trilhas*/
+  text-size-adjust: auto;
+  font-family: "calibri";
+  text-justify: distribute-all-lines;
+  font-size: 14px;
 }
 
-
-/*==============*/
-/* MAIN SECTION */
-/*==============*/
-.trails {
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: cover; /* Resize the background image to cover the entire container */
+.card {
+  /*Área total dos cards das Trilhas*/
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.main-frame-trails {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding: 84px 101px;
-    width: 100%;
-    height: 250px;
+.form-group {
+  /*Área do forms "Envie sua Dúvida"*/
+  padding-left: 25%;
+  padding-right: 25%;
+  font-family: "calibri";
+  font-size: 1.3rem;
+  background-color: white;
 }
 
-.barra-pesquisa-trail {
-    width: 1200px;
-    height: 150px;
-    background: rgb(252, 252, 252);
-    border-radius: 9px;
+.Form-titulo {
+  /*´Titulo do forms "Envie sua Dúvida"*/
+  padding-top: 3%;
+  text-align: center;
 }
 
-.input-pesquisa-wrap {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-
-.pesquisa-input-list {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    list-style-type: none;
-    width: 100%;
-}
-
-.pesquisa-input-list li {
-    border-right: 1px solid black;
-}
-
-.pesquisa-input-item {
-    font-family: 'Calibri';
-    font-size: 18px;
-    color: #050200;
-    text-align: center;
-}
-
-.formulario {
-    font-family: 'Calibri';
-    font-size: 0px;
-    height: 38px;
-    width: 230px;
-    margin-right: 1rem;
-    background-color: rgb(255, 255, 255);
-}
-
-.xpto {
-    background-color: #faf8f7;
-    font-family: 'Calibri';
-    font-size: 18px;
-    height: 38px;
-    width: 213px;
-    margin-right: 1rem;
-    text-align: center;
-}
-
-
-.pesquisa-input-row {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    list-style-type: none;
-}
-
-.pesquisa-input-list li:nth-last-child(1) {
-    border: 0;
-}
-
-.pesquisa-input-list li input {
-    height: 38px;
-    width: 213px;
-    margin-right: 1rem;
-}
-
-.pesquisa-input-list li label {
-    padding-bottom: 0%;
-    margin-right: 1rem;
-    font-weight: 900;
-    color: gr;
-}
-
-
-.pesquisar-input-btn {
-    width: 148px !important;
-    height: 45px !important;
-    color: white;
-    font-family: 'Calibri';
-    font-size: 20px;
-    background-color: #ff6004;
-    border-radius: 90px;
-    border: none;
-    cursor: pointer;
-}
-
-.novapesquisa-input-btn {
-    width: 148px;
-    height: 35px;
-    background-color: #EB5C0C;
-    color: white;
-    font-size: 15px;
-    font-weight: bold;
-    border-radius:10px;
-    border: none;
-    cursor: pointer;
-}
-
-.novapesquisa-input-btn:hover {
-    opacity: 0.7;
-}
-
-.pesquisar-input-explorar {
-    width: 108px !important;
-    height: 30px !important;
-    color: white;
-    font-family: 'Calibri';
-    font-weight: 500;
-    font-size: 17px;
-    background-color: rgb(255, 91, 2);
-    border-radius: 70px;
-    border: none;
-    cursor: pointer;
-    justify-content: space-between;
-    align-items: left;
-    width: 20%;
-    height: 20px;
-    padding: 0px;
-}
-
-.pesquisar-input-btn:hover {
-    opacity: 0.7;
-}
-
-
-.pesquisar-input-login {
-    width: 120px !important;
-    height: 30px !important;
-    color: white;
-    font-family: 'Calibri';
-    font-weight: 500;
-    font-size: 17px;
-    background-color: rgb(255, 91, 2);
-    border-radius: 70px;
-    border: none;
-    cursor: pointer;
-    justify-content: space-between;
-    align-items: left;
-    width: 20%;
-    height: 20px;
-    padding: 0px;
-}
-
-
-.slider-trilhas {
-    height: 800px;
-    width: 1160px;
-    margin-bottom: 1rem;
-    background-position: center; 
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    justify-content: center;
-}
-
-.slider-trilhas span:nth-child(1) {
-    background-color: aqua;
-}
-
-
-.dot-trilha-slider {
-    margin: 3.5rem 1rem;
-    height: 25px;
-    width: 25px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-}
-
-
-/*==============*/
-/* TRILHA BOX */
-/*==============*/
-.trilhas-recomendadas {
-    background-color: #D9D9D9;
-}
-
-.trilhas-wraper {
-    padding: 3rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.trilhas-box-geral {
-    display: flex;
-    flex-direction: column;
-    column-gap: 1rem;
-    text-justify: auto;
-    align-items: auto;
-}
-
-.trilhas-box-items {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-}
-
-.trilha-item {
-    padding: 1rem;
-    margin: 1rem 1rem;
-    border-radius: 10px;
-    height: 400px;
-    width: 402px;
-    background-color: white;
-    box-shadow: 0px 0px 9px 3px rgba(0, 0, 0, 0.75);
-    ;
-
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
-}
-
-.icon-trilha-item {
-    width: 100%;
-    text-align: right;
-}
-
-.mais-trilhas-btn-element {
-    font-size: 17px;
-    color: white;
-    width: 140px;
-    height: 43px;
-    border-radius: 90px;
-    background: #EB5C0C;
-    border: none;
-    transition: 0.5;
-    cursor: pointer;
-}
-
-.mais-trilhas-btn-element:hover {
-    background-color: rgb(136, 66, 0);
-}
-
-.trilhas-recomendadas-title h1 {
-    font-size: 50px;
-    font-family: 'Calibri';
-    margin: 2rem;
-}
-
-
-.setup-form {
-    border: 0px #ccc;
-    width: 100%;
-    padding-left: 5rem;
-    padding-right: 5rem;
-    font-size: 16px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: right;
-    padding-bottom: 2%;
-    background-color: whitesmoke;
-}
-
-
-.setup-form>button { 
-    font-size: 17px;
-    color: white;
-    width: 140px;
-    height: 43px;
-    border-radius: 90px;
-    background: #EB5C0C;
-    border: none;
-    transition: 0.5;
-    cursor: pointer;
-}
-
-.setup-form-nome,
-.setup-form-email {
-    width: 100%;
-    height: 3rem;
-    outline: none;
-    border: 0;
-    padding-left: 0.2rem;
-    margin: 15px 0;
-    font-family: 'calibri';
-    font-size: 16px;
-    color: black;
-    text-align: left;
-}
-
-.setup-form label {
-    font-size: 20px;
-    margin-top: 0.5rem;
-    text-align: left;
-}
-
-.txtAreaForm {
-    align-items: center;
-    width: 100%;
-    height: 7rem;
-    outline: none;
-    border: 0;
-    padding-left: 0.2rem;
-    margin: 15px 0;
-    font-family: 'Calibri';
-    font-size: 16px;
-    color:black;
-    background-color: white;
-}
-
-.buttom-form {
-    font-size: 17px;
-    color: white;
-    width: 140px;
-    height: 43px;
-    border-radius: 90px;
-    background: #EB5C0C;
-    border: none;
-    transition: 0.5;
-    cursor: pointer;
+.form-control {
+  /*Campos inputs do forms "Envie sua Dúvida"*/
+  background-color: white;
+  padding: auto;
 }
 
 .btn-form-wraper {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  /*Alinhamento do Botão Enviar no forms "Envie sua Dúvida"*/
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 2%;
+  border: none;
 }
 
-
-.form-titulo-wraper {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Calibri';
-    font-size: 2.3rem;
-    padding-top: 2%;
-}
-
-
-.form-titulo-wraper>h1 {
-    font-size: 2rem;
-    font-family: 'Calibri';
-    font-weight: 500;
-}
-
-
-.buttom-form:hover {
-    background-color: rgb(136, 66, 0);
-}
-
-
-.button-Btn{
-background-color: white;
-color: #EB5C0C;
-font-weight: bolder;
-border: 0px;
-cursor: pointer;
-}
-
+  /*//////// FOOTER ////////*/
 
 footer {
-    padding: 2rem;
-    text-align: center;
-    width: 100%;
-    background-color: white;
-    font-family: 'Calibri';
-    color: #767676;
+background-color:whitesmoke;
+padding-top: 15px;
+padding-bottom:15px;
 }
 
-  /* PROJECTS */
-
-section#projects {
-    height: 500px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
+.container.text {
+margin: 0;
+padding: 0;
 }
 
-.project-img{
-    width: 60%;
+#Copyright{
+  /*Configuração do Rodapé*/
+color: gray;
+font-size: 1px;
+text-align: right;
+margin: 0;
 }
 
-.project-img img{
-    box-shadow: 0 1px 2px #0003;
-    object-fit: cover;
-    width: 80%;
-    height: 400px;
+#imgFAQ{
+  /*Configuração do Rodapé*/
+text-align: center;
 }
 
-.project-info {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    text-align: start;
-    font-weight: 800;
+/*///////////// BARRA DE PESQUISA /////////////*/
+.container {
+  /*Container da Barra de Pesquisa*/
+  width: 100%;
+  padding-top: 2%;
+  padding-bottom: 2%;
 }
 
-.swiper {
-    width: 95vw;
-    height: 500px;
+#floatingInput {
+  /*Ajuste do input Cidade da Barra de Pesquisa*/
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-radius: 0.4rem;
+  margin: 0;
+  font-size: 17px;
 }
 
-.swiper-slide{
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 30px;
+.Cidade-btn {
+  /*Ajuste do input Cidade na Barra de Pesquisa*/
+  border: 1px solid transparent;
+  background-color: white;
+  font-size: 16px;
 }
 
-.swiper-button-next,
-.swiper-button-prev {
-    color: #EB5C0C(39, 39, 164);
+#floatingSelect {
+  /*Ajuste do input Dificuldade da Barra de Pesquisa*/
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
-.swiper-pagination-bullet-active {
-    background-color: #EB5C0C;
+#date {
+  /*Ajuste do input date da Barra de Pesquisa*/
+  text-align: justify center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: white;
 }
 
-/* FORM CADASTRO TRILHA */
-.form-cadastro-trilha {
-    display: flex;
-    flex-direction: column;
+.d-flex {
+  /*Ajuste do grid da Barra de Pesquisa*/
+  background-color: rgb(227, 227, 227);
 }
 
-.form-cadastro-trilha textarea {   
-    outline: none;
-    resize: none;
+#pesquisa {
+  /*Ajuste do grid da Barra de Pesquisa*/
+  background-color: rgb(227, 227, 227);
 }
 
-.form-cadastro-trilha label {
-    margin: 0.5rem 0;
+.row {
+  /*Ajuste do grid da Barra de Pesquisa*/
+  margin: 0;
+  padding: 0;
 }
 
-.form-cadastro-trilha input {
-    height: 2.4rem;
-    width: 100%;
-    padding: 0.6rem;
-}
-.form-btn-cadastro, .form-title-container {
-    text-align: center;
-    margin: 1rem;
-}
-/* Modal de compartilhar */
-.modal,
-.modal2,
-.modal3 {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: #fff;
-    border: 1px solid #EB5C0C;
-    border-radius: 20px;
-    max-width: 460px;
-    width: 100%;
-    transition: .3;
-    opacity: 0;
-    visibility: hidden;
-    z-index: 1;
-}
-.modal-head {
-    padding: 25px 40px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 1px solid #EB5C0C;
-}
-.modal-title {
-    font-weight: 600;
-    font-size: 24px;
-    color: #000;
-}
-.modal-close,
-.modal-close2,
-.modal-close3 {
-    width: 32px;
-    height: 32px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    background-color: #ededed;
-    border-radius: 50%;
-    text-decoration: none;
-    color: #000;
-}
-.modal-body {
-    padding: 30px 40px;
-}
-.modal-name {
-    display: flex;
-    font-weight: 500;
-    font-size: 18px;
-    color: #000;
-    margin-bottom: 20px;
-}
-.modal-socials {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-}
-.modal-column {
-    margin-right: 20px;
-}
-.modal-social {
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid;
-    border-radius: 50%;
-    font-size: 24px;
-    background: #fff;
-    text-decoration: none;
-    transition: .5s;
-}
-.modal-social.is-facebook {
-    border-color: #3b5998;
-    color: #3b5998;
-}
-.modal-social.is-facebook:hover {
-    background: #3b5998;
-    color: #fff;
-}
-.modal-social.is-twitter {
-    border-color: #00acee;
-    color: #00acee;
-}
-.modal-social.is-twitter:hover {
-    background: #00acee;
-    color: #fff;
-}
-.modal-social.is-linkedin {
-    border-color: #0e76a8;
-    color: #0e76a8;
-}
-.modal-social.is-linkedin:hover {
-    background: #0e76a8;
-    color: #fff;
-}
-.modal-label {
-    position: relative;
-    display: flex;
-}
-.modal-input {
-    width: 100%;
-    height: 50px;
-    background: #fbfbfb;
-    border: 1px solid #ededed;
-    border-radius: none;
-    padding: 0 15px;
-    font-family: Montserrat;
-    font-weight: normal;
-    font-size: 14px;
-    color: #000;
-}
-.modal-label .btn-copiar {
-    position: absolute;
-    top: 7px;
-    right: 7px;
-}
-.btn-copiar {
-    display: flex;
-    align-items: center;
-    height: 36px;
-    padding: 0 30px;
-    background: #EB5C0C;
-    border-radius: 5px;
-    border: 0;
-    outline: none;
-    cursor: pointer;
-    font-weight: 500;
-    font-size: 14px;
-    color: #fff;
-    border: 1px solid #EB5;
-    text-decoration: none;
-}
-#btn-modal-close{
-	border: none;
-}
-.btn-sem-borda{
-    border: none;
-    background: inherit;
-    cursor: pointer;
-}
-.btn-copiar:hover {
-    background: #fff;
-    color: #EB5C0C;
-}
-.btn-copiar:focus{
-    background: #3a1b02;
+.autocomplete {
+  /*Auto complete das Cidades*/
+  position: relative;
+  padding: 0px 12.75px;
 }
 
-#search-bar{
-    display: flex;
-    justify-content: center;
-    font-family: 'Calibri';
-    font-size: 18px;
-    font-weight: 700;
-    padding: 1rem;
-}
-/* *************** */
-/* USUARIO LOGADO */
-/* ************* */
-#container--usuario-logado-main {
-    padding-top: 1rem;
-    margin-top: 1rem;
-    padding-bottom: 1rem;
-    margin-bottom: 1rem;
-    display: flex;
-}
-.container--metade1{
-    width: 25%;
-    display: flex;
-    justify-content: center;
-}
-.user-img{
-    width: 100px;
-    height: 100px;
-}
-.container--metade2{
-    padding-top: 1rem;
-    width: 75%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-.container--metade2>h2 {
-    margin-left: 1rem;
-    font-size: 2rem;
-}
-.card-menu {
-    padding: 1rem;
-    margin: 1rem 1rem;
-    border-radius: 10px;
-    height: 700px;
-    width: 300px;
-    background-color: white;
-    box-shadow: 0px 0px 9px 3px rgba(0, 0, 0, 0.75);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    text-align: center;
-}
-.card-menu>h2,
-.card-menu>h5,
-.card-menu>p {
-    margin-left: 1rem;
-}
-.btn-add-trail {
-    font-size: 17px;
-    color: white;
-    width: 140px;
-    height: 43px;
-    border-radius: 90px;
-    background: #EB5C0C;
-    border: none;
-    transition: 0.5;
-    cursor: pointer;
-}
-.btn-add-trail:hover {
-    background-color: rgb(136, 66, 0);
+.autocomplete-items {
+  /*Configurações do Auto complete das Cidades*/
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  width: 15rem;
 }
 
-.card-trilhas-salvas{
-    padding: 1rem;
-    margin: 1rem 1rem;
-    border-radius: 10px;
-    height: 300px;
-    width: 90%;
-    background-color: white;
-    box-shadow: 0px 0px 9px 3px rgba(0, 0, 0, 0.75);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+.autocomplete-items div {
+  /*Configurações do Auto complete das Cidades*/
+  cursor: pointer;
+  background-color: whitesmoke;
 }
-.card-exemplo1 {
-    display: flex;
-    justify-content: flex-end;
+
+.autocomplete-items:hover {
+  /*Configurações do Auto complete das Cidades*/
+  cursor: pointer;
+  background-color: blue;
 }
-.card-exemplo2 {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
+
+.autocomplete-active {
+  /*Configurações do Auto complete das Cidades*/
+  background-color: DodgerBlue !important;
+  color: #ffffff;
 }
-.card-exemplo2 h2, .card-exemplo2 p {
-    margin-top: 1rem;
+
+/*///////////// CARROSEL /////////////*/
+.carousel-inner {
+  /*Configuração inicial do Carrosel */
+  position: relative;
+  margin: 0 auto;
+}
+
+.carousel-inner .content {
+  /*Configurações do Carrosel */
+  position: absolute;
+  bottom: 2%;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.6);
+  text-align: center;
+  color: #f1f1f1;
+  width: 100%;
+  height: 20%;
+  padding-top: 1%;
+}
+
+span.psw {
+  /*Elementos do Carrosel*/
+  float: right;
+  padding-top: 16px;
+}
+
+/*///////////// MODAL LOGIN /////////////*/
+
+input[type=text],
+input[type=password] {
+  /*Configurações inputs textos*/
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  /*Botão entrar*/
+  background-color: rgb(95, 3, 95);
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+}
+
+button:hover {
+ /*Botão entrar*/
+  opacity: 0.8;
+}
+
+.cancelbtn {
+ /*Botão Cancelar*/
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+  display: flex;
+  float: none;
+}
+
+.containerX {
+  /*Container Modal Cadastre-se/Entrar*/
+  width: 100%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 3%;
+  padding-bottom: 2%;
+  float: center;
+  margin: auto;
+}
+
+.modal {
+  /*Configurações Modal de Login*/
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  padding-top: 60px;
+}
+
+.modal-content {
+  /*Configurações Modal de Login*/
+  background-color: #fefefe;
+  margin: auto;
+  border: 1px solid #888;
+  width: 50%;
+}
+
+.close {
+  /*Botão (x) do Modal de Login*/
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  /*Elementos do Botão (x) do Modal de Login*/
+  color: #EB5C0C;
+  cursor: pointer;
+}
+
+.cancelarbtn {
+  /*Botão de Cancelar do modal Cadastre-se e Entrar*/
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+  display: flex;
+  float: none;
+}
+
+.breadcrumb {
+ /*Rota das páginas navegadas*/
+  width: 100%;
+  padding-left: 10px;
+  margin: 0;
+}
+
+.breadcrumb a {
+ /*Configuração do texto da Rota das páginas navegadas*/
+  font-size: 0.01rem;
+  font-family: 'calibri';
+  color: red;
+}
+
+/*//////////  FAQ //////////*/
+#FAQ {
+  /*Configuração da Imagem principal*/
+  text-align: center;
+  padding-top: 1%;
+  padding-bottom: 2%;
+  text-justify: auto;
+}
+
+.accordion {
+  /*Configuração do componente*/
+  padding-bottom: 0.7rem;
+  width: auto;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.accordion-button {
+  /*Configuração do componente*/
+  color: #EB5C0C;
+  background-color:whitesmoke;
+  font-family: "calibri";
+  padding: 0.07rem;
+}
+
+.card-faq {
+  /*Configuração do campo de texto do componente*/
+  font-family: "calibri";
+  color: gray;
+  font-size: 10px;
+}
+
+.textarea {
+margin: 3%;
+padding: 0;
+}
+
+.descricaotrilha{
+margin: 3%;
+text-size-adjust: auto;
+}
+
+/*/////////////// ELEMENTOS DA AÇÃO: "VEJA MAIS" ////////*/
+
+.vejamais {
+background-color: white;
+font-size-adjust: auto;
+color: #EB5C0C;
+font-weight: 500;
+text-align: left;
+padding-left: 0;
+padding-bottom: 0;
+}
+
+.hide{
+  display: none;
 }
