@@ -4,13 +4,15 @@ const dadosIniciais = {
             login: "admin",
             senha: "123",
             nome: "Administrador do Sistema",
-            email: "admin@abc.com"
+            email: "admin@abc.com",
+            descricao: "Lorem, ipsum dolor sit amet consectetur adipisicing elit."
         },
         {
             login: "user",
             senha: "123",
             nome: "Usuario Comum",
-            email: "user@abc.com"
+            email: "user@abc.com",
+            descricao: "Lorem, ipsum dolor sit amet consectetur adipisicing elit."
         }
     ]
 };
@@ -21,6 +23,7 @@ if(localStorage.getItem("usuariosCadastrados") !== null){
     document.getElementById("user__name").innerHTML = readLog[1].nome;
     document.getElementById("user__password").innerHTML = readLog[1].senha;
     document.getElementById("user__email").innerHTML = readLog[1].email;
+    document.getElementById("user__description").innerHTML = readLog[1].descricao;
 } else {
     localStorage.setItem("usuariosCadastrados", JSON.stringify(dadosIniciais.usuarios));
 }
@@ -34,6 +37,7 @@ function atualizaHTML() {
     document.getElementById("user__name").innerHTML = readLog[1].nome;
     document.getElementById("user__password").innerHTML = readLog[1].senha;
     document.getElementById("user__email").innerHTML = readLog[1].email;
+    document.getElementById("user__description").innerHTML = readLog[1].descricao;
 }
 
 function alterarNome() {
@@ -42,8 +46,6 @@ function alterarNome() {
         dadosIniciais.usuarios[1].nome = inputUsuario;
         atualizaUsuarios();
         atualizaHTML();
-    } else {
-        window.alert("Usuário inválido");
     }
 }
 
@@ -53,8 +55,6 @@ function alterarSenha() {
         dadosIniciais.usuarios[1].senha = inputSenha;
         atualizaUsuarios();
         atualizaHTML();
-    } else {
-        window.alert("Senha inválida");
     }
 }
 
@@ -64,8 +64,33 @@ function alterarEmail() {
         dadosIniciais.usuarios[1].email = inputEmail;
         atualizaUsuarios();
         atualizaHTML();
+    }
+}
+
+function alterarDescricao() {
+    let inputDescricao = document.getElementById("input-description").value;
+    if(inputDescricao) {
+        dadosIniciais.usuarios[1].descricao = inputDescricao;
+        atualizaUsuarios();
+        atualizaHTML();
+    }
+}
+
+//BTN CONFIG
+
+const btnShow = document.getElementById("user__configs");
+const div2Show = document.getElementById("favoritas");
+let clicked = false;
+
+function showDiv(){
+    if(clicked) {
+        div2Show.style.display= "block";
+        btnShow.style.display= "none";
+        clicked = false;
     } else {
-        window.alert("Email inválido");
+        div2Show.style.display= "none";
+        btnShow.style.display= "block";
+        clicked = true;
     }
 }
 

@@ -1,0 +1,97 @@
+#container--usuario-logado-main {
+    padding-top: 1rem;
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+}
+.container--metade1{
+    width: 25%;
+    display: flex;
+    justify-content: center;
+}
+.user-img{
+    width: 100px;
+    height: 100px;
+}
+.container--metade2{
+    padding-top: 1rem;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.container--metade2>h2 {
+    margin-left: 1rem;
+    font-size: 2rem;
+}
+.card-menu {
+    padding: 1rem;
+    margin: 1rem 1rem;
+    border-radius: 10px;
+    height: 700px;
+    width: 300px;
+    background-color: white;
+    box-shadow: 0px 0px 9px 3px rgba(0, 0, 0, 0.75);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+.card-menu>h2,
+.card-menu>h5,
+.card-menu>p {
+    margin-left: 1rem;
+}
+.btn-add-trail {
+    font-size: 17px;
+    color: white;
+    width: 140px;
+    height: 43px;
+    border-radius: 90px;
+    background: #EB5C0C;
+    border: none;
+    transition: 0.5;
+    cursor: pointer;
+}
+.btn-add-trail:hover {
+    background-color: rgb(136, 66, 0);
+}
+
+.card-trilhas-salvas{
+    padding: 1rem;
+    margin: 1rem 1rem;
+    border-radius: 10px;
+    height: 300px;
+    width: 90%;
+    background-color: white;
+    box-shadow: 0px 0px 9px 3px rgba(0, 0, 0, 0.75);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.card-exemplo1 {
+    display: flex;
+    justify-content: flex-end;
+}
+.card-exemplo2 {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+.card-exemplo2 h2, .card-exemplo2 p {
+    margin-top: 1rem;
+}
+
+
+
+#user__configs {
+    width: 300px;
+    display: none;
+}
+#user__config-btn {
+    cursor: pointer;
+    border-style: none;
+    background-color: inherit;
+}
