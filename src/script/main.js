@@ -14,26 +14,89 @@ const selectAllElements = (name) => {
     return elements;
 }
 
+let trilhaItemHTML = (trilhaNome, trilhaDescricao, trilhaAltimetria, trilhaDuracao) => {
+    return `
+    <div class="trilha-item">
+    <div class="icon-trilha-item">
+        <a href="https://www.pucminas.br/main/Paginas/default.aspx"><button
+                class="pesquisar-input-explorar">Saiba Mais</button></a>
+        <a href="javascript:;" class="open-modal"><img src="images/icons/compartilhar.png" alt=""></a>
+
+        <div class="modal">
+            <div class="modal-head">
+                <h2 class="modal-title">Compartilhar</h2>
+                <a href="javascript:;" class="modal-close">
+                    <i class="fa-sharp fa-solid fa-xmark"></i>
+                </a>
+            </div><!-- modal head -->
+            <div class="modal-body">
+                <h3 class="modal-name">Compartilhe o link:</h3>
+                <div class="modal-socials">
+                    <div class="modal-column">
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.pucminas.br/main/Paginas/default.aspx" target="_blank" class="modal-social is-facebook">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                    </div><!-- modal do Facebook -->
+                    <div class="modal-column">
+                        <a href="https://twitter.com/intent/tweet?text=Veja conhecer a trilha Pata da Vaca. Acesse em: https://www.pucminas.br/main/Paginas/default.aspx"
+                            target="_blank" class="modal-social is-twitter">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                    </div><!-- modal do Twitter -->
+                    <div class="modal-column">
+                        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.pucminas.br/main/Paginas/default.aspx" target="_blank" class="modal-social is-linkedin">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>                                            
+                    </div><!-- modal do linkedIn -->
+                </div><!-- modal-socials -->
+                <h3 class="modal-name">Ou copie o link:</h3>
+                <div class="modal-label">
+                    <input type="text" class="modal-input" value="https://www.pucminas.br">
+                    <button class="btn-copiar" onclick="copiarBtn()">Copiar</button>
+                </div>
+            </div><!-- modal-body -->
+        </div><!-- modal -->
+    </div>
+    <div class="trilhas-text">
+        <h2 class="titulo-trilha">${trilhaNome}</h2>
+        <p class="desc-trilha">
+            ${trilhaDescricao}    
+        </p>
+        <button onclick="vejaMais()" class="button-Btn" id="myBtn"><b>Veja Mais</b></button>
+    </div>
+    <div class="icon-trilha-item">
+        <img src="images/icons/Vector.svg" alt="" class="save-trilha"></button>
+    </div>
+</div>
+   `
+};
+
+let trailsLocalStorage = localStorage;
+
 const trailFuncs = {
+
     cadastroDuvidas: () => {
+        this.event.preventDefault();
         //ALL INPUTS TOGHETER
         let clearAllInputs = selectAllElements('.form-input');
 
         let nameInput = selectElement('.setup-form-nome');
-        let sobrenomeInput = selectElement('.setup-form-sobrenome');
         let emailInput = selectElement('.setup-form-email');
         let textareaInput = selectElement('.txtAreaForm');
-
+ 
         if(!nameInput && !sobrenomeInput && !emailInput && !textareaInput) alert('Por favor, preencha todos os campos');
+        
+        //NECESSARIO VERIFICACAO SE O ID JA EXISTE
 
         const duvidaObj = {
+            id_duvida: Math.floor(Math.random() * 999999),
             nome: nameInput.value,
-            sobrenome: sobrenomeInput.value,
             email:  emailInput.value,
-            duvidaText: textareaInput.value
+            duvidaText: textareaInput.value,
+            statusDuvidaResposta: false,
+            idUserAdminResposta: null,
+            responstaDuvida: null
         };
-
-        this.event.preventDefault();
 
         window.localStorage.setItem(`CM-${emailInput.value}`, JSON.stringify(duvidaObj));
 
@@ -41,9 +104,41 @@ const trailFuncs = {
 
         return alert('Dúvida enviada com sucesso!');
     },
-    buscarTrilha: () => {
 
+    buscarTrilha: () => {
+        //FAZER PARTE DE VERIFICAO
+        //TODOS INPUTS
+        const localTrilha = selectElement('.trilha_local');
+        const nivelTrilha = selectElement('.trilha_nivel');
+
+        this.event.preventDefault();
+
+        Object.keys(trailsLocalStorage).forEach(storageKey => {
+            if(storageKey.split('-')[0] != 'trilha'){
+                return 'Isto nao e um cadastro de uma trilha!';
+            };
+
+            const trilhasStorage = trailsLocalStorage.getItem(storageKey);
+
+            const trilhas = JSON.parse(trilhasStorage);
+
+            const {
+                local,
+                nivel
+            } = trilhas;
+
+            //CASO A TRILHA NAO EXISTA DEVE SER RETORNADO UM ERRO NO HTML
+
+            //REVISAR SE REALMENTE E NECESSARIO FAZER A PESQUISA COM A DATA
+            if(local == localTrilha.value && nivel == nivelTrilha.value){
+                //NECESSARIO FAZER COM QUE SEJA RENDERIZADO NA PAGINA DE RESPOSTA DA PESQUISA.
+                console.log(trilhas);
+            };
+
+            return;
+        })
     },
+
     maisTrilhas: () => {
         let trilhasBox = selectAllElements('.trilhas-box-geral');
 
@@ -106,6 +201,7 @@ const trailFuncs = {
         
         return;
     },
+
     cadastroTrilha: () => {
         const allInputsCadastro = selectAllElements('.cadastro-trilha-input');
 
@@ -114,6 +210,7 @@ const trailFuncs = {
         const trilhaDescricao = selectElement('#trilha_descricao');
         const trilhaAltimetria = selectElement('#trilha_altimetria');
         const trilhaDuracao = selectElement('#trilha_duracao');
+        const trilhaNivel = selectElement('.trilha_nivel');
 
         this.event.preventDefault();
 
@@ -127,12 +224,101 @@ const trailFuncs = {
             descricao: trilhaDescricao.value,
             altimetria: trilhaAltimetria.value,
             trilha_duracao: trilhaDuracao.value,
+            nivel: trilhaNivel.value,
         };
 
-        window.localStorage.setItem(`trilha-${trilhaNome.value}`, JSON.stringify(trilhaObj));
+        localStorage.setItem(`trilha-${trilhaNome.value}`, JSON.stringify(trilhaObj));
 
         allInputsCadastro.forEach(item => item.value = '');
 
         return alert('Trilha cadastrada com sucesso!');
+    },
+
+    getAllTrails: () => {
+        Object.keys(trailsLocalStorage).forEach(storageKey => {
+            if(storageKey.split('-')[0] != "trilha") {
+                return;
+            };
+        
+            let allTrailsObj = localStorage.getItem(storageKey);
+            
+            let trailObj = JSON.parse(allTrailsObj);
+            
+        
+            let trilhaBox = selectElement('.trilhas-box-items');
+
+            if(trilhaBox) {
+                trilhaBox.innerHTML += trilhaItemHTML(trailObj.nome, trailObj.descricao);
+            }
+            
+            return;
+        });
+    },
+    cadastrarUsuario: () => {
+        let nomeCompleto = selectElement('#nome_usuario_cadastro');
+        let email = selectElement('#email_usuario_cadastro');
+        // NECESSARIO ENCRIPTAR A SENHA DO USUARIO ANTES DE SALVAR
+        let senha = selectElement('#senha_usuario_cadastro');
+        let verificacaoSenha = selectElement('#senha_usuario_cadastro_verificacao');
+        
+        
+        // NECESSARIO CRIAR UM TOKEN/ID PARA IDENTIFICAR CADA USUARIO COOMO ADMIN OU USER NORMAL 
+        let token;
+        
+        /* 
+            -> NOME COMPLETO
+            -> EMAIL
+            -> SENHA-
+        */
+
+        //VERIFICACAO SE O USUARIO JA EXISTE OU SE O EMAIL JA ESTA EM USO
+        // let usuarioExistente = localStorage.getItem();
+
+        // if(usuarioExistente) {
+        //     return "Usuario ja existe.";
+        // }
+
+        //VERIFICACAO SE AS DUAS SENHAS SAO IGUAIS
+        if(senha.value != verificacaoSenha.value) {
+            return "As senha nao sao iguais.";
+        }
+
+        let usuarioObj = {
+            nomeCompleto: nomeCompleto.value,
+            email: email.value,
+            senha: senha.value
+        };
+
+        localStorage.setItem(`user-${nomeCompleto.value}`, JSON.stringify(usuarioObj));
+
+        alert("Usuario cadastrado com sucesso!");
+    },
+    getAllUsers: () => {
+        Object.keys(localStorage).forEach(key => {
+            let mainKey = key.split('-');
+
+            if(mainKey[0] != 'user') {
+                return false;
+            }
+
+            let userResponse = JSON.parse(localStorage.getItem(key));
+
+
+
+            //NECESSARIO RENDERIZAR TODOS OS USUARIOS DENTRO DO HTML
+            console.log(userResponse);
+        })
     }
+
 }
+
+//CARREGA TODAS AS TRILHAS ASSIM QUE A PAGINA ACABA DE CARREGAR
+let body = selectElement('body');
+body.onload =  () => {
+    trailFuncs.getAllTrails();
+};
+
+
+
+
+  

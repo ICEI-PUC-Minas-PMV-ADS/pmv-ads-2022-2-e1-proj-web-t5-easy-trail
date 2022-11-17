@@ -5,9 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="style/main.css">
-    <link rel="stylesheet" href="./style/mediaquery.css">
     <link rel="shortcut icon" href="images/logoEasy.png">
     <title>Easy Trail</title>
     <style>
@@ -42,8 +41,17 @@
             <input type="text" name="nome" id="trilha_nome" placeholder="Nome" class="cadastro-trilha-input shadow mb-3" required>
 
             <label for="nome"><b>Local:</b></label>
-            <input type="text" name="local" id="trilha_local" placeholder="local" class="cadastro-trilha-input shadow mb-3" required>
+            <input type="text" name="local" id="trilha_local" placeholder="local" class="cadastro-trilha-input shadow mb-3 " required>
 
+            <div class="cadastro-trilha-input shadow mb-3">
+                <label><b>Dificuldade:</b></label>
+                <select id="floatingSelect" class="form-select trilha_nivel" aria-label="Floating label select example">
+                  <option selected>Dificuldade</option>
+                  <option value="1">Alta</option>
+                  <option value="2">Média</option>
+                  <option value="3">Baixa</option>
+                </select>
+            </div>
             <label for="descricao"><b>Descricao:</b></label>
             
             <div>
