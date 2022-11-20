@@ -392,3 +392,13 @@ padding-bottom: 0;
 .hide{
   display: none;
 }
+
+.link{
+font-family: "calibri";
+font-display: italic;
+}
+
+#NameUser {
+font-size: 25px;
+font-weight: bolder;
+}

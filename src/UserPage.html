@@ -25,11 +25,11 @@
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-          <img onclick="location=href='https://www.google.com'" src="images/logoEasy.png" width="120" alt="100">
+          <img onclick="location=href='HomePage.html'" src="images/logoEasy.png" width="120" alt="100">
                 <ul class="header-list">
                     <img src="images/icons/notificacao.png" width="30">
                     <img src="images/icons/user.png" width="30">
-                    <img src="images/icons/logout.png" width="30">
+                    <img onclick="location=href='HomePage.html'" src="images/icons/logout.png" width="30">
                 </ul>
         </div>
     </nav>     
@@ -39,20 +39,43 @@
         <div class="container-fluid p-4">        
             <div class="row">
                     <div class="col-3 p-1 m-1">
-                      <div class="card p-2">
-                        <img src="images/usuarioEasyTrail.jpg">
-                        <div class="card-body mb">
-                          <h5 class="card-title">Usuário</h5>
-                          <p class="card-text">Leonardo Buck</p>
-                        </div>
-                      </div>
+                        <div class="card">
+                                <img src="images/usuarioEasyTrail.jpg">
+                            <div class="card-body p-1 m-3">
+                                    <h7 class="card-title">Usuário</h7>
+                                    <p id="NameUser" class="card-text">Leonardo Buck</p>
+                            </div>
+                                  
+                                <div class="col-4 align-self-center" style="width: 90%;">
+                                  <div class="list-group" id="list-tab" role="tablist">
+                                    
+                                    <a class="list-group-item list-group-item-action" id="list-home-list" data-bs-toggle="list" href="#list-home" role="tab" aria-controls="list-home">Home</a>
+                                    
+                                    <a class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="list" href="#list-profile" role="tab" aria-controls="list-profile">Adicionar Trilha</a>
+                                    
+                                    <a class="list-group-item list-group-item-action" id="list-messages-list" data-bs-toggle="list" href="#list-messages" role="tab" aria-controls="list-messages">Configurações</a>
+                                  </div>
+                                </div>
+                               
+                                <div class="col-8 mb-4">
+                                  <div class="tab-content" id="nav-tabContent">
+                                    
+                                    <div class="tab-pane" id="list-home" role="tabpanel" aria-labelledby="list-home-list"></div>
+                                    
+                                    <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list"></div>
+                                    
+                                    <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list"></div>
+                                  
+                                </div>
+                                </div>
+                        </div>    
                     </div>
 
                 
-                    <div class="col-8 p-5">
+                    <div class="col-8 p-2">
                         <div class="container-fluid">
-                            <h1>Minhas trilhas favoritas</h1>
-                            <hr>
+                            <h1><img src="images/icons/estrela.png" style="width: 7%;">Minhas trilhas favoritas</h1>
+                            <hr class="p-2">
                             <div class="card mb-4" style="width: 100%">
                                 <div class="card-body m-3">
                                 <img src="/src/images/icons/compartilhar.png">
@@ -76,30 +99,20 @@
                                   <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo numquam explicabo!Dolor, architecto. Odio, itaque facere numquam magnam, omnis cupiditate quis sapiente laboriosam quibusdam est veritatis doloribus enim repellendus. Aut sequi illo blanditiis temporibus impedit fugit libero delectus itaque tempora dolorem! lorem Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium voluptates nihil eius magni tempora molestias dignissimos.</p>
                                 </div>
                               </div>
-        
-
-
-
+                        </div>
                     </div>
-                    </div>
-            
-            
             </div>
         </div>
-
-            
-
-
-        
-
-        
+       
     </section>
 
     <footer>
-        <div class="container">
-            <p>Direitos reservados a Pucminas. COPYRIGHT &copy 2022.</p> 
-        </div><!-- </div> -->
-        <!--CONTAINER-->
+        <div class="container text">
+            <div class="row">
+              <div class="col-sm-9 align-self-center" id="Copyright">Direitos reservados a PUC Minas. COPYRIGHT&copy 2022</div>
+              <div class="col-sm-3" id="imgFAQ"><img onclick="location=href='FAQ.html'" src="images/FAQ.jpg" width="30%"></div>
+            </div>
+          </div>
     </footer>
 
     <script src="script/main.js"></script>
