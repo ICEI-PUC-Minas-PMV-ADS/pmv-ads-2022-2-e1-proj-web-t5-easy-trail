@@ -402,3 +402,8 @@ font-display: italic;
 font-size: 25px;
 font-weight: bolder;
 }
+
+.myBackground {
+  background-image: url('../image/map.jpg');
+  color: white
+}
