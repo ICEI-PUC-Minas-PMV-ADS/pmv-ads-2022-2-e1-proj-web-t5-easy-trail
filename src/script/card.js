@@ -80,7 +80,7 @@ cardBody.dadosCards.forEach((card) => {
                     <p class="card-text">${card.descricao}<span class="dots">...</span><span class="more hide">${card.moreHide}</span></p>
                     <button class="vejamais" onclick="readMore(this)"><b>Veja Mais</b></button>
                     <button type="button" onclick="showDiv()" style="background-color: #fff; border-style: none; width: fit-content; float: right;"><img src="src/images/icons/compartilhar.png" alt="imagem-compartilhar"></button>
-                    <button onclick="addToFavoritas(${card.bookmark})" style="background-color: #fff; border-style: none; width: fit-content; float: right;"><img src="src/images/icon/bookmark.png" alt="imagem-bookmark" width="26px" height="26px"></button>
+                    <button onclick="addToFavoritas(${card.bookmark})" style="background-color: #fff; border-style: none; width: fit-content; float: right;"><img src="src/images/icon/bookmark.svg" alt="imagem-bookmark" width="26px" height="26px"></button>
                     <div id="mostra__modal">
                         <h3>Compartilhar</h3>
                         ${meuModal}
