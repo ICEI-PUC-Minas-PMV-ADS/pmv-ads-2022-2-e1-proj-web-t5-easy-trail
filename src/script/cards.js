@@ -1,38 +1,42 @@
 const cardBody = {
     dadosCards: [
         {
+            id: 10,
             nome: "Laranjeiras",
             descricao: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel erisque enim ligula venenatis Dolor. Maecenas nisl est, ultrices",
-            imagem: "images/460.jpg",
-            moreHide: "nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac.",
+            imagem: "./images/460.jpg",
+            moreHide: "nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.",
             bookmark: "cardBody.dadosCards[0]"
         },
         {
+            id: 11,
             nome: "Mirante das Goiabeiras",
             descricao: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel erisque enim ligula venenatis Dolor. Maecenas nisl est, ultrices",
-            imagem: "images/462.jpg",
+            imagem: "./images/462.jpg",
             moreHide: "nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.",
             bookmark: "cardBody.dadosCards[1]"
         },
         {
+            id: 12,
             nome: "Caiçara",
             descricao: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel erisque enim ligula venenatis Dolor. Maecenas nisl est, ultrices",
-            imagem: "images/465.jpg",
+            imagem: "./images/465.jpg",
             moreHide: "nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.",
             bookmark: "cardBody.dadosCards[2]"
         },
         {
+            id: 13,
             nome: "3 Lagoas",
             descricao: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel erisque enim ligula venenatis Dolor. Maecenas nisl est, ultrices",
-            imagem: "images/461.jpg",
+            imagem: "./images/461.jpg",
             moreHide: "nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.",
             bookmark: "cardBody.dadosCards[3]"
         },
-        
         {
+            id: 14,
             nome: "Estradão do Vento",
             descricao: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel erisque enim ligula venenatis Dolor. Maecenas nisl est, ultrices",
-            imagem: "images/463.jpeg",
+            imagem: "./images/463.jpeg",
             moreHide: "nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.",
             bookmark: "cardBody.dadosCards[4]"
         }
@@ -61,6 +65,7 @@ listaoTrilhas.forEach((item) => {
 // console.log(novasTrilhas);
 for(let i = 0; i < cardBody.dadosCards.length; i++){
     var bookmarks = i+1;
+    var bookId = i+15;
 }
 novasTrilhas.forEach((elemento) => {
     cardBody.dadosCards.push({nome: elemento.nome, descricao: elemento.descricao, imagem: "", moreHide: "", bookmark: `cardBody.dadosCards[${bookmarks}]`});
@@ -80,10 +85,11 @@ cardBody.dadosCards.forEach((card) => {
                     <h6 class="card-title"><b>${card.nome}</b></h6>
                     <p class="card-text">${card.descricao}<span class="dots">...</span><span class="more hide">${card.moreHide}</span></p>
                     <button class="vejamais" onclick="readMore(this)"><b>Veja Mais</b></button>
-                    <button type="button" onclick="showDiv()" style="background-color: #fff; border-style: none; width: fit-content; float: right;"><img src="images/icons/compartilhar.png" alt="imagem-compartilhar"></button>
-                    <button onclick="addToFavoritas(${card.bookmark})" style="background-color: #fff; border-style: none; width: fit-content; float: right;"><img src="images/icons/bookmark.svg" alt="imagem-bookmark" width="26px" height="26px"></button>
+                    <button type="button" onclick="showDiv()" style="background-color: #fff; border-style: none; width: fit-content; float: right;"><img src="./images/icons/compartilhar.png" alt="imagem-compartilhar"></button>
+                    <button onclick="addToFavoritas(${card.bookmark})" style="background-color: #fff; border-style: none; width: fit-content; float: right;"><img src="./images/icons/bookmark.png" alt="imagem-bookmark" width="26px" height="26px"></button>
                     <div id="mostra__modal">
-                        <h5>Compartilhar<span onclick="showDiv()" style="cursor: pointer; font-size: 30px;">&times;</span></h5>
+                        <h3>Compartilhar</h3>
+                        <span onclick="showDiv()" style="cursor: pointer; font-size: 30px;">&times;</span>
                         ${meuModal}
                     </div>
                 </div>
@@ -108,18 +114,22 @@ function showDiv(){
     }
 }
 
-
-
 let trilhasFavoritas  = [];
 function addToFavoritas(trilha) {
-    // if(localStorage.getItem("trilhasFavoritas") !== null) {
-    //     var novasTrilhasFavoritas = JSON.parse(localStorage.getItem("trilhasFavoritas"));
-    //     console.log(novasTrilhasFavoritas)
-
-    // } else {
-    trilhasFavoritas.push(trilha);
-    localStorage.setItem("trilhasFavoritas", JSON.stringify(trilhasFavoritas));
-    // }
+    if(localStorage.getItem("trilhasFavoritas") !== null) {
+        if(localStorage.getItem("trilhasFavoritas").includes(trilha.id)){
+            return alert("Trilha já está favoritada!");
+        } else {
+            trilhasFavoritas = JSON.parse(localStorage.getItem("trilhasFavoritas"));
+            trilhasFavoritas.push(trilha);
+            localStorage.setItem("trilhasFavoritas", JSON.stringify(trilhasFavoritas));
+            return alert("Trilha favoritada!");
+        }
+    } else {
+        trilhasFavoritas.push(trilha);
+        localStorage.setItem("trilhasFavoritas", JSON.stringify(trilhasFavoritas));
+        return alert("Trilha favoritada!");
+    }
 }
 
 

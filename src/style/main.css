@@ -322,12 +322,6 @@ button:hover {
   float: none;
 }
 
-.breadcrumb {
- /*Rota das páginas navegadas*/
-  width: 100%;
-  padding-left: 10px;
-  margin: 0;
-}
 
 .breadcrumb a {
  /*Configuração do texto da Rota das páginas navegadas*/
@@ -434,100 +428,5 @@ font-weight: bolder;
 
 #mostra__modal span {
 align-items: right;
-padding-left: 2rem;
+padding-left: 1rem;
 }
-
-
-
-
-.toggle{
-
-  width: 55px;
-  height: 55px;
-  background-color: #008FE6;
-  color: #ffffff;
-  border-radius: 50%;
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
-}
-
-.toggle::before{
-
-  content: '\e159';
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  color: white;
-  font-family: 'untitled-font-1';
-  text-align: center;
-  line-height: 55px;
-  font-size: 20px;
-  transition:0.5s;
-}
-
-.btn-share.ativo .toggle::before{
- 
- background-color:#373939;
- color: #ffffff;
- transition:0.5s;
-
-}
-
-.btn-share{ 
-
-  margin:auto; 
-  width:50px; 
-  height:50px; 
-
-}
-
-
-.btn-share ol li{
-  
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  line-height: 55px;
-  background: #FAFAFA;
-  display: block;
-  border-radius: 50%;
-  transition: all .5s;
-  text-align: center;
-}
-
-
-
-.btn-share.ativo ol li:nth-child(1){
-  
-  transition-delay: 0.4s;
-  transform: translateX(-60px);
-
-
-}
-
-.btn-share.ativo ol li:nth-child(2){
-
-  transition-delay: 0.3s;
-  transform: translateX(-120px);
-
-  /*Degradê do Instagram*/
-  background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
-
-}
-
-.btn-share.ativo ol li:nth-child(3){
-
-  transition-delay: 0.2s;
-  transform: translateX(-180px);
-  background-color:#34af23;
-
-}
-
-
-.btn-shared {
-background-color: white;
-border: none;
-}
-
-
