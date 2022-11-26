@@ -5,15 +5,12 @@ const elementSelect = (name) => {
 
     return element;
 }
-//BASE OBJECT
-    // nome
-    // local
-    //descricao
-    // altimetria
-    //trilha_duracao
 
 let adminFuncionalities = {
     getAllTrails: () => {
+
+        const trilhaContainer = selectElement("#trilhas_cadastradas");
+
         Object.keys(localStorage).forEach(storageKey => {
             if(storageKey.split('-')[0] != "trilha") {
                 return;
@@ -22,11 +19,22 @@ let adminFuncionalities = {
             let allTrailsObj = localStorage.getItem(storageKey);
         
             let trailObj = JSON.parse(allTrailsObj);
-            
+
+            trilhaContainer.innerHTML += `
+            <div class="trilha_cadastrada_item">
+                <p><strong>Nome:</strong>${trailObj.nome}</p>
+                <p><strong>Descricao:</strong>${trailObj.descricao}</p>
+                <p><strong>Local:</strong>${trailObj.local}</p>
+                <p><strong>Altimetria:</strong>${trailObj.altimetria}</p>
+            </div>`;
+
             return trailObj;
         });
     },
     getAllSaq: () => {
+        const perguntasContainer = selectElement('#perguntas_cadastradas');
+
+        console.log(perguntasContainer);
         Object.keys(localStorage).forEach(storageKey => {
             if(storageKey.split('-')[0] != "CM") {
                 return;
@@ -45,34 +53,48 @@ let adminFuncionalities = {
                 statusDuvidaResposta
             } = questionsObj;
 
-            // ADICIONAR TODAS AS DUVIDAS DENTRO DO HTML
-
             let questionElement = `
-                <div>   
-                    <span>Id Duvida:</span>
-                    <p>${id_duvida}</p>
-                    <span>Nome:</span>
-                    <p>${nome}</p>
-                    <span>Email:</span>
-                    <p>${email}</p>
-                    <span>Duvida:</span>
-                    <p>${duvidaText}</p>
-                    <span>Status duvida:</span>
-                    <p>${statusDuvidaResposta}</p>
-                    <span>Id do admin que respondeu a duvida:</span>
-                    <p>${idUserAdminResposta}</p>
-                    <input type="checkbox" id="horns" name="horns" idPergunta="${id_duvida}">
-                </div>
-            `;
+            <div class="duvida_element">   
+                <span>Id Duvida: ${id_duvida}</span>
+
+                <span>Nome: ${nome}</span>
+
+                <span>Email: ${email}</span>
+
+                <span>Duvida: ${duvidaText}</span>
+
+                <span>Status duvida: ${statusDuvidaResposta}</span>
+
+                <span>Id do admin que respondeu a duvida: ${idUserAdminResposta}</span>
+
+                <span>Selecionar: <input type="checkbox" id="horns" name="horns" value="${id_duvida}"></span>
+            </div>`;
+
+            perguntasContainer.innerHTML += questionElement;
 
             return;
         });
     },
     getAllUsers: () => {
-        
+        Object.keys(localStorage).forEach(key => {
+            let mainKey = key.split('-');
+
+            if(mainKey[0] != 'user') {
+                return false;
+            }
+
+            let userResponse = JSON.parse(localStorage.getItem(key));
+
+            console.log(userResponse);
+            //DEVERA SER RENDERIZADO DENTRO DO HTML
+                // => ESTRUTURAR HTML DO ELEMENTO
+        })
     },
+
+    //FUNCAO PARA RESPONDER UMA QUESTAO ESPECIFICA
     answerSaq: () => {
         let inputAnswer = elementSelect("#resposta");
+        //saqId => SERA O VALOR SELECIONADO DENTRO DO CHECKBOX
         let saqId;
 
         Object.keys(localStorage).forEach(storageKey => {
@@ -92,7 +114,7 @@ let adminFuncionalities = {
                 nome,
                 statusDuvidaResposta
             } = questionsObj;
-
+            
             // if(id_duvida != saqId) {
             //     return "Duvida inexistente!";
             // }
@@ -130,17 +152,11 @@ let adminFuncionalities = {
     }
 };
 
+//FAZ TODA A RENDERIZACAO APOS O CARREGAMENTO DO BODY
+selectElement('body').onload =  () => {
+    //CARREGA TODAS AS TRILHAS
+    adminFuncionalities.getAllTrails();
+    //CARREGA TODAS AS QUESTOES
+    adminFuncionalities.getAllSaq();
+};
 
-//BASE MODEL QUESTIONS
-/**
- * 
- * -> ID DO COMENTARIO
- * -> 
- * -> NOME DO USUARIO   
- * -> EMAIL DO USUARIO
- * -> COMENTARIO DO USUARIO
- * 
- * ->STATUS DA DUVIDA (SE FOI RESPONDIDA OU NAO)
- * 
- * ->ID DO USUARIO ADMIN QUE RESPONDEU  O COMENTARIO
-*/

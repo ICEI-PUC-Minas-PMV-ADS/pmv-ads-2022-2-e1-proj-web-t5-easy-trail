@@ -243,13 +243,23 @@ const trailFuncs = {
             let allTrailsObj = localStorage.getItem(storageKey);
             
             let trailObj = JSON.parse(allTrailsObj);
-            
-        
-            let trilhaBox = selectElement('.trilhas-box-items');
 
-            if(trilhaBox) {
-                trilhaBox.innerHTML += trilhaItemHTML(trailObj.nome, trailObj.descricao);
-            }
+            const {
+
+            } = trailObj;
+        
+            let trilhaItem = `     
+            <div class="col mb-4 shadow-lg">
+                <div class="card">
+                <img src="images/460.jpg" class="card-img-top d-block w-100">
+                <div class="card-body">
+                    <h6 class="card-title"><b>Laranjeiras</b></h6>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et
+                    dictum interdum, nisi lorem egestas vitae scel erisque enim ligula venenatis Dolor. Maecenas nisl est, ultrices<span class="dots">...</span><span class="more hide">nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
+                        <button class="vejamais" onclick="readMore(this)"><b>Veja Mais</b></button>
+                </div>
+                </div>
+            </div>`;
             
             return;
         });
@@ -261,22 +271,28 @@ const trailFuncs = {
         let senha = selectElement('#senha_usuario_cadastro');
         let verificacaoSenha = selectElement('#senha_usuario_cadastro_verificacao');
         
-        
         // NECESSARIO CRIAR UM TOKEN/ID PARA IDENTIFICAR CADA USUARIO COOMO ADMIN OU USER NORMAL 
         let token;
-        
-        /* 
-            -> NOME COMPLETO
-            -> EMAIL
-            -> SENHA-
-        */
 
-        //VERIFICACAO SE O USUARIO JA EXISTE OU SE O EMAIL JA ESTA EM USO
-        // let usuarioExistente = localStorage.getItem();
+        Object.keys(localStorage).forEach(key => {
+            if(key.split('-')[0] != 'user') {
+                // NECESSARIO VERIFICAR SE EXISTE ALGUMA SESSAO EXISTENTE
+                if(key == 'CLIENTE') {
+                    alert("Ja existe um usuario logado");
+                }
+                return;
+            }
 
-        // if(usuarioExistente) {
-        //     return "Usuario ja existe.";
-        // }
+            let usuarios = localStorage.getItem(key);
+
+
+            let matchEmail = JSON.parse(usuarios).email == email.value;
+
+            if(matchEmail) {
+                alert("Credenciais envalidas.");
+            }
+            
+        });
 
         //VERIFICACAO SE AS DUAS SENHAS SAO IGUAIS
         if(senha.value != verificacaoSenha.value) {
@@ -286,30 +302,75 @@ const trailFuncs = {
         let usuarioObj = {
             nomeCompleto: nomeCompleto.value,
             email: email.value,
-            senha: senha.value
+            senha: senha.value,
+            trilhasCadastradas: []
         };
 
         localStorage.setItem(`user-${nomeCompleto.value}`, JSON.stringify(usuarioObj));
 
         alert("Usuario cadastrado com sucesso!");
     },
-    getAllUsers: () => {
-        Object.keys(localStorage).forEach(key => {
-            let mainKey = key.split('-');
 
-            if(mainKey[0] != 'user') {
-                return false;
+    //ESTRUTURAR LOGIN DO USUARIO
+    login: () => {
+        const emailUsuario = selectElement('#email_login_usuario');
+        const senhaUsuario = selectElement('#senha_login_usuario');
+
+        Object.keys(localStorage).forEach(key => {
+            if(key.split('-')[0] != 'user') {
+                // NECESSARIO VERIFICAR SE EXISTE ALGUMA SESSAO EXISTENTE
+                if(key == 'CLIENTE') {
+                    alert("Ja existe um usuario logado");
+                }
+                return;
             }
 
-            let userResponse = JSON.parse(localStorage.getItem(key));
+            //JSON DO PERFIL DO USUARIO
+            let usuario = localStorage.getItem(key);
 
+            //VERIFICAR SE EMAIL E SENHA ESTAO CORRETOS
+            let emailMatch = JSON.parse(usuario).email === emailUsuario.value;
+            let senhaMatch = JSON.parse(usuario).senha === senhaUsuario.value;
 
+            if(emailMatch && senhaMatch) {
+                const sessaoCliente = {
+                    email: emailUsuario,
+                    ativo: true,
+                    data: new Date()
+                };
+        
+                //SALVAR SESSAO DO USUARIO
+                localStorage.setItem('CLIENTE', JSON.stringify(sessaoCliente));
 
-            //NECESSARIO RENDERIZAR TODOS OS USUARIOS DENTRO DO HTML
-            console.log(userResponse);
+                window.location.href = "file:///home/oliveira/Documents/code/newLayout/pmv-ads-2022-2-e1-proj-web-t5-easy-trail/src/UsuarioLogado.html"
+            }else {
+                return false;
+            }
         })
-    }
 
+        //DESABILITA O RECARREGAMENTO DA PAGINA
+        this.event.preventDefault();
+    },
+
+
+    // FUNCOES DE GERAIS
+    verificarSessaoLogado: () => {
+        const sessaoTeste = Object.keys(localStorage).forEach(key => {
+            const teste = key.split('-')[0];
+
+            // if(teste == 'user' || teste == 'CM' || teste == 'trilha'){
+            //     return;
+            // }else if(key == 'CLIENTE') {
+            //     console.log(key);
+
+            //     return window.location.href = "file:///home/oliveira/Documents/code/newLayout/pmv-ads-2022-2-e1-proj-web-t5-easy-trail/src/UsuarioLogado.html";
+            // }else {
+            //     console.log('TERCEIRO => ', key);
+
+            //     return window.location.href = "file:///home/oliveira/Documents/code/newLayout/pmv-ads-2022-2-e1-proj-web-t5-easy-trail/src/HomePage.html";
+            // }
+        });
+    }
 }
 
 //CARREGA TODAS AS TRILHAS ASSIM QUE A PAGINA ACABA DE CARREGAR
@@ -318,7 +379,7 @@ body.onload =  () => {
     trailFuncs.getAllTrails();
 };
 
-
-
-
+window.onload = () => {
+    trailFuncs.verificarSessaoLogado();
+};
   
