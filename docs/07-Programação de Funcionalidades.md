@@ -17,13 +17,53 @@ Abaixo temos a descrição das funcionalidades criadas por cada integrante da eq
 ## 2- Leonardo Lima
 `Filtro Pesquisa`
 
-![Funcionalidade](img/codeLeonardoLima.jpg)
-![Funcionalidade](img/codeLeonardoLima2.jpg)
+![Funcionalidade](img/LLima-BarraPesquisa.jpg)
+![Funcionalidade](img/LLima-BarraPesquisa(foto).jpg)
 
 `Veja Mais`
 
-![Funcionalidade](img/codeLeonardoLima1.jpg)
-![Funcionalidade](img/codeLeonardoLima3.jpg)
+![Funcionalidade](img/LLima-vejaMais(1).jpg)
+![Funcionalidade](img/LLima-vejaMaisJS.jpg)
+![Funcionalidade](img/LLima-vejaMais.jpg)
+
+`Cadastre-se`
+
+![Funcionalidade](img/LLima-cadastrese.jpg)
+![Funcionalidade](img/LLima-cadastrese(foto).jpg)
+
+`Entrar`
+
+![Funcionalidade](img/LLima-entrar.jpg)
+![Funcionalidade](img/LLima-entrar(foto).jpg)
+
+`Footer FAQ`
+
+![Funcionalidade](img/LLima-footerFAQ.jpg)
+![Funcionalidade](img/LLima-footerFAQ(foto).jpg)
+
+`Accordion FAQ`
+
+![Funcionalidade](img/LLima-accordion.jpg)
+![Funcionalidade](img/LLima-accordion(foto).jpg)
+
+`Breadcrumb`
+
+![Funcionalidade](img/LLima-breadcrumb.jpg)
+![Funcionalidade](img/LLima-breadcrumb(foto).jpg)
+
+`FullScren Map`
+
+![Funcionalidade](img/LLima-fullscrenMap.jpg)
+![Funcionalidade](img/LLima-fullscrenMapJS.jpg)
+![Funcionalidade](img/LLima-fullscrenMap(foto).jpg)
+
+`List Group`
+
+![Funcionalidade](img/LLima-tableUser.jpg)
+![Funcionalidade](img/LLima-tableUser(foto).jpg)
+
+
+
 
 ## 3- Leonardo Buck
 `Botão Compartilhar`
