@@ -3,41 +3,49 @@ const cardBody = {
         {
             id: 10,
             nome: "Laranjeiras",
-            descricao: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel erisque enim ligula venenatis Dolor. Maecenas nisl est, ultrices",
+            descricao: "Trilha bastante verde, com grande e vasta vegetação de mata Atlantica, pequenos cursos de água e panoramas de tirar o folego.",
             imagem: "./images/460.jpg",
-            moreHide: "nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.",
+            moreHide: " É uma daquelas trilhas que você fica de queixo caído, devido a suas paisagens, belos mirantes e trechos por mata fechada que nos dão aquela sensação de aventura épica",
             bookmark: "cardBody.dadosCards[0]"
         },
         {
             id: 11,
             nome: "Mirante das Goiabeiras",
-            descricao: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel erisque enim ligula venenatis Dolor. Maecenas nisl est, ultrices",
+            descricao: "Trajeto variado com subidas e descidas com pedregulhos soltos risco de torção por isso muita atenção ao passar pelo corredores",
             imagem: "./images/462.jpg",
-            moreHide: "nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.",
+            moreHide: " fechados seguir muito atento aonde pisar mas tirando isso uma aventura e tanta e sem deixar de contemplar há bela da natureza.",
             bookmark: "cardBody.dadosCards[1]"
         },
         {
             id: 12,
             nome: "Caiçara",
-            descricao: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel erisque enim ligula venenatis Dolor. Maecenas nisl est, ultrices",
-            imagem: "./images/465.jpg",
-            moreHide: "nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.",
+            descricao: "logo após um bom trecho dessa estradinha, a trilha se separa para dois locais dinstintos o da esquerda leva para um açude médio",
+            imagem: "./images/461.jpg",
+            moreHide: " (um pouquinho mais longe) e a trilha da direita para um açude menor mas bem legal também. Os dois açudes são limpos, sem desníveis, com a água batendo no meio da barriga até uns 25m à dentro. A paisagem em volta é bem bonita, agradável e tranquila.",
             bookmark: "cardBody.dadosCards[2]"
         },
         {
             id: 13,
             nome: "3 Lagoas",
-            descricao: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel erisque enim ligula venenatis Dolor. Maecenas nisl est, ultrices",
-            imagem: "./images/461.jpg",
-            moreHide: "nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.",
+            descricao: "O caminho por essa trilha oferece desde cachoeiras, parques, até belas cidadezinhas que faz qualquer amante das trilhas encarar",
+            imagem: "./images/464.jpg",
+            moreHide: " de bom animo o desafio, ao chegar no destino, os ciclistas costumam se refrescar com um bom banho nas cachoeira para renovarem suas energias. O percurso passa por cachoeiras, algumas cidadezinhas bonitas e parques que são ótimos para passear com sua bike.",
             bookmark: "cardBody.dadosCards[3]"
         },
         {
             id: 14,
             nome: "Estradão do Vento",
-            descricao: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel erisque enim ligula venenatis Dolor. Maecenas nisl est, ultrices",
+            descricao: "Para quem busca praticar trilha e ainda apreciar uma beleza incomparável deve apostar nesse parque. Ela proporciona uma aventura",
+            imagem: "./images/465.jpeg",
+            moreHide: " muito segura aos ciclistas, que percorrem as areias brancas com suas bikes facilmente, desde que já tenham experiência. Caso não seja o seu caso, essa trilha pode se tornar um pouco difícil para você, já que tem alguns pontos onde a areia é bem densa, sendo necessária uma bike mais profissional e apropriada para esse tipo de atividade",
+            bookmark: "cardBody.dadosCards[4]"
+        },
+        {
+            id: 15,
+            nome: "Pata da Vaca",
+            descricao: "Para quem busca praticar trilha e ainda apreciar uma beleza incomparável deve apostar nesse parque. Ela proporciona uma aventura",
             imagem: "./images/463.jpeg",
-            moreHide: "nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.",
+            moreHide: " muito segura aos ciclistas, que percorrem as areias brancas com suas bikes facilmente, desde que já tenham experiência. Caso não seja o seu caso, essa trilha pode se tornar um pouco difícil para você, já que tem alguns pontos onde a areia é bem densa, sendo necessária uma bike mais profissional e apropriada para esse tipo de atividade",
             bookmark: "cardBody.dadosCards[4]"
         }
     ]
