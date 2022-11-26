@@ -342,9 +342,10 @@ const trailFuncs = {
                 //SALVAR SESSAO DO USUARIO
                 localStorage.setItem('CLIENTE', JSON.stringify(sessaoCliente));
 
-                window.location.href = "file:///home/oliveira/Documents/code/newLayout/pmv-ads-2022-2-e1-proj-web-t5-easy-trail/src/UsuarioLogado.html"
+                window.location.href = "file:///home/oliveira/Documents/code/newLayout/pmv-ads-2022-2-e1-proj-web-t5-easy-trail/src/UsuarioLogado.html";
+                return;
             }else {
-                return false;
+                alert('Credenciais invalidas!');
             }
         })
 
