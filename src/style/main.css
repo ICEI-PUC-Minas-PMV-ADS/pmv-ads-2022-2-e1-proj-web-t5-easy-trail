@@ -430,3 +430,22 @@ font-weight: bolder;
 align-items: right;
 padding-left: 1rem;
 }
+
+
+/* The Close Button */
+.closeX {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.closeX:hover,
+.closeX:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
