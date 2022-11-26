@@ -245,22 +245,27 @@ const trailFuncs = {
             let trailObj = JSON.parse(allTrailsObj);
 
             const {
-
+                nome,
+                descricao,
+                altimetria
             } = trailObj;
-        
+
+            let processDesc = descricao.split('')
+
             let trilhaItem = `     
             <div class="col mb-4 shadow-lg">
                 <div class="card">
                 <img src="images/460.jpg" class="card-img-top d-block w-100">
                 <div class="card-body">
-                    <h6 class="card-title"><b>Laranjeiras</b></h6>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et
-                    dictum interdum, nisi lorem egestas vitae scel erisque enim ligula venenatis Dolor. Maecenas nisl est, ultrices<span class="dots">...</span><span class="more hide">nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
+                    <h6 class="card-title"><b>${nome}</b></h6>
+                    <p class="card-text">${descricao}<span class="dots">...</span><span class="more hide">nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
                         <button class="vejamais" onclick="readMore(this)"><b>Veja Mais</b></button>
                 </div>
                 </div>
             </div>`;
             
+
+            console.log(trilhaItem);
             return;
         });
     },
@@ -316,6 +321,7 @@ const trailFuncs = {
         const emailUsuario = selectElement('#email_login_usuario');
         const senhaUsuario = selectElement('#senha_login_usuario');
 
+
         Object.keys(localStorage).forEach(key => {
             if(key.split('-')[0] != 'user') {
                 // NECESSARIO VERIFICAR SE EXISTE ALGUMA SESSAO EXISTENTE
@@ -342,17 +348,25 @@ const trailFuncs = {
                 //SALVAR SESSAO DO USUARIO
                 localStorage.setItem('CLIENTE', JSON.stringify(sessaoCliente));
 
-                window.location.href = "file:///home/oliveira/Documents/code/newLayout/pmv-ads-2022-2-e1-proj-web-t5-easy-trail/src/UsuarioLogado.html";
-                return;
+                return window.location.href = "file:///home/oliveira/Documents/code/newLayout/pmv-ads-2022-2-e1-proj-web-t5-easy-trail/src/UsuarioLogado.html";
             }else {
                 alert('Credenciais invalidas!');
+                emailUsuario.value = '';
+                senhaUsuario.value = '';
             }
+
+            return;
         })
 
         //DESABILITA O RECARREGAMENTO DA PAGINA
         this.event.preventDefault();
     },
 
+    logOut: () => {
+        localStorage.removeItem('CLIENTE');
+
+        return window.location.href = "file:///home/oliveira/Documents/code/newLayout/pmv-ads-2022-2-e1-proj-web-t5-easy-trail/src/HomePage.html";
+    },
 
     // FUNCOES DE GERAIS
     verificarSessaoLogado: () => {
