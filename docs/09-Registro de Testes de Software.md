@@ -8,5 +8,6 @@ Abaixo as evidências dos testes de software realizados no sistema pela equipe, 
 
 > **Caso de Teste 05**:
 
-![CasodeTeste](img/tela cadastro.jpg)
-![CasodeTeste](img/tela cadastro (sucesso).jpg)
+
+![Teste](img/telacadastro.jpg)
+
