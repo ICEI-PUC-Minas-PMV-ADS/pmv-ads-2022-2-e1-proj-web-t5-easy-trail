@@ -6,8 +6,39 @@ Abaixo as evidências dos testes de software realizados no sistema pela equipe, 
 
 ## Casos de Testes
 
+> **Caso de Teste 01**:
+![Teste](img/.jpg)
+![Teste](img/.jpg)
+
+<hr>
+
+> **Caso de Teste 02**:
+![Teste](img/.jpg)
+![Teste](img/.jpg)
+
+<hr>
+
+> **Caso de Teste 03**:
+![Teste](img/.jpg)
+![Teste](img/.jpg)
+
+<hr>
+
+> **Caso de Teste 04**:
+![Teste](img/.jpg)
+![Teste](img/.jpg)
+
+<hr>
+
 > **Caso de Teste 05**:
+![Teste](img/telaCadastro.jpg)
+![Teste](img/telaCadastro(sucesso).jpg)
 
+<hr>
 
-![Teste](img/telacadastro.jpg)
+> **Caso de Teste 06**:
+![Teste](img/.jpg)
+![Teste](img/.jpg)
+
+<hr>
 
