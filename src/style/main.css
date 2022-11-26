@@ -328,6 +328,7 @@ button:hover {
   font-size: 0.01rem;
   font-family: 'calibri';
   color: red;
+  padding-left: 0.5rem;
 }
 
 /*//////////  FAQ //////////*/
