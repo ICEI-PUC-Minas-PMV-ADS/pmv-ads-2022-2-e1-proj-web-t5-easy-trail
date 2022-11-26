@@ -76,6 +76,8 @@ let adminFuncionalities = {
         });
     },
     getAllUsers: () => {
+        const usersContainer = selectElement('#usuarios_cadastrados');
+
         Object.keys(localStorage).forEach(key => {
             let mainKey = key.split('-');
 
@@ -85,9 +87,23 @@ let adminFuncionalities = {
 
             let userResponse = JSON.parse(localStorage.getItem(key));
 
-            console.log(userResponse);
-            //DEVERA SER RENDERIZADO DENTRO DO HTML
-                // => ESTRUTURAR HTML DO ELEMENTO
+            let {
+                email, 
+                nomeCompleto,
+                trilhasCadastradas
+            } = userResponse;
+    
+            
+            let userHtmlItem = `
+            <div class="userHtmlItem">
+                <span>Nome: </span> <span>${nomeCompleto}</span><br>
+                <span>Email: </span> <span>${email}</span><br>
+                <span>Trilhas: </span> <span>${trilhasCadastradas}</span>
+            </div>
+            `;
+
+            usersContainer.innerHTML += userHtmlItem;
+            return;
         })
     },
 
@@ -157,6 +173,8 @@ selectElement('body').onload =  () => {
     //CARREGA TODAS AS TRILHAS
     adminFuncionalities.getAllTrails();
     //CARREGA TODAS AS QUESTOES
-    adminFuncionalities.getAllSaq();
+    // adminFuncionalities.getAllSaq();
+    //CARREGA TODOS OS USERS
+    adminFuncionalities.getAllUsers();
 };
 

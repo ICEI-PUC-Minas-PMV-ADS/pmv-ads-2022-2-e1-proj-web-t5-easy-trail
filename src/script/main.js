@@ -315,7 +315,6 @@ const trailFuncs = {
 
         alert("Usuario cadastrado com sucesso!");
     },
-
     //ESTRUTURAR LOGIN DO USUARIO
     login: () => {
         const emailUsuario = selectElement('#email_login_usuario');
@@ -340,7 +339,8 @@ const trailFuncs = {
 
             if(emailMatch && senhaMatch) {
                 const sessaoCliente = {
-                    email: emailUsuario,
+                    nomeCompleto: JSON.parse(usuario).nomeCompleto,
+                    email: emailUsuario.value,
                     ativo: true,
                     data: new Date()
                 };
