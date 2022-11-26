@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="./style/mediaquery.css">
+    <link rel="shortcut icon" href="images/logoEasy.png">
+    <title>EasyTrail | Trilha</title>
+    <style>
+        #more {display: none;}
+        #more2 {display: none;}
+        #more3 {display: none;}
+    </style>
+</head>
+
+<body>
+
+    <div class="containerbread">
+        <ul class="breadcrumb m-0">
+            <li class="breadcrumb-item"><a href="HomePage.html">Home</a></li>
+            <li class="breadcrumb-item"><a href="PesquisaTrilha.html">Pesquisa Trilha</a></li>
+            <li class="breadcrumb-item"><a href="DetalheTrilha.html">Detalhe Trilha</a></li>
+        </ul>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <img onclick="location=href='HomePage.html'" src="images/logoEasy.png" width="120" alt="100">
+            <div>
+                <button class="btn btn-danger"
+                    onclick="document.getElementById('id00').style.display='block'">Cadastre-se</button>
+                <button class="btn btn-danger" onclick="document.getElementById('id01').style.display='block'"
+                    style="width:auto;">Entrar</button>
+
+                <div id="id00" class="modal">
+                    <form class="modal-content" action="/action_page.php">
+                        <div class="container">
+                            <span onclick="document.getElementById('id00').style.display='none'" class="close"
+                                title="close">&times;</span>
+                            <label for="name"><b>Nome</b></label>
+                            <input type="text" placeholder="Digite o seu nome completo" name="name" required>
+                            <label for="email"><b>Email</b></label>
+                            <input type="text" placeholder="Digite o seu Email" name="email" required>
+                            <label for="psw"><b>Senha</b></label>
+                            <input type="password" placeholder="Digite sua senha" name="psw" required>
+                            <label for="psw-repeat"><b>Repita sua Senha</b></label>
+                            <input type="password" placeholder="Digite sua senha" name="psw-repeat" required>
+                            <button type="submit" class="signup-login">Entrar</button>
+                            <button type="button" onclick="document.getElementById('id00').style.display='none'"
+                                class="cancelarbtn">Cancelar</button>
+                        </div>
+                </div>
+                </form>
+
+                <div id="id01" class="modal">
+                    <form class="modal-content animate" action="/action_page.php" method="post">
+                        <div class="imgcontainer">
+                            <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                                title="Close Modal">&times;</span>
+                        </div>
+                        <div class="container">
+                            <label for="uname"><b>Usuário</b></label>
+                            <input type="text" placeholder="Digite seu e-mail" name="uname" required>
+                            <label for="psw"><b>Senha</b></label>
+                            <input type="password" placeholder="Digite sua senha" name="psw" required>
+                            <button type="submit">Entrar</button>
+                        </div>
+                        <div class="container" style="background-color:#f1f1f1">
+                            <button type="button" onclick="document.getElementById('id01').style.display='none'"
+                                class="cancelarbtn">Cancelar</button>
+                            <span class="psw">Esqueceu sua <a href="#">senha?</a></span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+    </nav>
+
+<section>
+
+    <div class="container-fluid d-flex bg-light">
+        <div class="row col-sm-9 mt-3">
+                <h2>Caiçara</h2>
+                <img src="images/461.jpg" style="shadow-lg">
+            </div>
+            <div class="col-3 p-4 align-self-center">
+                <h5>Previsão do Tempo</h5>
+                <p>Tempo e Temperatura</p>
+                <div class="city">Belo Horizonte, BR</div>
+                <div>Terça, 8 Novembro 2022</div>
+                <div class="weather py-2">Nublado</div>
+                <div class="container-temp">
+                <div>22<span>°c</span></div>
+                </div>
+            </div>
+        </div>
+        
+         <div class="descricaotrilha m-4">
+            <p style="width:90%">O caminho por essa trilha oferece desde cachoeiras, parques, até belas cidadezinhas que faz qualquer amante das trilhas encarar de bom animo o desafio, ao chegar no destino, os ciclistas costumam se refrescar com um bom banho nas cachoeira para renovarem suas energias. O percurso passa por cachoeiras, algumas cidadezinhas bonitas e parques que são ótimos para passear com sua bike.</p>
+            <div class="row text-center p-3" style="background-color: rgb(243, 242, 242);">
+
+                <div class="col">
+                    <div><b>Indicação</b> </div> 
+                    <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="#EB5C0C" class="bi bi-person-fill" viewBox="0 0 16 16">
+                        <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
+                      </svg> Individual ou <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="#EB5C0C" class="bi bi-people-fill" viewBox="0 0 16 16">
+                        <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7Zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm-5.784 6A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216ZM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/>
+                      </svg> Grupo
+                    </div>
+                </div>
+                    
+
+                <div class="col">
+                    <div><b>Elevação</b></div>  
+                    <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="#EB5C0C" class="bi bi-activity" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M6 2a.5.5 0 0 1 .47.33L10 12.036l1.53-4.208A.5.5 0 0 1 12 7.5h3.5a.5.5 0 0 1 0 1h-3.15l-1.88 5.17a.5.5 0 0 1-.94 0L6 3.964 4.47 8.171A.5.5 0 0 1 4 8.5H.5a.5.5 0 0 1 0-1h3.15l1.88-5.17A.5.5 0 0 1 6 2Z"/>
+                      </svg> 550 metros
+                    </div>
+                </div> 
+
+                <div class="col">
+                    <div><b>Dificuldade</b></div>
+                    <div><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="#EB5C0C" class="bi bi-reception-4" viewBox="0 0 16 16">
+                        <path d="M0 11.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-2zm4-3a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-5zm4 5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5zm4 0a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5z"/>
+                      </svg> Média
+                    </div>
+                </div> 
+
+             </div>
+    
+        <div class="descricaotrilha p-3 m-4">
+            <h6>COMENTÁRIOS</h6>
+            <hr>
+          <p style="font-size: 0.1rem; color: gray; width:70%;" class="p-3"><b>Eric Silva: </b>Trilha ideal para iniciantes.</p>
+            </div>
+            
+        </div>
+
+</section>
+
+<footer>
+
+    <div class="container text">
+        <div class="row">
+          <div class="col"></div>
+          <div class="col" id="Copyright">Direitos reservados a PUC Minas. COPYRIGHT&copy 2022</div>
+          <div class="col" id="imgFAQ"><img onclick="location=href='FAQ.html'" src="images/FAQ.jpg" width="30%" style="cursor: pointer;"></div>
+        </div>
+      </div>
+
+  </footer>
+
+    <script src="climatempo.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+    </body>
+    
+    </html>
