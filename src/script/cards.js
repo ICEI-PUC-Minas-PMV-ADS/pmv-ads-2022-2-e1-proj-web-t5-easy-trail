@@ -43,10 +43,10 @@ const cardBody = {
         {
             id: 15,
             nome: "Pata da Vaca",
-            descricao: "Para quem busca praticar trilha e ainda apreciar uma beleza incomparável deve apostar nesse parque. Ela proporciona uma aventura",
+            descricao: "Além de ser uma trilha muito bela, esse local é considerado ainda um patrimônio cultural pela UNESCO, pois segundo os historiadores",
             imagem: "./images/463.jpeg",
-            moreHide: " muito segura aos ciclistas, que percorrem as areias brancas com suas bikes facilmente, desde que já tenham experiência. Caso não seja o seu caso, essa trilha pode se tornar um pouco difícil para você, já que tem alguns pontos onde a areia é bem densa, sendo necessária uma bike mais profissional e apropriada para esse tipo de atividade",
-            bookmark: "cardBody.dadosCards[4]"
+            moreHide: " esse foi o lugar que os portugueses disseram ter avistado terra e gritaram “Terra à vista!”, sendo muito interessante também para quem gosta de locais históricos.",
+            bookmark: "cardBody.dadosCards[5]"
         }
     ]
 };
