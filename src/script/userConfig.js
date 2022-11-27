@@ -81,7 +81,7 @@ novaUserList.forEach((usuario) => {
 
 userObj.push(allUsersObjList);
 
-let loggedUser = {nomeCompleto: "userino", senha: "12345"};
+let loggedUser = {nomeCompleto: currentUser, senha: currentUserPassword};
 for(i = 0; i < userObj.length; i++) {
     if(loggedUser.nomeCompleto == userObj[i].nomeCompleto && loggedUser.senha == userObj[i].senha) {
         console.log(`Bem vindo ${userObj[i].nomeCompleto}`);
