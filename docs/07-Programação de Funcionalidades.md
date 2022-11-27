@@ -68,6 +68,8 @@ Abaixo temos a descrição das funcionalidades criadas por cada integrante da eq
 ## 3- Leonardo Buck
 `Cards`
 
+![Funcionalidade](img/LeoBAlves-cards-html-live.png)
+![Funcionalidade](img/LeoBAlves-cards-html-live2.png)
 ![Funcionalidade](img/LeoBAlves-cards-html.png)
 ![Funcionalidade](img/LeoBAlves-cards-JavaScript1.png)
 ![Funcionalidade](img/LeoBAlves-cards-JavaScript2.png)
@@ -79,19 +81,21 @@ Abaixo temos a descrição das funcionalidades criadas por cada integrante da eq
 
 `Configurações do usuário`
 
+![Funcionalidade](img/LeoBAlves-userConfig-live2.png)
+![Funcionalidade](img/LeoBAlves-userConfig-live3.png)
 ![Funcionalidade](img/LeoBAlves-userConfig-html.png)
 
 `Card favorita (Remover e exibição)`
 
 ![Funcionalidade](img/LeoBAlves-userConfig-JavaScript1.png)
+![Funcionalidade](img/LeoBAlves-userConfig-live.png)
 ![Funcionalidade](img/LeoBAlves-userConfig-JavaScript2.png)
 ![Funcionalidade](img/LeoBAlves-userConfig-JavaScript3.png)
 ![Funcionalidade](img/LeoBAlves-userConfig-JavaScript4.png)
 
 `Botão Compartilhar`
 
-![Funcionalidade](img/codeLeonardoBuck.png)
-![Funcionalidade](img/codeLeonardoBuck-compartilhar.png)
+![Funcionalidade](img/LeoBAlves-Modal.png)
 
 ## 4- Rafael Santana
 `Cadastro de Trilhas`
