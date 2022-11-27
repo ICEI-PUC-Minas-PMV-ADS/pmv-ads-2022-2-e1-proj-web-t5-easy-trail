@@ -278,8 +278,8 @@ const trailFuncs = {
 
         let usuarioObj = {
             nomeCompleto: nomeCompleto.value,
-            email: email.value,
-            senha: senha.value,
+            email: email.value.toLowerCase(),
+            senha: senha.value.toLowerCase(),
             trilhasCadastradas: []
         };
 
@@ -289,8 +289,8 @@ const trailFuncs = {
     },
     //ESTRUTURAR LOGIN DO USUARIO
     login: () => {
-        const emailUsuario = selectElement('#email_login_usuario');
-        const senhaUsuario = selectElement('#senha_login_usuario');
+        const emailUsuario = selectElement('#email_login_usuario').value.toLowerCase();
+        const senhaUsuario = selectElement('#senha_login_usuario').value.toLowerCase();
 
 
         Object.keys(localStorage).forEach(key => {
@@ -298,6 +298,7 @@ const trailFuncs = {
                 // NECESSARIO VERIFICAR SE EXISTE ALGUMA SESSAO EXISTENTE
                 if(key == 'CLIENTE') {
                     alert("Ja existe um usuario logado");
+                    return;
                 }
                 return;
             }
@@ -306,9 +307,12 @@ const trailFuncs = {
             let usuario = localStorage.getItem(key);
 
             //VERIFICAR SE EMAIL E SENHA ESTAO CORRETOS
-            let emailMatch = JSON.parse(usuario).email === emailUsuario.value;
-            let senhaMatch = JSON.parse(usuario).senha === senhaUsuario.value;
+            let emailMatch = JSON.parse(usuario).email == emailUsuario;
+            let senhaMatch = JSON.parse(usuario).senha == senhaUsuario;
 
+            // console.log(JSON.parse(usuario));
+
+        
             if(emailMatch && senhaMatch) {
                 const sessaoCliente = {
                     nomeCompleto: JSON.parse(usuario).nomeCompleto,
@@ -320,16 +324,20 @@ const trailFuncs = {
                 //SALVAR SESSAO DO USUARIO
                 localStorage.setItem('CLIENTE', JSON.stringify(sessaoCliente));
 
-                return window.location.href = "file:///home/oliveira/Documents/code/newLayout/pmv-ads-2022-2-e1-proj-web-t5-easy-trail/src/UsuarioLogado.html";
-            }else {
-                alert('Credenciais invalidas!');
-                emailUsuario.value = '';
-                senhaUsuario.value = '';
-            }
+                window.location.href = 'UsuarioLogado.html';
 
-            return;
+                return;
+            }
         })
 
+        let teste = localStorage.getItem('CLIENTE');
+
+        if(!teste) {
+            alert('Credenciais invalidas');
+        }
+                           
+        emailUsuario.value = '';
+        senhaUsuario.value = '';
         //DESABILITA O RECARREGAMENTO DA PAGINA
         this.event.preventDefault();
     },
