@@ -5,6 +5,7 @@ const cardBody = {
             nome: "Laranjeiras",
             descricao: "Trilha bastante verde, com grande e vasta vegetação de mata Atlantica, pequenos cursos de água e panoramas de tirar o folego.",
             imagem: "./images/460.jpg",
+            link: 'Laranjeiras.html',
             moreHide: " É uma daquelas trilhas que você fica de queixo caído, devido a suas paisagens, belos mirantes e trechos por mata fechada que nos dão aquela sensação de aventura épica",
             bookmark: "cardBody.dadosCards[0]"
         },
@@ -13,6 +14,7 @@ const cardBody = {
             nome: "Mirante das Goiabeiras",
             descricao: "Trajeto variado com subidas e descidas com pedregulhos soltos risco de torção por isso muita atenção ao passar pelo corredores",
             imagem: "./images/462.jpg",
+            link: 'MiranteGoiabeiras.html',
             moreHide: " fechados seguir muito atento aonde pisar mas tirando isso uma aventura e tanta e sem deixar de contemplar há bela da natureza.",
             bookmark: "cardBody.dadosCards[1]"
         },
@@ -21,6 +23,7 @@ const cardBody = {
             nome: "Caiçara",
             descricao: "logo após um bom trecho dessa estradinha, a trilha se separa para dois locais dinstintos o da esquerda leva para um açude médio",
             imagem: "./images/461.jpg",
+            link: 'Caicara.html',
             moreHide: " (um pouquinho mais longe) e a trilha da direita para um açude menor mas bem legal também. Os dois açudes são limpos, sem desníveis, com a água batendo no meio da barriga até uns 25m à dentro. A paisagem em volta é bem bonita, agradável e tranquila.",
             bookmark: "cardBody.dadosCards[2]"
         },
@@ -29,6 +32,7 @@ const cardBody = {
             nome: "3 Lagoas",
             descricao: "O caminho por essa trilha oferece desde cachoeiras, parques, até belas cidadezinhas que faz qualquer amante das trilhas encarar",
             imagem: "./images/464.jpg",
+            link: '3lagoas.html',
             moreHide: " de bom animo o desafio, ao chegar no destino, os ciclistas costumam se refrescar com um bom banho nas cachoeira para renovarem suas energias. O percurso passa por cachoeiras, algumas cidadezinhas bonitas e parques que são ótimos para passear com sua bike.",
             bookmark: "cardBody.dadosCards[3]"
         },
@@ -37,6 +41,7 @@ const cardBody = {
             nome: "Estradão do Vento",
             descricao: "Além de ser uma trilha muito bela, esse local é considerado ainda um patrimônio cultural, pois segundo historiadores",
             imagem: "./images/467.jpg",
+            link: 'estradao.html',
             moreHide: " esse foi o lugar que os portugueses disseram ter avistado terra e gritaram “Terra à vista!”, sendo muito interessante também para quem gosta de locais históricos.",
             bookmark: "cardBody.dadosCards[4]"
         },
@@ -45,6 +50,7 @@ const cardBody = {
             nome: "Pata da Vaca",
             descricao: "Esse terreno é um pouco acidentado, apresentado estradas de terra e de cascalho, raízes expostas, rochas e riachos, o que exige",
             imagem: "./images/465.jpg",
+            link: 'patadavaca.html',
             moreHide: " um pouco mais do desempenho do ciclista. essa trilha não é tão fácil de percorrer, sendo necessário inclusive que a bike que você irá escolher para pedalar, nesse caso, seja uma excelente mountain bike, pois elas se adequam melhor a esse tipo de terreno.",
             bookmark: "cardBody.dadosCards[5]"
         }
@@ -88,7 +94,7 @@ cardBody.dadosCards.forEach((card) => {
     let cardHtml = `
         <div class="col mb-4 shadow-lg">
             <div class="card">
-                <img src="${card.imagem}" class="card-img-top d-block w-100">
+                <img onclick="location=href='${card.link}'" src="${card.imagem}" class="card-img-top d-block w-100" style="cursor: pointer;">
                 <div class="card-body">
                     <h6 class="card-title"><b>${card.nome}</b></h6>
                     <p class="card-text">${card.descricao}<span class="dots">...</span><span class="more hide">${card.moreHide}</span></p>
@@ -138,5 +144,3 @@ function addToFavoritas(trilha) {
         return alert("Trilha favoritada!");
     }
 }
-
-

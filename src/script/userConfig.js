@@ -7,7 +7,6 @@ if(localStorage.getItem("trilhasFavoritas") === "[]" || localStorage.getItem("tr
 }
 
 let trilhasFavoritadas = JSON.parse(localStorage.getItem("trilhasFavoritas"));
-// console.log(trilhasFavoritadas);
 trilhasFavoritadas.forEach((card) => {
     let cardFav = `
         <div class="col mb-4 shadow-lg">
@@ -33,112 +32,6 @@ function removerFavoritos(trilha) {
     alert("Trilha removida!");
     window.location.reload();
 }
-
-// const dadosIniciais = {
-//     usuarios: [
-//         {
-//             login: "admin",
-//             senha: "123",
-//             nome: "Administrador do Sistema",
-//             email: "admin@abc.com",
-//             descricao: "Lorem, ipsum dolor sit amet consectetur adipisicing elit."
-//         },
-//         {
-//             login: "user",
-//             senha: "123",
-//             nome: "Usuário Comum",
-//             email: "user@abc.com",
-//             descricao: "Lorem, ipsum dolor sit amet consectetur adipisicing elit."
-//         }
-//     ]
-// };
-
-// // for(i = 0; i < dadosIniciais.usuarios.length; i++){
-// //     dadosIniciais.usuarios.forEach((user) => {
-// //         localStorage.setItem(`user-${user.nome}`, JSON.stringify(user));
-// //     });
-// // }
-
-// // let arraysLocalStg = []; // lista vazia para armazenar usuários
-// // arraysLocalStg.filter(array => array.includes('user-'));
-
-// // for (var i = 0; i < localStorage.length; i++) { // insere cada key do local storage na array
-// //     arraysLocalStg.push(localStorage.key(i));
-// // }
-// // // console.log(arraysLocalStg);
-
-// // let novosUsuarios = [];
-// // var listaoUsuarios = arraysLocalStg.filter(array => array.includes('user-')); // separa todos os itens com texto "trilha-"
-// // listaoUsuarios.forEach((item) => {
-// //     var usuariosLogLog = JSON.parse(localStorage.getItem(item));
-// //     // console.log(usuariosLogLog);
-// //     novosUsuarios.push(usuariosLogLog);
-// // });
-
-
-
-// let cadastrados = JSON.parse(localStorage.getItem("usuariosCadastrados"));
-// if(localStorage.getItem("usuariosCadastrados") !== null){
-//     document.getElementById("NameUser").innerHTML = cadastrados[1].nome;
-//     // document.getElementById("user__password").innerHTML = cadastrados[1].senha;
-//     // document.getElementById("user__email").innerHTML = cadastrados[1].email;
-// } else {
-//     localStorage.setItem("usuariosCadastrados", JSON.stringify(dadosIniciais.usuarios));
-//     window.location.reload();
-// }
-
-// function atualizaUsuarios() {
-//     localStorage.setItem("usuariosCadastrados", JSON.stringify(dadosIniciais.usuarios));
-//     cadastrados = JSON.parse(localStorage.getItem("usuariosCadastrados"));
-// }
-
-// function atualizaHTML() {
-//     document.getElementById("NameUser").innerHTML = cadastrados[1].nome;
-// //     document.getElementById("user__password").innerHTML = cadastrados[1].senha;
-// //     document.getElementById("user__email").innerHTML = cadastrados[1].email;
-// //     document.getElementById("user__description").innerHTML = cadastrados[1].descricao;
-//     window.location.reload();
-// }
-
-// function alterarNome() {
-//     let inputUsuario = document.getElementById("input-nome").value;
-//     if(inputUsuario) {
-//         dadosIniciais.usuarios[1].nome = inputUsuario;
-//         atualizaUsuarios();
-//         alert("Nome alterado com sucesso!")
-//         atualizaHTML();
-//     }
-// }
-
-// function alterarSenha() {
-//     let inputSenha = document.getElementById("input-senha").value;
-//     if(inputSenha) {
-//         dadosIniciais.usuarios[1].senha = inputSenha;
-//         atualizaUsuarios();
-//         alert("Senha alterada com sucesso!")
-//         atualizaHTML();
-//     }
-// }
-
-// function alterarEmail() {
-//     let inputEmail = document.getElementById("input-email").value;
-//     if(inputEmail) {
-//         dadosIniciais.usuarios[1].email = inputEmail;
-//         atualizaUsuarios();
-//         alert("E-mail alterado com sucesso!")
-//         atualizaHTML();
-//     }
-// }
-
-// function alterarDescricao() {
-//     let inputDescricao = document.getElementById("input-description").value;
-//     if(inputDescricao) {
-//         dadosIniciais.usuarios[1].descricao = inputDescricao;
-//         atualizaUsuarios();
-//         atualizaHTML();
-//     }
-// }
-
 //BTN CONFIG
 
 const userConfig = document.getElementById("user__configs");
@@ -172,33 +65,21 @@ var userObj = [
 ];
 
 
-// userObj.forEach((user) => {
-//     localStorage.setItem(`user-${user.nomeCompleto}`, JSON.stringify(user));
-// });
-
 let userList = []; // lista vazia para armazenar usuários
 for (var i = 0; i < localStorage.length; i++) { // insere cada key do local storage na array
     userList.push(localStorage.key(i));
 }
-// console.log(userList);
+
 let novaUserList = userList.filter(array => array.includes('user-'));
-// console.log(novaUserList);
+
 
 let allUsersObjList = [];
 novaUserList.forEach((usuario) => {
     let ruser = JSON.parse(localStorage.getItem(usuario));
     allUsersObjList.push(ruser);
 });
-// console.log(allUsersObjList); // Array de objetos com TODOS os usuários
 
 userObj.push(allUsersObjList);
-// console.log(userObj)
-
-// let usuarioLogado = true;
-// while(usuarioLogado) {
-    
-// }
-
 
 let loggedUser = {nomeCompleto: "userino", senha: "12345"};
 for(i = 0; i < userObj.length; i++) {
@@ -218,17 +99,17 @@ for(i = 0; i < userObj.length; i++) {
             window.location.reload();
         }
 
-        // function alterarNome() {
-        //     this.event.preventDefault();
-        //     let inputUsuario = document.getElementById("input-nome").value;
-        //     if(inputUsuario) {
-        //         esseUsuario.nomeCompleto = inputUsuario;
-        //         alert("Nome alterado com sucesso!");
-        //         localStorage.removeItem(`user-${esseUsuario.nomeCompleto}`)
-        //         atualizaUsuarios();
-        //         // atualizaHTML();
-        //     }
-        // }
+        function alterarNome() {
+            this.event.preventDefault();
+            let inputUsuario = document.getElementById("input-nome").value;
+            if(inputUsuario) {
+                esseUsuario.nomeCompleto = inputUsuario;
+                alert("Nome alterado com sucesso!");
+                localStorage.removeItem(`user-${esseUsuario.nomeCompleto}`)
+                atualizaUsuarios();
+                // atualizaHTML();
+            }
+        }
 
         function alterarSenha() {
             this.event.preventDefault();
@@ -241,6 +122,7 @@ for(i = 0; i < userObj.length; i++) {
         }
 
         function alterarEmail() {
+            this.event.preventDefault();
             let inputEmail = document.getElementById("input-email").value;
             if(inputEmail) {
                 esseUsuario.email = inputEmail;
