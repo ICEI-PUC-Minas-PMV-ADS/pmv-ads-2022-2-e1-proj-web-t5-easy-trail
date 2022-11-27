@@ -106,12 +106,15 @@ const trailFuncs = {
     },
 
     buscarTrilha: () => {
-        //FAZER PARTE DE VERIFICAO
-        //TODOS INPUTS
-        const localTrilha = selectElement('.trilha_local');
-        const nivelTrilha = selectElement('.trilha_nivel');
+        const localTrilha = selectElement('.trilha_local').value;
+        const nivelTrilha = selectElement('.trilha_nivel').value;
+        //CONTAINER ONDE VAO SER RETORNADAS TODAS AS TRILHAS
+        const trilhasContainer = selectElement('#trilhas_pesquisa');
+
 
         this.event.preventDefault();
+
+        trilhasContainer.innerHTML = ' ';
 
         Object.keys(trailsLocalStorage).forEach(storageKey => {
             if(storageKey.split('-')[0] != 'trilha'){
@@ -120,87 +123,43 @@ const trailFuncs = {
 
             const trilhasStorage = trailsLocalStorage.getItem(storageKey);
 
+            //RETORNA TODAS AS TRILHAS
             const trilhas = JSON.parse(trilhasStorage);
 
-            const {
-                local,
-                nivel
-            } = trilhas;
+            if(trilhas.local.toLowerCase() == localTrilha.toLowerCase() && trilhas.nivel == nivelTrilha) {
+                let trilhaPesquisa = JSON.parse(localStorage.getItem(storageKey));
 
-            //CASO A TRILHA NAO EXISTA DEVE SER RETORNADO UM ERRO NO HTML
+                let {
+                    nome, 
+                    descricao,
+                    local,
+                    nivel
+                } = trilhaPesquisa;
 
-            //REVISAR SE REALMENTE E NECESSARIO FAZER A PESQUISA COM A DATA
-            if(local == localTrilha.value && nivel == nivelTrilha.value){
-                //NECESSARIO FAZER COM QUE SEJA RENDERIZADO NA PAGINA DE RESPOSTA DA PESQUISA.
-                console.log(trilhas);
-            };
+                let descLength = descricao.length;
 
-            return;
+                let trilhaItem = `
+                <div class="col mb-4 shadow-lg">
+                    <div class="card">
+                    <img src="../src/images/464.jpg" class="card-img-top d-block w-100">
+                    <div class="card-body">
+                        <h6 class="card-title"><b>${nome}</b></h6>
+                        <p class="card-text">${descricao.slice(descLength / 2)}<span class="dots">...</span><span class="more hide">${descricao.slice(descLength / 2, -1)}</span></p>
+                        <button class="vejamais" onclick="readMore(this)"><b>Veja Mais</b></button>
+                    </div>
+                    </div>
+                </div>
+                `;
+
+                trilhasContainer.innerHTML += trilhaItem;
+            }else {
+                trilhasContainer.innerHTML = '<h1>Pesquisa invalida!</h1>';
+                return;
+            }
+
         })
     },
 
-    maisTrilhas: () => {
-        let trilhasBox = selectAllElements('.trilhas-box-geral');
-
-        let trilhasBoxItems = selectAllElements('.trilhas-box-items');
-
-        if(trilhasBoxItems.length >= 2) {
-            return;
-        };
-
-        let content = `<div class="trilhas-box-items">
-        <div class="trilha-item">
-            <div class="icon-trilha-item">
-                <a href="https://www.pucminas.br/main/Paginas/default.aspx"><button class="pesquisar-input-explorar">Saiba Mais</button></a>
-                <button onclick="compartilhaBotao()" class="botoes-outline"><img src="images/icons/compartilhar.png" alt="" class="comp-trilha"></button>
-            </div>
-            <div class="trilhas-text">
-                <h2 class="titulo-trilha">Pata da Vaca</h2>
-                <p class="desc-trilha">
-                    Saída da antiga estação ferroviária, bairro São Luiz, Fazenda São José, Sapucaí novo e Sapucaí velho, Eleutério, Barão Ataliba Nogueira, Fazenda Malheiros, Fazenda da Mata, Fazenda Bom Café e Chácara Primavera, antigo Sítio Floresta. Os quase 65 km de estradas ajudam a contar a história recente de nosso país quando tropas federalistas e paulistas travaram o maior combate armado da história nacional.
-                </p>
-            </div>
-            <div class="icon-trilha-item">
-                <button onclick="salvarTrilha()" class="botoes-outline"><img src="images/icons/Vector.svg" alt="" class="save-trilha"></button>
-            </div>
-        </div>
-        <div class="trilha-item">
-            <div class="icon-trilha-item">
-                <a href="https://www.pucminas.br/main/Paginas/default.aspx"><button class="pesquisar-input-explorar">Saiba Mais</button></a>
-                <img src="images/icons/compartilhar.png" alt="" class="comp-trilha">
-            </div>
-            <div class="trilhas-text">
-                <h2 class="titulo-trilha">Laranjeiras</h2>
-                <p class="desc-trilha">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quae pariatur beatae minima, adipisci laudantium obcaecati fugit culpa impedit ut est voluptatibus dolorum modi sint soluta aliquid quaerat accusantium nostrum!
-                </p>
-            </div>
-            <div class="icon-trilha-item">
-                <img src="images/icons/Vector.svg" alt="" class="save-trilha">
-            </div>
-        </div>
-        <div class="trilha-item">
-            <div class="icon-trilha-item">
-                <a href="https://www.pucminas.br/main/Paginas/default.aspx"><button class="pesquisar-input-explorar">Saiba Mais</button></a>
-                <img src="images/icons/compartilhar.png" alt="" class="comp-trilha">
-            </div>
-        
-            
-            <div class="trilhas-text">
-                <h2 class="titulo-trilha">Mirante das Goiabeiras</h2>
-                <p class="desc-trilha">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quae pariatur beatae minima, adipisci laudantium obcaecati fugit culpa impedit ut est voluptatibus dolorum modi sint soluta aliquid quaerat accusantium nostrum!
-                </p>
-            </div>
-            <div class="icon-trilha-item">
-                <img src="images/icons/Vector.svg" alt="" class="save-trilha">
-            </div>
-        </div>`;
-        
-        trilhasBox[0].innerHTML += content;
-        
-        return;
-    },
 
     cadastroTrilha: () => {
         const allInputsCadastro = selectAllElements('.cadastro-trilha-input');
