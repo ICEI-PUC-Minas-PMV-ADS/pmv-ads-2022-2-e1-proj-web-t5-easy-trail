@@ -59,24 +59,19 @@ const cardBody = {
 
 let arraysDoLocal = []; // lista vazia para armazenar trilhas cadastradas pelos usuários
 
-function forEachKey() { 
+function forEachKey() {
     for (var i = 0; i < localStorage.length; i++) { // insere cada key do local storage na array
       arraysDoLocal.push(localStorage.key(i));
     }
 }
 
 forEachKey();
-// console.log(arraysDoLocal);
-
 var listaoTrilhas = arraysDoLocal.filter(array => array.includes('trilha-')); // separa todos os itens com texto "trilha-"
-// console.log(listaoTrilhas);
 let novasTrilhas = [];
 listaoTrilhas.forEach((item) => {
     var logLog = JSON.parse(localStorage.getItem(item));
-    // console.log(logLog);
     novasTrilhas.push(logLog);
 });
-// console.log(novasTrilhas);
 for(let i = 0; i < cardBody.dadosCards.length; i++){
     var bookmarks = i+1;
     var bookId = i+15;
@@ -84,7 +79,6 @@ for(let i = 0; i < cardBody.dadosCards.length; i++){
 novasTrilhas.forEach((elemento) => {
     cardBody.dadosCards.push({nome: elemento.nome, descricao: elemento.descricao, imagem: "", moreHide: "", bookmark: `cardBody.dadosCards[${bookmarks}]`});
 });
-// console.log(cardBody.dadosCards);
 
 let meuModal = `
     <div class="sharethis-inline-share-buttons"></div>
