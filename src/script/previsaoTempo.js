@@ -16,25 +16,6 @@ const search_input = document.querySelector('.form-control');
 const search_button = document.querySelector('.btn');
 const low_high = document.querySelector('.low-high');
 
-window.addEventListener('load', () => {
-    //if ("geolocation" in navigator)
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(setPosition, showError);
-    }
-    else {
-        alert('navegador não suporta geolozalicação');
-    }
-    function setPosition(position) {
-        console.log(position)
-        let lat = position.coords.latitude;
-        let long = position.coords.longitude;
-        coordResults(lat, long);
-    }
-    function showError(error) {
-        alert(`erro: ${error.message}`);
-    }
-})
-
 function coordResults(lat, long) {
     fetch(`${api.base}weather?lat=${lat}&lon=${long}&lang=${api.lang}&units=${api.units}&APPID=${api.key}`)
         .then(response => {
