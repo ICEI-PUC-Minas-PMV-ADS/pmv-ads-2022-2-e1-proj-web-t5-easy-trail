@@ -5,53 +5,89 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Easy Trail</title>
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    <link rel="stylesheet" href="./style/main2.css">
-    <link rel="stylesheet" href="./style/mediaQueries.css">
-    <link rel="shortcut icon" href="images/logoEasy.png" type="image">
-    <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/77bf635d25.js" crossorigin="anonymous"></script>
+    <title>EasyTrail | Usuário</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">   
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style/main.css">
+    <link rel="shortcut icon" href="images/logoEasy.png">
 </head>
 
-<body>
-
-    
-    <section id="container--usuario-logado-main">
-
-        <div class="container--metade2">
-            <div id="titulo-admin">
-            <h2>Administrador</h2>
-            </div>
-
-            <div class="card-salvas">
-                <div class="card-exemplo2" id="usuarios_cadastrados">
-                    <h2 class="item">Usuários cadastrados</h2>
-                </div>
-            </div>
-
-            <div class="card-salvas">
-                <div class="card-exemplo2" id="trilhas_cadastradas">
-                    <h2 class="item">Trilhas cadastradas</h2>
-                </div>
-            </div>
-
+<body style="background-image: url(images/map.jpg); background-repeat: atributo;">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <img onclick="location=href='HomePage.html'" src="images/logoEasy.png" width="120" alt="100">
+                <ul class="header-list">
+                    <img src="images/icons/notificacao.png" width="30">
+                    <img src="images/icons/user.png" width="30"style="cursor: pointer;">
+                    <img onclick="location=href='HomePage.html'" src="images/icons/logout.png" width="30" style="cursor: pointer;">
+                </ul>
         </div>
+    </nav>     
+    
+<section id="container--usuario-logado-main">
 
-        
-    </section>
+      <div class="container-fluid p-4">
+        <div class="row">
+          <div class="col-3 p-1 m-1">
+            <div class="card">
+              <img src="images/usuarioEasyTrail.jpg">
+              <div class="card-body p-1 m-3">
+                <h7 class="card-title">Administrador</h7>
+                <p id="NameUser" class="card-text">Diogo Costa</p>
+              </div>
+      
+              <div class="col-4 align-self-center" style="width: 90%;">
+                <div class="list-group" id="list-tab" role="tablist">
+                  <a class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="list"
+                  onclick=location=href="criacaoTrilha.html" style="cursor: pointer;"  role="tab" aria-controls="list-profile">Adicionar Trilha</a>
+                  <a class="list-group-item list-group-item-action" id="list-messages-list" data-bs-toggle="list" onclick="showDivs()" style="cursor: pointer;" role="tab" aria-controls="list-messages">Configurações</a>
+                    
+                </div>
+              </div>
+      
+              <div class="col-8 mb-4">
+                <div class="tab-content" id="nav-tabContent">
+                  <div class="tab-pane fade" id="list-add" role="tabpanel" aria-labelledby="list-profile-list"></div>
+                  <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-messages-list"></div>
+      
+                </div>
+              </div>
+            </div>
+          </div>
+      
+      
+          <div class="col-8 p-2">
+            <div id="trilhas__favoritas" class="container-fluid">
 
-    <footer>
-        <div class="container">
-            <p>Direitos reservados a Pucminas. COPYRIGHT &copy 2022.</p> 
-        </div><!-- </div> -->
-        <!--CONTAINER-->
-    </footer>
+teste
+            </div>
 
-    <script src="script/main.js"></script>
-    <!-- <script src="script/shareModal.js"></script> -->
-    <!-- <script src="script/userConfig.js"></script> -->
-    <script src="../src/script/adminPage.js"></script>
-</body >
+
+
+          </div>
+          
+
+      </div>
+       
+</section>
+
+<footer>
+      <div class="container text">
+        <div class="row">
+          <div class="col"></div>
+          <div class="col" id="Copyright">Direitos reservados a PUC Minas. COPYRIGHT&copy 2022</div>
+          <div class="col" id="imgFAQ"><img onclick="location=href='FAQ.html'" src="images/FAQ.jpg" width="30%" style="cursor: pointer;"></div>
+        </div>
+      </div>
+  </footer>
+
+  <script src="script/main.js"></script>
+  <script src="script/cards.js"></script>
+  <script src="script/vejamais.js"></script>
+  <script src="script/userConfig.js"></script>
+
+
+  </body >
 
 </html >
