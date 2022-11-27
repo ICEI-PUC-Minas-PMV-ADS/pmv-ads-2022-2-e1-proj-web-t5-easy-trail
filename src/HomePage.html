@@ -33,13 +33,13 @@
               <div class="container">
                 <span onclick="document.getElementById('id00').style.display='none'" class="close" title="close">&times;</span>
                 <label for="name"><b>Nome</b></label>
-                <input type="text" placeholder="Digite o seu nome completo" name="name" required>
+                <input type="text" placeholder="Digite o seu nome completo" name="name" required id="nome_usuario_cadastro">
                 <label for="email"><b>Email</b></label>
-                <input type="text" placeholder="Digite o seu Email" name="email" required>
+                <input type="text" placeholder="Digite o seu Email" name="email" required id="email_usuario_cadastro">
                 <label for="psw"><b>Senha</b></label>
-                <input type="password" placeholder="Digite sua senha" name="psw" required>
+                <input type="password" placeholder="Digite sua senha" name="psw" required id="senha_usuario_cadastro">
                 <label for="psw-repeat"><b>Repita sua Senha</b></label>
-                <input type="password" placeholder="Digite sua senha" name="psw-repeat" required>
+                <input type="password" placeholder="Digite sua senha" name="psw-repeat" required id="senha_usuario_cadastro_verificacao">
                 <button type="submit" onclick="trailFuncs.cadastrarUsuario()">Cadastrar</button>
                 <button type="button" onclick="document.getElementById('id00').style.display='none'"
                   class="cancelarbtn">Cancelar</button>
@@ -48,20 +48,19 @@
           </div>
           <div id="id01" class="modal">
           
-            <form class="modal-content animate" method="post">
+            <form class="modal-content animate">
               <div class="imgcontainer">
                 <span onclick="document.getElementById('id01').style.display='none'" class="close"
                   title="Close Modal">&times;</span>
               </div>
               <div class="containerX">
                 <label for="uname"><b>Usuário</b></label>
-                <input type="text" placeholder="Digite seu e-mail" name="uname" required>
+                <input type="text" placeholder="Digite seu e-mail" name="uname" required id="email_login_usuario">
                 <label for="psw"><b>Senha</b></label>
-                <input type="password" placeholder="Digite sua senha" name="psw" required>
+                <input type="password" placeholder="Digite sua senha" name="psw" required id="senha_login_usuario">
                 <button type="submit" onclick="trailFuncs.login()">Entrar</button>
               </div>
               <div class="containerX" style="background-color:#f1f1f1">
-                <span class="psw">Esqueceu sua <a href="#">senha?</a></span>
                 <button type="button" onclick="document.getElementById('id01').style.display='none'"
                   class="cancelarbtn">Cancelar</button>
               </div>
@@ -111,34 +110,31 @@
     
     <div id="pesquisa" class="d-flex justify-content-center">
       <div class="container">
-    
         <div class="row align-self-center">
           <div class="col-sm align-self-center p-2">
-            <input id="floatingInput" class="Cidade-btn" type="text" name="myCountry" placeholder="Digite o estado..."
-              required>
+            <input id="floatingInput" class="trilha_local Cidade-btn" type="text" name="myCountry"
+              placeholder="Digite a cidade..." required>
           </div>
-    
           <div class="col-sm align-self-center p-2">
-            <select id="floatingSelect" class="form-select" aria-label="Floating label select example">
+            <select id="floatingSelect" class="trilha_nivel form-select" aria-label="Floating label select example"
+              required>
               <option selected>Dificuldade</option>
               <option value="1">Alta</option>
               <option value="2">Média</option>
               <option value="3">Baixa</option>
             </select>
           </div>
-    
           <div class="col-sm align-self-center p-2">
             <div class="form-floating">
               <input type="date" class="form-control" id="date">
             </div>
           </div>
-    
           <div class="col-sm align-self-center">
-            <button type="button" class="btn btn-danger">Pesquisar</button>
+            <button type="button" class="btn btn-danger" onclick="trailFuncs.buscarTrilha()">Pesquisar</button>
           </div>
         </div>
       </div>
-    </div>
+    </div>      
     
     <section id="trilhas-recomendadas">
       <div class="cards-trilhas">

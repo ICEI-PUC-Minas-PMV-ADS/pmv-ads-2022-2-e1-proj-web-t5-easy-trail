@@ -106,12 +106,15 @@ const trailFuncs = {
     },
 
     buscarTrilha: () => {
-        //FAZER PARTE DE VERIFICAO
-        //TODOS INPUTS
-        const localTrilha = selectElement('.trilha_local');
-        const nivelTrilha = selectElement('.trilha_nivel');
+        const localTrilha = selectElement('.trilha_local').value.toLowerCase();
+        const nivelTrilha = selectElement('.trilha_nivel').value;
+        //CONTAINER ONDE VAO SER RETORNADAS TODAS AS TRILHAS
+        const trilhasContainer = selectElement('.trilhas_pesquisa');
+
 
         this.event.preventDefault();
+
+        trilhasContainer.innerHTML = ' ';
 
         Object.keys(trailsLocalStorage).forEach(storageKey => {
             if(storageKey.split('-')[0] != 'trilha'){
@@ -120,93 +123,62 @@ const trailFuncs = {
 
             const trilhasStorage = trailsLocalStorage.getItem(storageKey);
 
+            //RETORNA TODAS AS TRILHAS
             const trilhas = JSON.parse(trilhasStorage);
 
-            const {
-                local,
-                nivel
-            } = trilhas;
+            // let teste = trilhas.local.toLowerCase();
 
-            //CASO A TRILHA NAO EXISTA DEVE SER RETORNADO UM ERRO NO HTML
+            if(trilhas.local == localTrilha && trilhas.nivel == nivelTrilha) {
+                let trilhaPesquisa = JSON.parse(localStorage.getItem(storageKey));
 
-            //REVISAR SE REALMENTE E NECESSARIO FAZER A PESQUISA COM A DATA
-            if(local == localTrilha.value && nivel == nivelTrilha.value){
-                //NECESSARIO FAZER COM QUE SEJA RENDERIZADO NA PAGINA DE RESPOSTA DA PESQUISA.
-                console.log(trilhas);
-            };
+                let {
+                    nome, 
+                    descricao,
+                    local,
+                    nivel
+                } = trilhaPesquisa;
 
-            return;
+                let descLength = descricao.length;
+
+                let trilhaItem = `
+                <div class="col mb-4 shadow-lg">
+                    <div class="card">
+                    <img src="../src/images/464.jpg" class="card-img-top d-block w-100">
+                    <div class="card-body">
+                        <h6 class="card-title"><b>${nome}</b></h6>
+                        <p class="card-text">${descricao.slice(descLength / 2)}<span class="dots">...</span><span class="more hide">${descricao.slice(descLength / 2, -1)}</span></p>
+                        <button class="vejamais" onclick="readMore(this)"><b>Veja Mais</b></button>
+                    </div>
+                    </div>
+                </div>
+                `;
+
+
+                trilhasContainer.innerHTML += trilhaItem;
+            }else {
+                let vericador = selectAllElements('#trilhas_pesquisa');
+
+                console.log(vericador.length);
+
+
+                if(vericador.length >= 1) {
+                    return;
+                }
+
+
+                trilhasContainer.innerHTML = '<h1>Pesquisa invalida!</h1>';
+                return;
+            }
+
         })
     },
 
-    maisTrilhas: () => {
-        let trilhasBox = selectAllElements('.trilhas-box-geral');
-
-        let trilhasBoxItems = selectAllElements('.trilhas-box-items');
-
-        if(trilhasBoxItems.length >= 2) {
-            return;
-        };
-
-        let content = `<div class="trilhas-box-items">
-        <div class="trilha-item">
-            <div class="icon-trilha-item">
-                <a href="https://www.pucminas.br/main/Paginas/default.aspx"><button class="pesquisar-input-explorar">Saiba Mais</button></a>
-                <img src="images/icons/compartilhar.png" alt="" class="comp-trilha">
-            </div>
-            <div class="trilhas-text">
-                <h2 class="titulo-trilha">Pata da Vaca</h2>
-                <p class="desc-trilha">
-                    Saída da antiga estação ferroviária, bairro São Luiz, Fazenda São José, Sapucaí novo e Sapucaí velho, Eleutério, Barão Ataliba Nogueira, Fazenda Malheiros, Fazenda da Mata, Fazenda Bom Café e Chácara Primavera, antigo Sítio Floresta. Os quase 65 km de estradas ajudam a contar a história recente de nosso país quando tropas federalistas e paulistas travaram o maior combate armado da história nacional.
-                </p>
-            </div>
-            <div class="icon-trilha-item">
-                <img src="images/icons/Vector.svg" alt="" class="save-trilha">
-            </div>
-        </div>
-        <div class="trilha-item">
-            <div class="icon-trilha-item">
-                <a href="https://www.pucminas.br/main/Paginas/default.aspx"><button class="pesquisar-input-explorar">Saiba Mais</button></a>
-                <img src="images/icons/compartilhar.png" alt="" class="comp-trilha">
-            </div>
-            <div class="trilhas-text">
-                <h2 class="titulo-trilha">Laranjeiras</h2>
-                <p class="desc-trilha">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quae pariatur beatae minima, adipisci laudantium obcaecati fugit culpa impedit ut est voluptatibus dolorum modi sint soluta aliquid quaerat accusantium nostrum!
-                </p>
-            </div>
-            <div class="icon-trilha-item">
-                <img src="images/icons/Vector.svg" alt="" class="save-trilha">
-            </div>
-        </div>
-        <div class="trilha-item">
-            <div class="icon-trilha-item">
-                <a href="https://www.pucminas.br/main/Paginas/default.aspx"><button class="pesquisar-input-explorar">Saiba Mais</button></a>
-                <img src="images/icons/compartilhar.png" alt="" class="comp-trilha">
-            </div>
-        
-            
-            <div class="trilhas-text">
-                <h2 class="titulo-trilha">Mirante das Goiabeiras</h2>
-                <p class="desc-trilha">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quae pariatur beatae minima, adipisci laudantium obcaecati fugit culpa impedit ut est voluptatibus dolorum modi sint soluta aliquid quaerat accusantium nostrum!
-                </p>
-            </div>
-            <div class="icon-trilha-item">
-                <img src="images/icons/Vector.svg" alt="" class="save-trilha">
-            </div>
-        </div>`;
-        
-        trilhasBox[0].innerHTML += content;
-        
-        return;
-    },
 
     cadastroTrilha: () => {
         const allInputsCadastro = selectAllElements('.cadastro-trilha-input');
 
         const trilhaNome = selectElement('#trilha_nome');
-        const trilhaLocal = selectElement('#trilha_local');
+        const trilhaLocal = selectElement('.trilha_local');
         const trilhaDescricao = selectElement('#trilha_descricao');
         const trilhaAltimetria = selectElement('#trilha_altimetria');
         const trilhaDuracao = selectElement('#trilha_duracao');
@@ -220,7 +192,7 @@ const trailFuncs = {
 
         const trilhaObj = {
             nome: trilhaNome.value,
-            local: trilhaLocal.value,
+            local: trilhaLocal.value.toLowerCase(),
             descricao: trilhaDescricao.value,
             altimetria: trilhaAltimetria.value,
             trilha_duracao: trilhaDuracao.value,
@@ -245,22 +217,27 @@ const trailFuncs = {
             let trailObj = JSON.parse(allTrailsObj);
 
             const {
-
+                nome,
+                descricao,
+                altimetria
             } = trailObj;
-        
+
+            let processDesc = descricao.split('');
+
             let trilhaItem = `     
             <div class="col mb-4 shadow-lg">
                 <div class="card">
                 <img src="images/460.jpg" class="card-img-top d-block w-100">
                 <div class="card-body">
-                    <h6 class="card-title"><b>Laranjeiras</b></h6>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et
-                    dictum interdum, nisi lorem egestas vitae scel erisque enim ligula venenatis Dolor. Maecenas nisl est, ultrices<span class="dots">...</span><span class="more hide">nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
+                    <h6 class="card-title"><b>${nome}</b></h6>
+                    <p class="card-text">${descricao}<span class="dots">...</span><span class="more hide">nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
                         <button class="vejamais" onclick="readMore(this)"><b>Veja Mais</b></button>
                 </div>
                 </div>
             </div>`;
             
+
+            console.log(trilhaItem);
             return;
         });
     },
@@ -285,6 +262,7 @@ const trailFuncs = {
 
             let usuarios = localStorage.getItem(key);
 
+
             let matchEmail = JSON.parse(usuarios).email == email.value;
 
             if(matchEmail) {
@@ -300,8 +278,8 @@ const trailFuncs = {
 
         let usuarioObj = {
             nomeCompleto: nomeCompleto.value,
-            email: email.value,
-            senha: senha.value,
+            email: email.value.toLowerCase(),
+            senha: senha.value.toLowerCase(),
             trilhasCadastradas: []
         };
 
@@ -309,17 +287,18 @@ const trailFuncs = {
 
         alert("Usuario cadastrado com sucesso!");
     },
-
     //ESTRUTURAR LOGIN DO USUARIO
     login: () => {
-        const emailUsuario = selectElement('#email_login_usuario');
-        const senhaUsuario = selectElement('#senha_login_usuario');
+        const emailUsuario = selectElement('#email_login_usuario').value.toLowerCase();
+        const senhaUsuario = selectElement('#senha_login_usuario').value.toLowerCase();
+
 
         Object.keys(localStorage).forEach(key => {
             if(key.split('-')[0] != 'user') {
                 // NECESSARIO VERIFICAR SE EXISTE ALGUMA SESSAO EXISTENTE
                 if(key == 'CLIENTE') {
                     alert("Ja existe um usuario logado");
+                    return;
                 }
                 return;
             }
@@ -328,12 +307,16 @@ const trailFuncs = {
             let usuario = localStorage.getItem(key);
 
             //VERIFICAR SE EMAIL E SENHA ESTAO CORRETOS
-            let emailMatch = JSON.parse(usuario).email === emailUsuario.value;
-            let senhaMatch = JSON.parse(usuario).senha === senhaUsuario.value;
+            let emailMatch = JSON.parse(usuario).email == emailUsuario;
+            let senhaMatch = JSON.parse(usuario).senha == senhaUsuario;
 
+            // console.log(JSON.parse(usuario));
+
+        
             if(emailMatch && senhaMatch) {
                 const sessaoCliente = {
-                    email: emailUsuario,
+                    nomeCompleto: JSON.parse(usuario).nomeCompleto,
+                    email: emailUsuario.value,
                     ativo: true,
                     data: new Date()
                 };
@@ -341,14 +324,28 @@ const trailFuncs = {
                 //SALVAR SESSAO DO USUARIO
                 localStorage.setItem('CLIENTE', JSON.stringify(sessaoCliente));
 
-                window.location.href = "file:///home/oliveira/Documents/code/newLayout/pmv-ads-2022-2-e1-proj-web-t5-easy-trail/src/UsuarioLogado.html"
-            }else {
-                return false;
+                window.location.href = 'UserPage.html';
+
+                return;
             }
         })
 
+        let teste = localStorage.getItem('CLIENTE');
+
+        if(!teste) {
+            alert('Credenciais invalidas');
+        }
+                           
+        emailUsuario.value = '';
+        senhaUsuario.value = '';
         //DESABILITA O RECARREGAMENTO DA PAGINA
         this.event.preventDefault();
+    },
+
+    logOut: () => {
+        localStorage.removeItem('CLIENTE');
+
+        return window.location.href = "HomePage.html";
     },
 
     // FUNCOES DE GERAIS
@@ -381,4 +378,3 @@ window.onload = () => {
     trailFuncs.verificarSessaoLogado();
 };
   
-
