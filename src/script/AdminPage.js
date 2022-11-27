@@ -178,3 +178,4 @@ selectElement('body').onload =  () => {
     adminFuncionalities.getAllUsers();
 };
 
+
