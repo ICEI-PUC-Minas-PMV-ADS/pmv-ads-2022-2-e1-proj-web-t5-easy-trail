@@ -106,10 +106,10 @@ const trailFuncs = {
     },
 
     buscarTrilha: () => {
-        const localTrilha = selectElement('.trilha_local').value;
+        const localTrilha = selectElement('.trilha_local').value.toLowerCase();
         const nivelTrilha = selectElement('.trilha_nivel').value;
         //CONTAINER ONDE VAO SER RETORNADAS TODAS AS TRILHAS
-        const trilhasContainer = selectElement('#trilhas_pesquisa');
+        const trilhasContainer = selectElement('.trilhas_pesquisa');
 
 
         this.event.preventDefault();
@@ -126,7 +126,9 @@ const trailFuncs = {
             //RETORNA TODAS AS TRILHAS
             const trilhas = JSON.parse(trilhasStorage);
 
-            if(trilhas.local.toLowerCase() == localTrilha.toLowerCase() && trilhas.nivel == nivelTrilha) {
+            // let teste = trilhas.local.toLowerCase();
+
+            if(trilhas.local == localTrilha && trilhas.nivel == nivelTrilha) {
                 let trilhaPesquisa = JSON.parse(localStorage.getItem(storageKey));
 
                 let {
@@ -151,8 +153,19 @@ const trailFuncs = {
                 </div>
                 `;
 
+
                 trilhasContainer.innerHTML += trilhaItem;
             }else {
+                let vericador = selectAllElements('#trilhas_pesquisa');
+
+                console.log(vericador.length);
+
+
+                if(vericador.length >= 1) {
+                    return;
+                }
+
+
                 trilhasContainer.innerHTML = '<h1>Pesquisa invalida!</h1>';
                 return;
             }
@@ -179,7 +192,7 @@ const trailFuncs = {
 
         const trilhaObj = {
             nome: trilhaNome.value,
-            local: trilhaLocal.value,
+            local: trilhaLocal.value.toLowerCase(),
             descricao: trilhaDescricao.value,
             altimetria: trilhaAltimetria.value,
             trilha_duracao: trilhaDuracao.value,
@@ -209,7 +222,7 @@ const trailFuncs = {
                 altimetria
             } = trailObj;
 
-            let processDesc = descricao.split('')
+            let processDesc = descricao.split('');
 
             let trilhaItem = `     
             <div class="col mb-4 shadow-lg">
