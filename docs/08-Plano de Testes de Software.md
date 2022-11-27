@@ -55,7 +55,6 @@ Os testes funcionais a serem realizados no aplicativo são descritos a seguir.
     </table>
 <br>
 
-
 <table border="0" id="CT02 - Exibir detalhe da trilha">
     <tr>
         <th>Caso de Teste</th>
@@ -94,7 +93,6 @@ Os testes funcionais a serem realizados no aplicativo são descritos a seguir.
     </tr>
     </table>
 <br>
-
 
 <table border="0" id="CT03 - Cadastro de Trilha">
     <tr>
@@ -147,7 +145,6 @@ Os testes funcionais a serem realizados no aplicativo são descritos a seguir.
     </table>
 <br>
 
-
 <table border="0" id="CT04 - Trilhas Recomendadas ">
     <tr>
         <th>Caso de Teste</th>
@@ -184,11 +181,10 @@ Os testes funcionais a serem realizados no aplicativo são descritos a seguir.
     </table>
 <br>
 
-
-<table border="0" id="CT05 - ">
+<table border="0" id="CT05 – Cadastro de novo usuário">
     <tr>
         <th>Caso de Teste</th>
-        <th>CT-05</th>
+        <th>CT-05 Cadastro de novo usuário</th>
     </tr>
     <tr>
         <td><b>Requisitos Associados</b></td>
@@ -196,15 +192,69 @@ Os testes funcionais a serem realizados no aplicativo são descritos a seguir.
     </tr>
     <tr>
         <td><b>Objetivo do Teste</b></td>
-        <td> </td>
+        <td>Validar se o sistema cadastra os usuários mediante os dados informados no formulário.</td>
     </tr>
     <tr>
-        <td><b>Passos</b></td>
-        <td> </td>
+        <td rowspan="6"><b>Passos</b></td>
+        <td>1. Acessar o Navegador</td>
     </tr>
+    <tr>
+        <td>2. Informar o endereço do Site</td>
+    </tr>
+    <tr>
+        <td>3. Visualizar a página principal</td>
+    </tr>
+    <tr>
+        <td>4. Clicar no botão “Cadastre-se”</td>
+    </tr>
+    <tr>
+        <td>5. Preencher todos os dados solicitados</td>
+    </tr>
+    <tr>
+        <td>6. Cadastrar</td>
+    </tr
     <tr>
         <td><b>Critério de Êxito</b></td>
-        <td> </td>
+        <td>Sistema realizar o cadastro do usuário, mediante as informações digitadas no formulário.</td>
+    </tr>
+    </table>
+<br>
+
+<table border="0" id="CT06 – Login de usuário cadastrado">
+    <tr>
+        <th>Caso de Teste</th>
+        <th>CT-06 Login de usuário cadastrado</th>
+    </tr>
+    <tr>
+        <td><b>Requisitos Associados</b></td>
+        <td><t/d>
+    </tr>
+    <tr>
+        <td><b>Objetivo do Teste</b></td>
+        <td>Validar se o sistema realiza o login do usuário cadastrado.</td>
+    </tr>
+    <tr>
+        <td rowspan="6"><b>Passos</b></td>
+        <td>1. Acessar o Navegador</td>
+    </tr>
+    <tr>
+        <td>2. Informar o endereço do Site</td>
+    </tr>
+    <tr>
+        <td>3. Visualizar a página principal</td>
+    </tr>
+    <tr>
+        <td>4. Clicar no botão “Entrar”</td>
+    </tr>
+    <tr>
+        <td>5. Preencher os dados de e-mail e senha cadastrados</td>
+    </tr>
+    <tr>
+        <td>6. Entrar</td>
+    </tr
+    <tr>
+        <td><b>Critério de Êxito</b></td>
+        <td>Sistema realizar a autenticação do usuário cadastrado, mediante as informações digitadas de sei e-mail e senha.</td>
     </tr>
     </table>
 <br>

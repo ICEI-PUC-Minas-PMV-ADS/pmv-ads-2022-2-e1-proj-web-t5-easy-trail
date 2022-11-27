@@ -1,73 +1,135 @@
-const dadosIniciais = {
-    usuarios: [
-        {
-            login: "admin",
-            senha: "123",
-            nome: "Administrador do Sistema",
-            email: "admin@abc.com"
-        },
-        {
-            login: "user",
-            senha: "123",
-            nome: "Usuario Comum",
-            email: "user@abc.com"
-        }
-    ]
-};
-
-let readLog = JSON.parse(localStorage.getItem("usuariosCadastrados"));
-
-if(localStorage.getItem("usuariosCadastrados") !== null){
-    document.getElementById("user__name").innerHTML = readLog[1].nome;
-    document.getElementById("user__password").innerHTML = readLog[1].senha;
-    document.getElementById("user__email").innerHTML = readLog[1].email;
+let trilhasFavoritasS  = [];
+if(localStorage.getItem("trilhasFavoritas") === "[]" || localStorage.getItem("trilhasFavoritas") === null) {
+    localStorage.setItem("trilhasFavoritas", JSON.stringify(trilhasFavoritasS));
+    document.getElementById("nenhuma__favoritada").style.display = "block";
 } else {
-    localStorage.setItem("usuariosCadastrados", JSON.stringify(dadosIniciais.usuarios));
+    document.getElementById("nenhuma__favoritada").style.display = "none";
 }
 
-function atualizaUsuarios() {
-    localStorage.setItem("usuariosCadastrados", JSON.stringify(dadosIniciais.usuarios));
-    readLog = JSON.parse(localStorage.getItem("usuariosCadastrados"));
+let trilhasFavoritadas = JSON.parse(localStorage.getItem("trilhasFavoritas"));
+trilhasFavoritadas.forEach((card) => {
+    let cardFav = `
+        <div class="col mb-4 shadow-lg">
+            <div class="card">
+                <img src="${card.imagem}" class="card-img-top d-block w-100">
+                <div class="card-body">
+                    <h6 class="card-title"><b>${card.nome}</b></h6>
+                    <p class="card-text">${card.descricao}<span class="dots">...</span><span class="more hide">${card.moreHide}</span></p>
+                    <button class="vejamais" onclick="readMore(this)"><b>Veja Mais</b></button>
+                    <button class="btn btn-danger" onclick="removerFavoritos(${card.id})" style="float: right; width: fit-content;">Remover dos favoritos</button>
+                </div>
+            </div>
+        </div>
+    `;
+    document.getElementById("cards__favoritas").innerHTML += cardFav;
+})
+
+function removerFavoritos(trilha) {
+    trilhasFavoritasS = JSON.parse(localStorage.getItem("trilhasFavoritas"));
+    trilhasFavoritasS.splice(trilha.id, 1);
+    console.log(trilhasFavoritasS.id);
+    localStorage.setItem("trilhasFavoritas", JSON.stringify(trilhasFavoritasS));
+    alert("Trilha removida!");
+    window.location.reload();
+}
+//BTN CONFIG
+
+const userConfig = document.getElementById("user__configs");
+const trilhasFav = document.getElementById("trilhas__favoritas");
+let clickado = false;
+userConfig.style.display = "none";
+
+function showDivs(){
+    if(clickado) {
+        trilhasFav.style.display= "block";
+        userConfig.style.display= "none";
+        clickado = false;
+    } else {
+        trilhasFav.style.display= "none";
+        userConfig.style.display= "block";
+        clickado = true;
+    }
 }
 
-// CRIAR VALIDAÇÃO DE DADOS
-// https://stackoverflow.com/questions/154059/how-do-i-check-for-an-empty-undefined-null-string-in-javascript
-// !EMPTY !NULL !UNDEFINED
-function atualizaHTML() {
-    // INSERIR VALIDAÇÃO
-    document.getElementById("user__name").innerHTML = readLog[1].nome;
-    document.getElementById("user__password").innerHTML = readLog[1].senha;
-    document.getElementById("user__email").innerHTML = readLog[1].email;
+var userObj = [
+    {
+        nomeCompleto: "userino",
+        senha: "12345",
+        email: "user@mail.com"
+    },
+    {
+        nomeCompleto: "what",
+        senha: "54321",
+        email: "what@mail.com"
+    },
+];
+
+
+let userList = []; // lista vazia para armazenar usuários
+for (var i = 0; i < localStorage.length; i++) { // insere cada key do local storage na array
+    userList.push(localStorage.key(i));
 }
 
-function alterarNome() {
-    dadosIniciais.usuarios[1].nome = document.getElementById("input-nome").value;
-    atualizaUsuarios();
-    atualizaHTML();
-    console.log(readLog[1].nome);
+let novaUserList = userList.filter(array => array.includes('user-'));
+
+
+let allUsersObjList = [];
+novaUserList.forEach((usuario) => {
+    let ruser = JSON.parse(localStorage.getItem(usuario));
+    allUsersObjList.push(ruser);
+});
+
+userObj.push(allUsersObjList);
+
+let loggedUser = {nomeCompleto: currentUser, senha: currentUserPassword};
+for(i = 0; i < userObj.length; i++) {
+    if(loggedUser.nomeCompleto == userObj[i].nomeCompleto && loggedUser.senha == userObj[i].senha) {
+        console.log(`Bem vindo ${userObj[i].nomeCompleto}`);
+
+        let esseUsuario = userObj[i];
+
+        document.getElementById("NameUser").innerHTML = userObj[i].nomeCompleto;
+
+        function atualizaUsuarios() {
+            localStorage.setItem(`user-${esseUsuario.nomeCompleto}`, JSON.stringify(esseUsuario));
+        }
+        
+        function atualizaHTML() {
+            document.getElementById("NameUser").innerHTML = esseUsuario.nomeCompleto;
+            window.location.reload();
+        }
+
+        function alterarNome() {
+            this.event.preventDefault();
+            let inputUsuario = document.getElementById("input-nome").value;
+            if(inputUsuario) {
+                esseUsuario.nomeCompleto = inputUsuario;
+                alert("Nome alterado com sucesso!");
+                localStorage.removeItem(`user-${esseUsuario.nomeCompleto}`)
+                atualizaUsuarios();
+                // atualizaHTML();
+            }
+        }
+
+        function alterarSenha() {
+            this.event.preventDefault();
+            let inputSenha = document.getElementById("input-senha").value;
+            if(inputSenha) {
+                esseUsuario.senha = inputSenha;
+                atualizaUsuarios();
+                alert("Senha alterada com sucesso!");
+            }
+        }
+
+        function alterarEmail() {
+            this.event.preventDefault();
+            let inputEmail = document.getElementById("input-email").value;
+            if(inputEmail) {
+                esseUsuario.email = inputEmail;
+                atualizaUsuarios();
+                alert("E-mail alterado com sucesso!");
+            }
+        }
+
+    }
 }
-
-
-
-// AJAX?
-
-// var req = new XMLHttpRequest ();
-// var url = "";
-
-// function processaDados() {
-     
-// }
-
-// function getData() {
-//     req.open('GET', url, true);
-//     req.send();
-// }
-
-
-
-
-
-
-
-
-

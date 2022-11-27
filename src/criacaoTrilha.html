@@ -1,84 +1,107 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="images/logoEasy.png" type="image" </head>
-    <title>Cadastrar Trilha</title>
-    <link rel="stylesheet" href="./style/main.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="shortcut icon" href="images/logoEasy.png">
+    <title>EasyTrail | Criação Trilha</title>
+    <style>
+      #more {display: none;}
+      #more2 {display: none;}
+      #more3 {display: none;}
+    </style>
 </head>
+
 <body>
-    <header>
-        <div class="container">
-            <nav class="header-wrap">
-                <div class="logo-container">
-                    <a href="#">
-                        <img src="images/logoEasy.png" width="120" alt="100"></a>
-                </div>
-                <!--LOGO-CONTAINER-->
-                <ul class="header-list">
-                    <li class="header-list-row">
-                        <a href="#" class="header-list-link">
-                            <img src="images/icons/search.svg" alt="" class="search-icon header-icon">
-                        </a>
-                    </li>
-                    <li class="header-list-row">
-                        <a href="#" class="header-list-link">
-                            <a href="https://www.pucminas.br/main/Paginas/default.aspx"><button
-                                    class="pesquisar-input-login">Login</button></a>
-                        </a>
-                    </li>
-                </ul>
-                <!--HEADER-LIST-->
-            </nav>
-            <!--HEADER-WRAP-->
-        </div>
-        <!--CONTAINER-->
-    </header>
+
+    <div class="containerbread">
+        <ul class="breadcrumb m-0">
+            <li class="breadcrumb-item"><a href="HomePage.html">Home</a></li>
+            <li class="breadcrumb-item"><a href="PesquisaTrilha.html">Cadstro Trilha</a></li>
+        </ul>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <img onclick="location=href='HomePage.html'" src="images/logoEasy.png" width="120" alt="100">
+                  <ul class="header-list">
+                      <img src="images/icons/notificacao.png" width="30">
+                      <img src="images/icons/user.png" width="30" style="cursor: pointer;" onclick="location=href='UserPage.html'" >
+                      <img src="images/icons/logout.png" width="30" style="cursor: pointer;" onclick="location=href='HomePage.html'">
+                  </ul>
+          </div>
+    </nav>
 
     <div class="container">
         <form action="" class="form-cadastro-trilha">
             
-            <div class="form-title-container">
+            <div class="form-title-container mb-5">
                 <h1>Cadastro de trilha</h1>
+            <hr>
             </div>
 
-            <label for="nome">Nome:</label>
-            <input type="text" name="nome" id="trilha_nome" placeholder="Nome" class="cadastro-trilha-input">
+            <label for="nome"><b>Nome:</b></label>
+            <input type="text" name="nome" id="trilha_nome" placeholder="Nome" class="cadastro-trilha-input shadow mb-3" required>
 
-            <label for="nome">Local:</label>
-            <input type="text" name="local" id="trilha_local" placeholder="local" class="cadastro-trilha-input">
+            <div><label for="nome"><b>Local:</b></label>
+            <input id="floatingInput" class="trilha_local Cidade-btn mb-4" type="text" name="myCountry" placeholder="Digite a cidade..." required>
+        </div>
 
-            <label for="descricao">Descricao:</label>
-            <textarea name="descricao" id="trilha_descricao" cols="30" rows="10" placeholder="descricao" class="cadastro-trilha-input"></textarea>
+            <label for="descricao"><b>Descricao:</b></label>
+            
+            <div>
+            <textarea name="descricao" id="trilha_descricao" placeholder="descricao" class="form-control shadow mb-3" width="100%"></textarea>
+            </div>
 
-            <label for="nome">Altimetria:</label>
-            <input type="number" name="" id="trilha_altimetria" placeholder="altimetria" class="cadastro-trilha-input">
+        <div class="row">
+            <div class="col-sm-4 p-2">
+            <label for="nome"><b>Altimetria:</b></label>
+            <input type="text" id="trilha_altimetria" placeholder="Ex: 700 metros" class="cadastro-trilha-input shadow mb-3">
+            </div>
+            <div class="col-sm-4 p-2">
+            <label for="nome"><b>Duração Estimada:</b></label>
+            <input type="text" name="" id="trilha_duracao" placeholder="Ex: 02h30m, 50min" class="cadastro-trilha-input shadow mb-3">
+            </div>
+            <div class="col-sm-4 p-2">
+            <label for="select"><b>Dificuldade:</b></label>
+                <select id="floatingSelect" class="form-select trilha_nivel" aria-label="Floating label select example" required>
+                    <option selected>Dificuldade</option>
+                    <option value="1">Alta</option>
+                    <option value="2">Média</option>
+                    <option value="3">Baixa</option>
+                </select> </div>
+            </div>
 
-            <label for="nome">Duracao:</label>
-            <input type="text" name="" id="trilha_duracao" placeholder="duracao" class="cadastro-trilha-input">
+
+
+
+
+         </div>
 
             <div class="form-btn-cadastro">
-                <button id="cadastroTrilha" onclick="trailFuncs.cadastroTrilha()" class="buttom-form">Cadastrar</button>
+                <button id="cadastroTrilha" onclick="trailFuncs.cadastroTrilha()" class="btn btn-danger">Cadastrar</button>
             </div>
 
         </form>
     </div><!--CONTAINER-->
 
-    <footer style="position: absolute; bottom: 0px;">
-        <div class="container">
-            <p>Direitos reservados a Pucminas. COPYRIGHT &copy 2022.</p>
-            <link rel="stylesheet"
-                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-            <!-- Add font awesome icons -->
-            <!-- <div class=".fa-facebook"> -->
-            <a href="https://www.facebook.com" class="fa fa-facebook"></a>
-            <a href="https://www.twitter.com" class="fa fa-twitter"></a>
-            <!-- </div> -->
-        </div>
-        <!--CONTAINER-->
-    </footer>
-    <script src="./script/main.js"></script>
+    <footer>
+
+        <div class="container text">
+            <div class="row">
+              <div class="col"></div>
+              <div class="col" id="Copyright">Direitos reservados a PUC Minas. COPYRIGHT&copy 2022</div>
+              <div class="col" id="imgFAQ"><img onclick="location=href='FAQ.html'" src="images/FAQ.jpg" width="30%" style="cursor: pointer;"></div>
+            </div>
+          </div>
+  
+      </footer>
+      
+    <script src="script/main.js"></script>
+    <script src="script/cidades.js"></script>
 </body>
 </html>

@@ -1,0 +1,65 @@
+/* Página Admin */
+
+.card-salvas{
+    padding: 1rem;
+    margin: 1rem 1rem;
+    border-radius: 10px;
+    min-height: 300px;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.card-exemplo1 {
+    display: flex;
+    justify-content: flex-end;
+    
+}
+.card-exemplo2 {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+.card-exemplo2 h2, .card-exemplo2 p {
+    margin-top: 0.5rem;
+    text-align: left;
+}
+
+.button-admin {
+    width: 120px !important;
+    height: 30px !important;
+    color: white;
+    font-family: 'Calibri';
+    font-weight: 500;
+    font-size: 17px;
+    background-color: rgb(255, 91, 2);
+    border-radius: 70px;
+    border: none;
+    cursor: pointer;
+    justify-content: space-between;
+    align-items: left;
+    width: 20%;
+    height: 20px;
+    padding: 0px;
+    margin-top: 15px;
+}
+
+.text-admin{
+    margin-top: 10px;
+    padding: 45px;
+}
+
+.titulo{
+    text-align: center;
+    font-weight: 700;
+
+}
+
+.item{
+    color:black
+    text-align: center;
+    font-size: 1.5rem;
+}
