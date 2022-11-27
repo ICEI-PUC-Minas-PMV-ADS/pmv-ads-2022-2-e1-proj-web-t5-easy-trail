@@ -81,14 +81,15 @@ Abaixo temos a descrição das funcionalidades criadas por cada integrante da eq
 
 `Configurações do usuário`
 
-![Funcionalidade](img/LeoBAlves-userConfig-live2.png)
-![Funcionalidade](img/LeoBAlves-userConfig-live3.png)
-![Funcionalidade](img/LeoBAlves-userConfig-html.png)
+![Funcionalidade](img/LeoBAlves-userConfig-live.png)
 
 `Card favorita (Remover e exibição)`
 
+![Funcionalidade](img/LeoBAlves-userConfig-html.png)
+![Funcionalidade](img/LeoBAlves-userConfig-live2.png)
+![Funcionalidade](img/LeoBAlves-userConfig-live3.png)
 ![Funcionalidade](img/LeoBAlves-userConfig-JavaScript1.png)
-![Funcionalidade](img/LeoBAlves-userConfig-live.png)
+
 ![Funcionalidade](img/LeoBAlves-userConfig-JavaScript2.png)
 ![Funcionalidade](img/LeoBAlves-userConfig-JavaScript3.png)
 ![Funcionalidade](img/LeoBAlves-userConfig-JavaScript4.png)
