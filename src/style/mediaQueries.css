@@ -1,0 +1,131 @@
+/* MEDIA QUERIES */
+@media (max-width: 1850px) {
+    .container{
+        max-width: none;
+    }
+    .logo-container {
+        margin-left: 2rem;
+    }
+}
+@media (max-width: 1300px) {
+    .trilhas-box-items{
+        flex-direction: column;
+    }
+    .pesquisa-input-list {
+        flex-direction: column;
+    }
+    .barra-pesquisa-trail {
+        width: fit-content;
+    }
+}
+@media (max-width: 1125px) {
+    .border-r{
+        padding-right: 0;
+        border-right: none;
+    } 
+}
+@media (max-width: 1074px) {
+    .container--search-bar{
+        width: min-content;
+        height: min-content;
+        display: flex;
+        align-items: center;
+    }
+    .search-bar {
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+    }
+    #search-div4 {
+        display: flex;
+        align-self: center;
+    }
+    .search-bar-itens{
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+    }
+    .border-r{
+        border-bottom: 1px solid black;;
+    }
+    .label-search-bar{
+        width: 68.22px;
+        height: 22px;
+    }
+}
+@media (max-width: 850px) {
+    #container--usuario-logado-main {
+        flex-direction: column;
+    }
+    .container--metade1 {
+        width: 100%;
+        justify-content: center;
+    }
+    .container--metade2 {
+        width: 100%;
+        align-items: center;
+    }
+}
+@media (max-width: 650px) {
+    .card-exemplo2 h2, .card-exemplo2 p {
+        margin-top: 0;
+    }
+}
+@media (max-width: 535px) {
+     #teste-frito1 {
+        display: none;
+     }
+}
+@media (max-width: 450px) {
+    .header-wrap {
+        flex-direction: column;
+        height: 250px;
+    }
+    .header-list {
+        flex-direction: column;
+        padding: 5%;
+    }
+    ul.header-list {
+        align-items: center;
+        padding: 16px;
+    }
+    .logo-container {
+        margin-left: 0;
+    }
+}
+@media (max-width: 365px) {
+    #teste-frito2 {
+        display: none;
+    }
+}
+@media (max-width: 275px) {
+    #teste-frito3 {
+        display: none;
+    }
+}
+@media (max-width: 220px) {
+    .card-menu {
+        width: 75%;
+    }
+    .btn-add-trail{
+        width: 100%;
+        border-radius: 45px;
+    }
+}
+@media (max-width: 270px) {
+    #search-bar{
+        overflow: auto;
+        justify-content: flex-start;
+    }
+}
+@media (max-width: 170px) {
+    .card-exemplo2 h2{
+        font-size: 18px;
+    }
+     .card-exemplo2 p {
+        font-size: 14px;
+    }
+    .btn-add-trail{
+        width: 5rem;
+    }
+}

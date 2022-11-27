@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easy Trail</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./style/main.css">
+    <link rel="stylesheet" href="./style/userConfigs.css">
+    <link rel="stylesheet" href="./style/mediaQueries.css">
+    <link rel="shortcut icon" href="images/logoEasy.png" type="image">
+
+    <!-- SHARE THIS TEST -->
+    <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=6374e517ed9b4700195a726f&product=inline-share-buttons&source=platform" async="async"></script>
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/77bf635d25.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+
+        <div class="container">
+
+            <nav class="header-wrap">
+                <div class="logo-container">
+                        <img onclick="location=href='https://www.google.com'" src="images/logoEasy.png">
+                </div><!--LOGO-CONTAINER-->
+                <ul class="header-list">
+                    <li class="header-list-row">
+                        <button class="pesquisar-input-login" onclick="location=href='https://www.google.com'">Cadastre-se</button>
+                    </li>
+                    <ul class="header-list">
+                        <li class="header-list-row">
+                            <button class="pesquisar-input-login" onclick="location=href='https://www.google.com'">Login</button>
+                        </li>
+                </ul><!--HEADER-LIST-->
+            </nav><!--HEADER-WRAP-->
+        </div><!--CONTAINER-->
+        
+    </header>
+    
+    <section id="container--usuario-logado-main">
+
+        <div class="container--metade1">
+            <div class="card-menu">
+                <button id="user__config-btn" onclick="showDiv()"><i class="fa-solid fa-gear"></i></button>
+                <div class="divisoes-card-menu">
+                    <img src="/src/images/icons/perfil.svg" alt="" class="user-img">
+                </div>
+                <div class="divisoes-card-menu">
+                    <h2 id="user__name">Usuário</h2>
+                    <h5>Sobre:</h5>
+                    <p id="user__description">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="divisoes-card-menu">
+                    <button onclick="location.href='/src/criacaoTrilha.html'" class="btn-add-trail">Adicionar Trilha</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="container--metade2">
+            <div id="favoritas">
+                <h2>Trilhas Favoritas</h2>
+                <div class="card-trilhas-salvas">
+                    <div class="card-exemplo1">
+                        <img src="/src/images/icons/compartilhar.png" alt="share">
+                    </div>
+                    <div class="card-exemplo2">
+                        <h2>Pata da Vaca</h2>
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                            Assumenda illo numquam explicabo!<span id="teste-frito3">Dolor, architecto. Odio, itaque facere numquam magnam,
+                            omnis cupiditate quis sapiente laboriosam quibusdam est veritatis doloribus enim repellendus.</span><span id="teste-frito2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error fuga a magnam, suscipit tempore
+                            minus ipsa ab soluta.</span><span id="teste-frito1">Aut sequi illo blanditiis temporibus impedit fugit libero delectus itaque tempora dolorem!lorem
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium voluptates nihil eius magni tempora molestias dignissimos.</span>
+                        </p>
+                    </div>
+                </div>
+    
+                <div class="card-trilhas-salvas">
+                    <div class="card-exemplo1">
+                        <img src="/src/images/icons/compartilhar.png" alt="share">
+                    </div>
+                    <div class="card-exemplo2">
+                        <h2>Laranjeiras</h2>
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                            Assumenda illo numquam explicabo!<span id="teste-frito3">Dolor, architecto. Odio, itaque facere numquam magnam,
+                            omnis cupiditate quis sapiente laboriosam quibusdam est veritatis doloribus enim repellendus.</span><span id="teste-frito2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error fuga a magnam, suscipit tempore
+                            minus ipsa ab soluta.</span><span id="teste-frito1">Aut sequi illo blanditiis temporibus impedit fugit libero delectus itaque tempora dolorem!lorem
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium voluptates nihil eius magni tempora molestias dignissimos.</span>
+                        </p>
+                    </div>
+                </div>
+    
+                <div class="card-trilhas-salvas">
+                    <div class="card-exemplo1">
+                        <img src="/src/images/icons/compartilhar.png" alt="share">
+                    </div>
+                    <div class="card-exemplo2">
+                        <h2>Mirante das Goiabeiras</h2>
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                            Assumenda illo numquam explicabo!<span id="teste-frito3">Dolor, architecto. Odio, itaque facere numquam magnam,
+                            omnis cupiditate quis sapiente laboriosam quibusdam est veritatis doloribus enim repellendus.</span><span id="teste-frito2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error fuga a magnam, suscipit tempore
+                            minus ipsa ab soluta.</span><span id="teste-frito1">Aut sequi illo blanditiis temporibus impedit fugit libero delectus itaque tempora dolorem!lorem
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium voluptates nihil eius magni tempora molestias dignissimos.</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAZER LAYOUT NO CSS -->
+            <div class="container" id="user__configs">
+                <p class="fw-bold">Senha: <span class="fw-normal" id="user__password"></span></p>
+                <p class="fw-bold">E-mail: <span class="fw-normal" id="user__email"></span></p>
+                
+                <form class="form-floating my-2 row">
+                    <input type="text" name="nome" id="input-nome" class="form-control col"
+                        placeholder="Alterar Nome" required>
+                    <label for="nome">Alterar nome:</label>
+                    <button type="submit" onclick="alterarNome()" class="btn btn-primary my-1">Alterar</button>
+                </form>
+                <form class="form-floating mb-2 row">
+                    <input type="password" name="password" id="input-senha" class="form-control col"
+                        placeholder="Alterar Senha" required>
+                    <label for="password">Nova senha:</label>
+                    <button type="submit" onclick="alterarSenha()" class="btn btn-primary my-1">Alterar</button>
+                </form>
+                <form class="form-floating mb-2 row">
+                    <input type="email" name="email" id="input-email" class="form-control col"
+                        placeholder="E-mail" required>
+                    <label for="email">Alterar email:</label>
+                    <button type="submit" onclick="alterarEmail()" class="btn btn-primary my-1">Alterar</button>
+                </form>
+                <form class="form-floating mb-2 row">
+                    <input type="text" name="descricao" id="input-description" class="form-control col"
+                        placeholder="Descrição" required>
+                    <label for="descricao">Alterar descrição:</label>
+                    <button type="submit" onclick="alterarDescricao()" class="btn btn-primary my-1">Alterar</button>
+                </form>
+            </div>
+
+        </div>
+
+        
+
+        
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>Direitos reservados a Pucminas. COPYRIGHT &copy 2022.</p> 
+        </div><!-- </div> -->
+        <!--CONTAINER-->
+    </footer>
+
+    <script src="script/main.js"></script>
+    <!-- <script src="script/shareModal.js"></script> -->
+    <script src="script/userConfig.js"></script>
+</body >
+
+</html >

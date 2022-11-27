@@ -152,7 +152,7 @@ const trailFuncs = {
         <div class="trilha-item">
             <div class="icon-trilha-item">
                 <a href="https://www.pucminas.br/main/Paginas/default.aspx"><button class="pesquisar-input-explorar">Saiba Mais</button></a>
-                <button onclick="compartilhaBotao()" class="botoes-outline"><img src="images/icons/compartilhar.png" alt="" class="comp-trilha"></button>
+                <img src="images/icons/compartilhar.png" alt="" class="comp-trilha">
             </div>
             <div class="trilhas-text">
                 <h2 class="titulo-trilha">Pata da Vaca</h2>
@@ -161,7 +161,7 @@ const trailFuncs = {
                 </p>
             </div>
             <div class="icon-trilha-item">
-                <button onclick="salvarTrilha()" class="botoes-outline"><img src="images/icons/Vector.svg" alt="" class="save-trilha"></button>
+                <img src="images/icons/Vector.svg" alt="" class="save-trilha">
             </div>
         </div>
         <div class="trilha-item">
