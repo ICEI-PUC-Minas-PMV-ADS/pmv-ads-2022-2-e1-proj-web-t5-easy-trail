@@ -110,11 +110,14 @@ const trailFuncs = {
         const nivelTrilha = selectElement('.trilha_nivel').value;
         //CONTAINER ONDE VAO SER RETORNADAS TODAS AS TRILHAS
         const trilhasContainer = selectElement('.trilhas_pesquisa');
-
+        console.log("XPTO")
 
         this.event.preventDefault();
 
         trilhasContainer.innerHTML = ' ';
+        
+        const titulo = selectElement('.cards-trilhas h1');
+        titulo.innerHTML = 'Resultado pesquisa'
 
         Object.keys(trailsLocalStorage).forEach(storageKey => {
             if(storageKey.split('-')[0] != 'trilha'){
@@ -166,11 +169,17 @@ const trailFuncs = {
                 }
 
 
-                trilhasContainer.innerHTML = '<h1>Pesquisa invalida!</h1>';
+                /* trilhasContainer.innerHTML = '<h1>Pesquisa invalida!</h1>';*/
+                localStorage.setItem('erro', 'teste');
                 return;
             }
-
         })
+
+        let erro = JSON.parse(localStorage.getItem('erro'));
+            if(erro) {
+            alert("Pesqusa invalida");
+            localStorage.removeItem('erro');
+        }
     },
 
 

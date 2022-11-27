@@ -141,7 +141,7 @@
         <h1><b>Trilhas Recomendadas</b></h1>
       </div>
     
-      <div class="row row-cols-1 row-cols-md-3" id="all__cards"></div>
+      <div class="row row-cols-1 row-cols-md-3 trilhas_pesquisa" id="all__cards"></div>
 
     </section>
     
@@ -149,24 +149,25 @@
     
       <form>
         <h2 class="Form-titulo"><b>Envie sua Dúvida</b></h2>
-      <hr>
+        <hr>
         <div class="form-group">
-          <label><b>Nome</b></label>
-          <input class="form-control shadow p-3 mb-4" type="text" placeholder="Meu Nome.. " required>
+        <label><b>Nome</b></label>
+        <input class="setup-form-nome form-control shadow p-3 mb-4" type="text" placeholder="Meu Nome.. " required>
         </div>
         <div class="form-group">
-          <label for="exampleFormControlInput1"><b>E-mail</b></label>
-          <input type="email" class="form-control shadow p-3 mb-4" id="exampleFormControlInput1"
-            placeholder="nome@exemplo.com.br" required>
+        <label for="exampleFormControlInput1"><b>E-mail</b></label>
+        <input type="email" class="setup-form-email form-control shadow p-3 mb-4" id="exampleFormControlInput1"
+        placeholder="nome@exemplo.com.br" required>
         </div>
         <div class="form-group">
-          <label for="exampleFormControlTextarea1"><b>Comentário</b></label>
-          <textarea class="form-control pl-3 shadow mb-2" placeholder="Escreva seu comentário.."
-            id="exampleFormControlTextarea1" rows="3" required></textarea>
+        <label for="exampleFormControlTextarea1"><b>Comentário</b></label>
+        <textarea class="txtAreaForm form-control pl-3 shadow mb-2" placeholder="Escreva seu comentário.."
+        id="exampleFormControlTextarea1" rows="3" required></textarea>
         </div>
         <div class="btn-form-wraper">
-          <button class="btn btn-danger" type="submit">Enviar</button>
-      </form>
+        <button class="btn btn-danger" type="submit" onclick="trailFuncs.cadastroDuvidas()">Enviar</button>
+        </form>
+
     </section>
     
     <footer>

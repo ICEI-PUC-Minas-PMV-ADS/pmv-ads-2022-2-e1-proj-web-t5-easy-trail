@@ -21,11 +21,12 @@ let adminFuncionalities = {
             let trailObj = JSON.parse(allTrailsObj);
 
             trilhaContainer.innerHTML += `
+            <hr>
             <div class="trilha_cadastrada_item">
-                <p><strong>Nome:</strong>${trailObj.nome}</p>
-                <p><strong>Descricao:</strong>${trailObj.descricao}</p>
-                <p><strong>Local:</strong>${trailObj.local}</p>
-                <p><strong>Altimetria:</strong>${trailObj.altimetria}</p>
+                <p><strong>Nome:</strong> ${trailObj.nome}</p>
+                <p><strong>Descricao:</strong> ${trailObj.descricao}</p>
+                <p><strong>Local:</strong> ${trailObj.local}</p>
+                <p><strong>Altimetria:</strong> ${trailObj.altimetria}</p>
             </div>`;
 
             return trailObj;
@@ -95,10 +96,10 @@ let adminFuncionalities = {
     
             
             let userHtmlItem = `
+            <hr>
             <div class="userHtmlItem">
-                <span>Nome: </span> <span>${nomeCompleto}</span><br>
-                <span>Email: </span> <span>${email}</span><br>
-                <span>Trilhas: </span> <span>${trilhasCadastradas}</span>
+                <span><b>Nome:</b> </span> <span> ${nomeCompleto}</span><br>
+                <span><b>Email:</b> </span> <span> ${email}</span><br>
             </div>
             `;
 
