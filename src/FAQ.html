@@ -37,55 +37,55 @@
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <img onclick="location=href='HomePage.html'" src="images/logoEasy.png" width="120" alt="100">
-            <div>
-                <button class="btn btn-danger"
-                    onclick="document.getElementById('id00').style.display='block'">Cadastre-se</button>
-                <button class="btn btn-danger" onclick="document.getElementById('id01').style.display='block'"
-                    style="width:auto;">Entrar</button>
-
-                <div id="id00" class="modal">
-                    <form class="modal-content" action="/action_page.php">
-                        <div class="container">
-                            <span onclick="document.getElementById('id00').style.display='none'" class="close"
-                                title="close">&times;</span>
-                            <label for="name"><b>Nome</b></label>
-                            <input type="text" placeholder="Digite o seu nome completo" name="name" required>
-                            <label for="email"><b>Email</b></label>
-                            <input type="text" placeholder="Digite o seu Email" name="email" required>
-                            <label for="psw"><b>Senha</b></label>
-                            <input type="password" placeholder="Digite sua senha" name="psw" required>
-                            <label for="psw-repeat"><b>Repita sua Senha</b></label>
-                            <input type="password" placeholder="Digite sua senha" name="psw-repeat" required>
-                            <button type="submit" class="signup-login">Cadastrar</button>
-                            <button type="button" onclick="document.getElementById('id00').style.display='none'"
-                                class="cancelarbtn">Cancelar</button>
-                        </div>
+          <img onclick="location=href='HomePage.html'" src="images/logoEasy.png" width="120" alt="100">
+          <div>
+            <button class="btn btn-danger"
+              onclick="document.getElementById('id00').style.display='block'">Cadastre-se</button>
+            <button class="btn btn-danger" onclick="document.getElementById('id01').style.display='block'">Entrar</button>
+          </div>
+  
+            <div id="id00" class="modal">
+              <form class="modal-content">
+                <div class="container">
+                  <span onclick="document.getElementById('id00').style.display='none'" class="close" title="close">&times;</span>
+                  <label for="name"><b>Nome</b></label>
+                  <input type="text" placeholder="Digite o seu nome completo" name="name" required id="nome_usuario_cadastro">
+                  <label for="email"><b>Email</b></label>
+                  <input type="text" placeholder="Digite o seu Email" name="email" required id="email_usuario_cadastro">
+                  <label for="psw"><b>Senha</b></label>
+                  <input type="password" placeholder="Digite sua senha" name="psw" required id="senha_usuario_cadastro">
+                  <label for="psw-repeat"><b>Repita sua Senha</b></label>
+                  <input type="password" placeholder="Digite sua senha" name="psw-repeat" required id="senha_usuario_cadastro_verificacao">
+                  <button type="submit" onclick="trailFuncs.cadastrarUsuario()">Cadastrar</button>
+                  <button type="button" onclick="document.getElementById('id00').style.display='none'"
+                    class="cancelarbtn">Cancelar</button>
                 </div>
-                </form>
-
-                <div id="id01" class="modal">
-                    <form class="modal-content animate" action="/action_page.php" method="post">
-                        <div class="imgcontainer">
-                            <span onclick="document.getElementById('id01').style.display='none'" class="close"
-                                title="Close Modal">&times;</span>
-                        </div>
-                        <div class="container">
-                            <label for="uname"><b>Usuário</b></label>
-                            <input type="text" placeholder="Digite seu e-mail" name="uname" required>
-                            <label for="psw"><b>Senha</b></label>
-                            <input type="password" placeholder="Digite sua senha" name="psw" required>
-                            <button type="submit">Entrar</button>
-                        </div>
-                        <div class="container" style="background-color:#f1f1f1">
-                            <button type="button" onclick="document.getElementById('id01').style.display='none'"
-                                class="cancelarbtn">Cancelar</button>
-                            <span class="psw">Esqueceu sua <a href="#">senha?</a></span>
-                        </div>
-                    </form>
-                </div>
+              </form>
             </div>
-    </nav>
+            <div id="id01" class="modal">
+            
+              <form class="modal-content animate">
+                <div class="imgcontainer">
+                  <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                    title="Close Modal">&times;</span>
+                </div>
+                <div class="containerX">
+                  <label for="uname"><b>Usuário</b></label>
+                  <input type="text" placeholder="Digite seu e-mail" name="uname" required id="email_login_usuario">
+                  <label for="psw"><b>Senha</b></label>
+                  <input type="password" placeholder="Digite sua senha" name="psw" required id="senha_login_usuario">
+                  <button type="submit" onclick="trailFuncs.login()">Entrar</button>
+                </div>
+                <div class="containerX" style="background-color:#f1f1f1">
+                  <button type="button" onclick="document.getElementById('id01').style.display='none'"
+                    class="cancelarbtn">Cancelar</button>
+                </div>
+              </form>
+            
+            </div>
+            
+        </div>
+      </nav>
 
     <section id="Perguntas Frequentes">
         <div id="FAQ">
