@@ -12,7 +12,8 @@ Abaixo temos a descrição das funcionalidades criadas por cada integrante da eq
 
 ![Funcionalidade](img/codeCarlos.jpg)
 ![Funcionalidade](img/codeCarlos-carrossel.jpg)
-
+![Funcionalidade](img/CJose-VisaoGeralCode(Admin).jpg)
+![Funcionalidade](img/CJose-VisaoGeral(Admin).jpg)
 
 ## 2- Leonardo Lima
 `Filtro Pesquisa`
@@ -103,7 +104,10 @@ Abaixo temos a descrição das funcionalidades criadas por cada integrante da eq
 
 ![Funcionalidade](img/codeRafael.png)
 ![Funcionalidade](img/codeRafael(1).png)
-![Funcionalidade](img/codeRafael-Cadastro.png)
+![Funcionalidade](img/ROliveira-CriacaoTrilha.jpg)
+![Funcionalidade](img/ROliveira-pesquisa.png)
+![Funcionalidade](img/ROliveira-cadastro.png)
+![Funcionalidade](img/ROliveira-login.png)
 
 
 ## 5- Diogo Silva
