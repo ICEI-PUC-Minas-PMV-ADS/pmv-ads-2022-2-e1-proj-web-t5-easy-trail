@@ -14,10 +14,10 @@
     <link rel="shortcut icon" href="images/logoEasy.png">
 </head>
 
-<body style="background-image: url(images/map.jpg); background-repeat: atributo;">
+<body style="background-image: url(images/map.jpg);">
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-        <img src="images/logoEasy.png" width="120" alt="100">      
+        <img src="images/logoEasy.png" width="120" alt="Logomarca">      
         <div class="row align-items-center">
             <div class="header-list col">
                 <img src="images/icons/notificacao.png" width="30" alt="icone notifcação">
@@ -34,69 +34,67 @@
     
 <section id="container--usuario-logado-main">
 
-      <div class="container-fluid p-4">
-        <div class="row">
-          <div class="col-3 p-1 m-1">
-            <div class="card">
-              <img src="images/admin.jpg">
-              <div class="card-body p-1 m-3">
-                <h7 class="card-title">Administrador</h7>
-                <p id="NameUser" class="card-text">Diogo Costa</p>
-              </div>
-      
-              <div class="col-4 align-self-center" style="width: 90%;">
-                <div class="list-group" id="list-tab" role="tablist">
-                  <a class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="list"
-                  onclick=location=href="criacaoTrilha.html" style="cursor: pointer;"  role="tab" aria-controls="list-profile">Adicionar Trilha</a>
-                  <a class="list-group-item list-group-item-action" id="list-messages-list" data-bs-toggle="list" onclick="showDivs()" style="cursor: pointer;" role="tab" aria-controls="list-messages">Configurações</a>
-                    
-                </div>
-              </div>
-      
-              <div class="col-8 mb-4">
-                <div class="tab-content" id="nav-tabContent">
-                  <div class="tab-pane fade" id="list-add" role="tabpanel" aria-labelledby="list-profile-list"></div>
-                  <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-messages-list"></div>
-      
-                </div>
-              </div>
+  <div class="container-fluid p-4">
+    <div class="row">
+
+      <div class="col-3 p-1 m-1">
+        <div class="card">
+          <img src="images/admin.jpg" alt="Foto do Administrador">
+          <div class="card-body p-1 m-3">
+            <p class="card-title mb-0">Administrador</p>
+            <p id="NameUser" class="card-text">Diogo Costa</p>
+          </div>
+
+          <div class="col-4 align-self-center" style="width: 90%;">
+            <div class="list-group" id="list-tab" role="tablist">
+              <a class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="list"
+                onclick="location=href='criacaoTrilha.html'" style="cursor: pointer;" role="tab">Adicionar Trilha</a>
+              <a class="list-group-item list-group-item-action" id="list-messages-list" data-bs-toggle="list"
+                onclick="showDivs()" style="cursor: pointer;" role="tab">Configurações</a>
             </div>
           </div>
-      
-      
-          <div class="col-8">
-            <div id="trilhas__favoritas" class="container-fluid">
-                <section id="container--usuario-logado-main">
 
-                    <div class="container--metade2">
-                        <h2>Visão Geral</h2>
-            
-                        <div class="card-salvas">
-                            <div class="card-exemplo2" id="usuarios_cadastrados">
-                                <h2 class="item">Usuários cadastrados</h2>
-                            </div>
-                        </div>
-            
-                        <div class="card-salvas">
-                            <div class="card-exemplo2" id="trilhas_cadastradas">
-                                <h2 class="item">Trilhas cadastradas</h2>
-                            </div>
-                        </div>
-            
-                    </div>
-            
-                    
-                </section>
-            
+          <div class="col-8 mb-4">
+            <div class="tab-content" id="nav-tabContent">
+              <div class="tab-pane fade" id="list-add" role="tabpanel" aria-labelledby="list-profile-list"></div>
+              <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-messages-list"></div>
+
             </div>
-
-
-
           </div>
-          
+
+        </div>
 
       </div>
-       
+
+
+      <div class="col-8">
+        <div id="trilhas__favoritas" class="container-fluid">
+          <section id="container--usuario-logado-main">
+            <div class="container--metade2">
+              <h2>Visão Geral</h2>
+
+              <div class="card-salvas">
+                <div class="card-exemplo2" id="usuarios_cadastrados">
+                  <h2 class="item">Usuários cadastrados</h2>
+                </div>
+              </div>
+
+              <div class="card-salvas">
+                <div class="card-exemplo2" id="trilhas_cadastradas">
+                  <h2 class="item">Trilhas cadastradas</h2>
+                </div>
+              </div>
+
+            </div>
+          </section>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
 </section>
 
 <footer>
