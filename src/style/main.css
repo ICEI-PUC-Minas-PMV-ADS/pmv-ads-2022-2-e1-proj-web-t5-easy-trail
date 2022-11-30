@@ -322,6 +322,13 @@ button:hover {
   float: none;
 }
 
+.containerC {
+  /*Container da Barra de Pesquisa*/
+  width: 100%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  background-color: white;
+}
 
 .breadcrumb a {
  /*Configuração do texto da Rota das páginas navegadas*/
