@@ -49,26 +49,80 @@
             </div>
             <label for="descricao"><b>Descricao:</b></label>
             <div>
-            <textarea name="descricao" id="trilha_descricao" placeholder="descricao" class="form-control shadow mb-3"></textarea>
+            <textarea name="descricao" id="trilha_descricao" placeholder="Descrição da trilha..." class="form-control shadow mb-3"></textarea>
             </div>
-        <div class="row justify-content-center">
-            <div class="col-sm-3 p-2">
-            <label for="nome"><b>Altimetria:</b></label>
-            <input type="text" id="trilha_altimetria" placeholder="Ex: 700 metros" class="cadastro-trilha-input shadow mb-3">
+
+            <div class="row">
+            <div class="col-sm-2 p-2">
+                <div class="form-floating">
+                    <div>
+                        <label for="nome"><b>Altimetria</b></label>
+                    </div>
+                    <input type="text" placeholder="Ex: 700 metros" required id="trilha_altimetria" class="cadastro-trilha-input shadow mb-3">
+                </div>
             </div>
-            <div class="col-sm-3 p-2">
-            <label for="nome"><b>Duração Estimada:</b></label>
-            <input type="text" id="trilha_duracao" placeholder="Ex: 02h30m, 50min" class="cadastro-trilha-input shadow mb-3">
+
+            <div class="col-sm-2 p-2">
+                <div class="form-floating">
+                    <div>
+                        <label for="nome"><b>Duração Estimada</b></label>
+                    </div>
+                    <input type="text" id="trilha_duracao" placeholder="Ex: 02h30m, 50min" class="cadastro-trilha-input shadow mb-3">
+                </div>
             </div>
-            <div class="col-sm-3 p-2">
-            <label for="select"><b>Dificuldade:</b></label>
-                <select id="floatingSelect" class="form-select trilha_nivel" aria-label="Floating label select example" required style="width:70%;">
-                    <option value="">Dificuldade</option>
-                    <option value="1">Alta</option>
-                    <option value="2">Média</option>
-                    <option value="3">Baixa</option>
-                </select> </div>
+        </div>
+        
+        <div class="d-flex justify-content-center">
+            <div class="containerC">
+                <div class="row">
+        
+                    <div class="col-2 justify-content-center align-self-center p-2">
+                        <div>
+                            <div>
+                                <label for="nome"><b>Dificuldade</b></label>
+                            </div>
+                            <select class="form-select trilha_nivel shadow mb-3"
+                                 required style="height:3rem;">
+                                <option value="">-</option>
+                                <option value="1">Alta</option>
+                                <option value="2">Média</option>
+                                <option value="3">Baixa</option>
+                            </select>
+                        </div>
+                    </div>
+        
+                    <div class="col-2 justify-content-center align-self-center p-2">
+                        <div>
+                            <div>
+                                <label for="nome"><b>Tipo da Trilha</b></label>
+                            </div>
+                            <select class="form-select trilha_nivel shadow mb-3"
+                                required style="height:3rem;">
+                                <option value="">-</option>
+                                <option value="1">Urbana</option>
+                                <option value="2">Rural</option>
+                            </select>
+                        </div>
+                    </div>
+        
+                    <div class="col-3 justify-content-center align-self-center">
+                        <div>
+                            <div>
+                                <label for="nome"><b>Recomendação</b></label>
+                            </div>
+                            <select class="form-select trilha_nivel shadow mb-3" style="height:3rem;" required>
+                                <option value="">-</option>
+                                <option value="1">Individual</option>
+                                <option value="2">Grupo</option>
+                                <option value="3">Individual ou Grupo</option>
+                            </select>
+                        </div>
+                    </div>
+        
+                </div>
             </div>
+        </div>
+
             <div class="form-btn-cadastro">
                 <button id="cadastroTrilha" onclick="trailFuncs.cadastroTrilha()" class="btn btn-danger">Cadastrar</button>
             </div>
