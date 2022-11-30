@@ -13,123 +13,139 @@
     <link rel="shortcut icon" href="images/logoEasy.png">
 </head>
 
-<body style="background-image: url(images/map.jpg); background-repeat: atributo;">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-          <img src="images/logoEasy.png" width="120" alt="100">
-                <ul class="header-list">
-                    <img src="images/icons/notificacao.png" width="30">
-                    <img onclick="location=href='UserPage.html'" src="images/icons/user.png" width="30"style="cursor: pointer;">
-                    <img onclick="trailFuncs.logOut()" src="images/icons/logout.png" width="30" style="cursor: pointer;">
-                </ul>
+<body style="background-image: url(images/map.jpg);">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <img src="images/logoEasy.png" width="120" alt="100">      
+        <div class="row align-items-center">
+            <div class="header-list col">
+                <img src="images/icons/notificacao.png" width="30" alt="icone notifcação">
+            </div>
+            <div class="header-list col">
+                <img src="images/icons/user.png" width="30" style="cursor: pointer;" onclick="location=href='UserPage.html'" alt="icone usuário">
+            </div>
+            <div class="header-list col">
+                <img src="images/icons/logout.png" width="30" style="cursor: pointer;" alt="icone sair">
+            </div>
         </div>
-    </nav>     
+    </div>
+</nav>    
     
 <section id="container--usuario-logado-main">
 
-      <div class="container-fluid p-4">
-        <div class="row">
-          <div class="col-3 p-1 m-1">
-            <div class="card">
-              <img onclick="location=href='UserPage.html'" src="images/usuarioEasyTrail.jpg" style="cursor: pointer;">
-              <div class="card-body p-1 m-3">
-                <h7 class="card-title">Usuário</h7>
-                <p id="NameUser" class="card-text">TESTE</p>
-              </div>
-      
-              <div class="col-4 align-self-center" style="width: 90%;">
-                <div class="list-group" id="list-tab" role="tablist">
-                  <a class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="list"
-                  onclick=location=href="criacaoTrilha.html" style="cursor: pointer;"  role="tab" aria-controls="list-profile">Adicionar Trilha</a>
-                  <a class="list-group-item list-group-item-action" id="list-messages-list" data-bs-toggle="list" onclick="showDivs()" style="cursor: pointer;" role="tab" aria-controls="list-messages">Configurações</a>
-                    
-                </div>
-              </div>
-      
-              <div class="col-8 mb-4">
-                <div class="tab-content" id="nav-tabContent">
-                  <div class="tab-pane fade" id="list-add" role="tabpanel" aria-labelledby="list-profile-list"></div>
-                  <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-messages-list"></div>
-      
-                </div>
-              </div>
+  <div class="container-fluid p-4">
+    <div class="row">
+      <div class="col-3 p-1 m-1">
+        <div class="card">
+          <img onclick="location=href='UserPage.html'" src="images/usuarioEasyTrail.jpg" style="cursor: pointer;"
+            alt="icone usuário">
+          <div class="card-body p-1 m-3">
+            <P class="card-title mb-0">Usuário</P>
+            <p id="NameUser" class="card-text">TESTE</p>
+          </div>
+
+          <div class="col-4 align-self-center" style="width: 90%;">
+            <div class="list-group" id="list-tab" role="tablist">
+              <a class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="list"
+                onclick="location=href='criacaoTrilha.html'" style="cursor: pointer;" role="tab"
+                aria-controls="list-profile">Adicionar Trilha</a>
+              <a class="list-group-item list-group-item-action" id="list-messages-list" data-bs-toggle="list"
+                onclick="showDivs()" style="cursor: pointer;" role="tab" aria-controls="list-messages">Configurações</a>
             </div>
           </div>
 
           <div class="col-8 mb-4">
-            <div id="pesquisa" class="d-flex justify-content-center">
-              <div class="container">
-                <div class="row align-self-center">
-                  <div class="col-sm align-self-center p-2">
-                    <input id="floatingInput" class="trilha_local Cidade-btn" type="text" name="myCountry"
-                      placeholder="Digite o estado..." required>
-                  </div>
-                  <div class="col-sm align-self-center p-2">
-                    <select id="floatingSelect" class="trilha_nivel form-select" aria-label="Floating label select example"
-                      required>
-                      <option selected>Dificuldade</option>
-                      <option value="1">Alta</option>
-                      <option value="2">Média</option>
-                      <option value="3">Baixa</option>
-                    </select>
-                  </div>
-                  <div class="col-sm align-self-center p-2">
-                    <div class="form-floating">
-                      <input type="date" class="form-control" id="date">
-                    </div>
-                  </div>
-                  <div class="col-sm align-self-center">
-                    <button type="button" class="btn btn-danger" onclick="trailFuncs.buscarTrilha()">Pesquisar</button>
-                  </div>
+            <div class="tab-content" id="nav-tabContent">
+              <div class="tab-pane fade" id="list-add" role="tabpanel" aria-labelledby="list-profile-list"></div>
+              <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-messages-list"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-8 mb-4">
+        <div id="pesquisa" class="d-flex justify-content-center">
+          <div class="container">
+            <div class="row align-self-center">
+              <div class="col-sm align-self-center p-2">
+                <input id="floatingInput" class="trilha_local Cidade-btn" type="text" name="myCountry"
+                  placeholder="Digite o estado..." required>
+              </div>
+              <div class="col-sm align-self-center p-2">
+                <select id="floatingSelect" class="trilha_nivel form-select" aria-label="Floating label select example"
+                  required>
+                  <option value="">Dificuldade</option>
+                  <option value="1">Alta</option>
+                  <option value="2">Média</option>
+                  <option value="3">Baixa</option>
+                </select>
+              </div>
+              <div class="col-sm align-self-center p-2">
+                <div class="form-floating">
+                  <input type="date" class="form-control" id="date">
                 </div>
               </div>
-            </div>
-
-          <div class="col p-2">
-            <div id="trilhas__favoritas" class="container-fluid">
-              <h1><img src="images/icons/estrela.png" style="width: 2rem; height: 2rem;">Minhas trilhas favoritas<img id="Estrela" src="images/icons/estrela.png" style="width: 2rem; height: 2rem;"></h1>
-              <hr class="p-2">
-              <div id="nenhuma__favoritada">No momento você não possuí nenhuma trilha favoritada</div>
-              <div id="cards__favoritas"></div>
-            </div>
-            
-            <div id="user__configs" class="container-fluid">
-              <h1>Meu Cadastro</h1>
-              <hr class="p-2">
-              <div class="container">
-                <form class="form-floating m-3 row" style="width: 70%;">
-                  <input type="text" name="nome" id="input-nome" class="form-control col" placeholder="Alterar Nome" required>
-                  <label for="nome">Alterar Nome</label>
-                  <button type="submit" onclick="alterarNome()" class="btn-danger my-1 col-2 align-self-center" style="height: 50px;">Alterar</button>
-                </form>
-                <form class="form-floating m-3 row" style="width: 70%;">
-                  <input type="email" name="email" id="input-email" class="form-control col"
-                      placeholder="E-mail" required>
-                  <label for="email">Alterar email:</label>
-                  <button type="submit" onclick="alterarEmail()" class="btn-danger my-1 col-2 align-self-center" style="height: 50px;">Alterar</button>
-                </form>
-                <form class="form-floating m-3 row" style="width: 70%;">
-                  <input type="password" name="password" id="input-senha" class="form-control col"
-                      placeholder="Alterar Senha" required>
-                  <label for="password">Nova senha:</label>
-                  <button type="submit" onclick="alterarSenha()" class="btn-danger my-1 col-2 align-self-center" style="height: 50px;">Alterar</button>
-                </form>
+              <div class="col-sm align-self-center">
+                <button type="button" class="btn btn-danger" onclick="trailFuncs.buscarTrilha()">Pesquisar</button>
               </div>
             </div>
-
           </div>
-          
+        </div>
+
+        <div class="col p-2">
+          <div id="trilhas__favoritas" class="container-fluid">
+            <h1><img src="images/icons/estrela.png" style="width: 2rem; height: 2rem;" alt="estrela">Minhas trilhas
+              favoritas<img id="Estrela" src="images/icons/estrela.png" style="width: 2rem; height: 2rem;"
+                alt="estrela"></h1>
+            <hr class="p-2">
+            <div id="nenhuma__favoritada">No momento você não possuí nenhuma trilha favoritada</div>
+            <div id="cards__favoritas"></div>
+          </div>
+
+          <div id="user__configs" class="container-fluid">
+            <h1>Meu Cadastro</h1>
+            <hr class="p-2">
+            <div class="container">
+              <form class="form-floating m-3 row" style="width: 70%;">
+                <input type="text" name="nome" id="input-nome" class="form-control col" placeholder="Alterar Nome"
+                  required>
+                <label for="nome">Alterar Nome</label>
+                <button type="submit" onclick="alterarNome()" class="btn-danger my-1 col-2 align-self-center"
+                  style="height: 50px;">Alterar</button>
+              </form>
+              <form class="form-floating m-3 row" style="width: 70%;">
+                <input type="email" name="email" id="input-email" class="form-control col" placeholder="E-mail"
+                  required>
+                <label for="email">Alterar email:</label>
+                <button type="submit" onclick="alterarEmail()" class="btn-danger my-1 col-2 align-self-center"
+                  style="height: 50px;">Alterar</button>
+              </form>
+              <form class="form-floating m-3 row" style="width: 70%;">
+                <input type="password" name="password" id="input-senha" class="form-control col"
+                  placeholder="Alterar Senha" required>
+                <label for="password">Nova senha:</label>
+                <button type="submit" onclick="alterarSenha()" class="btn-danger my-1 col-2 align-self-center"
+                  style="height: 50px;">Alterar</button>
+              </form>
+            </div>
+          </div>
+
+        </div>
+
 
       </div>
-       
+    </div>
+  </div>
+
 </section>
 
 <footer>
       <div class="container text">
         <div class="row">
           <div class="col"></div>
-          <div class="col" id="Copyright">Direitos reservados a PUC Minas. COPYRIGHT&copy 2022</div>
-          <div class="col" id="imgFAQ"><img onclick="location=href='FAQ.html'" src="images/FAQ.jpg" width="30%" style="cursor: pointer;"></div>
+          <div class="col" id="Copyright">Direitos reservados a PUC Minas. COPYRIGHT&copy; 2022</div>
+          <div class="col" id="imgFAQ"><img onclick="location=href='FAQ.html'" src="images/FAQ.jpg" style="cursor: pointer; width: 30%;" alt="Imagem FAQ"></div>
         </div>
       </div>
   </footer>
