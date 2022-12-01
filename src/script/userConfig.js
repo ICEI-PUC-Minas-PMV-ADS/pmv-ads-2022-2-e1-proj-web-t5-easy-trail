@@ -11,7 +11,7 @@ trilhasFavoritadas.forEach((card) => {
     let cardFav = `
         <div class="col mb-4 shadow-lg">
             <div class="card">
-                <img src="${card.imagem}" class="card-img-top d-block w-100">
+                <img onclick="location=href='${card.link}'" src="${card.imagem}" class="card-img-top d-block w-100" style="cursor: pointer">
                 <div class="card-body">
                     <h6 class="card-title"><b>${card.nome}</b></h6>
                     <p class="card-text">${card.descricao}<span class="dots">...</span><span class="more hide">${card.moreHide}</span></p>
