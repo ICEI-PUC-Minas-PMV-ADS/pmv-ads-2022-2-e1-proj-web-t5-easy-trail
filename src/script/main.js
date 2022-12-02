@@ -1,5 +1,5 @@
 const selectElement = (name) => {
-    if(!name) throw new Error('The element name is empty!');
+    if (!name) throw new Error('The element name is empty!');
 
     const element = document.querySelector(name);
 
@@ -7,7 +7,7 @@ const selectElement = (name) => {
 }
 
 const selectAllElements = (name) => {
-    if(!name) throw new Error('The element name is empty!');
+    if (!name) throw new Error('The element name is empty!');
 
     const elements = document.querySelectorAll(name);
 
@@ -83,15 +83,15 @@ const trailFuncs = {
         let nameInput = selectElement('.setup-form-nome');
         let emailInput = selectElement('.setup-form-email');
         let textareaInput = selectElement('.txtAreaForm');
- 
-        if(!nameInput && !sobrenomeInput && !emailInput && !textareaInput) alert('Por favor, preencha todos os campos');
-        
+
+        if (!nameInput && !sobrenomeInput && !emailInput && !textareaInput) alert('Por favor, preencha todos os campos');
+
         //NECESSARIO VERIFICACAO SE O ID JA EXISTE
 
         const duvidaObj = {
             id_duvida: Math.floor(Math.random() * 999999),
             nome: nameInput.value,
-            email:  emailInput.value,
+            email: emailInput.value,
             duvidaText: textareaInput.value,
             statusDuvidaResposta: false,
             idUserAdminResposta: null,
@@ -115,12 +115,12 @@ const trailFuncs = {
         this.event.preventDefault();
 
         trilhasContainer.innerHTML = ' ';
-        
+
         const titulo = selectElement('.cards-trilhas h1');
         titulo.innerHTML = 'Resultado pesquisa'
 
         Object.keys(trailsLocalStorage).forEach(storageKey => {
-            if(storageKey.split('-')[0] != 'trilha'){
+            if (storageKey.split('-')[0] != 'trilha') {
                 return 'Isto nao e um cadastro de uma trilha!';
             };
 
@@ -131,11 +131,11 @@ const trailFuncs = {
 
             // let teste = trilhas.local.toLowerCase();
 
-            if(trilhas.local == localTrilha && trilhas.nivel == nivelTrilha) {
+            if (trilhas.local == localTrilha && trilhas.nivel == nivelTrilha) {
                 let trilhaPesquisa = JSON.parse(localStorage.getItem(storageKey));
 
                 let {
-                    nome, 
+                    nome,
                     descricao,
                     local,
                     nivel
@@ -158,13 +158,13 @@ const trailFuncs = {
 
 
                 trilhasContainer.innerHTML += trilhaItem;
-            }else {
+            } else {
                 let vericador = selectAllElements('#trilhas_pesquisa');
 
                 console.log(vericador.length);
 
 
-                if(vericador.length >= 1) {
+                if (vericador.length >= 1) {
                     return;
                 }
 
@@ -176,7 +176,7 @@ const trailFuncs = {
         })
 
         let erro = JSON.parse(localStorage.getItem('erro'));
-            if(erro) {
+        if (erro) {
             alert("Pesqusa invalida");
             localStorage.removeItem('erro');
         }
@@ -191,11 +191,13 @@ const trailFuncs = {
         const trilhaDescricao = selectElement('#trilha_descricao');
         const trilhaAltimetria = selectElement('#trilha_altimetria');
         const trilhaDuracao = selectElement('#trilha_duracao');
-        const trilhaNivel = selectElement('.trilha_nivel');
+        const dificuldadeTrilha = selectElement('.trilha_nivel');
+        const tipoTrilha = selectElement('.trilha_tipo');
+        const recomTrilha = selectElement('.trilha_recom');
 
         this.event.preventDefault();
 
-        if(!trilhaNome.value && !trilhaLocal.value && !trilhaDescricao.value && !trilhaAltimetria.value && !trilhaDuracao.value ) {
+        if (!trilhaNome.value && !trilhaLocal.value && !trilhaDescricao.value && !trilhaAltimetria.value && !trilhaDuracao.value) {
             return alert("Preencha todos os campos!");
         }
 
@@ -205,7 +207,9 @@ const trailFuncs = {
             descricao: trilhaDescricao.value,
             altimetria: trilhaAltimetria.value,
             trilha_duracao: trilhaDuracao.value,
-            nivel: trilhaNivel.value,
+            nivel: dificuldadeTrilha.value,
+            tipo: tipoTrilha.value,
+            recomendacao: recomTrilha.value
         };
 
         localStorage.setItem(`trilha-${trilhaNome.value}`, JSON.stringify(trilhaObj));
@@ -217,12 +221,12 @@ const trailFuncs = {
 
     getAllTrails: () => {
         Object.keys(trailsLocalStorage).forEach(storageKey => {
-            if(storageKey.split('-')[0] != "trilha") {
+            if (storageKey.split('-')[0] != "trilha") {
                 return;
             };
-        
+
             let allTrailsObj = localStorage.getItem(storageKey);
-            
+
             let trailObj = JSON.parse(allTrailsObj);
 
             const {
@@ -244,109 +248,105 @@ const trailFuncs = {
                 </div>
                 </div>
             </div>`;
-            
 
-            console.log(trilhaItem);
             return;
         });
     },
     cadastrarUsuario: () => {
-        let nomeCompleto = selectElement('#nome_usuario_cadastro');
-        let email = selectElement('#email_usuario_cadastro');
-        // NECESSARIO ENCRIPTAR A SENHA DO USUARIO ANTES DE SALVAR
-        let senha = selectElement('#senha_usuario_cadastro');
-        let verificacaoSenha = selectElement('#senha_usuario_cadastro_verificacao');
-        
-        // NECESSARIO CRIAR UM TOKEN/ID PARA IDENTIFICAR CADA USUARIO COOMO ADMIN OU USER NORMAL 
-        let token;
+        const nomeCompleto = selectElement('#nome_usuario_cadastro');
+        const email = selectElement('#email_usuario_cadastro');
+        const dataNasc = selectElement('#date');
+        const tmpCiclismo = selectElement('.trilha_nivel');
+        const senha = selectElement('#senha_usuario_cadastro');
+        const verificacaoSenha = selectElement('#senha_usuario_cadastro_verificacao');
 
-        Object.keys(localStorage).forEach(key => {
-            if(key.split('-')[0] != 'user') {
-                // NECESSARIO VERIFICAR SE EXISTE ALGUMA SESSAO EXISTENTE
-                if(key == 'CLIENTE') {
-                    alert("Ja existe um usuario logado");
-                }
-                return;
-            }
+        let validacaoLoginUsuario = Object.keys(localStorage).some(key => key == 'CLIENTE');
 
-            let usuarios = localStorage.getItem(key);
-
-
-            let matchEmail = JSON.parse(usuarios).email == email.value;
-
-            if(matchEmail) {
-                alert("Credenciais envalidas.");
-            }
-            
-        });
-
-        //VERIFICACAO SE AS DUAS SENHAS SAO IGUAIS
-        if(senha.value != verificacaoSenha.value) {
-            return "As senha nao sao iguais.";
+        if(validacaoLoginUsuario) {
+            alert('Ja existe um usuario logado!');
         }
 
-        let usuarioObj = {
-            nomeCompleto: nomeCompleto.value,
-            email: email.value.toLowerCase(),
-            senha: senha.value.toLowerCase(),
-            trilhasCadastradas: []
-        };
+        const validacaoCadastroUsuario = new Promise((resolve, reject) => {
 
-        localStorage.setItem(`user-${nomeCompleto.value}`, JSON.stringify(usuarioObj));
+            const validacaoCredenciais = Object.keys(localStorage).some((key) => {
+                if (key.split('-')[0] == 'user') {
+                    let usuarios = localStorage.getItem(key);
+                
+                    let matchEmail = JSON.parse(usuarios).email == email.value;
+    
+                    return matchEmail;
+                }
+            });
 
-        alert("Usuario cadastrado com sucesso!");
+            if (senha.value != verificacaoSenha.value) {
+                reject("As senhas sao diferentes!");
+            }else if(validacaoCredenciais){
+                reject("Email ja cadastrado!");
+            }else {
+                let usuarioObj = {
+                    nomeCompleto: nomeCompleto.value,
+                    email: email.value.toLowerCase(),
+                    senha: senha.value.toLowerCase(),
+                    experiencia: tmpCiclismo.value,
+                    dataNascimento: dataNasc.value,
+                    trilhasCadastradas: []
+                };
+    
+                localStorage.setItem(`user-${nomeCompleto.value}`, JSON.stringify(usuarioObj));
+    
+                resolve("Usuario cadastrado com sucesso!");
+            }
+        });
+
+        validacaoCadastroUsuario
+            .then((m) => {
+                alert(m);
+                return selectElement('#id00').style.display = 'none';
+            })
+            .catch((e) => alert(e))
     },
     //ESTRUTURAR LOGIN DO USUARIO
     login: () => {
         const emailUsuario = selectElement('#email_login_usuario').value.toLowerCase();
         const senhaUsuario = selectElement('#senha_login_usuario').value.toLowerCase();
 
+        let validacaoLoginUsuario = Object.keys(localStorage).some(key => key == 'CLIENTE');
 
-        Object.keys(localStorage).forEach(key => {
-            if(key.split('-')[0] != 'user') {
-                // NECESSARIO VERIFICAR SE EXISTE ALGUMA SESSAO EXISTENTE
-                if(key == 'CLIENTE') {
-                    alert("Ja existe um usuario logado");
+        if(validacaoLoginUsuario) {
+            alert("Ja existe um usuario logado!");
+            window.location.href = 'UserPage.html';
+        }else {
+            Object.keys(localStorage).forEach((key) => {
+
+                if(key.split('-')[0] != 'user') {
                     return;
                 }
-                return;
-            }
-
-            //JSON DO PERFIL DO USUARIO
-            let usuario = localStorage.getItem(key);
-
-            //VERIFICAR SE EMAIL E SENHA ESTAO CORRETOS
-            let emailMatch = JSON.parse(usuario).email == emailUsuario;
-            let senhaMatch = JSON.parse(usuario).senha == senhaUsuario;
-
-            // console.log(JSON.parse(usuario));
-
-        
-            if(emailMatch && senhaMatch) {
-                const sessaoCliente = {
-                    nomeCompleto: JSON.parse(usuario).nomeCompleto,
-                    email: emailUsuario.value,
-                    ativo: true,
-                    data: new Date()
-                };
-        
-                //SALVAR SESSAO DO USUARIO
-                localStorage.setItem('CLIENTE', JSON.stringify(sessaoCliente));
-
-                window.location.href = 'UserPage.html';
-
-                return;
-            }
-        })
-
-        let teste = localStorage.getItem('CLIENTE');
-
-        if(!teste) {
-            alert('Credenciais invalidas');
+    
+                //JSON DO PERFIL DO USUARIO
+                let usuario = localStorage.getItem(key);
+    
+                //VERIFICAR SE EMAIL E SENHA ESTAO CORRETOS
+                let emailMatch = JSON.parse(usuario).email == emailUsuario;
+                let senhaMatch = JSON.parse(usuario).senha == senhaUsuario;
+    
+                if (emailMatch && senhaMatch) {
+                    const sessaoCliente = {
+                        nomeCompleto: JSON.parse(usuario).nomeCompleto,
+                        email: emailUsuario.value,
+                        ativo: true,
+                        data: new Date()
+                    };
+    
+                    localStorage.setItem('CLIENTE', JSON.stringify(sessaoCliente));
+    
+                    emailUsuario.value = '';
+                    senhaUsuario.value = '';
+    
+                    window.location.href = 'UserPage.html';
+                }
+            });
         }
-                           
-        emailUsuario.value = '';
-        senhaUsuario.value = '';
+     
         //DESABILITA O RECARREGAMENTO DA PAGINA
         this.event.preventDefault();
     },
@@ -357,33 +357,28 @@ const trailFuncs = {
         return window.location.href = "HomePage.html";
     },
 
-    // FUNCOES DE GERAIS
+
+    //ESTA FUNCAO DEVE ESTAR SENDO CARREGADA EM TODAS AS PAGINAS QUE NECESSITAM VERIFICACAO
     verificarSessaoLogado: () => {
-        const sessaoTeste = Object.keys(localStorage).forEach(key => {
-            const teste = key.split('-')[0];
+        //PRECISO VERIFICAR SE JA EXISTE ALGUM USUARIO LOGADO'
+        const verificacaoUsuarioLogado = Object.keys(localStorage).some(key => key == 'CLIENTE');
 
-            // if(teste == 'user' || teste == 'CM' || teste == 'trilha'){
-            //     return;
-            // }else if(key == 'CLIENTE') {
-            //     console.log(key);
+        //SE EXISTIR UM USUARIO LOGADO
+            // ESGUIR FLUXO DA APLICACAO
 
-            //     return window.location.href = "file:///home/oliveira/Documents/code/newLayout/pmv-ads-2022-2-e1-proj-web-t5-easy-trail/src/UsuarioLogado.html";
-            // }else {
-            //     console.log('TERCEIRO => ', key);
-
-            //     return window.location.href = "file:///home/oliveira/Documents/code/newLayout/pmv-ads-2022-2-e1-proj-web-t5-easy-trail/src/HomePage.html";
-            // }
-        });
+        //CASO NAO EXISTA UM USUARIO LOGADO RETORNA USUARIO PARA A HOME PAGE
+        if(!verificacaoUsuarioLogado && window.location.href.split('/')[9] != 'HomePage.html') {
+            window.location.href = 'HomePage.html';
+            alert('NAO EXISTE USUARIO LOGADO');
+            return;
+        }
+        return;
     }
 }
 
-//CARREGA TODAS AS TRILHAS ASSIM QUE A PAGINA ACABA DE CARREGAR
-let body = selectElement('body');
-body.onload =  () => {
-    trailFuncs.getAllTrails();
-};
 
 window.onload = () => {
+    trailFuncs.getAllTrails();
     trailFuncs.verificarSessaoLogado();
 };
-  
+
