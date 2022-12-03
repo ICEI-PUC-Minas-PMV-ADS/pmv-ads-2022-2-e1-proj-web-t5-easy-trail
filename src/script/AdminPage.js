@@ -27,6 +27,7 @@ let adminFuncionalities = {
                 <p><strong>Descricao:</strong> ${trailObj.descricao}</p>
                 <p><strong>Local:</strong> ${trailObj.local}</p>
                 <p><strong>Altimetria:</strong> ${trailObj.altimetria}</p>
+                <button data-nome="${trailObj.nome}" onClick="adminFuncionalities.excluirUser(this)">Excluir</button>
             </div>`;
 
             return trailObj;
@@ -100,6 +101,7 @@ let adminFuncionalities = {
             <div class="userHtmlItem">
                 <span><b>Nome:</b> </span> <span> ${nomeCompleto}</span><br>
                 <span><b>Email:</b> </span> <span> ${email}</span><br>
+                <button data-email="${email}" onClick="adminFuncionalities.excluirUser(this)">Excluir</button>
             </div>
             `;
 
@@ -166,11 +168,49 @@ let adminFuncionalities = {
                 respostaDuvida: inputAnswer.value
             }));
         });
+    },
+    excluirUser: (e) => {
+        let {email, nome} = e.dataset;
+
+            Object.keys(localStorage).forEach((key) => {
+                if(email) {
+                    if(key.split("-")[0] != 'user'){
+                        return;
+                    }
+    
+                   let usuarios = JSON.parse(localStorage.getItem(key));
+    
+                   let match = usuarios.email == email;
+    
+                   if(match) {
+                    localStorage.removeItem(key);
+                    selectElement('#usuarios_cadastrados').innerHTML = '';
+    
+                    adminFuncionalities.getAllUsers();
+                   }
+                }else if(nome) {
+                    if(key.split("-")[0] != 'trilha'){
+                        return;
+                    }
+    
+                   let trilhas = JSON.parse(localStorage.getItem(key));
+    
+                   let match = trilhas.nome == nome;
+    
+                   if(match) {
+                    localStorage.removeItem(key);
+                    selectElement('#trilhas_cadastradas').innerHTML = '';
+    
+                    adminFuncionalities.getAllTrails();
+                   }
+                }
+               
+            })
     }
 };
 
 //FAZ TODA A RENDERIZACAO APOS O CARREGAMENTO DO BODY
-selectElement('body').onload =  () => {
+window.onload =  () => {
     //CARREGA TODAS AS TRILHAS
     adminFuncionalities.getAllTrails();
     //CARREGA TODAS AS QUESTOES

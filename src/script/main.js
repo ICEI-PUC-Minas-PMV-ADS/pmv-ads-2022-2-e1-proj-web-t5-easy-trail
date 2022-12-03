@@ -110,7 +110,6 @@ const trailFuncs = {
         const nivelTrilha = selectElement('.trilha_nivel').value;
         //CONTAINER ONDE VAO SER RETORNADAS TODAS AS TRILHAS
         const trilhasContainer = selectElement('.trilhas_pesquisa');
-        console.log("XPTO")
 
         this.event.preventDefault();
 
@@ -209,7 +208,7 @@ const trailFuncs = {
             trilha_duracao: trilhaDuracao.value,
             nivel: dificuldadeTrilha.value,
             tipo: tipoTrilha.value,
-            recomendacao: recomTrilha.value
+            recomendacao: recomTrilha.value,
         };
 
         localStorage.setItem(`trilha-${trilhaNome.value}`, JSON.stringify(trilhaObj));
