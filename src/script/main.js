@@ -361,6 +361,25 @@ const trailFuncs = {
         //PRECISO VERIFICAR SE JA EXISTE ALGUM USUARIO LOGADO'
         const verificacaoUsuarioLogado = Object.keys(localStorage).some(key => key == 'CLIENTE');
 
+        if(verificacaoUsuarioLogado) {
+            
+        
+        
+        }
+
+        function showDivs(){
+            if(clickado) {
+                trilhasFav.style.display= "block";
+                userConfig.style.display= "none";
+                clickado = false;
+            } else {
+                trilhasFav.style.display= "none";
+                userConfig.style.display= "block";
+                clickado = true;
+            }
+        }
+
+
         //SE EXISTIR UM USUARIO LOGADO
             // ESGUIR FLUXO DA APLICACAO
 

@@ -36,107 +36,7 @@
         </ul>
     </div>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-          <img onclick="location=href='HomePage.html'" src="images/logoEasy.png" width="120" alt="100">
-          <div>
-            <button class="btn btn-danger"
-              onclick="document.getElementById('id00').style.display='block'">Cadastre-se</button>
-            <button class="btn btn-danger" onclick="document.getElementById('id01').style.display='block'">Entrar</button>
-          </div>
-  
-          <div id="id00" class="modal">
-            <form class="modal-content">
-              <div class="container">
-                <span onclick="document.getElementById('id00').style.display='none'" class="close" title="close">&times;</span>
-                <label for="name"><b>Nome</b></label>
-                <input type="text" placeholder="Digite o seu nome completo" name="name" required id="nome_usuario_cadastro">
-                <label for="email"><b>Email</b></label>
-                <input type="text" placeholder="Digite o seu Email" name="email" required id="email_usuario_cadastro">
-
-                <div class="d-flex justify-content-center">
-                  <div class="containerC">
-                    <div class="row">
-                
-                      <div class="col-sm-6 justify-content-center align-self-center p-2">
-                        <div class="form-floating">
-                          <div>
-                            <label><b>Data de Nascimento</b></label>
-                          </div>
-                          <input type="date" class="form-control" id="date">
-                        </div>
-                      </div>
-                      <div class="col-sm-6 justify-content-center align-self-center width=50%">
-                        <div>
-                          <label for=""><b>Tempo de Ciclismo</b></label>
-                        </div>
-                        <select id="floatingSelect" class="trilha_nivel form-select" required>
-                          <option value="">-</option>
-                          <option value="1">1 Ano</option>
-                          <option value="2">2 Anos</option>
-                          <option value="3">3 Anos</option>
-                          <option value="3">4 Anos</option>
-                          <option value="3">5 Anos</option>
-                          <option value="3">6 Anos</option>
-                          <option value="3">7 Anos</option>
-                          <option value="3">8 Anos</option>
-                          <option value="3">9 Anos</option>
-                          <option value="3">10 Anos</option>
-                          <option value="3">Acima de 10 Anos</option>
-                        </select>
-                      </div>
-                
-                      <div class="col-sm-6 justify-content-center align-self-center p-2">
-                        <div class="form-floating">
-                          <div>
-                            <label for="psw"><b>Senha</b></label>
-                          </div>
-                          <input type="password" placeholder="Digite sua senha" name="psw" required id="senha_usuario_cadastro">
-                        </div>
-                      </div>
-                
-                      <div class="col-sm-6 justify-content-center align-self-center width=50%">
-                        <div>
-                          <label for="psw-repeat"><b>Repita sua Senha</b></label>
-                        </div>
-                        <input type="password" placeholder="Digite sua senha" name="psw-repeat" required
-                          id="senha_usuario_cadastro_verificacao">
-                      </div>
-                
-                    </div>
-                  </div>
-                </div>
-
-                <button type="submit" onclick="trailFuncs.cadastrarUsuario()">Cadastrar</button>
-                <button type="button" onclick="document.getElementById('id00').style.display='none'"
-                  class="cancelarbtn">Cancelar</button>
-              </div>
-            </form>
-          </div>
-
-          <div id="id01" class="modal">
-          
-            <form class="modal-content animate">
-              <div class="imgcontainer">
-                <span onclick="document.getElementById('id01').style.display='none'" class="close"
-                  title="Close Modal">&times;</span>
-              </div>
-              <div class="containerX">
-                <label for="uname"><b>Usuário</b></label>
-                <input type="text" placeholder="Digite seu e-mail" name="uname" required id="email_login_usuario">
-                <label for="psw"><b>Senha</b></label>
-                <input type="password" placeholder="Digite sua senha" name="psw" required id="senha_login_usuario">
-                <button type="submit" onclick="trailFuncs.login()">Entrar</button>
-              </div>
-              <div class="containerX" style="background-color:#f1f1f1">
-                <button type="button" onclick="document.getElementById('id01').style.display='none'"
-                  class="cancelarbtn">Cancelar</button>
-              </div>
-            </form>
-          
-          </div>
-            
-        </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="logado">
       </nav>
 
     <section>
@@ -208,7 +108,8 @@
 
             <div class="col">
                 <div><b>Dificuldade</b></div>
-                <div><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="#EB5C0C"
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="#EB5C0C"
                         class="bi bi-reception-4" viewBox="0 0 16 16">
                         <path
                             d="M0 11.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-2zm4 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5zm4 0a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5zm4 0a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5z" />
@@ -243,6 +144,7 @@
 
     </footer>
 
+    <script src="script/headerUserlogado.js"></script>
     <script src="script/main.js"></script>
     <script src="climatempo.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
