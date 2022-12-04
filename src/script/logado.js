@@ -1,8 +1,10 @@
 window.onload = () => {
     let userData = JSON.parse(localStorage.getItem('CLIENTE'));
     let name = document.querySelector('#NameUser');
+
     const {
-    nomeCompleto
+    nomeCompleto,
     } = userData;
+
     name.innerHTML = nomeCompleto;
     };

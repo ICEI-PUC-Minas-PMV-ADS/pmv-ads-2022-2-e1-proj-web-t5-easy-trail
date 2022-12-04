@@ -331,14 +331,13 @@ const trailFuncs = {
                 if (emailMatch && senhaMatch) {
                     const sessaoCliente = {
                         nomeCompleto: JSON.parse(usuario).nomeCompleto,
-                        email: emailUsuario.value,
+                        email: selectElement('#email_login_usuario').value,
                         ativo: true,
                         data: new Date()
                     };
     
                     localStorage.setItem('CLIENTE', JSON.stringify(sessaoCliente));
     
-                    emailUsuario.value = '';
                     senhaUsuario.value = '';
     
                     window.location.href = 'UserPage.html';
@@ -365,8 +364,10 @@ const trailFuncs = {
         //SE EXISTIR UM USUARIO LOGADO
             // ESGUIR FLUXO DA APLICACAO
 
+        const path = window.location.href.split('/');
+
         //CASO NAO EXISTA UM USUARIO LOGADO RETORNA USUARIO PARA A HOME PAGE
-        if(!verificacaoUsuarioLogado && window.location.href.split('/')[9] != 'HomePage.html') {
+        if(!verificacaoUsuarioLogado && path[path.length - 1] != 'HomePage.html') {
             window.location.href = 'HomePage.html';
             alert('NAO EXISTE USUARIO LOGADO');
             return;
