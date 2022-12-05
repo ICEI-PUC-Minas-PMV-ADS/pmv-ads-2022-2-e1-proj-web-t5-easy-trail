@@ -1,60 +1,77 @@
+
 const cardBody = {
-    dadosCards: [
-        {
-            id: 10,
-            nome: "Laranjeiras",
-            descricao: "Trilha bastante verde, com grande e vasta vegetação de mata Atlantica, pequenos cursos de água e panoramas de tirar o folego.",
-            imagem: "./images/460.jpg",
-            link: 'Laranjeiras.html',
-            moreHide: " É uma daquelas trilhas que você fica de queixo caído, devido a suas paisagens, belos mirantes e trechos por mata fechada que nos dão aquela sensação de aventura épica",
-            bookmark: "cardBody.dadosCards[0]"
-        },
-        {
-            id: 11,
-            nome: "Mirante das Goiabeiras",
-            descricao: "Trajeto variado com subidas e descidas com pedregulhos soltos risco de torção por isso muita atenção ao passar pelo corredores",
-            imagem: "./images/462.jpg",
-            link: 'MiranteGoiabeiras.html',
-            moreHide: " fechados seguir muito atento aonde pisar mas tirando isso uma aventura e tanta e sem deixar de contemplar há bela da natureza.",
-            bookmark: "cardBody.dadosCards[1]"
-        },
-        {
-            id: 12,
-            nome: "Caiçara",
-            descricao: "logo após um bom trecho dessa estradinha, a trilha se separa para dois locais dinstintos o da esquerda leva para um açude médio",
-            imagem: "./images/461.jpg",
-            link: 'Caicara.html',
-            moreHide: " (um pouquinho mais longe) e a trilha da direita para um açude menor mas bem legal também. Os dois açudes são limpos, sem desníveis, com a água batendo no meio da barriga até uns 25m à dentro. A paisagem em volta é bem bonita, agradável e tranquila.",
-            bookmark: "cardBody.dadosCards[2]"
-        },
-        {
-            id: 13,
-            nome: "3 Lagoas",
-            descricao: "O caminho por essa trilha oferece desde cachoeiras, parques, até belas cidadezinhas que faz qualquer amante das trilhas encarar",
-            imagem: "./images/464.jpg",
-            link: '3lagoas.html',
-            moreHide: " de bom animo o desafio, ao chegar no destino, os ciclistas costumam se refrescar com um bom banho nas cachoeira para renovarem suas energias. O percurso passa por cachoeiras, algumas cidadezinhas bonitas e parques que são ótimos para passear com sua bike.",
-            bookmark: "cardBody.dadosCards[3]"
-        },
-        {
-            id: 14,
-            nome: "Estradão do Vento",
-            descricao: "Além de ser uma trilha muito bela, esse local é considerado ainda um patrimônio cultural, pois segundo historiadores",
-            imagem: "./images/467.jpg",
-            link: 'estradao.html',
-            moreHide: " esse foi o lugar que os portugueses disseram ter avistado terra e gritaram “Terra à vista!”, sendo muito interessante também para quem gosta de locais históricos.",
-            bookmark: "cardBody.dadosCards[4]"
-        },
-        {
-            id: 15,
-            nome: "Pata da Vaca",
-            descricao: "Esse terreno é um pouco acidentado, apresentado estradas de terra e de cascalho, raízes expostas, rochas e riachos, o que exige",
-            imagem: "./images/465.jpg",
-            link: 'patadavaca.html',
-            moreHide: " um pouco mais do desempenho do ciclista. essa trilha não é tão fácil de percorrer, sendo necessário inclusive que a bike que você irá escolher para pedalar, nesse caso, seja uma excelente mountain bike, pois elas se adequam melhor a esse tipo de terreno.",
-            bookmark: "cardBody.dadosCards[5]"
-        }
-    ]
+  dadosCards: [
+    {
+      id: 10,
+      nome: "Laranjeiras",
+      descricao:
+        "Trilha bastante verde, com grande e vasta vegetação de mata Atlantica, pequenos cursos de água e panoramas de tirar o folego.",
+      imagem: "./images/460.jpg",
+      link: "Laranjeiras.html",
+      moreHide: " É uma daquelas trilhas que você fica de queixo caído, devido a suas paisagens, belos mirantes e trechos por mata fechada que nos dão aquela sensação de aventura épica",
+      altimetria: "700 metros",
+      duracaoEstimada: "01h50",
+      dificuldade: "Alta",
+      tipodeTrilha: "Rural",
+      recomendacao: "Individual ou Grupo",
+      bookmark: "cardBody.dadosCards[0]",
+    },
+    {
+      id: 11,
+      nome: "Mirante das Goiabeiras",
+      descricao:
+        "Trajeto variado com subidas e descidas com pedregulhos soltos risco de torção por isso muita atenção ao passar pelo corredores",
+      imagem: "./images/462.jpg",
+      link: "MiranteGoiabeiras.html",
+      moreHide:
+        " fechados seguir muito atento aonde pisar mas tirando isso uma aventura e tanta e sem deixar de contemplar há bela da natureza.",
+      bookmark: "cardBody.dadosCards[1]",
+    },
+    {
+      id: 12,
+      nome: "Caiçara",
+      descricao:
+        "logo após um bom trecho dessa estradinha, a trilha se separa para dois locais dinstintos o da esquerda leva para um açude médio",
+      imagem: "./images/461.jpg",
+      link: "Caicara.html",
+      moreHide:
+        " (um pouquinho mais longe) e a trilha da direita para um açude menor mas bem legal também. Os dois açudes são limpos, sem desníveis, com a água batendo no meio da barriga até uns 25m à dentro. A paisagem em volta é bem bonita, agradável e tranquila.",
+      bookmark: "cardBody.dadosCards[2]",
+    },
+    {
+      id: 13,
+      nome: "3 Lagoas",
+      descricao:
+        "O caminho por essa trilha oferece desde cachoeiras, parques, até belas cidadezinhas que faz qualquer amante das trilhas encarar",
+      imagem: "./images/464.jpg",
+      link: "3lagoas.html",
+      moreHide:
+        " de bom animo o desafio, ao chegar no destino, os ciclistas costumam se refrescar com um bom banho nas cachoeira para renovarem suas energias. O percurso passa por cachoeiras, algumas cidadezinhas bonitas e parques que são ótimos para passear com sua bike.",
+      bookmark: "cardBody.dadosCards[3]",
+    },
+    {
+      id: 14,
+      nome: "Estradão do Vento",
+      descricao:
+        "Além de ser uma trilha muito bela, esse local é considerado ainda um patrimônio cultural, pois segundo historiadores",
+      imagem: "./images/467.jpg",
+      link: "estradao.html",
+      moreHide:
+        " esse foi o lugar que os portugueses disseram ter avistado terra e gritaram “Terra à vista!”, sendo muito interessante também para quem gosta de locais históricos.",
+      bookmark: "cardBody.dadosCards[4]",
+    },
+    {
+      id: 15,
+      nome: "Pata da Vaca",
+      descricao:
+        "Esse terreno é um pouco acidentado, apresentado estradas de terra e de cascalho, raízes expostas, rochas e riachos, o que exige",
+      imagem: "./images/465.jpg",
+      link: "patadavaca.html",
+      moreHide:
+        " um pouco mais do desempenho do ciclista. essa trilha não é tão fácil de percorrer, sendo necessário inclusive que a bike que você irá escolher para pedalar, nesse caso, seja uma excelente mountain bike, pois elas se adequam melhor a esse tipo de terreno.",
+      bookmark: "cardBody.dadosCards[5]",
+    },
+  ],
 };
 
 // TRILHAS CRIADAS
@@ -86,7 +103,7 @@ let meuModal = `
 `;
 
 cardBody.dadosCards.forEach((card) => {
-    let cardHtml = `
+  let cardHtml = `
         <div class="col mb-4 shadow-lg">
             <div class="card">
                 <img onclick="location=href='${card.link}'" src="${card.imagem}" class="card-img-top d-block w-100" style="cursor: pointer;">
@@ -104,38 +121,20 @@ cardBody.dadosCards.forEach((card) => {
             </div>
         </div>
     `;
-    document.getElementById("all__cards").innerHTML += cardHtml;
-})
+  document.getElementById("all__cards").innerHTML += cardHtml;
+});
 
 let btnShow = document.getElementById("mostra__modal");
 let clicked = false;
 
-function showDiv(){
-    if(clicked) {
-        btnShow.style.visibility= "visible";
-        btnShow.style.opacity= "1";
-        clicked = false;
-    } else {
-        btnShow.style.visibility= "hidden";
-        btnShow.style.opacity= "0";
-        clicked = true;
-    }
-}
-
-let trilhasFavoritas  = [];
-function addToFavoritas(trilha) {
-    if(localStorage.getItem("trilhasFavoritas") !== null) {
-        if(localStorage.getItem("trilhasFavoritas").includes(trilha.id)){
-            return alert("Trilha já está favoritada!");
-        } else {
-            trilhasFavoritas = JSON.parse(localStorage.getItem("trilhasFavoritas"));
-            trilhasFavoritas.push(trilha);
-            localStorage.setItem("trilhasFavoritas", JSON.stringify(trilhasFavoritas));
-            return alert("Trilha favoritada!");
-        }
-    } else {
-        trilhasFavoritas.push(trilha);
-        localStorage.setItem("trilhasFavoritas", JSON.stringify(trilhasFavoritas));
-        return alert("Trilha favoritada!");
-    }
+function showDiv() {
+  if (clicked) {
+    btnShow.style.visibility = "visible";
+    btnShow.style.opacity = "1";
+    clicked = false;
+  } else {
+    btnShow.style.visibility = "hidden";
+    btnShow.style.opacity = "0";
+    clicked = true;
+  }
 }

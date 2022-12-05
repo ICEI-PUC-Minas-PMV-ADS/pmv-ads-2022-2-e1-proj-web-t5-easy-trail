@@ -202,7 +202,7 @@ const trailFuncs = {
 
         const trilhaObj = {
             nome: trilhaNome.value,
-            local: trilhaLocal.value.toLowerCase(),
+            local: trilhaLocal.value,
             descricao: trilhaDescricao.value,
             altimetria: trilhaAltimetria.value,
             trilha_duracao: trilhaDuracao.value,
@@ -258,12 +258,15 @@ const trailFuncs = {
         const tmpCiclismo = selectElement('.trilha_nivel');
         const senha = selectElement('#senha_usuario_cadastro');
         const verificacaoSenha = selectElement('#senha_usuario_cadastro_verificacao');
+        const nomeDisplay = nomeCompleto.value;
 
         let validacaoLoginUsuario = Object.keys(localStorage).some(key => key == 'CLIENTE');
 
-        if(validacaoLoginUsuario) {
-            alert('Ja existe um usuario logado!');
-        }
+        // if (!nomeCompleto.value && !email.value && !dataNasc.value && !tmpCiclismo.value && !senha.value && !verificacaoSenha.value) {
+        //     return alert("Preencha todos os campos!");
+        // }else if(validacaoLoginUsuario){
+        //     alert('Ja existe um usuario logado!');
+        // }
 
         const validacaoCadastroUsuario = new Promise((resolve, reject) => {
 
@@ -278,17 +281,19 @@ const trailFuncs = {
             });
 
             if (senha.value != verificacaoSenha.value) {
-                reject("As senhas sao diferentes!");
+                reject("As senhas são diferentes!");
             }else if(validacaoCredenciais){
-                reject("Email ja cadastrado!");
+                reject("Email já cadastrado!");
             }else {
                 let usuarioObj = {
                     nomeCompleto: nomeCompleto.value,
+                    nomeDisplay: nomeDisplay,
                     email: email.value.toLowerCase(),
                     senha: senha.value.toLowerCase(),
                     experiencia: tmpCiclismo.value,
                     dataNascimento: dataNasc.value,
-                    trilhasCadastradas: []
+                    trilhasCadastradas: [],
+                    trilhasFavoritadas: []
                 };
     
                 localStorage.setItem(`user-${nomeCompleto.value}`, JSON.stringify(usuarioObj));
@@ -331,7 +336,9 @@ const trailFuncs = {
                 if (emailMatch && senhaMatch) {
                     const sessaoCliente = {
                         nomeCompleto: JSON.parse(usuario).nomeCompleto,
+                        nomeDisplay: JSON.parse(usuario).nomeDisplay,
                         email: selectElement('#email_login_usuario').value,
+                        senha: senhaUsuario,
                         ativo: true,
                         data: new Date()
                     };
@@ -388,6 +395,6 @@ const trailFuncs = {
 
 window.onload = () => {
     trailFuncs.getAllTrails();
-    trailFuncs.verificarSessaoLogado();
+    // trailFuncs.verificarSessaoLogado();
 };
 

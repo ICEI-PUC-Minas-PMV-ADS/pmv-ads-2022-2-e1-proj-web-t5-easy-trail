@@ -15,22 +15,7 @@
 </head>
 
 <body style="background-image: url(images/map.jpg);">
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-        <img src="images/logoEasy.png" width="120" alt="Logomarca">      
-        <div class="row align-items-center">
-            <div class="header-list col">
-                <img src="images/icons/notificacao.png" width="30" alt="icone notifcação">
-            </div>
-            <div class="header-list col">
-                <img src="images/icons/user.png" width="30" style="cursor: pointer;" onclick="location=href='UserPage.html'" alt="icone usuário">
-            </div>
-            <div class="header-list col">
-                <img src="images/icons/logout.png" width="30" style="cursor: pointer;" alt="icone sair">
-            </div>
-        </div>
-    </div>
-</nav>    
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" id="logado"></nav>   
     
 <section id="container--usuario-logado-main">
 
@@ -47,10 +32,12 @@
 
           <div class="col-4 align-self-center" style="width: 90%;">
             <div class="list-group" id="list-tab" role="tablist">
-              <a class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="list"
-                onclick="location=href='criacaoTrilha.html'" style="cursor: pointer;" role="tab">Adicionar Trilha</a>
               <a class="list-group-item list-group-item-action" id="list-messages-list" data-bs-toggle="list"
-                onclick="showDivs()" style="cursor: pointer;" role="tab">Configurações</a>
+                onclick="showAdmin()" style="cursor: pointer;" role="tab">Trilhas Cadastradas</a>
+            <a class="list-group-item list-group-item-action" id="list-messages-list" data-bs-toggle="list"
+                onclick="showAdmin()" style="cursor: pointer;" role="tab">Usuários cadastrados</a>
+              <a class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="list"
+              onclick="location=href='criacaoTrilha.html'" style="cursor: pointer;" role="tab">Adicionar Trilha</a>
             </div>
           </div>
 
@@ -58,7 +45,7 @@
             <div class="tab-content" id="nav-tabContent">
               <div class="tab-pane fade" id="list-add" role="tabpanel" aria-labelledby="list-profile-list"></div>
               <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-messages-list"></div>
-
+              <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-users-list"></div>
             </div>
           </div>
 
@@ -73,13 +60,13 @@
             <div class="container--metade2">
               <h2>Visão Geral</h2>
 
-              <div class="card-salvas">
+              <div class="card-salvas" id="listaUsuarios">
                 <div class="card-exemplo2" id="usuarios_cadastrados">
                   <h2 class="item">Usuários cadastrados</h2>
                 </div>
               </div>
 
-              <div class="card-salvas">
+              <div class="card-salvas" id="listaTrilhas">
                 <div class="card-exemplo2" id="trilhas_cadastradas">
                   <h2 class="item">Trilhas cadastradas</h2>
                 </div>
@@ -107,6 +94,7 @@
       </div>
   </footer>
 
+  <script src="script/headerUserlogado.js"></script>
   <script src="script/main.js"></script>
   <script src="script/AdminPage.js"></script>
   <script src="script/cards.js"></script>
