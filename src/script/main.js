@@ -363,14 +363,23 @@ const trailFuncs = {
 
         //SE EXISTIR UM USUARIO LOGADO
             // ESGUIR FLUXO DA APLICACAO
-
         const path = window.location.href.split('/');
 
+        // console.log(verificacaoUsuarioLogado)
+
         //CASO NAO EXISTA UM USUARIO LOGADO RETORNA USUARIO PARA A HOME PAGE
-        if(!verificacaoUsuarioLogado && path[path.length - 1] != 'HomePage.html') {
-            window.location.href = 'HomePage.html';
-            alert('NAO EXISTE USUARIO LOGADO');
-            return;
+        if(!verificacaoUsuarioLogado) {
+            switch (path[path.length - 1]) {
+                case 'AdminPage.html':
+                case 'Userloged.html':
+                case 'UserPage.html':
+                case 'criacaoTrilha.html':
+                    alert('NAO EXISTE USUARIO LOGADO');
+                    window.location.href = 'HomePage.html';
+                    break;
+                default:
+                    break;
+            }
         }
         return;
     }
