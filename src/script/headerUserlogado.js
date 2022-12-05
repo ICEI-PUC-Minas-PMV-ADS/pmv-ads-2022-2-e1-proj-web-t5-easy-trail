@@ -3,7 +3,7 @@ const verificacaoUsuarioLogado = Object.keys(localStorage).some(key => key == 'C
 if(verificacaoUsuarioLogado) {
     let navHeaderLogado = ` 
     <div class="container-fluid">
-        <img onclick="location=href='HomePage.html'" src="images/logoEasy.png" width="120" alt="100">      
+        <img onclick="location=href='HomePage.html'" src="images/logoEasy.png" width="120" alt="100" style="cursor: pointer;">      
         <div class="row align-items-center">
             <div class="header-list col">
                 <img src="images/icons/notificacao.png" width="30" alt="icone notifcação">
@@ -22,7 +22,7 @@ if(verificacaoUsuarioLogado) {
 } else {
     navHeaderLogado = `
     <div class="container-fluid">
-        <img onclick="location=href='HomePage.html'" src="images/logoEasy.png" width="120" alt="100">
+        <img onclick="location=href='HomePage.html'" src="images/logoEasy.png" width="120" alt="100" style="cursor: pointer;">
         <div>
         <button class="btn btn-danger"
             onclick="document.getElementById('id00').style.display='block'">Cadastre-se</button>

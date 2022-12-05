@@ -258,14 +258,15 @@ const trailFuncs = {
         const tmpCiclismo = selectElement('.trilha_nivel');
         const senha = selectElement('#senha_usuario_cadastro');
         const verificacaoSenha = selectElement('#senha_usuario_cadastro_verificacao');
+        const nomeDisplay = nomeCompleto.value;
 
         let validacaoLoginUsuario = Object.keys(localStorage).some(key => key == 'CLIENTE');
 
         // if (!nomeCompleto.value && !email.value && !dataNasc.value && !tmpCiclismo.value && !senha.value && !verificacaoSenha.value) {
         //     return alert("Preencha todos os campos!");
-        }else if(validacaoLoginUsuario){
-            alert('Ja existe um usuario logado!');
-        }
+        // }else if(validacaoLoginUsuario){
+        //     alert('Ja existe um usuario logado!');
+        // }
 
         const validacaoCadastroUsuario = new Promise((resolve, reject) => {
 
@@ -286,6 +287,7 @@ const trailFuncs = {
             }else {
                 let usuarioObj = {
                     nomeCompleto: nomeCompleto.value,
+                    nomeDisplay: nomeDisplay,
                     email: email.value.toLowerCase(),
                     senha: senha.value.toLowerCase(),
                     experiencia: tmpCiclismo.value,
@@ -334,7 +336,9 @@ const trailFuncs = {
                 if (emailMatch && senhaMatch) {
                     const sessaoCliente = {
                         nomeCompleto: JSON.parse(usuario).nomeCompleto,
+                        nomeDisplay: JSON.parse(usuario).nomeDisplay,
                         email: selectElement('#email_login_usuario').value,
+                        senha: senhaUsuario,
                         ativo: true,
                         data: new Date()
                     };
@@ -364,25 +368,6 @@ const trailFuncs = {
         //PRECISO VERIFICAR SE JA EXISTE ALGUM USUARIO LOGADO'
         const verificacaoUsuarioLogado = Object.keys(localStorage).some(key => key == 'CLIENTE');
 
-        if(verificacaoUsuarioLogado) {
-            
-        
-        
-        }
-
-        function showDivs(){
-            if(clickado) {
-                trilhasFav.style.display= "block";
-                userConfig.style.display= "none";
-                clickado = false;
-            } else {
-                trilhasFav.style.display= "none";
-                userConfig.style.display= "block";
-                clickado = true;
-            }
-        }
-
-
         //SE EXISTIR UM USUARIO LOGADO
             // ESGUIR FLUXO DA APLICACAO
 
@@ -401,6 +386,6 @@ const trailFuncs = {
 
 window.onload = () => {
     trailFuncs.getAllTrails();
-    trailFuncs.verificarSessaoLogado();
+    // trailFuncs.verificarSessaoLogado();
 };
 

@@ -126,7 +126,7 @@
           <div>
             <textarea class="txtAreaForm form-control pl-3 shadow mb-2" placeholder="Escreva seu comentário.."
             id="comentariosTrilha" rows="3" required></textarea>
-            <button class="btn btn-danger" type="submit" onclick="comment()">Enviar</button>
+            <button class="btn btn-danger" type="submit" onclick="comment(), trailFuncs.verificarSessaoLogado();">Enviar</button>
           </div>
             <p style="font-size: 0.1rem; color: gray; width:70%;" class="p-3" id="usuariocoment"><b id="nomeusuario"></b></p>
         </div>

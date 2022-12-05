@@ -138,24 +138,3 @@ function showDiv() {
     clicked = true;
   }
 }
-
-let trilhasFavoritas = [];
-function addToFavoritas(trilha) {
-  if (localStorage.getItem("trilhasFavoritas") !== null) {
-    if (localStorage.getItem("trilhasFavoritas").includes(trilha.id)) {
-      return alert("Trilha já está favoritada!");
-    } else {
-      trilhasFavoritas = JSON.parse(localStorage.getItem("trilhasFavoritas"));
-      trilhasFavoritas.push(trilha);
-      localStorage.setItem(
-        "trilhasFavoritas",
-        JSON.stringify(trilhasFavoritas)
-      );
-      return alert("Trilha favoritada!");
-    }
-  } else {
-    trilhasFavoritas.push(trilha);
-    localStorage.setItem("trilhasFavoritas", JSON.stringify(trilhasFavoritas));
-    return alert("Trilha favoritada!");
-  }
-}
