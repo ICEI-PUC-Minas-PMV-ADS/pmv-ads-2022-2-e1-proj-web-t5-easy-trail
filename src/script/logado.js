@@ -24,7 +24,7 @@ function alterarNome() {
     if(inputUsuario) {
         userNewData.nomeDisplay = inputUsuario;
         localStorage.setItem(`user-${userData.nomeCompleto}`, JSON.stringify(userNewData));
-        alert("Nome alterado com sucesso!");
+        alert("Nome alterado com sucesso! Favor entrar novamente");
         trailFuncs.logOut();
     }
 }
@@ -65,9 +65,11 @@ function addToFavoritas(trilha) {
 }
 
 function removerFavoritos(trilha) {
-    console.log(trilha)
-    // let trilhasFavoritas = userNewData.trilhasFavoritadas;
-    userNewData.trilhasFavoritadas.splice(trilha, 1);
+    userNewData.trilhasFavoritadas.filter((item, index, array) => {
+        if(item.id == trilha){
+        array.splice(index, 1)
+        } 
+    });
     localStorage.setItem(`user-${userName.nomeCompleto}`, JSON.stringify(userNewData));
     alert("Trilha removida!");
     window.location.reload();
