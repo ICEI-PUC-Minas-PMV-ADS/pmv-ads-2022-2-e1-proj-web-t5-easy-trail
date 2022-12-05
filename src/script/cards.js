@@ -1,32 +1,3 @@
-const detalheTrilha = {
-  Dificuldade: [
-    {
-      Alta: '<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="#EB5C0C" class="bi bi-reception-4" viewBox="0 0 16 16"><path d="M0 11.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-2zm4-3a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-5zm4-3a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-8zm4-3a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v11a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-11z"/></svg> Alta',
-    },
-    {
-      Media:
-        '<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="#EB5C0C"    class="bi bi-reception-4" viewBox="0 0 16 16"> <path d="M0 11.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-2zm4-3a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-5zm4-3a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-8zm4 8a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5z" /></svg> Média',
-    },
-    {
-      Baixa:
-        '<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="#EB5C0C" class="bi bi-reception-4" viewBox="0 0 16 16"><path d="M0 11.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-2zm4 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5zm4 0a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5zm4 0a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5z" /></svg> Baixa',
-    },
-  ],
-//   recomendacao: [
-//     {
-//       Individual: '',
-//     },
-//     {
-//       Grupo:
-//         '',
-//     },
-//     {
-//       IndividualouGrupo:
-//         '',
-//     },
-//   ],
-};
-
 
 const cardBody = {
   dadosCards: [
@@ -40,7 +11,7 @@ const cardBody = {
       moreHide: " É uma daquelas trilhas que você fica de queixo caído, devido a suas paisagens, belos mirantes e trechos por mata fechada que nos dão aquela sensação de aventura épica",
       altimetria: "700 metros",
       duracaoEstimada: "01h50",
-      dificuldade: detalheTrilha.Dificuldade[0],
+      dificuldade: "Alta",
       tipodeTrilha: "Rural",
       recomendacao: "Individual ou Grupo",
       bookmark: "cardBody.dadosCards[0]",

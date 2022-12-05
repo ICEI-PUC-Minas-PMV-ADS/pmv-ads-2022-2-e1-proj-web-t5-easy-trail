@@ -47,10 +47,12 @@
 
           <div class="col-4 align-self-center" style="width: 90%;">
             <div class="list-group" id="list-tab" role="tablist">
-              <a class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="list"
-                onclick="location=href='criacaoTrilha.html'" style="cursor: pointer;" role="tab">Adicionar Trilha</a>
               <a class="list-group-item list-group-item-action" id="list-messages-list" data-bs-toggle="list"
-                onclick="showDivs()" style="cursor: pointer;" role="tab">Configurações</a>
+                onclick="showAdmin()" style="cursor: pointer;" role="tab">Trilhas Cadastradas</a>
+            <a class="list-group-item list-group-item-action" id="list-messages-list" data-bs-toggle="list"
+                onclick="showAdmin()" style="cursor: pointer;" role="tab">Usuários cadastrados</a>
+              <a class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="list"
+              onclick="location=href='criacaoTrilha.html'" style="cursor: pointer;" role="tab">Adicionar Trilha</a>
             </div>
           </div>
 
@@ -58,7 +60,7 @@
             <div class="tab-content" id="nav-tabContent">
               <div class="tab-pane fade" id="list-add" role="tabpanel" aria-labelledby="list-profile-list"></div>
               <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-messages-list"></div>
-
+              <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-users-list"></div>
             </div>
           </div>
 
@@ -73,13 +75,13 @@
             <div class="container--metade2">
               <h2>Visão Geral</h2>
 
-              <div class="card-salvas">
+              <div class="card-salvas" id="listaUsuarios">
                 <div class="card-exemplo2" id="usuarios_cadastrados">
                   <h2 class="item">Usuários cadastrados</h2>
                 </div>
               </div>
 
-              <div class="card-salvas">
+              <div class="card-salvas" id="listaTrilhas">
                 <div class="card-exemplo2" id="trilhas_cadastradas">
                   <h2 class="item">Trilhas cadastradas</h2>
                 </div>

@@ -23,10 +23,15 @@ let adminFuncionalities = {
             trilhaContainer.innerHTML += `
             <hr>
             <div class="trilha_cadastrada_item">
-                <p><strong>Nome:</strong> ${trailObj.nome}</p>
-                <p><strong>Descricao:</strong> ${trailObj.descricao}</p>
-                <p><strong>Local:</strong> ${trailObj.local}</p>
+                <p><strong>Nome da Trilha:</strong> ${trailObj.nome}</p>
+                <p><strong>Estado:</strong> ${trailObj.local}</p>
+                <p><strong>Descrição:</strong> ${trailObj.descricao}</p>
                 <p><strong>Altimetria:</strong> ${trailObj.altimetria}</p>
+                <p><strong>Duração Estimada:</strong> ${trailObj.trilha_duracao}</p>
+                <p><strong>Dificuldade:</strong> ${trailObj.nivel}</p>
+                <p><strong>Tipo de Trilha:</strong> ${trailObj.tipo}</p>
+                <p><strong>Recomendação:</strong> ${trailObj.recomendacao}</p>
+
                 <button data-nome="${trailObj.nome}" onClick="adminFuncionalities.excluirUser(this)">Excluir</button>
             </div>`;
 
@@ -92,7 +97,9 @@ let adminFuncionalities = {
             let {
                 email, 
                 nomeCompleto,
-                trilhasCadastradas
+                dataNascimento,
+                experiencia,
+                trilhasCadastradas,
             } = userResponse;
     
             
@@ -101,11 +108,14 @@ let adminFuncionalities = {
             <div class="userHtmlItem">
                 <span><b>Nome:</b> </span> <span> ${nomeCompleto}</span><br>
                 <span><b>Email:</b> </span> <span> ${email}</span><br>
+                <span><b>Data Nascimento</b> </span> <span> ${dataNascimento}</span><br>
+                <span><b>Tempo de Ciclismo:</b> </span> <span> ${experiencia} ano(s)</span><br>
                 <button data-email="${email}" onClick="adminFuncionalities.excluirUser(this)">Excluir</button>
             </div>
             `;
 
             usersContainer.innerHTML += userHtmlItem;
+            console.log(userResponse)
             return;
         })
     },
@@ -220,3 +230,22 @@ window.onload =  () => {
 };
 
 
+
+// Admin Config
+
+const listaUsuarios = document.getElementById("listaUsuarios");
+const listaTrilhas = document.getElementById("listaTrilhas");
+let clicado = false;
+listaUsuarios.style.display = "none";
+
+function showAdmin(){
+    if(clicado) {
+        listaTrilhas.style.display= "block";
+        listaUsuarios.style.display= "none";
+        clicado = false;
+    } else {
+        listaTrilhas.style.display= "none";
+        listaUsuarios.style.display= "block";
+        clicado = true;
+    }
+}
