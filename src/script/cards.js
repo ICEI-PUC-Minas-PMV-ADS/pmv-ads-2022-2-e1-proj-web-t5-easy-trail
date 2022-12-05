@@ -102,27 +102,54 @@ let meuModal = `
     <div class="sharethis-inline-share-buttons"></div>
 `;
 
-cardBody.dadosCards.forEach((card) => {
-  let cardHtml = `
-        <div class="col mb-4 shadow-lg">
-            <div class="card">
-                <img onclick="location=href='${card.link}'" src="${card.imagem}" class="card-img-top d-block w-100" style="cursor: pointer;">
-                <div class="card-body">
-                    <h6 class="card-title"><b>${card.nome}</b></h6>
-                    <p class="card-text">${card.descricao}<span class="dots">...</span><span class="more hide">${card.moreHide}</span></p>
-                    <button class="vejamais" onclick="readMore(this)"><b>Veja Mais</b></button>
-                    <button type="button" onclick="showDiv()" style="background-color: #fff; border-style: none; width: fit-content; float: right;"><img src="./images/icons/compartilhar.png" alt="imagem-compartilhar"></button>
-                    <button onclick="addToFavoritas(${card.bookmark})" style="background-color: #fff; border-style: none; width: fit-content; float: right;"><img src="images/icons/bookmark.svg" alt="imagem-bookmark" width="26px" height="26px"></button>
-                    <div id="mostra__modal">
-                        <h3>Compartilhar<span onclick="showDiv()" style="cursor: pointer; font-size: 30px;">&times;</span></h3>
-                        ${meuModal}
-                    </div>
-                </div>
-            </div>
-        </div>
-    `;
-  document.getElementById("all__cards").innerHTML += cardHtml;
-});
+const verificacaoLogado = Object.keys(localStorage).some(key => key == 'CLIENTE');
+
+if(verificacaoLogado) {
+  cardBody.dadosCards.forEach((card) => {
+    let cardHtml = `
+          <div class="col mb-4 shadow-lg">
+              <div class="card">
+                  <img onclick="location=href='${card.link}'" src="${card.imagem}" class="card-img-top d-block w-100" style="cursor: pointer;">
+                  <div class="card-body">
+                      <h6 class="card-title"><b>${card.nome}</b></h6>
+                      <p class="card-text">${card.descricao}<span class="dots">...</span><span class="more hide">${card.moreHide}</span></p>
+                      <button class="vejamais" onclick="readMore(this)"><b>Veja Mais</b></button>
+                      <button type="button" onclick="showDiv()" style="background-color: #fff; border-style: none; width: fit-content; float: right;"><img src="./images/icons/compartilhar.png" alt="imagem-compartilhar"></button>
+                      <button onclick="addToFavoritas(${card.bookmark})" style="background-color: #fff; border-style: none; width: fit-content; float: right;"><img src="images/icons/bookmark.svg" alt="imagem-bookmark" width="26px" height="26px"></button>
+                      <div id="mostra__modal">
+                          <h3>Compartilhar<span onclick="showDiv()" style="cursor: pointer; font-size: 30px;">&times;</span></h3>
+                          ${meuModal}
+                      </div>
+                  </div>
+              </div>
+          </div>
+      `;
+    document.getElementById("all__cards").innerHTML += cardHtml;
+  });
+} else {
+  cardBody.dadosCards.forEach((card) => {
+    let cardHtml = `
+          <div class="col mb-4 shadow-lg">
+              <div class="card">
+                  <img onclick="location=href='${card.link}'" src="${card.imagem}" class="card-img-top d-block w-100" style="cursor: pointer;">
+                  <div class="card-body">
+                      <h6 class="card-title"><b>${card.nome}</b></h6>
+                      <p class="card-text">${card.descricao}<span class="dots">...</span><span class="more hide">${card.moreHide}</span></p>
+                      <button class="vejamais" onclick="readMore(this)"><b>Veja Mais</b></button>
+                      <button type="button" onclick="showDiv()" style="background-color: #fff; border-style: none; width: fit-content; float: right;"><img src="./images/icons/compartilhar.png" alt="imagem-compartilhar"></button>
+                      <div id="mostra__modal">
+                          <h3>Compartilhar<span onclick="showDiv()" style="cursor: pointer; font-size: 30px;">&times;</span></h3>
+                          ${meuModal}
+                      </div>
+                  </div>
+              </div>
+          </div>
+      `;
+    document.getElementById("all__cards").innerHTML += cardHtml;
+  });
+}
+
+
 
 let btnShow = document.getElementById("mostra__modal");
 let clicked = false;
