@@ -221,11 +221,7 @@ let adminFuncionalities = {
 
 //FAZ TODA A RENDERIZACAO APOS O CARREGAMENTO DO BODY
 window.onload =  () => {
-    //CARREGA TODAS AS TRILHAS
     adminFuncionalities.getAllTrails();
-    //CARREGA TODAS AS QUESTOES
-    // adminFuncionalities.getAllSaq();
-    //CARREGA TODOS OS USERS
     adminFuncionalities.getAllUsers();
 };
 
