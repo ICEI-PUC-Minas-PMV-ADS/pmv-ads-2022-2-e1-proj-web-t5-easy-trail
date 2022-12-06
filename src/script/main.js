@@ -316,6 +316,8 @@ const trailFuncs = {
 
         let validacaoLoginUsuario = Object.keys(localStorage).some(key => key == 'CLIENTE');
 
+        let validacaoLoginUsuario = Object.keys(localStorage).some(key => key == 'ADMIN');
+
         if(validacaoLoginUsuario) {
             alert("Ja existe um usuario logado!");
             window.location.href = 'UserPage.html';
