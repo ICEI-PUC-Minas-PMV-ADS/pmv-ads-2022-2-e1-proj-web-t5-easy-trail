@@ -121,44 +121,52 @@
 // const latitude = document.getElementById('citylat');
 // const longitude = document.getElementById('citylon'); 
 
-function getUserPosition() {
-    let url = ''
+// function getUserPosition() {
+//     let url = ''
   
-  //   navigator.geolocation.getCurrentPosition((pos) => {
-  //     let lat = pos.coords.latitude
-  //     let long = pos.coords.longitude
+//   //   navigator.geolocation.getCurrentPosition((pos) => {
+//   //     let lat = pos.coords.latitude
+//   //     let long = pos.coords.longitude
   
-    navigator.geolocation.getCurrentPosition((pos) => {
-      let lat = -18.10
-      let long = -44.38
+//     navigator.geolocation.getCurrentPosition((pos) => {
+//       let lat = 32.9331
+//       let long = 35.0827
   
-      url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&units=imperial&APPID=622296cd4fda08b69c46ccfa980f968d`
-      fetchApi(url)
-      console.log(url)
-    })
-  }
+//       url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&units=imperial&APPID=622296cd4fda08b69c46ccfa980f968d`
+//       fetchApi(url)
+//       console.log(url)
+//     })
+//   }
+
+
+// let lat = -7.24
+// let long = -36.782
+
+// url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&units=imperial&APPID=622296cd4fda08b69c46ccfa980f968d`
+// fetchApi(url)
+// console.log(url)
+
+// function fetchApi(url) {
+//   let city = document.querySelector('.city')
+//   let temperature = document.querySelector('#temp')
+//   let humidity = document.querySelector('#umidad')
+
+//   fetch(url)
+//   .then((data) => {
+//     return data.json()
+//   })
+//   .then((data) => {
+//     let tempInCelsius = ((5/9) * (data.main.temp-32)).toFixed(1);
+    
+//     city.textContent      = data.name
+//     temperature.innerHTML = tempInCelsius
+//     humidity.innerHTML    = data.main.humidity
+//   })
+//   .catch((err) => {
+//     city.innerText = `Impossível acessar o OpenWeather. Verifique a sua conexão.`;
+//     temperature.innerHTML = `-`;
+//   })
+// }
   
-  function fetchApi(url) {
-    let city = document.querySelector('.city')
-    let temperature = document.querySelector('#temp')
-    let humidity = document.querySelector('#umidad')
-  
-    fetch(url)
-    .then((data) => {
-      return data.json()
-    })
-    .then((data) => {
-      let tempInCelsius = ((5/9) * (data.main.temp-32)).toFixed(1);
-      
-      city.textContent      = data.name
-      temperature.innerHTML = tempInCelsius
-      humidity.innerHTML    = data.main.humidity
-    })
-    .catch((err) => {
-      city.innerText = `Impossível acessar o OpenWeather. Verifique a sua conexão.`;
-      temperature.innerHTML = `-`;
-    })
-  }
-  
-  getUserPosition();
+  // getUserPosition();
   

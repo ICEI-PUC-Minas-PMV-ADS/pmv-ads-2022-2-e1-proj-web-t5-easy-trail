@@ -44,6 +44,29 @@
       <div class="row col-sm-9 mt-3">
         <h2>Mirante das Goiabeiras</h2>
         <img src="images/462.jpg"  class="shadow-lg p-0 bg-body" alt="Imagem capa da trilha">
+        <!-- <H5>Minas Gerais</H5> -->
+      </div>
+      <div class="col-3 p-4 align-self-center">
+        <h5>Previsão do Tempo</h5>
+        <p>Temperatura e humidade</p>
+        <div id="temperatura">
+            <h1 class="city"></h1>
+            <h2>🌡<span id="temp"></span>°C 💧<span id='umidad'></span>%</h2>
+        </div>
+        <!-- <div class="city">Paraíba, BR</div>
+        <h6 id="citylat">-19.912998</h6>
+        <h6 id="citylon">-43.940933</h6>
+        <div>Terça, 8 Novembro 2022</div>
+        <div class="weather py-2">Nublado</div>
+        <div class="container-temp">
+            <div>22<span>°c</span></div>
+        </div> -->
+      </div>  
+    </div>
+    <!-- <div class="container-fluid d-flex bg-light">
+      <div class="row col-sm-9 mt-3">
+        <h2>Mirante das Goiabeiras</h2>
+        <img src="images/462.jpg"  class="shadow-lg p-0 bg-body" alt="Imagem capa da trilha">
       </div>
       <div class="col-3 p-4 align-self-center">
         <h5>Previsão do Tempo</h5>
@@ -55,7 +78,7 @@
           <div>22<span>°c</span></div>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <div class="container-fluid d-flex p-4 bg-white">
       <div class="row col-sm-7">
@@ -189,7 +212,37 @@
         document.getElementById('testeteste').innerHTML += `${element.nome}: ${element.comentario} <br>`;
     });
   </script>
+  
+  <script id="apiTempo">
+    let lat = -18.5121
+    let long = -44.555
 
+    url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&units=imperial&APPID=622296cd4fda08b69c46ccfa980f968d`
+    fetchApi(url)
+    console.log(url)
+
+    function fetchApi(url) {
+    let city = document.querySelector('.city')
+    let temperature = document.querySelector('#temp')
+    let humidity = document.querySelector('#umidad')
+
+    fetch(url)
+    .then((data) => {
+        return data.json()
+    })
+    .then((data) => {
+        let tempInCelsius = ((5/9) * (data.main.temp-32)).toFixed(1);
+        
+        city.textContent      = "Minas Gerais"
+        temperature.innerHTML = tempInCelsius
+        humidity.innerHTML    = data.main.humidity
+    })
+    .catch((err) => {
+        city.innerText = `Impossível acessar o OpenWeather. Verifique a sua conexão.`;
+        temperature.innerHTML = `-`;
+    })
+    }
+</script>
 </body>
 
 </html>
