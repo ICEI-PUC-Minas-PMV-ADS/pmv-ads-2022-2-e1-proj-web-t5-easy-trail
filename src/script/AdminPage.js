@@ -1,15 +1,7 @@
-const elementSelect = (name) => {
-    if(!name) throw new Error('The element name is empty!');
-
-    const element = document.querySelector(name);
-
-    return element;
-}
-
 let adminFuncionalities = {
     getAllTrails: () => {
 
-        const trilhaContainer = selectElement("#trilhas_cadastradas");
+        const trilhaContainer = document.querySelector("#trilhas_cadastradas");
 
         Object.keys(localStorage).forEach(storageKey => {
             if(storageKey.split('-')[0] != "trilha") {
@@ -39,7 +31,7 @@ let adminFuncionalities = {
         });
     },
     getAllSaq: () => {
-        const perguntasContainer = selectElement('#perguntas_cadastradas');
+        const perguntasContainer = document.querySelector('#perguntas_cadastradas');
 
         console.log(perguntasContainer);
         Object.keys(localStorage).forEach(storageKey => {
@@ -83,7 +75,7 @@ let adminFuncionalities = {
         });
     },
     getAllUsers: () => {
-        const usersContainer = selectElement('#usuarios_cadastrados');
+        const usersContainer = document.querySelector('#usuarios_cadastrados');
 
         Object.keys(localStorage).forEach(key => {
             let mainKey = key.split('-');
@@ -115,14 +107,13 @@ let adminFuncionalities = {
             `;
 
             usersContainer.innerHTML += userHtmlItem;
-            console.log(userResponse)
             return;
         })
     },
 
     //FUNCAO PARA RESPONDER UMA QUESTAO ESPECIFICA
     answerSaq: () => {
-        let inputAnswer = elementSelect("#resposta");
+        let inputAnswer = document.querySelector("#resposta");
         //saqId => SERA O VALOR SELECIONADO DENTRO DO CHECKBOX
         let saqId;
 
@@ -209,7 +200,7 @@ let adminFuncionalities = {
     
                    if(match) {
                     localStorage.removeItem(key);
-                    selectElement('#trilhas_cadastradas').innerHTML = '';
+                    document.querySelector('#trilhas_cadastradas').innerHTML = '';
     
                     adminFuncionalities.getAllTrails();
                    }
@@ -219,10 +210,25 @@ let adminFuncionalities = {
     }
 };
 
+
 //FAZ TODA A RENDERIZACAO APOS O CARREGAMENTO DO BODY
 window.onload =  () => {
     adminFuncionalities.getAllTrails();
     adminFuncionalities.getAllUsers();
+
+    if(localStorage.getItem('CLIENTE')) {
+
+        let userLogado = JSON.parse(localStorage.getItem('CLIENTE'));
+
+        if(userLogado.email != 'admin@easytrail.com') {
+            window.location.href = 'HomePage.html';
+            alert('Acesso negado!');
+        };
+
+    }else {
+        window.location.href = 'HomePage.html';
+        alert('Acesso negado!');
+    }
 };
 
 

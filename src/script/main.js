@@ -325,6 +325,8 @@ const trailFuncs = {
                 if(key.split('-')[0] != 'user') {
                     return;
                 }
+
+             
     
                 //JSON DO PERFIL DO USUARIO
                 let usuario = localStorage.getItem(key);
@@ -346,8 +348,11 @@ const trailFuncs = {
                     localStorage.setItem('CLIENTE', JSON.stringify(sessaoCliente));
     
                     senhaUsuario.value = '';
-    
-                    window.location.href = 'UserPage.html';
+                    if(key == 'user-adm') {
+                        window.location.href = 'AdminPage.html';
+                    }else { 
+                        window.location.href = 'UserPage.html';
+                    }
                 }
             });
         }
@@ -396,5 +401,12 @@ const trailFuncs = {
 window.onload = () => {
     trailFuncs.getAllTrails();
     // trailFuncs.verificarSessaoLogado();
+
+    if(!localStorage.getItem('user-adm')) {
+        localStorage.setItem('user-adm', JSON.stringify({
+            email: 'admin@easytrail.com',
+            senha: 'admin',
+        }));
+    }
 };
 
