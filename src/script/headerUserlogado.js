@@ -5,7 +5,9 @@ if(verificacaoUsuarioLogado) {
     <div class="container-fluid">
         <img onclick="location=href='HomePage.html'" src="images/logoEasy.png" width="120" alt="100" style="cursor: pointer;">      
         <div class="row align-items-center">
-
+            <div class="header-list col">
+                <img src="images/icons/notificacao.png" width="30" alt="icone notifcação">
+            </div>
             <div class="header-list col">
                 <img src="images/icons/user.png" width="30" style="cursor: pointer;" onclick="location=href='UserPage.html'" alt="icone usuário">
             </div>
