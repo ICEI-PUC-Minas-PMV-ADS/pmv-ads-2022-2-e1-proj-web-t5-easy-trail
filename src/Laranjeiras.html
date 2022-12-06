@@ -44,11 +44,18 @@
             <div class="row col-sm-9 mt-3">
                 <h2>Laranjeiras</h2>
                 <img src="images/460.jpg" class="shadow-lg p-0 bg-body" alt="Imagem capa da trilha">
+                <H5>Minas Gerais</H5>
             </div>
             <div class="col-3 p-4 align-self-center">
                 <h5>Previsão do Tempo</h5>
                 <p>Tempo e Temperatura</p>
+                <div id="temperatura">
+                    <h1 class="city"></h1>
+                    <h2>🌡<span id="temp"></span>°C 💧<span id='umidad'></span>%</h2>
+                </div>
                 <div class="city">Paraíba, BR</div>
+                <h6 id="citylat">-19.912998</h6>
+                <h6 id="citylon">-43.940933</h6>
                 <div>Terça, 8 Novembro 2022</div>
                 <div class="weather py-2">Nublado</div>
                 <div class="container-temp">
@@ -158,6 +165,7 @@
 
     </footer>
 
+    <script src="script/previsaoTempo.js"></script>
     <script src="script/headerUserlogado.js"></script>
     <script src="script/comments.js"></script>
     <script src="script/main.js"></script>
