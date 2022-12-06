@@ -15,6 +15,7 @@ const cardBody = {
       tipodeTrilha: "Rural",
       recomendacao: "Individual ou Grupo",
       bookmark: "cardBody.dadosCards[0]",
+      comments: []
     },
     {
       id: 11,
@@ -26,6 +27,7 @@ const cardBody = {
       moreHide:
         " fechados seguir muito atento aonde pisar mas tirando isso uma aventura e tanta e sem deixar de contemplar há bela da natureza.",
       bookmark: "cardBody.dadosCards[1]",
+      comments: []
     },
     {
       id: 12,
@@ -37,6 +39,7 @@ const cardBody = {
       moreHide:
         " (um pouquinho mais longe) e a trilha da direita para um açude menor mas bem legal também. Os dois açudes são limpos, sem desníveis, com a água batendo no meio da barriga até uns 25m à dentro. A paisagem em volta é bem bonita, agradável e tranquila.",
       bookmark: "cardBody.dadosCards[2]",
+      comments: []
     },
     {
       id: 13,
@@ -48,6 +51,7 @@ const cardBody = {
       moreHide:
         " de bom animo o desafio, ao chegar no destino, os ciclistas costumam se refrescar com um bom banho nas cachoeira para renovarem suas energias. O percurso passa por cachoeiras, algumas cidadezinhas bonitas e parques que são ótimos para passear com sua bike.",
       bookmark: "cardBody.dadosCards[3]",
+      comments: []
     },
     {
       id: 14,
@@ -59,6 +63,7 @@ const cardBody = {
       moreHide:
         " esse foi o lugar que os portugueses disseram ter avistado terra e gritaram “Terra à vista!”, sendo muito interessante também para quem gosta de locais históricos.",
       bookmark: "cardBody.dadosCards[4]",
+      comments: []
     },
     {
       id: 15,
@@ -70,9 +75,16 @@ const cardBody = {
       moreHide:
         " um pouco mais do desempenho do ciclista. essa trilha não é tão fácil de percorrer, sendo necessário inclusive que a bike que você irá escolher para pedalar, nesse caso, seja uma excelente mountain bike, pois elas se adequam melhor a esse tipo de terreno.",
       bookmark: "cardBody.dadosCards[5]",
+      comments: []
     },
   ],
 };
+
+if("trilhasCadastradas" in localStorage) {
+  localStorage.getItem('trilhasCadastradas');
+} else {
+  localStorage.setItem('trilhasCadastradas', JSON.stringify(cardBody.dadosCards));
+}
 
 // TRILHAS CRIADAS
 // let arraysDoLocal = []; // lista vazia para armazenar trilhas cadastradas pelos usuários

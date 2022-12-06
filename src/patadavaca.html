@@ -113,13 +113,25 @@
 
     </div>
 
-    <div class="descricaotrilha p-3 m-4">
-      <h6>COMENTÁRIOS</h6>
-      <hr>
-      <p style="font-size: 0.1rem; color: gray; width:70%;" class="p-3"><b>Clara Silva </b>Trilha muito técnica e
-        profissional, exigi muito preparo físico e conhecimento do ciclista, além de uma boa experiência em
-        trilhas. Desafiadora mas recompensadora ao seu final.</p>
-    </div>
+  <div class="descricaotrilha p-3 m-1">
+    <form action="" id="formComments">
+        <h6>Faça seu comentário</h6>
+        <div>
+            <textarea class="form-control pl-3 shadow mb-0" placeholder="Escreva seu comentário.."
+                id="comentariosTrilha" rows="3" required></textarea>
+            <button class="btn btn-danger" onclick="enviar()">Enviar</button>
+        </div>
+        <!-- <p style="font-size: 0.1rem; color: gray; width:70%;" class="p-3" id="usuariocoment"><b id="nomeusuario"></b></p> -->
+    </form>
+  </div>
+
+  <div class="bg-light">
+      <div class="p-4 w-70" id="commentPost">
+          <hr>
+          <div id="testeteste"></div>
+          <h6 class="m-4" style="font-size: 0.1rem; width:70%;" class="p-4">Comentários</h6>
+      </div>
+  </div>
 
   </section>
 
@@ -153,6 +165,27 @@
     span.onclick = function () {
       modal.style.display = "none";
     }
+  </script>
+  <script id="comments">
+    const inputName = document.getElementById('inputName');
+    const comentariosTrilhas = document.getElementById('comentariosTrilha');
+    const form = document.getElementById('formComments');
+    const commentPost = document.getElementById('commentPost');
+
+    let userLogaduu = JSON.parse(localStorage.getItem('CLIENTE'));
+
+    let trilhasCadastradass = JSON.parse(localStorage.getItem('trilhasCadastradas'));
+
+    function enviar() {
+        this.event.preventDefault();
+        trilhasCadastradass[5].comments.push({nome: userLogaduu.nomeCompleto, comentario: comentariosTrilhas.value});
+        localStorage.setItem('trilhasCadastradas', JSON.stringify(trilhasCadastradass))
+        window.location.reload();
+    }
+
+    trilhasCadastradass[5].comments.forEach((element) => {
+        document.getElementById('testeteste').innerHTML += `${element.nome}: ${element.comentario} <br>`;
+    });
   </script>
 </body>
 

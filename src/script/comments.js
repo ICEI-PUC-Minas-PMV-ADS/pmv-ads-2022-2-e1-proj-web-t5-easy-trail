@@ -1,53 +1,20 @@
+// const inputName = document.getElementById('inputName');
+// const comentariosTrilhas = document.getElementById('comentariosTrilha');
+// const form = document.getElementById('formComments');
+// const commentPost = document.getElementById('commentPost');
 
+// let userLogaduu = JSON.parse(localStorage.getItem('CLIENTE'));
 
-function comment (){
-    
-    let comments = document.getElementById("comentariosTrilha").value;
-    // localStorage.getItem("Comentario")
+// let trilhasCadastradass = JSON.parse(localStorage.getItem('trilhasCadastradas'));
 
-    if(localStorage.getItem("Comentario") === null){
-    document.getElementById("usuariocoment").innerHTML += localStorage.getItem("Comentario")
-    console.log("a")
-    }
-    else{
-    localStorage.setItem("Comentario", JSON.stringify(comments));
-    console.log("b")
-    }
-    
-    
-}
+// function enviar() {
+//     this.event.preventDefault();
+//     trilhasCadastradass[0].comments.push({nome: userLogaduu.nomeCompleto, comentario: comentariosTrilhas.value});
+//     localStorage.setItem('trilhasCadastradas', JSON.stringify(trilhasCadastradass))
+//     window.location.reload();
+// }
 
-window.onload = () => {
-    let userData = JSON.parse(localStorage.getItem('CLIENTE'));
-    let name = document.querySelector('#nomeusuario');
-
-    const {
-    nomeCompleto,
-    } = userData;
-
-    name.innerHTML = nomeCompleto;
-    };
-
-
-
-const inputName = document.getElementById('inputName');
-const comentariosTrilha = document.getElementById('comentariosTrilha');
-const form = document.getElementById('formComments');
-const commentPost = document.getElementById('commentPost');
-
-let userLogaduu = JSON.parse(localStorage.getItem('CLIENTE'));
-
-form.addEventListener('submit', (event) => {
-    event.preventDefault();
-    let nCom = Math.floor(Math.random() * 999);
-    localStorage.setItem(`comentario${nCom}`,JSON.stringify({nome: userLogaduu.nomeCompleto,comentario: comentariosTrilha.value}));
-
-    let p = document.createElement('p');
-    p.classList = 'p-2 text-wrap';
-    p.innerHTML = `<strong>${inputName.value}: </strong> &nbsp ${comentariosTrilha.value}`;
-    commentPost.appendChild(p);
-    inputName.value = '';
-    comentariosTrilha.value = '';
-    inputName.focus();
-});
+// trilhasCadastradass[0].comments.forEach((element) => {
+//     document.getElementById('testeteste').innerHTML += `${element.nome}: ${element.comentario} <br>`;
+// });
 

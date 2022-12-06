@@ -18,7 +18,7 @@ let userNewData = {
 };
 
 function alterarNome() {
-
+    trailFuncs.verificarSessaoLogado();
     this.event.preventDefault();
     let inputUsuario = document.getElementById("input-nome").value;
     if(inputUsuario) {
@@ -31,6 +31,7 @@ function alterarNome() {
 
 
 function alterarSenha() {
+    trailFuncs.verificarSessaoLogado();
     this.event.preventDefault();
     let inputSenha = document.getElementById("input-senha").value;
     if(inputSenha) {
@@ -42,6 +43,7 @@ function alterarSenha() {
 }
 
 function alterarEmail() {
+    trailFuncs.verificarSessaoLogado();
     this.event.preventDefault();
     let inputEmail = document.getElementById("input-email").value;
     if(inputEmail) {
@@ -60,11 +62,12 @@ function addToFavoritas(trilha) {
         let trilhasFavoritas = userNewData.trilhasFavoritadas;
         trilhasFavoritas.push(trilha);
         localStorage.setItem(`user-${userName.nomeCompleto}`, JSON.stringify(userNewData));
-        return alert("Trilha favoritada!");
+        return alert("Parabéns, muito bem, sua trilha foi favoritada, aproveite bem dela!");
     }
 }
 
 function removerFavoritos(trilha) {
+    trailFuncs.verificarSessaoLogado();
     userNewData.trilhasFavoritadas.filter((item, index, array) => {
         if(item.id == trilha){
         array.splice(index, 1)
