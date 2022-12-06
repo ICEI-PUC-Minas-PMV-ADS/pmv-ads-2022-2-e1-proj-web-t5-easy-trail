@@ -24,19 +24,19 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 
 |EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
 |--------------------|------------------------------------|----------------------------------------|
-| Ciclista | Informações sobre locais com sinal de celular durante o percurso da trilha  | Obter um melhor aproveitamento da trilha sozinho ou em grupo|
-| Ciclista | Indicativo de pontos de apoio para ciclistas | Saber onde encontrar ajuda em caso de algum imprevisto |
+| Ciclista | Informações sobre o percurso da trilha  | Obter um melhor aproveitamento da trilha sozinho ou em grupo|
+| Ciclista | Cadastrar trechos de novas trilhas | Poder contribuir com novos pontos para realização de trilhas |
 | Ciclista | Grau de dificuldade de trilhas rurais em relação a subidas, descidas, tipo do terreno | Ter conhecimento prévio sobre o grau de dificuldade de uma trilha |
 | Ciclista | Informações seguras para encontrar trilhas adequadas ao seu perfil iniciante | Melhorar sua saúde e condição física|
 | Ciclista | Conhecer várias localidades situadas no entorno da cidade | Desfrutar de bons passeios com amigos |
-| Ciclista | Informações sobre percursos percorridos, locais visitados em um mapa de desenvolvimento | Saber quais percursos já foram percorridos e o quanto já evolui nas trilhas expostas no sistema |
+| Ciclista | Informações sobre percursos percorridos, locais visitados | Saber quais percursos já foram percorridos e o quanto já evolui nas trilhas expostas no sistema |
 | Ciclista | Obter informações sobre programação de passeios por grupos de ciclismos| Ter companhia na realização de seus pedais |
 | Ciclista | Conhecer outros ciclistas com perfil similar | Compartilhar experiências e conhecer outras realidades|
 | Ciclista | Dicas de cuidado e prevenção de lesões decorrentes do esporte | Cuidar da saúde do corpo e da mente|
 | Ciclista | Informações sobre a distância total (Quilometragem) das trilhas | Saber se consegue finalizar o percurso
 | Ciclista | Fotos dos locais que vai ver durante o percurso | Se sentir motivado a iniciar a trilha|
 | Administrador | Informações sobre a quantidade de pessoas que normalmente frequentam os locais | Saber se deve ir acompanhado de algum responsável|
-| Administrador | Obter informações sobre quantidade de acessos ao site| Saber alcance do site para decidir sobre investimento em divulgação|
+| Administrador | Obter informações sobre quantidade de uauários cadastrados no site| Saber alcance do site para decidir sobre investimento em divulgação|
 | Administrador | Obter informações sobre idade e perfil dos usuários| Desenvolver conteúdos adequados para os usuários do site|
 | Administrador | Obter feedbacks dos usuários referentes as informações disponíveis na plataforma| Para entender necessidade de revisar informações disponíveis na plataforma |
 
@@ -50,20 +50,23 @@ A tabela a seguir apresenta os requisitos do projeto, identificando a prioridade
 
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
-|RF-001| O software deve mostrar as trilhas por ordem de dificuldade | ALTA |
-|RF-002| O software deve permitir que o usuário cadastre novas trilhas | MÉDIA |
-|RF-003| O software deve ter uma funcionalidade de indicações de trilhas | ALTA |
-|RF-004| O software deve mostrar o mapa/rota da trilha | ALTA |
-|RF-005| O software deve mostrar a previsão do tempo dia/hora, para que o usuário saiba se e possível realizar a trilha | ALTA |
-|RF-006| O software deve ter um fórum para que os ciclistas possam interagir com outros ciclistas | MÉDIA |
-|RF-007| O software deve mostrar uma frase motivacional após a "PRESENÇA" marcada em uma trilha| MÉDIA |
-|RF-008| O software deve poder mostrar as trilhas mais próximas da localização atual do usuário| BAIXA |
-|RF-009| O software deve recomendar trilhas para realização em grupo ou individual| BAIXA |
-|RF-010| Sistema deverá listar os usuários cadastrados conforme: idade, tempo no ciclismo, preferência de trilhas| BAIXA |
-|RF-011| Sistema deverá fornecer relatórios sobre dados de acesso, idade, perfil e feedback dos usuários| MÉDIA |
-|RF-012| Sistema deverá indicar cuidados e prevenções necessárias para a realização da trilha escolhida pelo usuário| MÉDIA |
-|RF-013| Usuário poderá enviar fotos de suas trilhas realizadas com comentários para elas | BAIXA |
-|RF-014| Para mostrar uma frase motivacional deve ser necessário que o usuário marque presença dentro de uma trilha| MÉDIA |
+|RF-01| O software deve mostrar o grau de dificuldade das trilhas expostas | ALTA |
+|RF-02| O software deve permitir que o usuário cadastre novas trilhas | MÉDIA |
+|RF-03| O software deve ter uma funcionalidade de indicações de trilhas | ALTA |
+|RF-04| O software deve mostrar o mapa da trilha | ALTA |
+|RF-05| O software deve mostrar a previsão do tempo do dia, para que o usuário saiba se e possível realizar a trilha | ALTA |
+|RF-06| O software deve ter um fórum para que os ciclistas possam interagir com outros ciclistas | MÉDIA |
+|RF-07| O software deve mostrar uma frase motivacional após uma trilha ser favortida| MÉDIA |
+|RF-08| O software deve ter uma opção para o usuário logado compartilhar uma trilha no facebook ou via Whatsapp | MÉDIA |
+|RF-09| O software deve mostrar trilhas com a indicação para realização em grupo ou individualmente| BAIXA |
+|RF-10| Sistema deverá mostrar informações dos usuários cadastrados tais como: idade, tempo no ciclismo| BAIXA |
+|RF-11| Sistema deverá listar todas as trilhas que foram cadastradas pelos usuários para que sejam em caso de aprovação, exibidas no sistema | MÉDIA |
+|RF-12| Sistema deverá indicar cuidados e prevenções necessárias para a realização da trilha escolhida pelo usuário| MÉDIA |
+|RF-13| Sistema deve ter um espaço para que os usuários possam enviar dúvidas sobre assuntos diversos | MÉDIA |
+|RF-14| Para mostrar uma frase motivacional deve ser necessário que o usuário favorite uma trilha | MÉDIA |
+|RF-15| O software deve fornecer ao usuário a possibilidade de cadastro e login | MÉDIA |
+|RF-16| O software deve ter uma área para que o usuário cadastrado possa favoritar trilhas e alterar seu nome, email e senha | MÉDIA 
+
 
 ### Requisitos não Funcionais
 
