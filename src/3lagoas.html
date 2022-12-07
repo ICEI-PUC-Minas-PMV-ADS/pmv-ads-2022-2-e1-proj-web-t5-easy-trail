@@ -44,24 +44,15 @@
             <div class="row col-sm-9 mt-3">
                 <h2>3 Lagoas</h2>
                 <img src="images/464.jpg" class="shadow-lg p-0 bg-body" alt="Imagem capa da trilha">
+                <div class="m-2 p-2"><b>Distância Estimada:</b> 47 quilômetros</div>
             </div>
             <div class="col-3 p-4 align-self-center">
                 <h5>Previsão do Tempo</h5>
                 <p>Temperatura e umidade</p>
                 <div id="temperatura">
-                    <h1 class="city"></h1>
-                    <h2>🌡<span id="temp"></span>°C 💧<span id='umidad'></span>%</h2>
+                    <h3 class="city"></h3>
+                    <h4>🌡<span id="temp"></span>°C 💧<span id='umidad'></span>%</h4>
                 </div>
-                <!-- <div class="col-3 p-4 align-self-center">
-                    <h5>Previsão do Tempo</h5>
-                    <p>Tempo e Temperatura</p>
-                    <div class="city">Rio Grande do Sul, BR</div>
-                    <div>Terça, 8 Novembro 2022</div>
-                    <div class="weather py-2">Nublado</div>
-                    <div class="container-temp">
-                        <div>22<span>°c</span></div>
-                    </div>
-                </div> -->
             </div>  
         </div>
 
@@ -70,7 +61,7 @@
                 <div class="descricaotrilha p-0 m-4 align-self-center">
                     <p style="width:90%">O caminho por essa trilha oferece desde cachoeiras, parques, até belas
                         cidadezinhas que faz qualquer amante das trilhas encarar de bom animo o desafio, ao chegar no
-                        destino, os ciclistas costumam se refrescar com um bom banho nas cachoeira para renovarem suas
+                        destino, os ciclistas costumam se refrescar com um bom banho na cachoeira para renovarem suas
                         energias. O percurso passa por cachoeiras, algumas cidadezinhas bonitas e parques que são ótimos
                         para passear com sua bike.</p>
                 </div>
@@ -126,20 +117,19 @@
 
         </div>
 
-        <div class="descricaotrilha p-3 m-1">
+        <div class="descricaotrilha p-3">
             <form action="" id="formComments">
                 <h6>Faça seu comentário</h6>
                 <div>
-                    <textarea class="form-control pl-3 shadow mb-0" placeholder="Escreva seu comentário.."
+                    <textarea class="form-control pl-3 shadow mb-3" placeholder="Escreva seu comentário.." style="width:75%;"
                         id="comentariosTrilha" rows="3" required></textarea>
                     <button class="btn btn-danger" onclick="enviar()">Enviar</button>
                 </div>
-                <!-- <p style="font-size: 0.1rem; color: gray; width:70%;" class="p-3" id="usuariocoment"><b id="nomeusuario"></b></p> -->
             </form>
         </div>
 
         <div class="bg-light">
-            <div class="p-4 w-70" id="commentPost">
+            <div class="w-70" id="commentPost">
                 <hr>
                 <div id="testeteste"></div>
                 <h6 class="m-4" style="font-size: 0.1rem; width:70%;" class="p-4">Comentários</h6>

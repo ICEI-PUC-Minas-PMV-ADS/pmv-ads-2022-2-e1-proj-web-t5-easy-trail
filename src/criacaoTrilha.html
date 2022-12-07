@@ -41,7 +41,7 @@
                 <div class="col-sm-8">
                     <label for="nome"><b>Nome da Trilha:</b></label>
                     <input type="text" name="nome" id="trilha_nome" placeholder="Nome"
-                        class="cadastro-trilha-input shadow mb-3 m-2" required>
+                        class="cadastro-trilha-input shadow mb-3 m-2 p-2" required>
                 </div>
 
                 <div class="col-sm-4">
@@ -49,9 +49,8 @@
                         <label for="nome"><b>Estado</b></label>
                     </div>
                     <div>
-                        <select id="floatingInput"
-                            class="form-select trilha_local shadow mb-3 m-2 cadastro-trilha-input" required
-                            style="height:3rem;" name="myCountry">
+                        <select id=""
+                            class="form-select trilha_local shadow mb-3 m-2 p-2 cadastro-trilha-input" required name="myCountry">
                             <option value="">-</option>
                             <option value="Acre">Acre</option>
                             <option value="Alagoas">Alagoas</option>
@@ -86,7 +85,7 @@
                 <label for="descricao"><b>Descricao:</b></label>
                 <div>
                     <textarea name="descricao" id="trilha_descricao" placeholder="Descrição da trilha..."
-                        class="form-control shadow mb-3 m-2 cadastro-trilha-input" required></textarea>
+                        class="form-control shadow mb-3 m-2 p-2 cadastro-trilha-input" required></textarea>
                 </div>
 
                 <div class="row">
@@ -96,7 +95,7 @@
                                 <label for="nome"><b>Altimetria</b></label>
                             </div>
                             <input type="text" placeholder="Ex: 700 metros" required id="trilha_altimetria"
-                                class="cadastro-trilha-input shadow mb-3 m-2">
+                                class="cadastro-trilha-input shadow mb-3 m-2 p-2" style="border-radius: 0.4rem;" required>
                         </div>
                     </div>
 
@@ -106,7 +105,7 @@
                                 <label for="nome"><b>Duração Estimada</b></label>
                             </div>
                             <input type="text" id="trilha_duracao" placeholder="Ex: 02h30m, 50min"
-                                class="cadastro-trilha-input shadow mb-3 m-2" required>
+                                class="cadastro-trilha-input shadow mb-3 m-2 p-2" style="border-radius: 0.4rem;" required>
                         </div>
                     </div>
                 </div>
@@ -118,8 +117,7 @@
                             <div>
                                 <label for="nome"><b>Dificuldade</b></label>
                             </div>
-                            <select class="form-select trilha_nivel shadow mb-3 m-2 cadastro-trilha-input" required
-                                style="height:3rem;">
+                            <select class="form-select trilha_nivel shadow mb-3 m-2 p-2 cadastro-trilha-input" required>
                                 <option value="">-</option>
                                 <option value="Alta">Alta</option>
                                 <option value="Média">Média</option>
@@ -133,8 +131,7 @@
                             <div>
                                 <label for="nome"><b>Tipo da Trilha</b></label>
                             </div>
-                            <select class="form-select trilha_tipo shadow mb-3 m-2 cadastro-trilha-input" required
-                                style="height:3rem;">
+                            <select class="form-select trilha_tipo shadow mb-3 m-2 p-2 cadastro-trilha-input" required>
                                 <option value="">-</option>
                                 <option value="Urbana">Urbana</option>
                                 <option value="Rural">Rural</option>
@@ -147,8 +144,7 @@
                             <div>
                                 <label for="nome"><b>Recomendação</b></label>
                             </div>
-                            <select class="form-select trilha_recom shadow mb-3 m-2 cadastro-trilha-input"
-                                style="height:3rem;" required>
+                            <select class="form-select trilha_recom shadow mb-3 m-2 p-2 cadastro-trilha-input" required>
                                 <option value="">-</option>
                                 <option value="Individual">Individual</option>
                                 <option value="Grupo">Grupo</option>

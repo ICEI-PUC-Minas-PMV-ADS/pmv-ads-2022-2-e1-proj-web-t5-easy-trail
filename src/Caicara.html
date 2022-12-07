@@ -44,24 +44,15 @@
             <div class="row col-sm-9 mt-3">
                 <h2>Caiçara</h2>
                 <img src="images/461.jpg" class="shadow-lg p-0 bg-body" alt="Imagem capa da trilha">
+                <div class="m-2 p-2"><b>Distância Estimada:</b> 39 quilômetros</div>
             </div>
             <div class="col-3 p-4 align-self-center">
                 <h5>Previsão do Tempo</h5>
                 <p>Temperatura e umidade</p>
                 <div id="temperatura">
-                    <h1 class="city"></h1>
-                    <h2>🌡<span id="temp"></span>°C 💧<span id='umidad'></span>%</h2>
+                    <h3 class="city"></h3>
+                    <h4>🌡<span id="temp"></span>°C 💧<span id='umidad'></span>%</h4>
                 </div>
-                <!-- <div class="col-3 p-4 align-self-center">
-                    <h5>Previsão do Tempo</h5>
-                    <p>Tempo e Temperatura</p>
-                    <div class="city">São Paulo, BR</div>
-                    <div>Terça, 8 Novembro 2022</div>
-                    <div class="weather py-2">Nublado</div>
-                    <div class="container-temp">
-                        <div>22<span>°c</span></div>
-                    </div>
-                </div> -->
             </div>  
 
         </div>
@@ -70,7 +61,7 @@
             <div class="row col-sm-7">
                 <div class="descricaotrilha p-0 m-4 align-self-center">
                     <p style="width:90%">Logo após um bom trecho dessa estradinha, a trilha se separa para dois locais
-                        dinstintos o da esquerda leva para um açude médio (um pouquinho mais longe) e a trilha da
+                        distintos o da esquerda leva para um açude médio (um pouquinho mais longe) e a trilha da
                         direita para um açude menor mas bem legal também. Os dois açudes são limpos, sem desníveis, com
                         a água batendo no meio da barriga até uns 25m à dentro. A paisagem em volta é bem bonita,
                         agradável e tranquila.</p>
@@ -127,20 +118,19 @@
 
         </div>
 
-        <div class="descricaotrilha p-3 m-1">
+        <div class="descricaotrilha p-3">
             <form action="" id="formComments">
                 <h6>Faça seu comentário</h6>
                 <div>
-                    <textarea class="form-control pl-3 shadow mb-0" placeholder="Escreva seu comentário.."
+                    <textarea class="form-control pl-3 shadow mb-3" placeholder="Escreva seu comentário.." style="width:75%;"
                         id="comentariosTrilha" rows="3" required></textarea>
                     <button class="btn btn-danger" onclick="enviar()">Enviar</button>
                 </div>
-                <!-- <p style="font-size: 0.1rem; color: gray; width:70%;" class="p-3" id="usuariocoment"><b id="nomeusuario"></b></p> -->
             </form>
         </div>
 
         <div class="bg-light">
-            <div class="p-4 w-70" id="commentPost">
+            <div class="w-70" id="commentPost">
                 <hr>
                 <div id="testeteste"></div>
                 <h6 class="m-4" style="font-size: 0.1rem; width:70%;" class="p-4">Comentários</h6>

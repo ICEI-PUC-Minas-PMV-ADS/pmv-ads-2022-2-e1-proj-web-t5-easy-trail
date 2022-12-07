@@ -196,7 +196,7 @@ const trailFuncs = {
 
         this.event.preventDefault();
 
-        if (!trilhaNome.value && !trilhaLocal.value && !trilhaDescricao.value && !trilhaAltimetria.value && !trilhaDuracao.value) {
+        if (!trilhaNome.value && !trilhaLocal.value && !trilhaDescricao.value && !trilhaAltimetria.value && !trilhaDuracao.value && !dificuldadeTrilha.value && !tipoTrilha.value && !recomTrilha.value) {
             return alert("Preencha todos os campos!");
         }
 

@@ -44,34 +44,22 @@
       <div class="row col-sm-9 mt-3">
         <h2>Pata da Vaca</h2>
         <img src="images/465.jpg" class="shadow-lg p-0 bg-body" alt="Imagem capa da trilha">
+        <div class="m-2 p-2"><b>Distância Estimada:</b> 72 quilômetros</div>
       </div>
       <div class="col-3 p-4 align-self-center">
         <h5>Previsão do Tempo</h5>
         <p>Temperatura e umidade</p>
         <div id="temperatura">
-            <h1 class="city"></h1>
-            <h2>🌡<span id="temp"></span>°C 💧<span id='umidad'></span>%</h2>
+            <h3 class="city"></h3>
+            <h4>🌡<span id="temp"></span>°C 💧<span id='umidad'></span>%</h4>
         </div>
-        <!-- <div class="col-3 p-4 align-self-center">
-          <h5>Previsão do Tempo</h5>
-          <p>Tempo e Temperatura</p>
-          <div class="city">Rio de Janeiro, BR</div>
-          <div>Terça, 8 Novembro 2022</div>
-          <div class="weather py-2">Nublado</div>
-          <div class="container-temp">
-            <div>22<span>°c</span></div>
-          </div>
-        </div> -->
       </div>
     </div>
 
     <div class="container-fluid d-flex p-4 bg-white">
       <div class="row col-sm-7">
         <div class="descricaotrilha p-0 m-4 align-self-center">
-          <p style="width:90%">Além de ser uma trilha muito bela, esse local é considerado ainda um patrimônio
-            cultural, pois segundo historiadores esse foi o lugar que os portugueses disseram ter avistado
-            terra e gritaram “Terra à vista!”, sendo muito interessante também para quem gosta de locais
-            históricos.</p>
+          <p style="width:90%">Esse terreno é um pouco acidentado, apresentado estradas de terra e de cascalho, raízes expostas, rochas e riachos, o que exige um pouco mais do desempenho do ciclista. essa trilha não é tão fácil de percorrer, sendo necessário inclusive que a bike que você irá escolher para pedalar, nesse caso, seja uma excelente mountain bike, pois elas se adequam melhor a esse tipo de terreno.</p>
         </div>
       </div>
 
@@ -99,7 +87,7 @@
 
 
       <div class="col">
-        <div><b>Elevação</b></div>
+        <div><b>Altimetria</b></div>
         <div>
           <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="#EB5C0C" class="bi bi-activity"
             viewBox="0 0 16 16">
@@ -121,15 +109,14 @@
 
     </div>
 
-  <div class="descricaotrilha p-3 m-1">
+  <div class="descricaotrilha p-3">
     <form action="" id="formComments">
         <h6>Faça seu comentário</h6>
         <div>
-            <textarea class="form-control pl-3 shadow mb-0" placeholder="Escreva seu comentário.."
+            <textarea class="form-control pl-3 shadow mb-3" placeholder="Escreva seu comentário.." style="width:75%;"
                 id="comentariosTrilha" rows="3" required></textarea>
             <button class="btn btn-danger" onclick="enviar()">Enviar</button>
         </div>
-        <!-- <p style="font-size: 0.1rem; color: gray; width:70%;" class="p-3" id="usuariocoment"><b id="nomeusuario"></b></p> -->
     </form>
   </div>
 
