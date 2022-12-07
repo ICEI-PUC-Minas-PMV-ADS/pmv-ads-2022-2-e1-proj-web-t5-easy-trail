@@ -195,7 +195,7 @@ const trailFuncs = {
         const recomTrilha = selectElement('.trilha_recom');
 
         this.event.preventDefault();
-
+        console.log(trilhaNome.value)
         if (!trilhaNome.value && !trilhaLocal.value && !trilhaDescricao.value && !trilhaAltimetria.value && !trilhaDuracao.value) {
             return alert("Preencha todos os campos!");
         }

@@ -1,20 +1,19 @@
-// const inputName = document.getElementById('inputName');
-// const comentariosTrilhas = document.getElementById('comentariosTrilha');
-// const form = document.getElementById('formComments');
-// const commentPost = document.getElementById('commentPost');
+const verificaLogado = Object.keys(localStorage).some(key => key == 'CLIENTE');
 
-// let userLogaduu = JSON.parse(localStorage.getItem('CLIENTE'));
+if(verificaLogado) {
+    let commentsShow = ` 
+    <form action="" id="formComments">
+        <h6>Faça seu comentário</h6>
+        <div>
+            <textarea class="form-control pl-3 shadow mb-0" placeholder="Escreva seu comentário.."
+                id="comentariosTrilha" rows="3" required></textarea>
+            <button class="btn btn-danger" onclick="enviar()">Enviar</button>
+        </div>
+        <!-- <p style="font-size: 0.1rem; color: gray; width:70%;" class="p-3" id="usuariocoment"><b id="nomeusuario"></b></p> -->
+    </form> 
+    `;
 
-// let trilhasCadastradass = JSON.parse(localStorage.getItem('trilhasCadastradas'));
-
-// function enviar() {
-//     this.event.preventDefault();
-//     trilhasCadastradass[0].comments.push({nome: userLogaduu.nomeCompleto, comentario: comentariosTrilhas.value});
-//     localStorage.setItem('trilhasCadastradas', JSON.stringify(trilhasCadastradass))
-//     window.location.reload();
-// }
-
-// trilhasCadastradass[0].comments.forEach((element) => {
-//     document.getElementById('testeteste').innerHTML += `${element.nome}: ${element.comentario} <br>`;
-// });
-
+    document.getElementById("commentarios").innerHTML = commentsShow;
+} else {
+    document.getElementById("commentarios").style.display = "none";
+}
