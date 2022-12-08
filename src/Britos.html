@@ -9,7 +9,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="style/main.css">
-    <link rel="stylesheet" href="./style/mediaquery.css">
     <link rel="shortcut icon" href="images/logoEasy.png">
     <title>EasyTrail | Britos</title>
     <style>
@@ -37,13 +36,13 @@
     </div>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light" id="logado"></nav>
-
+    <hr>
     <section>
 
         <div class="container-fluid d-flex bg-light">
             <div class="row col-sm-9 mt-3">
                 <h2>Britos</h2>
-                <img src="images/BritosPA.jpg" class="shadow-lg p-0 bg-body" alt="Imagem capa da trilha">
+                <img src="images/Britos.jpg" class="shadow-lg p-0 bg-body" alt="Imagem capa da trilha">
                 <div class="m-2 p-2"><b>Distância Estimada:</b> 65 quilômetros</div>
             </div>
             <div class="col-3 p-4 align-self-center">
@@ -63,10 +62,10 @@
                 </div>
             </div>
             <div class="col p-0">
-                <img id="myImg" src="images/ParaibaMaps.jpg" style="max-width:400px; cursor: pointer;" alt="Mapa Paraíba">
+                <img id="myImg" src="images/paraMaps.jpg" style="max-width:400px; cursor: pointer;" alt="Mapa Pará">
                 <div id="myModal" class="modal">
                     <span class="closeX">&times;</span>
-                    <img class="modal-content" id="img01" alt="Imagem Mapa" src="images/ParaibaMaps.jpg">
+                    <img class="modal-content" id="img01" alt="Imagem Mapa" src="images/paraMaps.jpg">
                     <div id="caption"></div>
                 </div>
             </div>
@@ -90,7 +89,7 @@
 
 
             <div class="col">
-                <div><b>Elevação</b></div>
+                <div><b>Altimetria</b></div>
                 <div>
                     <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="#EB5C0C" class="bi bi-activity"
                         viewBox="0 0 16 16">
@@ -189,8 +188,8 @@
         </script>
     
         <script id="apiTempo">
-        let lat = -1.4550
-        let long = -48.502
+        let lat = -1.45502
+        let long = -48.5024
     
             url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&units=imperial&APPID=622296cd4fda08b69c46ccfa980f968d`
             fetchApi(url)
@@ -208,7 +207,7 @@
             .then((data) => {
                 let tempInCelsius = ((5/9) * (data.main.temp-32)).toFixed(1);
                 
-                city.textContent      = "Minas Gerais"
+                city.textContent      = "Pará"
                 temperature.innerHTML = tempInCelsius
                 humidity.innerHTML    = data.main.humidity
             })
