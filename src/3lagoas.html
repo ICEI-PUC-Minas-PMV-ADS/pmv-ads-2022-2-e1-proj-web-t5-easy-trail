@@ -117,16 +117,7 @@
 
         </div>
 
-        <div class="descricaotrilha p-3">
-            <form action="" id="formComments">
-                <h6>Faça seu comentário</h6>
-                <div>
-                    <textarea class="form-control pl-3 shadow mb-3" placeholder="Escreva seu comentário.." style="width:75%;"
-                        id="comentariosTrilha" rows="3" required></textarea>
-                    <button class="btn btn-danger" onclick="enviar()">Enviar</button>
-                </div>
-            </form>
-        </div>
+        <div class="descricaotrilha p-3 m-1" id="commentarios"></div>
 
         <div class="bg-light">
             <div class="w-70" id="commentPost">
@@ -149,6 +140,7 @@
 
     </footer>
 
+    <script src="script/comments.js"></script>
     <script src="script/headerUserlogado.js"></script>
     <script src="script/main.js"></script>
     <script src="climatempo.js"></script>
@@ -180,12 +172,17 @@
 
         function enviar() {
             this.event.preventDefault();
-            trilhasCadastradass[3].comments.push({nome: userLogaduu.nomeCompleto, comentario: comentariosTrilhas.value});
-            localStorage.setItem('trilhasCadastradas', JSON.stringify(trilhasCadastradass))
+            if(comentariosTrilhas.value != ""){ 
+                trilhasCadastradass.dadosCards[3].comments.push({nome: userLogaduu.nomeCompleto, comentario: comentariosTrilhas.value});
+            localStorage.setItem('trilhasCadastradas', JSON.stringify(trilhasCadastradass));
+            alert("Comentario enviado!")
             window.location.reload();
+            }   else {
+                alert("Escreva algum comentário para ser enviado")
+            }
         }
 
-        trilhasCadastradass[3].comments.forEach((element) => {
+        trilhasCadastradass.dadosCards[3].comments.forEach((element) => {
             document.getElementById('testeteste').innerHTML += `${element.nome}: ${element.comentario} <br>`;
         });
     </script>

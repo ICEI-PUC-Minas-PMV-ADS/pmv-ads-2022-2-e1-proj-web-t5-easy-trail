@@ -78,12 +78,146 @@ const cardBody = {
       comments: []
     },
   ],
+  dadosCardsHidden: [
+    {
+      id: 16,
+      nome: "Vale do Pati",
+      descricao:
+        "A trilha mais linda do Brasil e da América do Sul, percorre uma área do exuberante Parque Nacional da Chapada Diamantina, no estado da Bahia,",
+      imagem: "./images/valedopatiBA.jpg",
+      link: "ValedoPati.html",
+      moreHide:
+        " passando por muitas de suas mais incríveis paisagens, que incluem vales, montanhas, cachoeiras e piscinas naturais, vegetação de mata atlântica, entre tantas outras belezas que existem nessa região. Apesar de ser um percurso um tanto difícil e cansativo devido à sua extensão, que é de setenta quilômetros. É uma aventura extremamente recompensadora e você ainda terá a oportunidade de ver cenários de tirar o fôlego como o Mirante do Pati e as Águas Claras, o Cachoeirão e a Cachoeira do Funil, e a Cachoeira do Lajeado e o Poço Azul.",
+      bookmark: "cardBody.dadosCardsHidden[0]",
+      comments: []
+    },
+    {
+      id: 17,
+      nome: "Trilha do Pantanal",
+      descricao:
+        "Uma novidade da Nascente Azul, a trilha foi desenvolvida em uma área de vegetação parcialmente inundada. Daí seu nome, Trilha do Pantanal.",
+      imagem: "./images/trilhaPantanalMS.jpg",
+      link: "TrilhadoPantanal.html",
+      moreHide:
+        " Nela, você vai poder observar uma variedade impressionante de aves e demais animais que permeiam o local. Pode ser apreciado sem obrigatoriedade de um elevado condicionamento física, não requer experiência anterior.",
+      bookmark: "cardBody.dadosCardsHidden[1]",
+      comments: []
+    },
+    {
+      id: 18,
+      nome: "Trilha do Ouro",
+      descricao:
+        "A Trilha do Ouro é um antigo caminho colonial do século XVII construído por índios para escoar ouro que vinha de Minas Gerais; atualmente,",
+      imagem: "./images/trilhadoOuroMG.jpg",
+      link: "TrilhadoOuro.html",
+      moreHide:
+        " é uma travessia cênica e famoso atrativo cheio de história e paisagens naturais. A trilha, que percorre a Serra da Bocaina de ponta a ponta em um percurso de cinquenta quilômetros, tem um grau de dificuldade de moderado. Mas fique tranquilo, todo seu esforço físico é muito recompensado com belos lugares históricos, como as fazendas centenárias e ruínas de um antigo engenho de cana-de-açúcar, e as mais lindas cachoeiras da região, como a Santo Izidro, a dos Veados e a das Posses.",
+      bookmark: "cardBody.dadosCardsHidden[2]",
+      comments: []
+    },
+    {
+      id: 19,
+      nome: "Trilha do Boi",
+      descricao:
+        "Aparados da Serra, ou Parque Nacional de Aparados da Serra, tem uma localização geográfica interessante - está localizado na fronteira natural entre",
+      imagem: "./images/trilhadoBoiSC.jpg",
+      link: "TrilhadoBoi.html",
+      moreHide:
+        "  Rio Grande do Sul e Santa Catarina e é o limite vertical da Serra Geral (formação rochosa que abrange o Brasil, Uruguai e Argentina) - e, por isso, abriga paisagens naturais impressionantes, compostas por imponentes desfiladeiros e pela maior quantidade de vertentes de águas cristalinas do país. A trilha do Rio do Boi passa por todos esses encantos, onde é preciso atenção, por que é feita entre pedras no interior de um famoso cânion dessa região (o Cânion Itaimbezinho) e ao final, você poderá observar de perto duas belíssimas cachoeiras, a das Andorinhas e a Véu da Noiva.",
+      bookmark: "cardBody.dadosCardsHidden[3]",
+      comments: []
+    },
+    {
+      id: 20,
+      nome: "Travessia Lençois",
+      descricao:
+        "Os Lençóis Maranhenses, no estado do Maranhão, é uma região já muito bem conhecida como um dos destinos brasileiros mais exuberantes e ricas em paisagens naturais, portanto,",
+      imagem: "./images/lencoisMA.jpg",
+      link: "TravessiaLencois.html",
+      moreHide:
+        " a travessia que percorre esse parque nacional é uma das melhores e mais incríveis maneiras de conhecer tudo que esse lugar tem para oferecer. É de nível moderado, as belezas ainda intocadas e os cenários paradisíacos dos Lençóis fazem valer todo e qualquer esforço físico, e você terá a oportunidade de conhecer algumas de suas principais atrações, como as lagoas Bonita e da Gaivota, as extensas e altas dunas, o Rio Preguiça, o povoado de Atins, e conhecer de perto a cultura local.",
+      bookmark: "cardBody.dadosCardsHidden[4]",
+      comments: []
+    },
+    {
+      id: 21,
+      nome: "Morro dois Irmãos",
+      descricao:
+        "Não é preciso ir muito longe da capital para se aventurar pelas trilhas maravilhosas do estado do Rio de Janeiro. E uma das opções mais conhecidas por lá é o Morro Dois Irmãos.",
+      imagem: "./images/morroDoisIrmaosRJ.jpg",
+      link: "MorroDoisIrmaos.html",
+      moreHide:
+        "  Pois, o local proporciona uma vista incrível da cidade maravilhosa, logo, também se destaca entre as melhores trilhas do Brasil. Com duração de duas horas e um grau de dificuldade relativamente fácil. Uma dica importante, é que você vá entre os meses de maio e setembro, quando o calor dá uma amenizada.",
+      bookmark: "cardBody.dadosCardsHidden[5]",
+      comments: []
+    },
+    {
+      id: 22,
+      nome: "Monte Roraima",
+      descricao:
+        "Todo o planejamento que a trilha requer, torna a aventura não tão fácil, logo menos inacessível e ótima para aqueles que apreciam lugares menos explorados.",
+      imagem: "./images/monteRoraimaRO.jpg",
+      link: "MonteRoraima.html",
+      moreHide:
+        " A pessoa deve ser capaz de desenvolver intensa atividade. É necessária experiência comprovada em trilhas, devendo estar preparado para executar movimentos técnicos, e grande esforço físico.",
+      bookmark: "cardBody.dadosCardsHidden[6]",
+      comments: []
+    },
+    {
+      id: 23,
+      nome: "Meia Volta de Ilha Bela",
+      descricao:
+        "A Ilhabela, no litoral norte de São Paulo, é um destino excelente para os amantes de ciclismo. Logo, se você é daqueles que não renuncia a uma boa",
+      imagem: "./images/ilhaBelaSP.jpg",
+      link: "MeiaVoltaIlhaBela.html",
+      moreHide:
+        " aventura, o circuito conhecido como meia volta na Ilhabela é uma ótima opção. A Ilhabela possui uma extensa costa, com lindas praias, cachoeiras e mata preservada. São aproximadamente 40 km de distância, com grau de dificuldade moderado.",
+      bookmark: "cardBody.dadosCardsHidden[7]",
+      comments: []
+    },
+    {
+      id: 24,
+      nome: "Janela do Céu",
+      descricao:
+        "A Janela do Céu é o lugar mais cobiçado do Parque Estadual do Ibitipoca e quem sabe um dos mais fotografados no estado de Minas Gerais. E por",
+      imagem: "./images/IbitipocaMG.jpg",
+      link: "JaneladoCeu.html",
+      moreHide:
+        " esse motivo, é uma das melhores trilhas ecológicas do Brasil. Portanto, alcançar esse pedacinho do paraíso com a vista impressionante de uma cascata que se abre para o horizonte, antes de uma queda de 100 metros não é uma tarefa fácil. A trilha da Janela é para os fortes, são muitas subidas e descidas. Então prepare-se psicologicamente e fisicamente e vá em frente, pois, o resultado vai valer a pena: é uma paisagem de tirar o fôlego.",
+      bookmark: "cardBody.dadosCardsHidden[8]",
+      comments: []
+    },
+    {
+      id: 25,
+      nome: "Chapada dos Veadeiros",
+      descricao:
+        "Visitantes do Brasil e de outras partes do mundo vão até Goiás (GO) para ver de perto a fauna, a flora, as cavernas, cânions, cachoeiras e outras riquezas da Chapada dos Veadeiros.",
+      imagem: "./images/chapadaVeaderosGO.jpg",
+      link: "ChapadaVeadiros.html",
+      moreHide:
+        " Durante o ano inteiro, as belezas naturais do local atraem pessoas interessadas nas suas várias trilhas, como as que levam ao Vale da Lua, ao Cânion 2 e às cachoeiras do Rio Preto, dos Cristais e a dos Cariocas. Requer condicionamento físico, pois tende a ser longa, acidentada e cansativa.",
+      bookmark: "cardBody.dadosCardsHidden[9]",
+      comments: []
+    },
+    {
+      id: 25,
+      nome: "Britos",
+      descricao:
+        "Trilha é cercada pelos rios de água doce Tapajós e Arapiuns, águas perfeitas para dar aquele mergulho refrescante. O destino possui uma das praias mais bonitas do Brasil, com reputação internacional já que entrou em 2009 no ranking do jornal The Guardian. ",
+      imagem: "./images/Britos.jpg",
+      link: "Britos.html",
+      moreHide:
+        "  As praias realmente dão um show de paisagens únicas. Ela se localiza no meio do Estado do Pará, a 720 quilômetros de Belém (PA) e mais de 560 quilômetros de distância de Manaus (AM).",
+      bookmark: "cardBody.dadosCardsHidden[10]",
+      comments: []
+    }
+  ]
 };
 
 if("trilhasCadastradas" in localStorage) {
   localStorage.getItem('trilhasCadastradas');
 } else {
-  localStorage.setItem('trilhasCadastradas', JSON.stringify(cardBody.dadosCards));
+  localStorage.setItem('trilhasCadastradas', JSON.stringify(cardBody));
 }
 
 // TRILHAS CRIADAS
