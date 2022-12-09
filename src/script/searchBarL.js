@@ -1,4 +1,3 @@
-//if card.IndividualGrupo === search.value ? display : fuck
 const parametro1 = document.querySelector('.searchParam1');
 const parametro2 = document.querySelector('.searchParam2');
 const parametro3 = document.querySelector('.searchParam3');
@@ -6,7 +5,12 @@ const parametro4 = document.querySelector('.searchParam4');
 
 const divSearch = document.querySelector('#search_results');
 
+let encontrouResultado = false;
+
 function codigoRodando() {
+
+    encontrouResultado = true;
+
     document.querySelector('#all__cards').style.display = "none";
 
     let meuModal = `
@@ -138,27 +142,35 @@ function pesquisarLoucamente() {
 
         if(parametro1.value == "" && parametro2.value != "" && parametro3.value != "" && parametro4.value != "") {
             if(parametro2.value === todos.cards[i].dificuldade && parametro3.value === todos.cards[i].tipo && parametro4.value === todos.cards[i].recomendacao) {
-                codigoRodando()
+                codigoRodando();
             }
         }
 
         if(parametro1.value != "" && parametro2.value == "" && parametro3.value != "" && parametro4.value == "") {
             if(parametro1.value === todos.cards[i].estado && parametro3.value === todos.cards[i].tipo && parametro4.value === todos.cards[i].recomendacao) {
-                codigoRodando()
+                codigoRodando();
             }
         }
 
         if(parametro1.value != "" && parametro2.value != "" && parametro3.value == "" && parametro4.value != "") {
             if(parametro1.value === todos.cards[i].estado && parametro2.value === todos.cards[i].dificuldade && parametro4.value === todos.cards[i].recomendacao) {
-                codigoRodando()
+                codigoRodando();
             }
         }
 
         if(parametro1.value != "" && parametro2.value != "" && parametro3.value != "" && parametro4.value != "") {
             if(parametro1.value === todos.cards[i].estado && parametro2.value === todos.cards[i].dificuldade && parametro3.value === todos.cards[i].tipo && parametro4.value === todos.cards[i].recomendacao) {
-                codigoRodando()
+                codigoRodando();
             }
         }
     }
+
+    if(!encontrouResultado) {
+        document.querySelector('#all__cards').style.display = "none";
+        divSearch.innerHTML = "Infelizmente não encontramos trilhas com essas especificações";
+    }
+
+    encontrouResultado = false;
+
 }
 
