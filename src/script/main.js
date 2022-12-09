@@ -136,7 +136,7 @@ const trailFuncs = {
         };
 
         switch(localTrilhaInput) {
-            case "Goiás":
+            case "Goias":
                 trilhasContainer.innerHTML += `<div class="col mb-4 shadow-lg">
                 <div class="card">
                 <img onclick="location=href='ChapadaVeadeiros.html'" src="../src/images/chapadaVeaderosGO.jpg" class="card-img-top d-block w-100">
@@ -146,12 +146,12 @@ const trailFuncs = {
                     <p class="card-text">${firstHalf('Visitantes do Brasil e de outras partes do mundo vão até Goiás (GO) para ver de perto a fauna, a flora, as cavernas, cânions, cachoeiras e outras riquezas da Chapada dos Veadeiros. Durante o ano inteiro, as belezas naturais do local atraem pessoas interessadas nas suas várias trilhas, como as que levam ao Vale da Lua, ao Cânion 2 e às cachoeiras do Rio Preto, dos Cristais e a dos Cariocas. Requer condicionamento físico, pois tende a ser longa, acidentada e cansativa.')}
                     <span class="dots">...</span><span class="more hide">${secondHalf('Visitantes do Brasil e de outras partes do mundo vão até Goiás (GO) para ver de perto a fauna, a flora, as cavernas, cânions, cachoeiras e outras riquezas da Chapada dos Veadeiros. Durante o ano inteiro, as belezas naturais do local atraem pessoas interessadas nas suas várias trilhas, como as que levam ao Vale da Lua, ao Cânion 2 e às cachoeiras do Rio Preto, dos Cristais e a dos Cariocas. Requer condicionamento físico, pois tende a ser longa, acidentada e cansativa.')}</span></p>
                     <button class="vejamais" onclick="readMore(this)"><b>Veja Mais</b></button>
-                   
+                    <button onclick="addToFavoritas(${cardBody.dadosCardsHidden[9].bookmark})" style="background-color: #fff; border-style: none; width: fit-content; float: right;"><img src="images/icons/bookmark.svg" alt="imagem-bookmark" width="26px" height="26px"></button>
                 </div>
                 </div>
                 </div>`;
                 break;
-            case 'São Paulo':
+            case 'Sao Paulo':
                 trilhasContainer.innerHTML += `  <div class="col mb-4 shadow-lg">
                 <div class="card">
                 <img onclick="location=href='MeiaVoltaIlhaBela.html'" src="../src/images/ilhaBelaSP.jpg" class="card-img-top d-block w-100">
@@ -161,6 +161,7 @@ const trailFuncs = {
                     <p class="card-text">${firstHalf('A Ilhabela, no litoral norte de São Paulo, é um destino excelente para os amantes de ciclismo. Logo, se você é daqueles que não renuncia a uma boa aventura, o circuito conhecido como meia volta na Ilhabela é uma ótima opção. A Ilhabela possui uma extensa costa, com lindas praias, cachoeiras e mata preservada. São aproximadamente 40 km de distância, com grau de dificuldade moderado.')}
                     <span class="dots">...</span><span class="more hide">${secondHalf('A Ilhabela, no litoral norte de São Paulo, é um destino excelente para os amantes de ciclismo. Logo, se você é daqueles que não renuncia a uma boa aventura, o circuito conhecido como meia volta na Ilhabela é uma ótima opção. A Ilhabela possui uma extensa costa, com lindas praias, cachoeiras e mata preservada. São aproximadamente 40 km de distância, com grau de dificuldade moderado.')}</span></p>
                     <button class="vejamais" onclick="readMore(this)"><b>Veja Mais</b></button>
+                    <button onclick="addToFavoritas(${cardBody.dadosCardsHidden[7].bookmark})" style="background-color: #fff; border-style: none; width: fit-content; float: right;"><img src="images/icons/bookmark.svg" alt="imagem-bookmark" width="26px" height="26px"></button>
                 </div>
                 </div>
                 </div>`;
@@ -175,6 +176,7 @@ const trailFuncs = {
                     <p class="card-text">${firstHalf('Todo o planejamento que a trilha requer, torna a aventura não tão fácil, logo menos inacessível e ótima para aqueles que apreciam lugares menos explorados. A pessoa deve ser capaz de desenvolver intensa atividade. É necessária experiência comprovada em trilhas, devendo estar preparado para executar movimentos técnicos, e grande esforço físico.')}
                     <span class="dots">...</span><span class="more hide">${secondHalf('Todo o planejamento que a trilha requer, torna a aventura não tão fácil, logo menos inacessível e ótima para aqueles que apreciam lugares menos explorados. A pessoa deve ser capaz de desenvolver intensa atividade. É necessária experiência comprovada em trilhas, devendo estar preparado para executar movimentos técnicos, e grande esforço físico.')}</span></p>
                     <button class="vejamais" onclick="readMore(this)"><b>Veja Mais</b></button>
+                    <button onclick="addToFavoritas(${cardBody.dadosCardsHidden[6].bookmark})" style="background-color: #fff; border-style: none; width: fit-content; float: right;"><img src="images/icons/bookmark.svg" alt="imagem-bookmark" width="26px" height="26px"></button>
                 </div>
                 </div>
                 </div>`;
@@ -189,11 +191,12 @@ const trailFuncs = {
                         <p class="card-text">${firstHalf('Não é preciso ir muito longe da capital para se aventurar pelas trilhas maravilhosas do estado do Rio de Janeiro. E uma das opções mais conhecidas por lá é o Morro Dois Irmãos. Pois, o local proporciona uma vista incrível da cidade maravilhosa, logo, também se destaca entre as melhores trilhas do Brasil. Com duração de duas horas e um grau de dificuldade relativamente fácil. Uma dica importante, é que você vá entre os meses de maio e setembro, quando o calor dá uma amenizada.')}
                         <span class="dots">...</span><span class="more hide">${secondHalf('Não é preciso ir muito longe da capital para se aventurar pelas trilhas maravilhosas do estado do Rio de Janeiro. E uma das opções mais conhecidas por lá é o Morro Dois Irmãos. Pois, o local proporciona uma vista incrível da cidade maravilhosa, logo, também se destaca entre as melhores trilhas do Brasil. Com duração de duas horas e um grau de dificuldade relativamente fácil. Uma dica importante, é que você vá entre os meses de maio e setembro, quando o calor dá uma amenizada.')}</span></p>
                         <button class="vejamais" onclick="readMore(this)"><b>Veja Mais</b></button>
+                        <button onclick="addToFavoritas(${cardBody.dadosCardsHidden[5].bookmark})" style="background-color: #fff; border-style: none; width: fit-content; float: right;"><img src="images/icons/bookmark.svg" alt="imagem-bookmark" width="26px" height="26px"></button>
                     </div>
                     </div>
                     </div>`;
                 break;
-            case 'Maranhão':
+            case 'Maranhao':
                     trilhasContainer.innerHTML += `  <div class="col mb-4 shadow-lg">
                     <div class="card">
                     <img onclick="location=href='TravessiaLencois.html'" src="../src/images/lencoisMA.jpg" class="card-img-top d-block w-100">
@@ -203,6 +206,7 @@ const trailFuncs = {
                         <p class="card-text">${firstHalf('Os Lençóis Maranhenses, no estado do Maranhão, é uma região já muito bem conhecida como um dos destinos brasileiros mais exuberantes e ricas em paisagens naturais, portanto, a travessia que percorre esse parque nacional é uma das melhores e mais incríveis maneiras de conhecer tudo que esse lugar tem para oferecer. É de nível moderado, as belezas ainda intocadas e os cenários paradisíacos dos Lençóis fazem valer todo e qualquer esforço físico, e você terá a oportunidade de conhecer algumas de suas principais atrações, como as lagoas Bonita e da Gaivota, as extensas e altas dunas, o Rio Preguiça, o povoado de Atins, e conhecer de perto a cultura local.')}
                         <span class="dots">...</span><span class="more hide">${secondHalf('Os Lençóis Maranhenses, no estado do Maranhão, é uma região já muito bem conhecida como um dos destinos brasileiros mais exuberantes e ricas em paisagens naturais, portanto, a travessia que percorre esse parque nacional é uma das melhores e mais incríveis maneiras de conhecer tudo que esse lugar tem para oferecer. É de nível moderado, as belezas ainda intocadas e os cenários paradisíacos dos Lençóis fazem valer todo e qualquer esforço físico, e você terá a oportunidade de conhecer algumas de suas principais atrações, como as lagoas Bonita e da Gaivota, as extensas e altas dunas, o Rio Preguiça, o povoado de Atins, e conhecer de perto a cultura local.')}</span></p>
                         <button class="vejamais" onclick="readMore(this)"><b>Veja Mais</b></button>
+                        <button onclick="addToFavoritas(${cardBody.dadosCardsHidden[4].bookmark})" style="background-color: #fff; border-style: none; width: fit-content; float: right;"><img src="images/icons/bookmark.svg" alt="imagem-bookmark" width="26px" height="26px"></button>
                     </div>
                     </div>
                     </div>`;
@@ -217,6 +221,7 @@ const trailFuncs = {
                         <p class="card-text">${firstHalf('Aparados da Serra, ou Parque Nacional de Aparados da Serra, tem uma localização geográfica interessante – está localizado na fronteira natural entre Rio Grande do Sul e Santa Catarina e é o limite vertical da Serra Geral (formação rochosa que abrange o Brasil, Uruguai e Argentina) – e, por isso, abriga paisagens naturais impressionantes, compostas por imponentes desfiladeiros e pela maior quantidade de vertentes de águas cristalinas do país. A trilha do Rio do Boi passa por todos esses encantos, onde é preciso atenção, por que é feita entre pedras no interior de um famoso cânion dessa região (o Cânion Itaimbezinho) e ao final, você poderá observar de perto duas belíssimas cachoeiras, a das Andorinhas e a Véu da Noiva.')}
                         <span class="dots">...</span><span class="more hide">${secondHalf('Aparados da Serra, ou Parque Nacional de Aparados da Serra, tem uma localização geográfica interessante – está localizado na fronteira natural entre Rio Grande do Sul e Santa Catarina e é o limite vertical da Serra Geral (formação rochosa que abrange o Brasil, Uruguai e Argentina) – e, por isso, abriga paisagens naturais impressionantes, compostas por imponentes desfiladeiros e pela maior quantidade de vertentes de águas cristalinas do país. A trilha do Rio do Boi passa por todos esses encantos, onde é preciso atenção, por que é feita entre pedras no interior de um famoso cânion dessa região (o Cânion Itaimbezinho) e ao final, você poderá observar de perto duas belíssimas cachoeiras, a das Andorinhas e a Véu da Noiva.')}</span></p>
                         <button class="vejamais" onclick="readMore(this)"><b>Veja Mais</b></button>
+                        <button onclick="addToFavoritas(${cardBody.dadosCardsHidden[3].bookmark})" style="background-color: #fff; border-style: none; width: fit-content; float: right;"><img src="images/icons/bookmark.svg" alt="imagem-bookmark" width="26px" height="26px"></button>
                     </div>
                     </div>
                     </div>`;
@@ -231,6 +236,7 @@ const trailFuncs = {
                         <p class="card-text">${firstHalf('A Trilha do Ouro é um antigo caminho colonial do século XVII construído por índios para escoar ouro que vinha de Minas Gerais; atualmente, é uma travessia cênica e famoso atrativo cheio de história e paisagens naturais. A trilha, que percorre a Serra da Bocaina de ponta a ponta em um percurso de cinquenta quilômetros, tem um grau de dificuldade de moderado. Mas fique tranquilo, todo seu esforço físico é muito recompensado com belos lugares históricos, como as fazendas centenárias e ruínas de um antigo engenho de cana-de-açúcar, e as mais lindas cachoeiras da região, como a Santo Izidro, a dos Veados e a das Posses.')}
                         <span class="dots">...</span><span class="more hide">${secondHalf('A Trilha do Ouro é um antigo caminho colonial do século XVII construído por índios para escoar ouro que vinha de Minas Gerais; atualmente, é uma travessia cênica e famoso atrativo cheio de história e paisagens naturais. A trilha, que percorre a Serra da Bocaina de ponta a ponta em um percurso de cinquenta quilômetros, tem um grau de dificuldade de moderado. Mas fique tranquilo, todo seu esforço físico é muito recompensado com belos lugares históricos, como as fazendas centenárias e ruínas de um antigo engenho de cana-de-açúcar, e as mais lindas cachoeiras da região, como a Santo Izidro, a dos Veados e a das Posses.')}</span></p>
                         <button class="vejamais" onclick="readMore(this)"><b>Veja Mais</b></button>
+                        <button onclick="addToFavoritas(${cardBody.dadosCardsHidden[2].bookmark})" style="background-color: #fff; border-style: none; width: fit-content; float: right;"><img src="images/icons/bookmark.svg" alt="imagem-bookmark" width="26px" height="26px"></button>
                     </div>
                     </div>
                     </div>`;
@@ -245,6 +251,7 @@ const trailFuncs = {
                         <p class="card-text">${firstHalf('Uma novidade da Nascente Azul, a trilha foi desenvolvida em uma área de vegetação parcialmente inundada. Daí seu nome, Trilha do Pantanal. Nela, você vai poder observar uma variedade impressionante de aves e demais animais que permeiam o local. Pode ser apreciado sem obrigatoriedade de um elevado condicionamento física, não requer experiência anterior.')}
                         <span class="dots">...</span><span class="more hide">${secondHalf('Uma novidade da Nascente Azul, a trilha foi desenvolvida em uma área de vegetação parcialmente inundada. Daí seu nome, Trilha do Pantanal. Nela, você vai poder observar uma variedade impressionante de aves e demais animais que permeiam o local. Pode ser apreciado sem obrigatoriedade de um elevado condicionamento física, não requer experiência anterior.')}</span></p>
                         <button class="vejamais" onclick="readMore(this)"><b>Veja Mais</b></button>
+                        <button onclick="addToFavoritas(${cardBody.dadosCardsHidden[1].bookmark})" style="background-color: #fff; border-style: none; width: fit-content; float: right;"><img src="images/icons/bookmark.svg" alt="imagem-bookmark" width="26px" height="26px"></button>
                     </div>
                     </div>
                     </div>`;
@@ -259,6 +266,7 @@ const trailFuncs = {
                         <p class="card-text">${firstHalf('A trilha mais linda do Brasil e da América do Sul, percorre uma área do exuberante Parque Nacional da Chapada Diamantina, no estado da Bahia, passando por muitas de suas mais incríveis paisagens, que incluem vales, montanhas, cachoeiras e piscinas naturais, vegetação de mata atlântica, entre tantas outras belezas que existem nessa região. Apesar de ser um percurso um tanto difícil e cansativo devido à sua extensão, que é de setenta quilômetros. É uma aventura extremamente recompensadora e você ainda terá a oportunidade de ver cenários de tirar o fôlego como o Mirante do Pati e as Águas Claras, o Cachoeirão e a Cachoeira do Funil, e a Cachoeira do Lajeado e o Poço Azul.')}
                         <span class="dots">...</span><span class="more hide">${secondHalf('A trilha mais linda do Brasil e da América do Sul, percorre uma área do exuberante Parque Nacional da Chapada Diamantina, no estado da Bahia, passando por muitas de suas mais incríveis paisagens, que incluem vales, montanhas, cachoeiras e piscinas naturais, vegetação de mata atlântica, entre tantas outras belezas que existem nessa região. Apesar de ser um percurso um tanto difícil e cansativo devido à sua extensão, que é de setenta quilômetros. É uma aventura extremamente recompensadora e você ainda terá a oportunidade de ver cenários de tirar o fôlego como o Mirante do Pati e as Águas Claras, o Cachoeirão e a Cachoeira do Funil, e a Cachoeira do Lajeado e o Poço Azul.')}</span></p>
                         <button class="vejamais" onclick="readMore(this)"><b>Veja Mais</b></button>
+                        <button onclick="addToFavoritas(${cardBody.dadosCardsHidden[0].bookmark})" style="background-color: #fff; border-style: none; width: fit-content; float: right;"><img src="images/icons/bookmark.svg" alt="imagem-bookmark" width="26px" height="26px"></button>
                     </div>
                     </div>
                     </div>`;
@@ -337,7 +345,7 @@ const trailFuncs = {
 
         this.event.preventDefault();
 
-        if (!trilhaNome.value && !trilhaLocal.value && !trilhaDescricao.value && !trilhaAltimetria.value && !trilhaDuracao.value && !dificuldadeTrilha.value && !tipoTrilha.value && !recomTrilha.value) {
+        if (trilhaNome.value == "" && trilhaLocal.value == "" && trilhaDescricao.value == "" && trilhaAltimetria.value == "" && trilhaDuracao.value && dificuldadeTrilha.value == "" && tipoTrilha.value == "" && recomTrilha.value == "") {
             return alert("Preencha todos os campos!");
         }
 
