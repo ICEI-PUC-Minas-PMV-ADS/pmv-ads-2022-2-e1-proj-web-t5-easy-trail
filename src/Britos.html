@@ -29,7 +29,7 @@
 <body style="background-image: url(images/0000007.jpg); justify-content: center;">
 
     <div class="containerbread">
-        <ul class="breadcrumb m-0">
+        <ul class="breadcrumb m-2 p-2">
             <li class="breadcrumb-item"><a style="cursor:pointer; color: #EB5C0C;"
                     onclick="location=href='./HomePage.html'">Home</a></li>
             <li class="breadcrumb-item"><a style="cursor:pointer; color: #EB5C0C;"
@@ -60,7 +60,11 @@
         <div class="container-fluid d-flex p-4 bg-white">
             <div class="row col-sm-7">
                 <div class="descricaotrilha p-0 m-4 align-self-center">
-                    <p style="width:90%">Trilha é cercada pelos rios de água doce Tapajós e Arapiuns, águas perfeitas para dar aquele mergulho refrescante. O destino possui uma das praias mais bonitas do Brasil, com reputação internacional já que entrou em 2009 no ranking do jornal The Guardian. As praias realmente dão um show de paisagens únicas. Ela se localiza no meio do Estado do Pará, a 720 quilômetros de Belém (PA) e mais de 560 quilômetros de distância de Manaus (AM).</p>
+                    <p style="width:90%">Trilha é cercada pelos rios de água doce Tapajós e Arapiuns, águas perfeitas
+                        para dar aquele mergulho refrescante. O destino possui uma das praias mais bonitas do Brasil,
+                        com reputação internacional já que entrou em 2009 no ranking do jornal The Guardian. As praias
+                        realmente dão um show de paisagens únicas. Ela se localiza no meio do Estado do Pará, a 720
+                        quilômetros de Belém (PA) e mais de 560 quilômetros de distância de Manaus (AM).</p>
                 </div>
             </div>
             <div class="col p-0">
@@ -104,7 +108,7 @@
             <div class="col">
                 <div><b>Dificuldade</b></div>
                 <div>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="#EB5C0C"
+                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="#EB5C0C"
                         class="bi bi-reception-4" viewBox="0 0 16 16">
                         <path
                             d="M0 11.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-2zm4-3a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-5zm4-3a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-8zm4-3a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v11a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-11z" />
@@ -115,19 +119,20 @@
             <div class="col">
                 <div><b>Tipo de Trilha</b></div>
                 <div><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="#EB5C0C"
-                  class="bi bi-reception-4" viewBox="0 0 16 16">
-                  <path d="M7 2.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0zm4.225 4.053a.5.5 0 0 0-.577.093l-3.71 4.71-2.66-2.772a.5.5 0 0 0-.63.062L.002 13v2a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-4.5l-4.777-3.947z"/>
-                </svg> Rural
+                        class="bi bi-reception-4" viewBox="0 0 16 16">
+                        <path
+                            d="M7 2.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0zm4.225 4.053a.5.5 0 0 0-.577.093l-3.71 4.71-2.66-2.772a.5.5 0 0 0-.63.062L.002 13v2a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-4.5l-4.777-3.947z" />
+                    </svg> Rural
                 </div>
-              </div>
+            </div>
 
         </div>
 
         <div class="descricaotrilha m-1 p-3 w-100" id="commentarios"></div>
-        <div class="bg-light m-0 p-0"> 
+        <div class="bg-light m-0 p-0">
             <h6 class="m-0 p-3" style="font-size: 0.1rem;">Comentários</h6>
             <div class="p-3 bg-light" style="background-color: white;" id="commentPost">
-                <div style="color: gray; mb-5 p-5" id="testeteste"></div>  
+                <div style="color: gray; mb-5 p-5" id="testeteste"></div>
             </div>
         </div>
 
@@ -139,7 +144,8 @@
             <div class="row">
                 <div class="col"></div>
                 <div class="col" id="Copyright">Direitos reservados a PUC Minas. COPYRIGHT&copy; 2022</div>
-                <div class="col" id="imgFAQ"><img onclick="location=href='FAQ.html'" src="images/FAQ.jpg" style="cursor: pointer; width: 30%;" alt="Imagem FAQ"></div>
+                <div class="col" id="imgFAQ"><img onclick="location=href='FAQ.html'" src="images/FAQ.jpg"
+                        style="cursor: pointer; width: 30%;" alt="Imagem FAQ"></div>
             </div>
         </div>
 
@@ -176,12 +182,12 @@
 
         function enviar() {
             this.event.preventDefault();
-            if(comentariosTrilhas.value != ""){ 
-                trilhasCadastradass.dadosCardsHidden[10].comments.push({nome: userLogaduu.nomeCompleto, comentario: comentariosTrilhas.value});
-            localStorage.setItem('trilhasCadastradas', JSON.stringify(trilhasCadastradass));
-            alert("Comentario enviado!")
-            window.location.reload();
-            }   else {
+            if (comentariosTrilhas.value != "") {
+                trilhasCadastradass.dadosCardsHidden[10].comments.push({ nome: userLogaduu.nomeCompleto, comentario: comentariosTrilhas.value });
+                localStorage.setItem('trilhasCadastradas', JSON.stringify(trilhasCadastradass));
+                alert("Comentario enviado!")
+                window.location.reload();
+            } else {
                 alert("Escreva algum comentário para ser enviado")
             }
         }
@@ -190,37 +196,37 @@
             document.getElementById('testeteste').innerHTML += `${element.nome}: ${element.comentario} <br>`;
         });
     </script>
-    
-        <script id="apiTempo">
+
+    <script id="apiTempo">
         let lat = -1.45502
         let long = -48.5024
-    
-            url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&units=imperial&APPID=622296cd4fda08b69c46ccfa980f968d`
-            fetchApi(url)
-            console.log(url)
-    
-            function fetchApi(url) {
+
+        url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&units=imperial&APPID=622296cd4fda08b69c46ccfa980f968d`
+        fetchApi(url)
+        console.log(url)
+
+        function fetchApi(url) {
             let city = document.querySelector('.city')
             let temperature = document.querySelector('#temp')
             let humidity = document.querySelector('#umidad')
-    
+
             fetch(url)
-            .then((data) => {
-                return data.json()
-            })
-            .then((data) => {
-                let tempInCelsius = ((5/9) * (data.main.temp-32)).toFixed(1);
-                
-                city.textContent      = "Pará"
-                temperature.innerHTML = tempInCelsius
-                humidity.innerHTML    = data.main.humidity
-            })
-            .catch((err) => {
-                city.innerText = `Impossível acessar o OpenWeather. Verifique a sua conexão.`;
-                temperature.innerHTML = `-`;
-            })
-            }
-        </script>
+                .then((data) => {
+                    return data.json()
+                })
+                .then((data) => {
+                    let tempInCelsius = ((5 / 9) * (data.main.temp - 32)).toFixed(1);
+
+                    city.textContent = "Pará"
+                    temperature.innerHTML = tempInCelsius
+                    humidity.innerHTML = data.main.humidity
+                })
+                .catch((err) => {
+                    city.innerText = `Impossível acessar o OpenWeather. Verifique a sua conexão.`;
+                    temperature.innerHTML = `-`;
+                })
+        }
+    </script>
 
 </body>
 
