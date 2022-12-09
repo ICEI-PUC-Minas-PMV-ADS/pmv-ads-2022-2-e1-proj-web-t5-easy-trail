@@ -87,8 +87,9 @@ header {
 
 footer {
 background-color:whitesmoke;
-padding-top: 15px;
-padding-bottom:15px;
+padding-top: 5px;
+padding-bottom:5px;
+font-size: 0.7rem;
 }
 
 .container.text {
@@ -367,8 +368,9 @@ button:hover {
 .card-faq {
   /*Configuração do campo de texto do componente*/
   font-family: "calibri";
-  color: gray;
-  font-size: 10px;
+  color:black;
+  font-size: 1rem;
+  background-color: whitesmoke;
 }
 
 .textarea {

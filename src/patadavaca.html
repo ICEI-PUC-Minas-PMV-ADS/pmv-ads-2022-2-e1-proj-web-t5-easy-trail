@@ -2,38 +2,39 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link rel="stylesheet" href="style/main.css">
-    <link rel="stylesheet" href="./style/mediaquery.css">
-    <link rel="shortcut icon" href="images/logoEasy.png">
-    <title>EasyTrail | Pata da Vaca</title>
-    <style>
-        #more {
-            display: none;
-        }
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <link rel="stylesheet" href="style/main.css">
+  <link rel="shortcut icon" href="images/logoEasy.png">
+  <title>EasyTrail | Pata da Vaca</title>
+  <style>
+    #more {
+      display: none;
+    }
 
-        #more2 {
-            display: none;
-        }
+    #more2 {
+      display: none;
+    }
 
-        #more3 {
-            display: none;
-        }
-    </style>
+    #more3 {
+      display: none;
+    }
+  </style>
 </head>
 
-<body>
+<body style="background-image: url(images/0000007.jpg); justify-content: center;">
 
   <div class="containerbread">
-      <ul class="breadcrumb m-0">
-          <li class="breadcrumb-item"><a href="HomePage.html">Home</a></li>
-          <li class="breadcrumb-item"><a href="DetalheTrilha.html">Pata da Vaca</a></li>
-      </ul>
+    <ul class="breadcrumb m-0">
+      <li class="breadcrumb-item"><a style="cursor:pointer; color: #EB5C0C;"
+          onclick="location=href='./HomePage.html'">Home</a></li>
+      <li class="breadcrumb-item"><a style="cursor:pointer; color: #EB5C0C;"
+          onclick="location=href='./patadavaca.html'">Pata da Vaca</a></li>
+    </ul>
   </div>
 
   <nav class="navbar navbar-expand-lg navbar-light bg-light" id="logado"></nav>
@@ -50,8 +51,8 @@
         <h5>Previsão do Tempo</h5>
         <p>Temperatura e umidade</p>
         <div id="temperatura">
-            <h3 class="city"></h3>
-            <h4>🌡<span id="temp"></span>°C 💧<span id='umidad'></span>%</h4>
+          <h3 class="city"></h3>
+          <h4>🌡<span id="temp"></span>°C 💧<span id='umidad'></span>%</h4>
         </div>
       </div>
     </div>
@@ -59,12 +60,16 @@
     <div class="container-fluid d-flex p-4 bg-white">
       <div class="row col-sm-7">
         <div class="descricaotrilha p-0 m-4 align-self-center">
-          <p style="width:90%">Esse terreno é um pouco acidentado, apresentado estradas de terra e de cascalho, raízes expostas, rochas e riachos, o que exige um pouco mais do desempenho do ciclista. essa trilha não é tão fácil de percorrer, sendo necessário inclusive que a bike que você irá escolher para pedalar, nesse caso, seja uma excelente mountain bike, pois elas se adequam melhor a esse tipo de terreno.</p>
+          <p style="width:90%">Esse terreno é um pouco acidentado, apresentado estradas de terra e de cascalho, raízes
+            expostas, rochas e riachos, o que exige um pouco mais do desempenho do ciclista. essa trilha não é tão fácil
+            de percorrer, sendo necessário inclusive que a bike que você irá escolher para pedalar, nesse caso, seja uma
+            excelente mountain bike, pois elas se adequam melhor a esse tipo de terreno.</p>
         </div>
       </div>
 
       <div class="col p-0">
-        <img id="myImg" src="images/riodejaneiroMaps.jpg" style="max-width:400px; cursor: pointer;" alt="Mapa Rio de Janeiro">
+        <img id="myImg" src="images/riodejaneiroMaps.jpg" style="max-width:400px; cursor: pointer;"
+          alt="Mapa Rio de Janeiro">
         <div id="myModal" class="modal">
           <span class="closeX">&times;</span>
           <img class="modal-content" id="img01" alt="imagem mapa" src="images/riodejaneiroMaps.jpg">
@@ -73,13 +78,13 @@
       </div>
     </div>
 
-    <div class="row text-center p-3" style="background-color: rgb(243, 242, 242);">
+    <div class="row text-center p-4 bg-light">
 
       <div class="col">
         <div><b>Indicação</b> </div>
         <div>
-          <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="#EB5C0C"
-            class="bi bi-person-fill" viewBox="0 0 16 16">
+          <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="#EB5C0C" class="bi bi-person-fill"
+            viewBox="0 0 16 16">
             <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
           </svg> Individual
         </div>
@@ -99,8 +104,8 @@
 
       <div class="col">
         <div><b>Dificuldade</b></div>
-        <div><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="#EB5C0C"
-            class="bi bi-reception-4" viewBox="0 0 16 16">
+        <div><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="#EB5C0C" class="bi bi-reception-4"
+            viewBox="0 0 16 16">
             <path
               d="M0 11.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-2zm4-3a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-5zm4-3a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-8zm4-3a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v11a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-11z" />
           </svg> Alta
@@ -109,36 +114,36 @@
 
       <div class="col">
         <div><b>Tipo de Trilha</b></div>
-        <div><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="#EB5C0C"
-          class="bi bi-reception-4" viewBox="0 0 16 16">
-          <path d="M7 2.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0zm4.225 4.053a.5.5 0 0 0-.577.093l-3.71 4.71-2.66-2.772a.5.5 0 0 0-.63.062L.002 13v2a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-4.5l-4.777-3.947z"/>
-        </svg> Rural
+        <div><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="#EB5C0C" class="bi bi-reception-4"
+            viewBox="0 0 16 16">
+            <path
+              d="M7 2.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0zm4.225 4.053a.5.5 0 0 0-.577.093l-3.71 4.71-2.66-2.772a.5.5 0 0 0-.63.062L.002 13v2a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-4.5l-4.777-3.947z" />
+          </svg> Rural
         </div>
       </div>
 
     </div>
 
-    <div class="descricaotrilha p-3 m-1" id="commentarios"></div>
-
-  <div class="bg-light">
-      <div class="p-4 w-70" id="commentPost">
-          <hr>
-          <div id="testeteste"></div>
-          <h6 class="m-4" style="font-size: 0.1rem; width:70%;" class="p-4">Comentários</h6>
+    <div class="descricaotrilha m-1 p-3 w-100" id="commentarios"></div>
+    <div class="bg-light m-0 p-0">
+      <h6 class="m-0 p-3" style="font-size: 0.1rem;">Comentários</h6>
+      <div class="p-3 bg-light" style="background-color: white;" id="commentPost">
+        <div style="color: gray; mb-5 p-5" id="testeteste"></div>
       </div>
-  </div>
+    </div>
 
   </section>
 
   <footer>
 
-  <div class="container text">
-    <div class="row">
-      <div class="col"></div>
-      <div class="col" id="Copyright">Direitos reservados a PUC Minas. COPYRIGHT&copy; 2022</div>
-      <div class="col" id="imgFAQ"><img onclick="location=href='FAQ.html'" src="images/FAQ.jpg" style="cursor: pointer; width: 30%;" alt="Imagem FAQ"></div>
+    <div class="container text">
+      <div class="row">
+        <div class="col"></div>
+        <div class="col" id="Copyright">Direitos reservados a PUC Minas. COPYRIGHT&copy; 2022</div>
+        <div class="col" id="imgFAQ"><img onclick="location=href='FAQ.html'" src="images/FAQ.jpg"
+            style="cursor: pointer; width: 30%;" alt="Imagem FAQ"></div>
+      </div>
     </div>
-  </div>
 
   </footer>
 
@@ -173,19 +178,19 @@
     let trilhasCadastradass = JSON.parse(localStorage.getItem('trilhasCadastradas'));
 
     function enviar() {
-            this.event.preventDefault();
-            if(comentariosTrilhas.value != ""){ 
-                trilhasCadastradass.dadosCards[5].comments.push({nome: userLogaduu.nomeCompleto, comentario: comentariosTrilhas.value});
-            localStorage.setItem('trilhasCadastradas', JSON.stringify(trilhasCadastradass));
-            alert("Comentario enviado!")
-            window.location.reload();
-            }   else {
-                alert("Escreva algum comentário para ser enviado")
-            }
-        }
+      this.event.preventDefault();
+      if (comentariosTrilhas.value != "") {
+        trilhasCadastradass.dadosCards[5].comments.push({ nome: userLogaduu.nomeCompleto, comentario: comentariosTrilhas.value });
+        localStorage.setItem('trilhasCadastradas', JSON.stringify(trilhasCadastradass));
+        alert("Comentario enviado!")
+        window.location.reload();
+      } else {
+        alert("Escreva algum comentário para ser enviado")
+      }
+    }
 
     trilhasCadastradass.dadosCards[5].comments.forEach((element) => {
-        document.getElementById('testeteste').innerHTML += `${element.nome}: ${element.comentario} <br>`;
+      document.getElementById('testeteste').innerHTML += `${element.nome}: ${element.comentario} <br>`;
     });
   </script>
 
@@ -198,25 +203,25 @@
     console.log(url)
 
     function fetchApi(url) {
-    let city = document.querySelector('.city')
-    let temperature = document.querySelector('#temp')
-    let humidity = document.querySelector('#umidad')
+      let city = document.querySelector('.city')
+      let temperature = document.querySelector('#temp')
+      let humidity = document.querySelector('#umidad')
 
-    fetch(url)
-    .then((data) => {
-        return data.json()
-    })
-    .then((data) => {
-        let tempInCelsius = ((5/9) * (data.main.temp-32)).toFixed(1);
-        
-        city.textContent      = data.name
-        temperature.innerHTML = tempInCelsius
-        humidity.innerHTML    = data.main.humidity
-    })
-    .catch((err) => {
-        city.innerText = `Impossível acessar o OpenWeather. Verifique a sua conexão.`;
-        temperature.innerHTML = `-`;
-    })
+      fetch(url)
+        .then((data) => {
+          return data.json()
+        })
+        .then((data) => {
+          let tempInCelsius = ((5 / 9) * (data.main.temp - 32)).toFixed(1);
+
+          city.textContent = data.name
+          temperature.innerHTML = tempInCelsius
+          humidity.innerHTML = data.main.humidity
+        })
+        .catch((err) => {
+          city.innerText = `Impossível acessar o OpenWeather. Verifique a sua conexão.`;
+          temperature.innerHTML = `-`;
+        })
     }
   </script>
 
