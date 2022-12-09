@@ -15,6 +15,7 @@ header {
   width: 120px;
   height: 40px;
   align-items: center;
+  margin-top: 1.7rem;
 }
 
 .col-sm {
@@ -87,9 +88,15 @@ header {
 
 footer {
 background-color:whitesmoke;
+<<<<<<< Updated upstream
 padding-top: 5px;
 padding-bottom:5px;
 font-size: 0.7rem;
+=======
+padding-top: 15px;
+padding-bottom:15px;
+font-size: 2rem;
+>>>>>>> Stashed changes
 }
 
 .container.text {
@@ -332,13 +339,12 @@ button:hover {
   padding-left: 0;
 }
 
-.breadcrumb a {
+.breadcrumb a,li,{
  /*Configuração do texto da Rota das páginas navegadas*/
-  font-size: 0.01rem;
-  font-family: 'calibri';
-  color: red;
-  padding-left: 0.5rem;
+ color: #EB5C0C;
+ font-size: 0.01rem;
 }
+
 
 /*//////////  FAQ //////////*/
 #FAQ {
@@ -368,9 +374,14 @@ button:hover {
 .card-faq {
   /*Configuração do campo de texto do componente*/
   font-family: "calibri";
+<<<<<<< Updated upstream
   color:black;
   font-size: 1rem;
   background-color: whitesmoke;
+=======
+  color: gray;
+  font-size: 1rem;
+>>>>>>> Stashed changes
 }
 
 .textarea {
