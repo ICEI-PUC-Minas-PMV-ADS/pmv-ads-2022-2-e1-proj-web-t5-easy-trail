@@ -167,7 +167,7 @@ function pesquisarLoucamente() {
 
     if(!encontrouResultado) {
         document.querySelector('#all__cards').style.display = "none";
-        divSearch.innerHTML = "Infelizmente não encontramos trilhas com essas especificações";
+        divSearch.innerHTML = `<p id="searchBar">Infelizmente não encontramos trilhas com essas especificações</P>`;
     }
 
     encontrouResultado = false;
