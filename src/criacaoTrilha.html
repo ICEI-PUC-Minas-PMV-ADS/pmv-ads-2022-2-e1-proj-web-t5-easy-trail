@@ -25,7 +25,15 @@
     </style>
 </head>
 
-<body>
+<body style="background-image: url(images/map.jpg);">
+    <div class="containerbread m-2 p-0">
+        <ul class="breadcrumb">
+          <li class="breadcrumb-item"><a onclick="location=href='HomePage.html'"
+              style="cursor: pointer;color:#EB5C0C;font-size: 1px;">Home</a></li>
+          <li class="breadcrumb-item"><a onclick="location=href='UserPage.html'"
+              style="cursor: pointer;color:#EB5C0C;font-size: 1px;font-weight: bold;">Cadastro de Trilha</a></li>
+        </ul>
+      </div>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light" id="logado"></nav>
 
@@ -82,7 +90,7 @@
                     </div>
                 </div>
 
-                <label for="descricao"><b>Descricao:</b></label>
+                <label for="descricao"><b>Descrição:</b></label>
                 <div>
                     <textarea name="descricao" id="trilha_descricao" placeholder="Descrição da trilha..."
                         class="form-control shadow mb-3 m-2 p-2 cadastro-trilha-input" required></textarea>
