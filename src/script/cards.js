@@ -250,7 +250,7 @@ const cardBody = {
       link: "Britos.html",
       moreHide: " uma das praias mais bonitas do Brasil, com reputação internacional já que entrou em 2009 no ranking do jornal The Guardian. As praias realmente dão um show de paisagens únicas. Ela se localiza no meio do Estado do Pará, a 720 quilômetros de Belém (PA) e mais de 560 quilômetros de distância de Manaus (AM).",
       altimetria: "915 metros",
-      estado: "Maranhao",
+      estado: "Para",
       dificuldade: "Alta",
       tipo: "Rural",
       recomendacao: "Individual ou Grupo",
