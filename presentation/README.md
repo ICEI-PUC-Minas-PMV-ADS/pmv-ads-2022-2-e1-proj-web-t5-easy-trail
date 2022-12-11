@@ -1,5 +1,5 @@
 # Apresentação da Solução
 
-Abaixo temos a solução criada, em uma apresentação em formato pdf e um vídeo demonstrando o funcionamento da aplicação.
+Em anexo, temos a solução criada, apresentada em formato pdf e um vídeo demonstrando o funcionamento da aplicação.
 
-[Apresentação - EasyTrail](./EasyTrail - Apresentação Final.pdf)
+
