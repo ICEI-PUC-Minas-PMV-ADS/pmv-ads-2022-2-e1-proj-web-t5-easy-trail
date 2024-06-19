@@ -1,0 +1,21 @@
+message: Please cite this software using these metadata.
+title: EASY TRAIL
+authors:
+  - family-names: Melo de Lima
+    given-names:  Leonardo
+  - family-names: Santana de Oliveira
+    given-names: Rafael
+  - family-names: Buck Alves
+    given-names: Leonardo
+  - family-names: Leao Freitas
+    given-names: Carlos José
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Alves Nogueira
+    given-names: Simone
+keywords:
+  - Trilhas
+  - Bicicleta
+repository-code: https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2022-2-e1-proj-web-t5-easy-trail
+version: 1.0.0
+date-released: 2023-12-14
